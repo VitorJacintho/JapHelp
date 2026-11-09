@@ -204,6 +204,24 @@ public class StackPanel : Panel
         _inLayout = true;
         try
         {
+            // a barra de rolagem pode aparecer/sumir e mudar a largura útil: refaz até estabilizar
+            for (int pass = 0; pass < 3; pass++)
+            {
+                int before = ClientSize.Width;
+                LayoutChildren();
+                AdjustFormScrollbars(AutoScroll);
+                if (ClientSize.Width == before) break;
+            }
+        }
+        finally
+        {
+            _inLayout = false;
+        }
+    }
+
+    private void LayoutChildren()
+    {
+        {
             int avail = ClientSize.Width - Padding.Horizontal;
             int w = MaxContentWidth > 0 ? Math.Min(avail, MaxContentWidth) : avail;
             int left = Padding.Left + Math.Max(0, (avail - w) / 2);
@@ -239,12 +257,7 @@ public class StackPanel : Panel
             }
             AutoScrollMinSize = new Size(0, y - AutoScrollPosition.Y + Padding.Bottom);
         }
-        finally
-        {
-            _inLayout = false;
-        }
     }
-
     protected override void OnResize(EventArgs eventargs)
     {
         base.OnResize(eventargs);

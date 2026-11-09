@@ -18,6 +18,17 @@ public static class ScreenshotTour
         {
             ("01_home", () => form.Navigate("home")),
             ("02_course", () => form.Navigate("course")),
+            ("02b_course_scrolled", () =>
+            {
+                // simula a roda do mouse sobre um cartão de lição
+                var stack = FindAll<StackPanel>(form).First(s => s.Visible);
+                var card = FindAll<LessonCard>(stack).First();
+                var pt = card.PointToScreen(new Point(20, 20));
+                for (int k = 0; k < 6; k++)
+                    SendMessage(card.Handle, 0x020A, (IntPtr)((-120) << 16), (IntPtr)((pt.Y << 16) | (pt.X & 0xFFFF)));
+                File.WriteAllText(Path.Combine(dir, "scroll_check.log"),
+                    $"barra visível={stack.VerticalScroll.Visible} posição={-stack.AutoScrollPosition.Y} altura conteúdo={stack.AutoScrollMinSize.Height} altura janela={stack.ClientSize.Height}");
+            }),
             ("03_lesson_theory", () => form.OpenLesson(lesson, "theory")),
             ("04_lesson_vocab_kana", () => form.OpenLesson(kanaLesson, "vocab")),
             ("05_lesson_examples", () => form.OpenLesson(lesson, "examples")),
@@ -82,6 +93,18 @@ public static class ScreenshotTour
             captured = false;
         };
         form.Shown += (_, _) => timer.Start();
+    }
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    private static extern IntPtr SendMessage(IntPtr hwnd, int msg, IntPtr wp, IntPtr lp);
+
+    private static IEnumerable<T> FindAll<T>(Control root) where T : Control
+    {
+        foreach (Control c in root.Controls)
+        {
+            if (c is T t) yield return t;
+            foreach (var x in FindAll<T>(c)) yield return x;
+        }
     }
 
     [System.Runtime.InteropServices.DllImport("user32.dll")]
