@@ -1,0 +1,278 @@
+// Formato: kanji|on'yomi|kun'yomi|significado|palavra:leitura:significado;palavra:leitura:significado
+// Linhas com # iniciam um nível. Os kanji são agrupados de 10 em 10 automaticamente.
+#N5
+一|イチ・イツ|ひと・ひと(つ)|um|一つ:ひとつ:um (objeto);一月:いちがつ:janeiro;一人:ひとり:uma pessoa
+二|ニ|ふた・ふた(つ)|dois|二つ:ふたつ:dois (objetos);二月:にがつ:fevereiro;二人:ふたり:duas pessoas
+三|サン|み・み(つ)|três|三つ:みっつ:três (objetos);三月:さんがつ:março
+四|シ|よ・よ(つ)・よん|quatro|四つ:よっつ:quatro (objetos);四月:しがつ:abril
+五|ゴ|いつ・いつ(つ)|cinco|五つ:いつつ:cinco (objetos);五月:ごがつ:maio
+六|ロク|む・む(つ)|seis|六つ:むっつ:seis (objetos);六月:ろくがつ:junho
+七|シチ|なな・なな(つ)|sete|七つ:ななつ:sete (objetos);七月:しちがつ:julho
+八|ハチ|や・や(つ)|oito|八つ:やっつ:oito (objetos);八月:はちがつ:agosto
+九|キュウ・ク|ここの・ここの(つ)|nove|九つ:ここのつ:nove (objetos);九月:くがつ:setembro
+十|ジュウ|とお|dez|十:とお:dez (objetos);十月:じゅうがつ:outubro
+百|ヒャク||cem|百円:ひゃくえん:100 ienes;三百:さんびゃく:trezentos
+千|セン|ち|mil|千円:せんえん:1.000 ienes;三千:さんぜん:três mil
+万|マン・バン||dez mil|一万円:いちまんえん:10.000 ienes;万一:まんいち:por via das dúvidas
+円|エン|まる(い)|iene; círculo|百円:ひゃくえん:100 ienes;円い:まるい:redondo
+日|ニチ・ジツ|ひ・か|dia; sol|日本:にほん:Japão;毎日:まいにち:todos os dias;日曜日:にちようび:domingo
+月|ゲツ・ガツ|つき|lua; mês|月曜日:げつようび:segunda-feira;一月:いちがつ:janeiro;月:つき:lua
+火|カ|ひ|fogo|火曜日:かようび:terça-feira;火事:かじ:incêndio
+水|スイ|みず|água|水曜日:すいようび:quarta-feira;水:みず:água
+木|モク・ボク|き|árvore; madeira|木曜日:もくようび:quinta-feira;木:き:árvore
+金|キン・コン|かね|ouro; dinheiro|金曜日:きんようび:sexta-feira;お金:おかね:dinheiro
+土|ド・ト|つち|terra, solo|土曜日:どようび:sábado;土:つち:terra
+曜|ヨウ||dia da semana|曜日:ようび:dia da semana;何曜日:なんようび:que dia da semana
+年|ネン|とし|ano|今年:ことし:este ano;来年:らいねん:ano que vem;年:とし:idade; ano
+時|ジ|とき|hora; tempo|時間:じかん:tempo, horas;何時:なんじ:que horas;時:とき:quando, momento
+分|ブン・フン|わ(かる)・わ(ける)|minuto; parte; entender|五分:ごふん:cinco minutos;分かる:わかる:entender;自分:じぶん:si mesmo
+半|ハン|なか(ば)|metade|三時半:さんじはん:três e meia;半分:はんぶん:metade
+今|コン|いま|agora|今:いま:agora;今日:きょう:hoje;今週:こんしゅう:esta semana
+何|カ|なに・なん|o quê|何:なに:o quê;何時:なんじ:que horas;何人:なんにん:quantas pessoas
+毎|マイ||cada, todo|毎日:まいにち:todo dia;毎朝:まいあさ:toda manhã;毎週:まいしゅう:toda semana
+週|シュウ||semana|今週:こんしゅう:esta semana;来週:らいしゅう:semana que vem;週末:しゅうまつ:fim de semana
+午|ゴ||meio-dia|午前:ごぜん:manhã (AM);午後:ごご:tarde (PM)
+前|ゼン|まえ|frente; antes|前:まえ:frente, antes;午前:ごぜん:manhã;名前:なまえ:nome
+後|ゴ・コウ|うし(ろ)・あと・のち|depois; atrás|後ろ:うしろ:atrás;午後:ごご:tarde;後で:あとで:depois
+上|ジョウ|うえ・あ(がる)・のぼ(る)|cima|上:うえ:em cima;上手:じょうず:habilidoso
+下|カ・ゲ|した・さ(がる)・くだ(さい)|baixo|下:した:embaixo;地下鉄:ちかてつ:metrô;下さい:ください:por favor me dê
+中|チュウ|なか|meio, dentro|中:なか:dentro;中国:ちゅうごく:China;一日中:いちにちじゅう:o dia todo
+外|ガイ・ゲ|そと・ほか|fora; outro|外:そと:lado de fora;外国人:がいこくじん:estrangeiro
+右|ウ・ユウ|みぎ|direita|右:みぎ:direita;右側:みぎがわ:lado direito
+左|サ|ひだり|esquerda|左:ひだり:esquerda;左側:ひだりがわ:lado esquerdo
+東|トウ|ひがし|leste|東:ひがし:leste;東京:とうきょう:Tóquio
+西|セイ・サイ|にし|oeste|西:にし:oeste;関西:かんさい:região de Kansai
+南|ナン|みなみ|sul|南:みなみ:sul;南口:みなみぐち:saída sul
+北|ホク|きた|norte|北:きた:norte;北海道:ほっかいどう:Hokkaido
+人|ジン・ニン|ひと|pessoa|人:ひと:pessoa;日本人:にほんじん:japonês;三人:さんにん:três pessoas
+男|ダン・ナン|おとこ|homem|男の人:おとこのひと:homem;男性:だんせい:sexo masculino
+女|ジョ・ニョ|おんな|mulher|女の人:おんなのひと:mulher;女性:じょせい:sexo feminino
+子|シ|こ|criança, filho|子供:こども:criança;女の子:おんなのこ:menina
+父|フ|ちち|pai|父:ちち:meu pai;お父さん:おとうさん:pai
+母|ボ|はは|mãe|母:はは:minha mãe;お母さん:おかあさん:mãe
+友|ユウ|とも|amigo|友達:ともだち:amigo;友人:ゆうじん:amigo (formal)
+名|メイ・ミョウ|な|nome; famoso|名前:なまえ:nome;有名:ゆうめい:famoso
+先|セン|さき|antes; ponta|先生:せんせい:professor;先週:せんしゅう:semana passada
+生|セイ・ショウ|い(きる)・う(まれる)・なま|vida; nascer; cru|学生:がくせい:estudante;生まれる:うまれる:nascer;生ビール:なまビール:chope
+学|ガク|まな(ぶ)|estudo|学生:がくせい:estudante;大学:だいがく:universidade;学校:がっこう:escola
+校|コウ||escola|学校:がっこう:escola;高校:こうこう:ensino médio
+大|ダイ・タイ|おお(きい)|grande|大きい:おおきい:grande;大学:だいがく:universidade;大丈夫:だいじょうぶ:tudo bem
+小|ショウ|ちい(さい)・こ|pequeno|小さい:ちいさい:pequeno;小学校:しょうがっこう:escola primária
+高|コウ|たか(い)|alto; caro|高い:たかい:alto, caro;高校:こうこう:ensino médio
+安|アン|やす(い)|barato; tranquilo|安い:やすい:barato;安心:あんしん:alívio, segurança
+新|シン|あたら(しい)|novo|新しい:あたらしい:novo;新幹線:しんかんせん:trem-bala;新聞:しんぶん:jornal
+古|コ|ふる(い)|velho|古い:ふるい:velho;中古:ちゅうこ:usado, seminovo
+長|チョウ|なが(い)|longo; chefe|長い:ながい:longo;店長:てんちょう:gerente da loja
+多|タ|おお(い)|muitos|多い:おおい:numeroso;多分:たぶん:provavelmente
+少|ショウ|すこ(し)・すく(ない)|pouco|少し:すこし:um pouco;少ない:すくない:pouco, escasso
+白|ハク|しろ・しろ(い)|branco|白い:しろい:branco;面白い:おもしろい:interessante
+山|サン|やま|montanha|山:やま:montanha;富士山:ふじさん:Monte Fuji
+川|セン|かわ|rio|川:かわ:rio;小川:おがわ:riacho
+田|デン|た|arrozal|田んぼ:たんぼ:arrozal;田中:たなか:Tanaka (sobrenome)
+天|テン|あめ|céu|天気:てんき:tempo (clima);天ぷら:てんぷら:tempurá
+気|キ・ケ||espírito; energia|元気:げんき:saudável, animado;天気:てんき:clima;気持ち:きもち:sentimento
+雨|ウ|あめ|chuva|雨:あめ:chuva;大雨:おおあめ:chuva forte
+花|カ|はな|flor|花:はな:flor;花火:はなび:fogos de artifício
+空|クウ|そら・あ(く)・から|céu; vazio|空:そら:céu;空港:くうこう:aeroporto;空く:あく:ficar vago
+電|デン||eletricidade|電車:でんしゃ:trem;電話:でんわ:telefone;電気:でんき:eletricidade, luz
+車|シャ|くるま|carro, veículo|車:くるま:carro;電車:でんしゃ:trem;自転車:じてんしゃ:bicicleta
+道|ドウ|みち|caminho, rua|道:みち:caminho;北海道:ほっかいどう:Hokkaido;柔道:じゅうどう:judô
+駅|エキ||estação|駅:えき:estação;駅員:えきいん:funcionário da estação
+店|テン|みせ|loja|店:みせ:loja;店員:てんいん:atendente;喫茶店:きっさてん:cafeteria
+国|コク|くに|país|国:くに:país;外国:がいこく:exterior;中国:ちゅうごく:China
+語|ゴ|かた(る)|palavra; idioma|日本語:にほんご:japonês;英語:えいご:inglês;単語:たんご:vocábulo
+本|ホン|もと|livro; origem|本:ほん:livro;日本:にほん:Japão;本当:ほんとう:verdade
+社|シャ|やしろ|empresa; santuário|会社:かいしゃ:empresa;神社:じんじゃ:santuário xintoísta
+会|カイ|あ(う)|encontrar; reunião|会う:あう:encontrar;会社:かいしゃ:empresa;会議:かいぎ:reunião
+間|カン・ケン|あいだ・ま|intervalo, entre|時間:じかん:tempo;間:あいだ:entre;人間:にんげん:ser humano
+見|ケン|み(る)|ver|見る:みる:ver;見学:けんがく:visita de estudo
+行|コウ・ギョウ|い(く)・おこな(う)|ir; realizar|行く:いく:ir;銀行:ぎんこう:banco;旅行:りょこう:viagem
+来|ライ|く(る)|vir|来る:くる:vir;来年:らいねん:ano que vem;来週:らいしゅう:semana que vem
+出|シュツ|で(る)・だ(す)|sair; tirar|出る:でる:sair;出口:でぐち:saída;出す:だす:entregar
+入|ニュウ|はい(る)・い(れる)|entrar; colocar|入る:はいる:entrar;入口:いりぐち:entrada;入れる:いれる:colocar
+休|キュウ|やす(む)|descansar|休む:やすむ:descansar, faltar;休み:やすみ:folga, férias
+食|ショク|た(べる)|comer|食べる:たべる:comer;食事:しょくじ:refeição;食堂:しょくどう:refeitório
+飲|イン|の(む)|beber|飲む:のむ:beber;飲み物:のみもの:bebida;飲食店:いんしょくてん:restaurante
+言|ゲン・ゴン|い(う)・こと|dizer|言う:いう:dizer;言葉:ことば:palavra
+話|ワ|はな(す)・はなし|falar; história|話す:はなす:falar;電話:でんわ:telefone;話:はなし:conversa, história
+読|ドク|よ(む)|ler|読む:よむ:ler;読書:どくしょ:leitura
+書|ショ|か(く)|escrever|書く:かく:escrever;辞書:じしょ:dicionário;図書館:としょかん:biblioteca
+聞|ブン|き(く)|ouvir; perguntar|聞く:きく:ouvir, perguntar;新聞:しんぶん:jornal
+買|バイ|か(う)|comprar|買う:かう:comprar;買い物:かいもの:compras
+立|リツ|た(つ)|ficar de pé|立つ:たつ:levantar-se;国立:こくりつ:nacional (instituição)
+口|コウ|くち|boca; abertura|口:くち:boca;入口:いりぐち:entrada;人口:じんこう:população
+目|モク|め|olho|目:め:olho;一つ目:ひとつめ:o primeiro
+耳|ジ|みみ|orelha|耳:みみ:orelha;耳鼻科:じびか:otorrinolaringologia
+手|シュ|て|mão|手:て:mão;上手:じょうず:habilidoso;切手:きって:selo
+足|ソク|あし・た(りる)|pé, perna; bastar|足:あし:pé, perna;足りる:たりる:ser suficiente
+力|リョク・リキ|ちから|força|力:ちから:força;協力:きょうりょく:cooperação
+#N4
+私|シ|わたし・わたくし|eu; privado|私:わたし:eu;私立:しりつ:particular (escola)
+家|カ・ケ|いえ・うち|casa; família|家:いえ:casa;家族:かぞく:família;作家:さっか:escritor
+族|ゾク||família, tribo|家族:かぞく:família;民族:みんぞく:etnia
+兄|ケイ・キョウ|あに|irmão mais velho|兄:あに:meu irmão mais velho;お兄さん:おにいさん:irmão mais velho
+弟|ダイ・テイ|おとうと|irmão mais novo|弟:おとうと:irmão mais novo;兄弟:きょうだい:irmãos
+姉|シ|あね|irmã mais velha|姉:あね:minha irmã mais velha;お姉さん:おねえさん:irmã mais velha
+妹|マイ|いもうと|irmã mais nova|妹:いもうと:irmã mais nova;姉妹:しまい:irmãs
+親|シン|おや・した(しい)|pais; íntimo|両親:りょうしん:pais;親切:しんせつ:gentil;親:おや:pai ou mãe
+自|ジ・シ|みずか(ら)|si mesmo|自分:じぶん:si mesmo;自転車:じてんしゃ:bicicleta;自由:じゆう:liberdade
+朝|チョウ|あさ|manhã|朝:あさ:manhã;朝ご飯:あさごはん:café da manhã;毎朝:まいあさ:toda manhã
+昼|チュウ|ひる|meio-dia|昼:ひる:meio-dia;昼ご飯:ひるごはん:almoço
+夜|ヤ|よる・よ|noite|夜:よる:noite;今夜:こんや:esta noite
+夕|セキ|ゆう|entardecer|夕方:ゆうがた:fim de tarde;夕飯:ゆうはん:jantar
+晩|バン||noite|晩ご飯:ばんごはん:jantar;今晩:こんばん:esta noite
+春|シュン|はる|primavera|春:はる:primavera;春休み:はるやすみ:férias de primavera
+夏|カ|なつ|verão|夏:なつ:verão;夏休み:なつやすみ:férias de verão
+秋|シュウ|あき|outono|秋:あき:outono
+冬|トウ|ふゆ|inverno|冬:ふゆ:inverno;冬休み:ふゆやすみ:férias de inverno
+早|ソウ|はや(い)|cedo, rápido|早い:はやい:cedo;早く:はやく:depressa
+近|キン|ちか(い)|perto|近い:ちかい:perto;近所:きんじょ:vizinhança;最近:さいきん:recentemente
+遠|エン|とお(い)|longe|遠い:とおい:longe;遠慮:えんりょ:cerimônia, reserva
+強|キョウ|つよ(い)|forte|強い:つよい:forte;勉強:べんきょう:estudo
+弱|ジャク|よわ(い)|fraco|弱い:よわい:fraco
+重|ジュウ・チョウ|おも(い)|pesado|重い:おもい:pesado;体重:たいじゅう:peso corporal
+軽|ケイ|かる(い)|leve|軽い:かるい:leve
+暑|ショ|あつ(い)|quente (clima)|暑い:あつい:quente
+寒|カン|さむ(い)|frio (clima)|寒い:さむい:frio
+暗|アン|くら(い)|escuro|暗い:くらい:escuro;暗証番号:あんしょうばんごう:senha
+明|メイ・ミョウ|あか(るい)・あ(かり)|claro, brilhante|明るい:あかるい:claro, alegre;説明:せつめい:explicação;明日:あした:amanhã
+広|コウ|ひろ(い)|amplo|広い:ひろい:amplo;広島:ひろしま:Hiroshima
+悪|アク|わる(い)|mau|悪い:わるい:ruim;気持ち悪い:きもちわるい:enjoado, nojento
+病|ビョウ|や(む)|doença|病気:びょうき:doença;病院:びょういん:hospital
+院|イン||instituição|病院:びょういん:hospital;大学院:だいがくいん:pós-graduação;美容院:びよういん:salão de beleza
+医|イ||medicina|医者:いしゃ:médico;医学:いがく:medicina
+者|シャ|もの|pessoa (que faz)|医者:いしゃ:médico;若者:わかもの:jovens
+薬|ヤク|くすり|remédio|薬:くすり:remédio;薬局:やっきょく:farmácia
+体|タイ|からだ|corpo|体:からだ:corpo;体育:たいいく:educação física
+頭|トウ・ズ|あたま|cabeça|頭:あたま:cabeça;頭痛:ずつう:dor de cabeça
+顔|ガン|かお|rosto|顔:かお:rosto;笑顔:えがお:sorriso
+声|セイ|こえ|voz|声:こえ:voz;大声:おおごえ:voz alta
+仕|シ|つか(える)|servir|仕事:しごと:trabalho;仕方:しかた:jeito, maneira
+事|ジ|こと|coisa, assunto|仕事:しごと:trabalho;事故:じこ:acidente;大事:だいじ:importante
+働|ドウ|はたら(く)|trabalhar|働く:はたらく:trabalhar;労働:ろうどう:trabalho, labor
+勉|ベン||esforço|勉強:べんきょう:estudo
+教|キョウ|おし(える)|ensinar|教える:おしえる:ensinar;教室:きょうしつ:sala de aula;教会:きょうかい:igreja
+室|シツ|むろ|sala|教室:きょうしつ:sala de aula;研究室:けんきゅうしつ:laboratório
+習|シュウ|なら(う)|aprender|習う:ならう:aprender (com alguém);練習:れんしゅう:prática, treino
+試|シ|ため(す)|testar|試験:しけん:prova;試合:しあい:partida, jogo
+験|ケン||examinar|試験:しけん:prova;経験:けいけん:experiência
+問|モン|と(う)|pergunta|問題:もんだい:problema, questão;質問:しつもん:pergunta
+題|ダイ||tema, título|問題:もんだい:problema;宿題:しゅくだい:lição de casa
+答|トウ|こた(える)|resposta|答える:こたえる:responder;答え:こたえ:resposta
+質|シツ||qualidade; questionar|質問:しつもん:pergunta;品質:ひんしつ:qualidade
+運|ウン|はこ(ぶ)|transportar; sorte|運動:うんどう:exercício;運転:うんてん:dirigir;運ぶ:はこぶ:carregar
+動|ドウ|うご(く)|mover|動く:うごく:mover-se;動物:どうぶつ:animal
+転|テン|ころ(ぶ)|rolar, girar|自転車:じてんしゃ:bicicleta;運転:うんてん:dirigir;転ぶ:ころぶ:cair, tropeçar
+走|ソウ|はし(る)|correr|走る:はしる:correr
+歩|ホ|ある(く)|andar|歩く:あるく:andar;散歩:さんぽ:passeio
+止|シ|と(まる)・と(める)|parar|止まる:とまる:parar;中止:ちゅうし:cancelamento
+乗|ジョウ|の(る)|embarcar|乗る:のる:embarcar, pegar (transporte);乗り換え:のりかえ:baldeação
+送|ソウ|おく(る)|enviar|送る:おくる:enviar;放送:ほうそう:transmissão
+映|エイ|うつ(る)|refletir, projetar|映画:えいが:filme;映画館:えいがかん:cinema
+画|ガ・カク||imagem; traço|映画:えいが:filme;画面:がめん:tela;計画:けいかく:plano
+写|シャ|うつ(す)|copiar, fotografar|写真:しゃしん:foto
+真|シン|ま|verdade|写真:しゃしん:foto;真ん中:まんなか:bem no meio
+音|オン|おと|som|音:おと:som;音楽:おんがく:música
+楽|ガク・ラク|たの(しい)|música; diversão; fácil|楽しい:たのしい:divertido;音楽:おんがく:música;楽:らく:confortável, fácil
+歌|カ|うた・うた(う)|canção|歌:うた:canção;歌う:うたう:cantar
+料|リョウ||taxa; material|料理:りょうり:culinária;料金:りょうきん:tarifa;無料:むりょう:grátis
+理|リ||lógica, razão|料理:りょうり:culinária;無理:むり:impossível;理由:りゆう:motivo
+茶|チャ・サ||chá|お茶:おちゃ:chá;茶色:ちゃいろ:marrom;喫茶店:きっさてん:cafeteria
+肉|ニク||carne|肉:にく:carne;牛肉:ぎゅうにく:carne bovina
+魚|ギョ|さかな|peixe|魚:さかな:peixe;金魚:きんぎょ:peixinho dourado
+米|ベイ・マイ|こめ|arroz (cru); América|米:こめ:arroz;米国:べいこく:EUA
+飯|ハン|めし|arroz cozido, refeição|ご飯:ごはん:arroz, refeição;朝ご飯:あさごはん:café da manhã
+牛|ギュウ|うし|vaca, boi|牛:うし:vaca;牛乳:ぎゅうにゅう:leite;牛丼:ぎゅうどん:tigela de carne
+売|バイ|う(る)|vender|売る:うる:vender;売り場:うりば:seção (de loja);売り切れ:うりきれ:esgotado
+開|カイ|ひら(く)・あ(く)・あ(ける)|abrir|開く:あく:abrir-se;開ける:あける:abrir
+閉|ヘイ|し(まる)・し(める)・と(じる)|fechar|閉まる:しまる:fechar-se;閉める:しめる:fechar
+始|シ|はじ(まる)・はじ(める)|começar|始まる:はじまる:começar;開始:かいし:início
+終|シュウ|お(わる)|terminar|終わる:おわる:terminar;終電:しゅうでん:último trem
+使|シ|つか(う)|usar|使う:つかう:usar;大使館:たいしかん:embaixada
+持|ジ|も(つ)|segurar, ter|持つ:もつ:segurar, ter;気持ち:きもち:sentimento
+待|タイ|ま(つ)|esperar|待つ:まつ:esperar;招待:しょうたい:convite
+作|サク・サ|つく(る)|fazer, produzir|作る:つくる:fazer;作文:さくぶん:redação
+思|シ|おも(う)|pensar|思う:おもう:pensar;思い出:おもいで:lembrança
+知|チ|し(る)|saber|知る:しる:saber;知らせ:しらせ:aviso
+考|コウ|かんが(える)|refletir|考える:かんがえる:pensar;参考:さんこう:referência
+住|ジュウ|す(む)|morar|住む:すむ:morar;住所:じゅうしょ:endereço
+着|チャク|き(る)・つ(く)|vestir; chegar|着る:きる:vestir;着く:つく:chegar;到着:とうちゃく:chegada
+借|シャク|か(りる)|pegar emprestado|借りる:かりる:pegar emprestado
+貸|タイ|か(す)|emprestar|貸す:かす:emprestar;貸し出し:かしだし:empréstimo
+帰|キ|かえ(る)|voltar|帰る:かえる:voltar para casa;帰国:きこく:voltar ao país
+急|キュウ|いそ(ぐ)|urgente; apressar|急ぐ:いそぐ:apressar-se;急行:きゅうこう:trem expresso;救急車:きゅうきゅうしゃ:ambulância
+町|チョウ|まち|cidade, bairro|町:まち:cidade;町内:ちょうない:bairro
+市|シ|いち|cidade; mercado|市役所:しやくしょ:prefeitura;市場:いちば:mercado
+区|ク||distrito|区役所:くやくしょ:subprefeitura;地区:ちく:distrito
+県|ケン||província|県:けん:província;県庁:けんちょう:governo provincial
+都|ト・ツ|みやこ|capital; metrópole|東京都:とうきょうと:Metrópole de Tóquio;都合:つごう:conveniência, disponibilidade
+物|ブツ・モツ|もの|coisa|物:もの:coisa;買い物:かいもの:compras;荷物:にもつ:bagagem
+品|ヒン|しな|artigo, produto|品物:しなもの:mercadoria;商品:しょうひん:produto
+服|フク||roupa|服:ふく:roupa;洋服:ようふく:roupa ocidental
+色|ショク・シキ|いろ|cor|色:いろ:cor;景色:けしき:paisagem
+赤|セキ|あか・あか(い)|vermelho|赤い:あかい:vermelho;赤ちゃん:あかちゃん:bebê
+青|セイ|あお・あお(い)|azul|青い:あおい:azul;青信号:あおしんごう:sinal verde
+黒|コク|くろ・くろ(い)|preto|黒い:くろい:preto
+銀|ギン||prata|銀行:ぎんこう:banco;銀色:ぎんいろ:prateado
+図|ズ・ト|はか(る)|desenho, mapa|地図:ちず:mapa;図書館:としょかん:biblioteca
+館|カン|やかた|edifício|図書館:としょかん:biblioteca;映画館:えいがかん:cinema;大使館:たいしかん:embaixada
+堂|ドウ||salão|食堂:しょくどう:refeitório;講堂:こうどう:auditório
+屋|オク|や|loja; telhado|部屋:へや:quarto;本屋:ほんや:livraria;屋上:おくじょう:terraço
+地|チ・ジ||terra, chão|地下鉄:ちかてつ:metrô;地図:ちず:mapa;地震:じしん:terremoto
+方|ホウ|かた|direção; pessoa; jeito|方:かた:pessoa (educado);夕方:ゆうがた:fim de tarde;使い方:つかいかた:modo de usar
+世|セ・セイ|よ|mundo; geração|世界:せかい:mundo;お世話:おせわ:cuidado, ajuda
+界|カイ||mundo, limite|世界:せかい:mundo
+用|ヨウ|もち(いる)|uso; assunto|用事:ようじ:compromisso;利用:りよう:utilização
+意|イ||mente; significado|意味:いみ:significado;注意:ちゅうい:atenção;意見:いけん:opinião
+特|トク||especial|特に:とくに:especialmente;特急:とっきゅう:trem expresso limitado
+別|ベツ|わか(れる)|separar; outro|別々:べつべつ:separado;特別:とくべつ:especial;別れる:わかれる:separar-se
+計|ケイ|はか(る)|medir|時計:とけい:relógio;会計:かいけい:conta (pagamento)
+説|セツ|と(く)|explicar|説明:せつめい:explicação;小説:しょうせつ:romance (livro)
+旅|リョ|たび|viagem|旅行:りょこう:viagem;旅:たび:jornada
+#Placas e avisos
+禁|キン||proibição|禁止:きんし:proibido;禁煙:きんえん:proibido fumar
+煙|エン|けむり|fumaça|禁煙:きんえん:proibido fumar;喫煙所:きつえんじょ:área de fumantes
+押|オウ|お(す)|empurrar, apertar|押す:おす:empurrar, apertar;押印:おういん:carimbar
+引|イン|ひ(く)|puxar|引く:ひく:puxar;割引:わりびき:desconto;引き出し:ひきだし:saque; gaveta
+非|ヒ||não, anti-|非常口:ひじょうぐち:saída de emergência;非常ベル:ひじょうベル:alarme de emergência
+常|ジョウ|つね|normal, sempre|非常口:ひじょうぐち:saída de emergência;日常:にちじょう:cotidiano
+危|キ|あぶ(ない)|perigo|危ない:あぶない:perigoso;危険:きけん:perigo
+険|ケン|けわ(しい)|íngreme, arriscado|危険:きけん:perigo;保険:ほけん:seguro
+注|チュウ|そそ(ぐ)|despejar; atenção|注意:ちゅうい:atenção;注文:ちゅうもん:pedido
+営|エイ|いとな(む)|administrar|営業中:えいぎょうちゅう:aberto;営業時間:えいぎょうじかん:horário de funcionamento
+業|ギョウ|わざ|negócio, trabalho|営業:えいぎょう:funcionamento;授業:じゅぎょう:aula;休業:きゅうぎょう:fechado
+準|ジュン||padrão; preparar|準備中:じゅんびちゅう:em preparação (fechado)
+備|ビ|そな(える)|preparar|準備:じゅんび:preparação;設備:せつび:instalações
+故|コ|ゆえ|motivo; falecido|故障中:こしょうちゅう:com defeito;事故:じこ:acidente
+障|ショウ|さわ(る)|obstáculo|故障:こしょう:defeito, pane;障害:しょうがい:deficiência; obstáculo
+割|カツ|わ(る)・わり|dividir; porcentagem|割引:わりびき:desconto;割り勘:わりかん:dividir a conta;三割:さんわり:30%
+税|ゼイ||imposto|税込:ぜいこみ:com imposto;税抜:ぜいぬき:sem imposto;免税:めんぜい:isento de imposto
+込||こ(む)|incluir; lotar|税込:ぜいこみ:com imposto;込む:こむ:estar lotado;申し込み:もうしこみ:inscrição
+席|セキ||assento|席:せき:assento;満席:まんせき:lotado;指定席:していせき:assento reservado
+満|マン|み(ちる)|cheio|満席:まんせき:lotado;満車:まんしゃ:estacionamento lotado;満員:まんいん:lotado (de gente)
+予|ヨ||antecipadamente|予約:よやく:reserva;予定:よてい:plano
+約|ヤク||promessa; aproximadamente|予約:よやく:reserva;約束:やくそく:promessa;約:やく:aproximadamente
+化|カ・ケ|ば(ける)|transformar|化粧室:けしょうしつ:toalete (banheiro);文化:ぶんか:cultura
+便|ベン・ビン|たよ(り)|conveniência; correio|便利:べんり:prático;郵便局:ゆうびんきょく:correio;不便:ふべん:inconveniente
+番|バン||número; vez|番号:ばんごう:número;一番:いちばん:o primeiro;交番:こうばん:posto policial
+号|ゴウ||número, sinal|番号:ばんごう:número;信号:しんごう:semáforo;号車:ごうしゃ:vagão nº
+線|セン||linha|番線:ばんせん:plataforma;新幹線:しんかんせん:trem-bala;路線図:ろせんず:mapa de linhas
+改|カイ|あらた(める)|reformar, verificar|改札:かいさつ:catraca;改札口:かいさつぐち:portão de catracas
+札|サツ|ふだ|placa; cédula|改札:かいさつ:catraca;お札:おさつ:cédula;名札:なふだ:crachá
+換|カン|か(える)|trocar|乗り換え:のりかえ:baldeação;交換:こうかん:troca
+替|タイ|か(える)|substituir|両替:りょうがえ:câmbio;着替える:きがえる:trocar de roupa
+両|リョウ||ambos|両替:りょうがえ:câmbio;両親:りょうしん:pais
+券|ケン||bilhete, ticket|券売機:けんばいき:máquina de bilhetes;食券:しょっけん:ticket de refeição;乗車券:じょうしゃけん:passagem
+払|フツ|はら(う)|pagar|払う:はらう:pagar;支払い:しはらい:pagamento
+受|ジュ|う(ける)|receber|受付:うけつけ:recepção;受ける:うける:receber; fazer (prova)
+付|フ|つ(ける)|anexar|受付:うけつけ:recepção;付ける:つける:anexar, ligar
+階|カイ||andar|一階:いっかい:térreo;階段:かいだん:escada
+段|ダン||degrau|階段:かいだん:escada;値段:ねだん:preço
+係|ケイ|かかり|responsável|係員:かかりいん:funcionário responsável;関係者:かんけいしゃ:pessoa autorizada
+関|カン|せき|portão; relação|関係:かんけい:relação;玄関:げんかん:entrada da casa;関西:かんさい:Kansai
+員|イン||membro|駅員:えきいん:funcionário da estação;店員:てんいん:atendente;会員:かいいん:sócio
+無|ム・ブ|な(い)|nada, sem|無料:むりょう:grátis;無理:むり:impossível
+有|ユウ・ウ|あ(る)|ter, existir|有料:ゆうりょう:pago (cobrado);有名:ゆうめい:famoso
+可|カ||possível|可能:かのう:possível;不可:ふか:não permitido
+不|フ・ブ||não, in-|不可:ふか:não permitido;不便:ふべん:inconveniente
+燃|ネン|も(える)|queimar|燃えるゴミ:もえるごみ:lixo queimável;燃料:ねんりょう:combustível

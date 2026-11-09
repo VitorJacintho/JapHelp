@@ -1,0 +1,256 @@
+[
+  {
+    "name": "Essenciais",
+    "icon": "基",
+    "phrases": [
+      ["すみません。", "すみません。", "Com licença / Desculpe / Obrigado (pelo incômodo)", "A palavra mais útil do Japão."],
+      ["ありがとうございます。", "ありがとうございます。", "Muito obrigado(a)."],
+      ["はい / いいえ", "はい / いいえ", "Sim / Não"],
+      ["お願いします。", "おねがい します。", "Por favor (pedindo)."],
+      ["大丈夫です。", "だいじょうぶ です。", "Está tudo bem / Não precisa, obrigado.", "Use para recusar sacola, recibo, ajuda."],
+      ["これをください。", "これ を ください。", "Quero isto, por favor."],
+      ["トイレはどこですか。", "トイレ は どこ ですか。", "Onde fica o banheiro?"],
+      ["いくらですか。", "いくら ですか。", "Quanto custa?"],
+      ["日本語が少し話せます。", "にほんご が すこし はなせます。", "Falo um pouco de japonês."],
+      ["ブラジルから来ました。", "ブラジル から きました。", "Vim do Brasil."],
+      ["留学生です。", "りゅうがくせい です。", "Sou estudante intercambista."],
+      ["助かりました。", "たすかりました。", "Você me ajudou muito (obrigado!)."],
+      ["ちょっと待ってください。", "ちょっと まって ください。", "Espere um pouco, por favor."],
+      ["失礼します。", "しつれい します。", "Com licença (ao entrar/sair)."],
+      ["よろしくお願いします。", "よろしく おねがい します。", "Prazer / Conto com você."]
+    ]
+  },
+  {
+    "name": "Quando não entender",
+    "icon": "？",
+    "phrases": [
+      ["すみません、分かりません。", "すみません、わかりません。", "Desculpe, não entendi."],
+      ["もう一度お願いします。", "もう いちど おねがい します。", "Mais uma vez, por favor."],
+      ["ゆっくり話してください。", "ゆっくり はなして ください。", "Fale devagar, por favor."],
+      ["やさしい日本語でお願いします。", "やさしい にほんご で おねがい します。", "Em japonês simples, por favor."],
+      ["英語で大丈夫ですか。", "えいご で だいじょうぶ ですか。", "Pode ser em inglês?"],
+      ["ここに書いてください。", "ここ に かいて ください。", "Escreva aqui, por favor.", "Ótimo quando não entende números ou nomes."],
+      ["〇〇は日本語で何と言いますか。", "〇〇 は にほんご で なん と いいますか。", "Como se diz ~ em japonês?"],
+      ["これはどういう意味ですか。", "これ は どういう いみ ですか。", "O que isto significa?"],
+      ["この漢字は何と読みますか。", "この かんじ は なん と よみますか。", "Como se lê este kanji?"],
+      ["つまり、〜ということですか。", "つまり、〜 という こと ですか。", "Ou seja, você quer dizer que ~?", "Para confirmar se entendeu."],
+      ["翻訳アプリを使ってもいいですか。", "ほんやくアプリ を つかっても いい ですか。", "Posso usar um app de tradução?"]
+    ]
+  },
+  {
+    "name": "Aeroporto e imigração",
+    "icon": "空",
+    "phrases": [
+      ["留学です。", "りゅうがく です。", "(Vim) para estudar.", "Resposta para 'objetivo da viagem'."],
+      ["一年滞在します。", "いちねん たいざい します。", "Vou ficar um ano."],
+      ["大学の寮に住みます。", "だいがく の りょう に すみます。", "Vou morar no dormitório da universidade."],
+      ["申告するものはありません。", "しんこく する もの は ありません。", "Não tenho nada a declarar."],
+      ["資格外活動許可を申請したいです。", "しかくがいかつどうきょか を しんせい したい です。", "Quero solicitar a permissão para trabalhar."],
+      ["荷物が出てきません。", "にもつ が でて きません。", "Minha bagagem não apareceu."],
+      ["両替所はどこですか。", "りょうがえじょ は どこ ですか。", "Onde fica a casa de câmbio?"],
+      ["市内へのバスはどこから乗れますか。", "しない へ の バス は どこ から のれますか。", "De onde sai o ônibus para o centro?"],
+      ["Wi-Fiのパスワードは何ですか。", "ワイファイ の パスワード は なん ですか。", "Qual é a senha do Wi-Fi?"],
+      ["乗り継ぎです。", "のりつぎ です。", "Estou em conexão (voo)."]
+    ]
+  },
+  {
+    "name": "Transporte",
+    "icon": "駅",
+    "phrases": [
+      ["〇〇駅までいくらですか。", "〇〇えき まで いくら ですか。", "Quanto custa até a estação ~?"],
+      ["この電車は〇〇に止まりますか。", "この でんしゃ は 〇〇 に とまりますか。", "Este trem para em ~?"],
+      ["何番線ですか。", "なんばんせん ですか。", "Qual plataforma?"],
+      ["どこで乗り換えればいいですか。", "どこ で のりかえれば いい ですか。", "Onde devo fazer baldeação?"],
+      ["次の電車は何時ですか。", "つぎ の でんしゃ は なんじ ですか。", "A que horas é o próximo trem?"],
+      ["終電は何時ですか。", "しゅうでん は なんじ ですか。", "A que horas é o último trem?"],
+      ["ICカードにチャージしたいです。", "アイシーカード に チャージ したい です。", "Quero recarregar o cartão IC."],
+      ["切符をなくしてしまいました。", "きっぷ を なくして しまいました。", "Perdi o bilhete."],
+      ["道に迷ってしまいました。", "みち に まよって しまいました。", "Me perdi."],
+      ["ここはどこですか。", "ここ は どこ ですか。", "Onde estou? (Que lugar é este?)"],
+      ["〇〇まで歩いて行けますか。", "〇〇 まで あるいて いけますか。", "Dá para ir a pé até ~?"],
+      ["〇〇までお願いします。", "〇〇 まで おねがい します。", "Até ~, por favor. (táxi)"],
+      ["ここで止めてください。", "ここ で とめて ください。", "Pare aqui, por favor. (táxi)"],
+      ["このバスは〇〇に行きますか。", "この バス は 〇〇 に いきますか。", "Este ônibus vai para ~?"]
+    ]
+  },
+  {
+    "name": "Konbini e compras",
+    "icon": "買",
+    "phrases": [
+      ["袋は大丈夫です。", "ふくろ は だいじょうぶ です。", "Não preciso de sacola."],
+      ["温めてください。", "あたためて ください。", "Esquente, por favor."],
+      ["お箸をください。", "おはし を ください。", "Me dê hashi, por favor."],
+      ["カードで払えますか。", "カード で はらえますか。", "Posso pagar com cartão?"],
+      ["現金でお願いします。", "げんきん で おねがい します。", "Em dinheiro, por favor."],
+      ["〇〇はどこにありますか。", "〇〇 は どこ に ありますか。", "Onde fica ~ (produto)?"],
+      ["これの違うサイズはありますか。", "これ の ちがう サイズ は ありますか。", "Tem este em outro tamanho?"],
+      ["試着してもいいですか。", "しちゃく しても いい ですか。", "Posso experimentar?"],
+      ["見ているだけです。", "みて いる だけ です。", "Só estou olhando."],
+      ["これにします。", "これ に します。", "Vou levar este."],
+      ["レシートをください。", "レシート を ください。", "Me dê o recibo, por favor."],
+      ["返品できますか。", "へんぴん できますか。", "Posso devolver?"],
+      ["ATMはありますか。", "エーティーエム は ありますか。", "Tem caixa eletrônico?"],
+      ["荷物を送りたいです。", "にもつ を おくりたい です。", "Quero enviar uma encomenda."]
+    ]
+  },
+  {
+    "name": "Restaurante",
+    "icon": "食",
+    "phrases": [
+      ["二人です。", "ふたり です。", "Somos dois."],
+      ["メニューをください。", "メニュー を ください。", "O cardápio, por favor."],
+      ["英語のメニューはありますか。", "えいご の メニュー は ありますか。", "Tem cardápio em inglês?"],
+      ["おすすめは何ですか。", "おすすめ は なん ですか。", "Qual é a recomendação?"],
+      ["これは何ですか。", "これ は なん ですか。", "O que é isto?"],
+      ["これをお願いします。", "これ を おねがい します。", "Este, por favor."],
+      ["〇〇抜きでお願いします。", "〇〇 ぬき で おねがい します。", "Sem ~, por favor."],
+      ["〇〇のアレルギーがあります。", "〇〇 の アレルギー が あります。", "Tenho alergia a ~."],
+      ["肉は食べられません。", "にく は たべられません。", "Não posso comer carne."],
+      ["お冷をください。", "おひや を ください。", "Água, por favor."],
+      ["辛くしないでください。", "からく しないで ください。", "Sem pimenta, por favor."],
+      ["お会計お願いします。", "おかいけい おねがい します。", "A conta, por favor."],
+      ["別々でお願いします。", "べつべつ で おねがい します。", "Separado, por favor."],
+      ["ごちそうさまでした。", "ごちそうさま でした。", "Obrigado pela refeição (ao sair)."],
+      ["予約していた〇〇です。", "よやく して いた 〇〇 です。", "Sou ~, tenho reserva."]
+    ]
+  },
+  {
+    "name": "Moradia",
+    "icon": "家",
+    "phrases": [
+      ["隣に引っ越してきた〇〇です。", "となり に ひっこして きた 〇〇 です。", "Sou ~, me mudei aqui ao lado."],
+      ["ゴミは何曜日に出せばいいですか。", "ゴミ は なんようび に だせば いい ですか。", "Em que dia devo colocar o lixo?"],
+      ["これは何ゴミですか。", "これ は なにゴミ ですか。", "Em que tipo de lixo vai isto?"],
+      ["お湯が出ないんですが。", "おゆ が でないん です が。", "A água quente não sai."],
+      ["エアコンが壊れました。", "エアコン が こわれました。", "O ar-condicionado quebrou."],
+      ["鍵をなくしてしまいました。", "かぎ を なくして しまいました。", "Perdi a chave."],
+      ["家賃はいくらですか。", "やちん は いくら ですか。", "Quanto é o aluguel?"],
+      ["初期費用はいくらですか。", "しょきひよう は いくら ですか。", "Quanto é o custo inicial (entrada)?"],
+      ["駅から歩いて何分ですか。", "えき から あるいて なんぷん ですか。", "Quantos minutos a pé da estação?"],
+      ["うるさくしてすみません。", "うるさく して すみません。", "Desculpe pelo barulho."],
+      ["インターネットは使えますか。", "インターネット は つかえますか。", "Tem internet?"]
+    ]
+  },
+  {
+    "name": "Prefeitura e banco",
+    "icon": "役",
+    "phrases": [
+      ["転入届を出したいんですが。", "てんにゅうとどけ を だしたいん です が。", "Quero fazer o registro de endereço."],
+      ["国民健康保険に入りたいです。", "こくみんけんこうほけん に はいりたい です。", "Quero entrar no seguro nacional de saúde."],
+      ["この書類の書き方を教えてください。", "この しょるい の かきかた を おしえて ください。", "Me ensine a preencher este documento."],
+      ["どの窓口に行けばいいですか。", "どの まどぐち に いけば いい ですか。", "A qual guichê devo ir?"],
+      ["住民票をください。", "じゅうみんひょう を ください。", "Quero um certificado de residência."],
+      ["学生納付特例を申請したいです。", "がくせいのうふとくれい を しんせい したい です。", "Quero pedir a isenção estudantil da previdência."],
+      ["口座を開きたいんですが。", "こうざ を ひらきたいん です が。", "Quero abrir uma conta."],
+      ["留学生でも口座を作れますか。", "りゅうがくせい でも こうざ を つくれますか。", "Intercambista pode abrir conta?"],
+      ["キャッシュカードをなくしました。", "キャッシュカード を なくしました。", "Perdi o cartão do banco."],
+      ["海外送金はできますか。", "かいがい そうきん は できますか。", "É possível fazer remessa ao exterior?"],
+      ["印鑑がなくても大丈夫ですか。", "いんかん が なくても だいじょうぶ ですか。", "Tudo bem se eu não tiver carimbo (hanko)?"]
+    ]
+  },
+  {
+    "name": "Universidade",
+    "icon": "学",
+    "phrases": [
+      ["質問してもよろしいでしょうか。", "しつもん しても よろしい でしょうか。", "Posso fazer uma pergunta?"],
+      ["今、お時間よろしいでしょうか。", "いま、おじかん よろしい でしょうか。", "O(a) senhor(a) tem um momento?"],
+      ["〜についてご相談があるのですが。", "〜 に ついて ごそうだん が ある の です が。", "Gostaria de conversar sobre ~."],
+      ["レポートの締め切りはいつですか。", "レポート の しめきり は いつ ですか。", "Quando é o prazo do trabalho?"],
+      ["締め切りを延ばしていただけないでしょうか。", "しめきり を のばして いただけない でしょうか。", "Poderia estender o prazo?"],
+      ["授業を休んでしまいました。申し訳ありません。", "じゅぎょう を やすんで しまいました。もうしわけ ありません。", "Faltei à aula. Peço desculpas."],
+      ["今日の授業は休講ですか。", "きょう の じゅぎょう は きゅうこう ですか。", "A aula de hoje foi cancelada?"],
+      ["このサークルに入りたいです。", "この サークル に はいりたい です。", "Quero entrar neste clube."],
+      ["図書館で本を借りたいです。", "としょかん で ほん を かりたい です。", "Quero pegar um livro emprestado na biblioteca."],
+      ["グループワークで一緒にやりませんか。", "グループワーク で いっしょに やりませんか。", "Vamos fazer o trabalho em grupo juntos?"],
+      ["ノートを見せてもらえませんか。", "ノート を みせて もらえませんか。", "Pode me mostrar suas anotações?"]
+    ]
+  },
+  {
+    "name": "Saúde",
+    "icon": "医",
+    "phrases": [
+      ["熱があります。", "ねつ が あります。", "Estou com febre."],
+      ["頭が痛いです。", "あたま が いたい です。", "Estou com dor de cabeça."],
+      ["お腹が痛いです。", "おなか が いたい です。", "Estou com dor de barriga."],
+      ["喉が痛くて、咳が出ます。", "のど が いたくて、せき が でます。", "Dor de garganta e tosse."],
+      ["気持ちが悪いです。", "きもち が わるい です。", "Estou enjoado / me sentindo mal."],
+      ["昨日からです。", "きのう から です。", "Desde ontem."],
+      ["薬のアレルギーがあります。", "くすり の アレルギー が あります。", "Tenho alergia a remédio."],
+      ["保険証を持っています。", "ほけんしょう を もって います。", "Tenho a carteirinha do seguro."],
+      ["英語が話せるお医者さんはいますか。", "えいご が はなせる おいしゃさん は いますか。", "Tem médico que fale inglês?"],
+      ["風邪薬はありますか。", "かぜぐすり は ありますか。", "Tem remédio para resfriado?"],
+      ["この薬はいつ飲めばいいですか。", "この くすり は いつ のめば いい ですか。", "Quando devo tomar este remédio?"],
+      ["予約したいのですが。", "よやく したい の です が。", "Gostaria de marcar uma consulta."],
+      ["けがをしました。", "けが を しました。", "Me machuquei."]
+    ]
+  },
+  {
+    "name": "Emergência",
+    "icon": "急",
+    "phrases": [
+      ["助けて！", "たすけて！", "Socorro!"],
+      ["救急車を呼んでください！", "きゅうきゅうしゃ を よんで ください！", "Chamem uma ambulância! (119)"],
+      ["警察を呼んでください！", "けいさつ を よんで ください！", "Chamem a polícia! (110)"],
+      ["火事です！", "かじ です！", "Incêndio!"],
+      ["救急です。", "きゅうきゅう です。", "É emergência médica. (ao ligar para o 119)"],
+      ["住所は〇〇です。", "じゅうしょ は 〇〇 です。", "O endereço é ~."],
+      ["友達が倒れました。", "ともだち が たおれました。", "Meu amigo desmaiou."],
+      ["財布を落としました。", "さいふ を おとしました。", "Perdi minha carteira."],
+      ["財布を盗まれました。", "さいふ を ぬすまれました。", "Roubaram minha carteira."],
+      ["避難所はどこですか。", "ひなんじょ は どこ ですか。", "Onde fica o abrigo?"],
+      ["大使館に連絡したいです。", "たいしかん に れんらく したい です。", "Quero entrar em contato com a embaixada."],
+      ["危ない！", "あぶない！", "Cuidado! / Perigo!"],
+      ["逃げて！", "にげて！", "Fuja!"]
+    ]
+  },
+  {
+    "name": "Trabalho (arubaito)",
+    "icon": "働",
+    "phrases": [
+      ["週に三日働けます。", "しゅう に みっか はたらけます。", "Posso trabalhar três dias por semana."],
+      ["来週から働けます。", "らいしゅう から はたらけます。", "Posso começar semana que vem."],
+      ["資格外活動許可を持っています。", "しかくがいかつどうきょか を もって います。", "Tenho permissão para trabalhar."],
+      ["いらっしゃいませ。", "いらっしゃいませ。", "Bem-vindo! (cliente entrando)"],
+      ["かしこまりました。", "かしこまりました。", "Entendido (formal)."],
+      ["少々お待ちください。", "しょうしょう おまち ください。", "Aguarde um momento, por favor."],
+      ["お待たせいたしました。", "おまたせ いたしました。", "Desculpe pela espera."],
+      ["申し訳ございません。", "もうしわけ ございません。", "Sinto muito (formal)."],
+      ["お疲れ様です。", "おつかれさま です。", "Bom trabalho! (cumprimento entre colegas)"],
+      ["お先に失礼します。", "おさき に しつれい します。", "Com licença, vou indo (saindo antes)."],
+      ["シフトを代わってもらえませんか。", "シフト を かわって もらえませんか。", "Pode trocar o turno comigo?"],
+      ["すみません、もう一度教えていただけますか。", "すみません、もう いちど おしえて いただけますか。", "Desculpe, pode me ensinar mais uma vez?"]
+    ]
+  },
+  {
+    "name": "Social e amizades",
+    "icon": "友",
+    "phrases": [
+      ["出身はどこですか。", "しゅっしん は どこ ですか。", "De onde você é?"],
+      ["趣味は何ですか。", "しゅみ は なん ですか。", "Qual é o seu hobby?"],
+      ["LINE交換しませんか。", "ライン こうかん しませんか。", "Vamos trocar LINE?"],
+      ["今度一緒にご飯に行きませんか。", "こんど いっしょに ごはん に いきませんか。", "Vamos comer juntos qualquer dia?"],
+      ["いいですね！ぜひ！", "いい ですね！ぜひ！", "Boa! Com certeza!"],
+      ["ごめん、その日はちょっと…", "ごめん、その ひ は ちょっと…", "Desculpa, nesse dia não dá…"],
+      ["また今度誘ってね。", "また こんど さそって ね。", "Me chama da próxima vez, tá?"],
+      ["乾杯！", "かんぱい！", "Saúde! (brinde)"],
+      ["お酒は飲めないんです。", "おさけ は のめないん です。", "Não bebo álcool."],
+      ["昨日はありがとう！楽しかった！", "きのう は ありがとう！たのしかった！", "Obrigado por ontem! Foi divertido!"],
+      ["写真を撮ってもらえませんか。", "しゃしん を とって もらえませんか。", "Pode tirar uma foto minha?"],
+      ["一緒に写真を撮りませんか。", "いっしょに しゃしん を とりませんか。", "Vamos tirar uma foto juntos?"]
+    ]
+  },
+  {
+    "name": "Telefone",
+    "icon": "電",
+    "phrases": [
+      ["もしもし、〇〇と申します。", "もしもし、〇〇 と もうします。", "Alô, aqui é ~."],
+      ["〇〇さんはいらっしゃいますか。", "〇〇さん は いらっしゃいますか。", "O(a) Sr(a). ~ está?"],
+      ["予約をお願いしたいのですが。", "よやく を おねがい したい の です が。", "Gostaria de fazer uma reserva."],
+      ["もう一度おっしゃっていただけますか。", "もう いちど おっしゃって いただけますか。", "Poderia repetir, por favor?"],
+      ["お電話が遠いようなのですが。", "おでんわ が とおい よう な の です が。", "Parece que a ligação está ruim."],
+      ["折り返しお電話いただけますか。", "おりかえし おでんわ いただけますか。", "Poderia me retornar a ligação?"],
+      ["伝言をお願いできますか。", "でんごん を おねがい できますか。", "Posso deixar um recado?"],
+      ["失礼いたします。", "しつれい いたします。", "Até logo (encerrando a ligação)."]
+    ]
+  }
+]

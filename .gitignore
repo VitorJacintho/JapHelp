@@ -1,0 +1,19 @@
+# Build
+bin/
+obj/
+publish/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Sistema
+Thumbs.db
+desktop.ini
+
+# Saídas do autoteste
+selftest.txt
+resultado.txt
