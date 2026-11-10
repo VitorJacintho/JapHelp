@@ -40,6 +40,53 @@ public static class SelfTest
         if (Kana.Compare("ke-ki", "ケーキ") != Kana.MatchResult.Exact) Fail("Compare ke-ki ~ ケーキ deveria ser Exact");
         if (Kana.Compare("tabeta", "たべない") != Kana.MatchResult.Wrong) Fail("Compare tabeta ~ たべない deveria ser Wrong");
 
+        // ---------- áudio ----------
+        sb.AppendLine("== Áudio ==");
+        try
+        {
+            Speech.Init();
+            sb.AppendLine($"  Vozes: {Speech.AllVoices.Count} ({string.Join(", ", Speech.AllVoices.Select(v => v.Name + "/" + v.Language + "/" + v.Engine))})");
+            sb.AppendLine($"  Japonesas: {Speech.JapaneseVoices.Count} · em uso: {(Speech.Available ? Speech.VoiceName : "nenhuma")}");
+            // testa o pipeline de síntese com qualquer voz moderna disponível
+            var any = Speech.JapaneseVoices.FirstOrDefault(v => v.Engine == "moderna") ?? Speech.AllVoices.FirstOrDefault(v => v.Engine == "moderna");
+            if (any != null)
+            {
+                var before = Speech.CurrentVoiceId;
+                Speech.SelectVoice(any.Id);
+                var phrase = any.IsJapanese ? "こんにちは。テストです。" : "Hello, this is a speech test.";
+                var wav = Speech.SynthesizeAsync(phrase, 1.0).GetAwaiter().GetResult();
+                if (wav == null || wav.Length < 2000 || System.Text.Encoding.ASCII.GetString(wav, 0, 4) != "RIFF")
+                    Fail($"Síntese com {any.Name} não gerou WAV válido");
+                else
+                {
+                    using var ms = new MemoryStream(wav);
+                    new System.Media.SoundPlayer(ms).Load();
+                    sb.AppendLine($"  Síntese OK com {any.Name}: {wav.Length} bytes de WAV");
+                }
+                var slow = Speech.SynthesizeAsync(phrase, 0.6).GetAwaiter().GetResult();
+                if (slow != null && wav != null && slow.Length <= wav.Length) Fail("Velocidade lenta não gerou áudio mais longo");
+                if (before != null) Speech.SelectVoice(before);
+            }
+            sb.AppendLine($"  Reconhecimento: {string.Join(", ", SpeechPractice.RecognizerLanguages())} · japonês: {SpeechPractice.JapaneseRecognitionAvailable}");
+            sb.AppendLine($"  Microfone: {SpeechPractice.HasMicrophone}");
+            if (SpeechPractice.HasMicrophone)
+            {
+                ProgressStore.OverrideFolder ??= Path.Combine(Path.GetTempPath(), "japhelp_selftest");
+                var err = SpeechPractice.StartRecording();
+                Thread.Sleep(600);
+                err += SpeechPractice.StopRecording();
+                if (err != "") sb.AppendLine("  (aviso) gravação: " + err);
+                else sb.AppendLine($"  Gravação OK: {new FileInfo(SpeechPractice.RecordingPath).Length} bytes");
+            }
+            var sim = SpeechPractice.Similarity("すみません", "すみません。");
+            if (sim < 0.99) Fail($"Similarity idêntico deveria ser 1, deu {sim}");
+            if (SpeechPractice.Similarity("すみません", "ありがとう") > 0.3) Fail("Similarity de frases diferentes muito alta");
+        }
+        catch (Exception exn)
+        {
+            Fail("Áudio: " + exn.Message);
+        }
+
         // ---------- conteúdo ----------
         sb.AppendLine("== Conteúdo ==");
         ContentRepository.Load();
@@ -64,6 +111,12 @@ public static class SelfTest
             {
                 if (ex.Length < 3) { Fail($"{l.Id}: exemplo incompleto"); continue; }
                 if (Kana.ContainsKanji(ex[1])) Fail($"{l.Id}: leitura de exemplo com kanji: {ex[1]}");
+            }
+            foreach (var t in l.Text)
+            {
+                if (t.Length < 3) { Fail($"{l.Id}: parágrafo de texto incompleto"); continue; }
+                if (Kana.ContainsKanji(t[1])) Fail($"{l.Id}: leitura de texto com kanji: {t[1]}");
+                if (Kana.ToRomaji(t[1]).Any(Kana.IsKana)) Fail($"{l.Id}: romaji incompleto no texto: {t[1]}");
             }
             foreach (var d in l.Dialog)
             {
@@ -125,6 +178,23 @@ public static class SelfTest
         {
             try { ExerciseFactory.KanjiDrill(ContentRepository.Kanji.Where(k => k.Level == lvl).Take(10).ToList()); }
             catch (Exception exn) { Fail($"KanjiDrill {lvl}: {exn.Message}"); }
+        }
+
+        // decks
+        sb.AppendLine($"  Decks: {ContentRepository.Decks.Count} com {ContentRepository.Decks.Sum(d => d.Items.Count)} palavras ({string.Join(", ", ContentRepository.Decks.GroupBy(d => d.Level).Select(g => g.Key + "=" + g.Sum(d => d.Items.Count)))})");
+        foreach (var d in ContentRepository.Decks)
+        {
+            if (d.Items.Count < 4) Fail($"Deck {d.Name}: poucas palavras");
+            foreach (var dup in d.Items.GroupBy(v => v.Jp + "|" + v.Reading).Where(g => g.Count() > 1))
+                Fail($"Deck {d.Name}: palavra repetida {dup.Key}");
+            foreach (var v in d.Items)
+            {
+                if (Kana.ContainsKanji(v.Reading)) Fail($"Deck {d.Name}: leitura com kanji em {v.Jp}");
+                if (v.Romaji.Any(Kana.IsKana)) Fail($"Deck {d.Name}: romaji incompleto em {v.Jp}");
+                if (!Kana.ContainsJapanese(v.Jp)) Fail($"Deck {d.Name}: palavra sem japonês: {v.Jp}");
+            }
+            try { ExerciseFactory.VocabDrill(d.Items, Math.Min(20, d.Items.Count), d.Items); }
+            catch (Exception exn) { Fail($"Deck {d.Name}: {exn.Message}"); }
         }
 
         // frases

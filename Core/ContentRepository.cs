@@ -51,6 +51,7 @@ public static class ContentRepository
         Modules = Modules.OrderBy(m => m.Order).ToList();
 
         LoadKanji();
+        LoadDecks();
         LoadPhrases();
         LoadTips();
     }
@@ -58,11 +59,16 @@ public static class ContentRepository
     private static void LoadKanji()
     {
         Kanji = new();
-        var file = Path.Combine(ContentDir, "kanji.txt");
-        if (!File.Exists(file)) return;
+        var files = Directory.GetFiles(ContentDir, "kanji*.txt").OrderBy(f => Path.GetFileName(f) == "kanji.txt" ? "" : f).ToList();
+        var counters = new Dictionary<string, int>();
+        foreach (var file in files)
+            LoadKanjiFile(file, counters);
+    }
+
+    private static void LoadKanjiFile(string file, Dictionary<string, int> counters)
+    {
         string level = "N5";
         int lineNo = 0;
-        var counters = new Dictionary<string, int>();
         foreach (var raw in File.ReadAllLines(file))
         {
             lineNo++;
@@ -100,9 +106,51 @@ public static class ContentRepository
             }
             catch (Exception ex)
             {
-                Errors.Add($"kanji.txt linha {lineNo}: {ex.Message}");
+                Errors.Add($"{Path.GetFileName(file)} linha {lineNo}: {ex.Message}");
             }
         }
+    }
+
+    public static List<VocabDeck> Decks { get; private set; } = new();
+
+    /// <summary>
+    /// Decks em Content/vocab_*.txt:
+    /// "# Nome | ícone | nível" inicia um deck; depois "japonês|leitura|significado" por linha.
+    /// </summary>
+    private static void LoadDecks()
+    {
+        Decks = new();
+        foreach (var file in Directory.GetFiles(ContentDir, "vocab_*.txt").OrderBy(f => f))
+        {
+            VocabDeck? deck = null;
+            int lineNo = 0;
+            foreach (var raw in File.ReadAllLines(file))
+            {
+                lineNo++;
+                var line = raw.Trim();
+                if (line.Length == 0 || line.StartsWith("//")) continue;
+                if (line.StartsWith("#"))
+                {
+                    var h = line.TrimStart('#').Split('|').Select(s => s.Trim()).ToArray();
+                    deck = new VocabDeck
+                    {
+                        Name = h[0],
+                        Icon = h.Length > 1 && h[1].Length > 0 ? h[1] : "語",
+                        Level = h.Length > 2 ? h[2] : "",
+                    };
+                    Decks.Add(deck);
+                    continue;
+                }
+                var p = line.Split('|');
+                if (deck == null || p.Length < 3)
+                {
+                    Errors.Add($"{Path.GetFileName(file)} linha {lineNo}: formato inválido");
+                    continue;
+                }
+                deck.Items.Add(new VocabItem(p[0].Trim(), p[1].Trim(), p[2].Trim(), "deck:" + deck.Name));
+            }
+        }
+        Decks = Decks.OrderBy(d => d.Level switch { "N5" => 0, "N4" => 1, "N3" => 2, "N2" => 3, _ => 9 }).ToList();
     }
 
     private static void LoadPhrases()

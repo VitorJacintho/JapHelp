@@ -41,6 +41,7 @@ public class LessonView : UserControl
         // ---- abas
         var tabs = new FlowLayoutPanel { Dock = DockStyle.Top, Height = Theme.S(56), BackColor = Theme.Background, Padding = Theme.Pad(28, 8, 28, 4), WrapContents = false };
         AddTab(tabs, "theory", "📖  Teoria");
+        if (lesson.Text.Count > 0) AddTab(tabs, "text", "📰  Texto");
         if (lesson.Vocab.Count > 0 || !string.IsNullOrWhiteSpace(lesson.Kana)) AddTab(tabs, "vocab", $"🈁  Vocabulário ({lesson.Vocab.Count})");
         if (lesson.Examples.Count > 0) AddTab(tabs, "examples", $"💬  Exemplos ({lesson.Examples.Count})");
         if (lesson.Dialog.Count > 0) AddTab(tabs, "dialog", "🎭  Diálogo");
@@ -83,6 +84,7 @@ public class LessonView : UserControl
         Control view = key switch
         {
             "vocab" => BuildVocab(),
+            "text" => BuildText(),
             "examples" => BuildExamples(),
             "dialog" => BuildDialog(),
             "exercises" => BuildExercises(),
@@ -162,11 +164,54 @@ public class LessonView : UserControl
         return stack;
     }
 
+    // ---------------- Texto (leitura) ----------------
+    private bool _showTranslation;
+
+    private Control BuildText()
+    {
+        var stack = new StackPanel { Padding = Theme.Pad(0, 4, 8, 8), Spacing = 8, MaxContentWidth = Theme.S(900) };
+        var paras = _lesson.Text.Where(t => t.Length > 0).ToList();
+        if (!string.IsNullOrWhiteSpace(_lesson.TextTitle))
+            stack.Add(Ui.Label(_lesson.TextTitle!, Theme.Jp(15f, FontStyle.Bold), Theme.Text));
+        stack.Add(Ui.Subtitle("Leia primeiro sem tradução. Tente entender a ideia geral, depois os detalhes. Só então confira a tradução."));
+
+        var play = FlatButton.Secondary("Ouvir o texto", (_, _) => Speech.SpeakQueue(paras.Select(p => p[0])));
+        play.Glyph = Glyphs.Volume;
+        play.FitWidth();
+        play.Enabled = Speech.Available;
+        var toggle = FlatButton.Secondary(_showTranslation ? "Ocultar tradução" : "Mostrar tradução", (_, _) =>
+        {
+            _showTranslation = !_showTranslation;
+            ShowTab("text");
+        });
+        var items = paras.Where(p => p.Length >= 3).Select(p => new VocabItem(p[0], p[1], p[2], _lesson.Id)).ToList();
+        stack.Add(Ui.Row(play, toggle, SpeakButton("Treinar a leitura em voz alta", items)));
+
+        foreach (var p in paras)
+        {
+            var reading = p.Length > 1 && !string.IsNullOrWhiteSpace(p[1]) ? p[1] : p[0];
+            if (_showTranslation && p.Length >= 3)
+            {
+                stack.Add(new SentenceCard(p[0], reading, p[2]));
+            }
+            else
+            {
+                bool hasReading = p.Length > 1 && !string.IsNullOrWhiteSpace(p[1]);
+                string? furi = ProgressStore.Data.Settings.ShowReading && hasReading && Kana.ContainsKanji(p[0]) ? reading.Replace(" ", "") : null;
+                var text = p[0];
+                stack.Add(new JpBlock(text, 15f, furi, null, () => Speech.Speak(text), () => Speech.Speak(text, true)));
+            }
+        }
+        return stack;
+    }
+
     // ---------------- Exemplos ----------------
     private Control BuildExamples()
     {
         var stack = new StackPanel { Padding = Theme.Pad(0, 4, 8, 8), Spacing = 8 };
         stack.Add(Ui.Subtitle("Leia em voz alta junto com o áudio (shadowing). Clique no cartão para ouvir; clique direito = devagar."));
+        stack.Add(SpeakButton("Treinar a fala com estes exemplos",
+            _lesson.Examples.Where(e => e.Length >= 3).Select(e => new VocabItem(e[0], e[1], e[2], _lesson.Id)).ToList()));
         foreach (var ex in _lesson.Examples.Where(e => e.Length >= 3))
             stack.Add(new SentenceCard(ex[0], ex[1], ex[2]));
         return stack;
@@ -182,8 +227,9 @@ public class LessonView : UserControl
         play.FitWidth();
         play.Enabled = Speech.Available;
         play.BaseColor = _color;
-        play.Tag = "fixed";
-        stack.Add(play);
+        var speak = SpeakButton("Treinar as falas do diálogo",
+            lines.Select(l => new VocabItem(l[1], l[2], l[3], _lesson.Id)).ToList());
+        stack.Add(Ui.Row(play, speak));
         stack.Add(Ui.Subtitle("Dica: depois de entender, cubra a tradução e tente fazer o papel de uma das pessoas."));
         var speakers = lines.Select(l => l[0]).Distinct().ToList();
         Color[] palette = { Theme.Indigo, Theme.Accent, Theme.Success, Theme.Warning };
@@ -196,6 +242,16 @@ public class LessonView : UserControl
             });
         }
         return stack;
+    }
+
+    private FlatButton SpeakButton(string text, List<VocabItem> items)
+    {
+        var lessonTitle = _lesson.Title;
+        var b = FlatButton.Secondary(text, (_, _) => MainForm.Instance.ShowView(new SpeakingView("Lição: " + lessonTitle, items), "speak"));
+        b.Glyph = "";
+        b.FitWidth();
+        b.Tag = "fixed";
+        return b;
     }
 
     // ---------------- Exercícios ----------------

@@ -28,7 +28,7 @@ internal static class Program
             ProgressStore.OverrideFolder = Path.Combine(args[1], "progress");
         ProgressStore.Load();
         ContentRepository.Load();
-        Speech.Init();
+        Speech.Init(ProgressStore.Data.Settings.VoiceId);
 
         var form = new MainForm();
         if (args.Length >= 2 && args[0] == "--shots")

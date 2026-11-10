@@ -69,6 +69,17 @@ public static class ScreenshotTour
             ("18_feedback_typing_ok", () => _runner!.TestAnswer(true)),
             ("19_feedback_order_ok", () => _runner!.TestAnswer(true)),
             ("20_finish", () => _runner!.TestFinishAll()),
+            ("21_vocab", () => form.Navigate("vocab")),
+            ("22_speak", () => form.Navigate("speak")),
+            ("23_reading_text", () => form.OpenLesson(ContentRepository.FindLesson("n7-02")!, "text")),
+            ("24_reading_exercise", () =>
+            {
+                var l = ContentRepository.FindLesson("n7-02")!;
+                var pick = ExerciseFactory.ForLesson(l).Where(e => e.Passage != null).Take(2).ToList();
+                form.RunExercises("leitura", () => pick, null, () => { }, "course");
+            }),
+            ("25_kanji_n3", () => form.ShowView(new KanjiView("N3"), "kanji")),
+            ("26_n2_lesson", () => form.OpenLesson(ContentRepository.FindLesson("n5-09")!, "theory")),
         };
         int i = 0;
         var timer = new System.Windows.Forms.Timer { Interval = 700 };

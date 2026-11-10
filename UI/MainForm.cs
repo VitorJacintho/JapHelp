@@ -50,8 +50,10 @@ public class MainForm : Form
         AddNav(nav, "家", "Início", "home", () => new HomeView());
         AddNav(nav, "道", "Curso", "course", () => new CourseView());
         AddNav(nav, "あ", "Hiragana & Katakana", "kana", () => new KanaView());
+        AddNav(nav, "語", "Vocabulário", "vocab", () => new VocabView());
         AddNav(nav, "漢", "Kanji", "kanji", () => new KanjiView());
         AddNav(nav, "復", "Revisão (SRS)", "review", () => new ReviewView());
+        AddNav(nav, "声", "Treino de fala", "speak", () => new SpeakingView());
         AddNav(nav, "話", "Frases úteis", "phrases", () => new PhrasesView());
         AddNav(nav, "辞", "Dicionário", "dict", () => new DictionaryView());
         AddNav(nav, "設", "Configurações", "settings", () => new SettingsView());

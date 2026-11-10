@@ -32,31 +32,68 @@ public class SettingsView : UserControl
 
         // ---- voz
         stack.Add(Ui.Section("Voz (áudio em japonês)"));
+        var jaVoices = Speech.JapaneseVoices;
         if (Speech.Available)
         {
-            stack.Add(new InfoBox("✓ Voz japonesa encontrada: " + Speech.VoiceName, Theme.Ui(11f), Theme.Success, Theme.SuccessSoft));
-            var rate = new TrackBar { Minimum = -6, Maximum = 4, Value = Math.Clamp(s.SpeechRate, -6, 4), TickFrequency = 1, Width = Theme.S(260), AutoSize = false, Height = Theme.S(40), BackColor = Theme.Background };
-            rate.ValueChanged += (_, _) => { s.SpeechRate = rate.Value; Speech.Rate = rate.Value; ProgressStore.Save(); };
+            stack.Add(new InfoBox($"✓ {jaVoices.Count} voz(es) japonesa(s) encontrada(s). Em uso: {Speech.VoiceName}", Theme.Ui(11f), Theme.Success, Theme.SuccessSoft));
+            var combo = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = Theme.S(380), Font = Theme.Ui(10.5f) };
+            foreach (var v in jaVoices) combo.Items.Add(v);
+            combo.SelectedItem = jaVoices.FirstOrDefault(v => v.Id == Speech.CurrentVoiceId);
+            combo.SelectedIndexChanged += (_, _) =>
+            {
+                if (combo.SelectedItem is Speech.VoiceInfo v && Speech.SelectVoice(v.Id))
+                {
+                    s.VoiceId = v.Id;
+                    ProgressStore.Save();
+                    Speech.Speak("こんにちは。わたしの こえは どうですか。");
+                }
+            };
+            stack.Add(Ui.Row(Ui.Label("Voz:", Theme.Ui(11f), Theme.Text, new Padding(0, Theme.S(4), 0, 0)), combo));
+
+            var speedLabel = Ui.Label($"Velocidade: {Speech.Speed:0.00}×", Theme.Ui(11f), Theme.Text, new Padding(0, Theme.S(8), 0, 0));
+            var rate = new TrackBar { Minimum = 50, Maximum = 150, Value = (int)Math.Clamp(Speech.Speed * 100, 50, 150), TickFrequency = 10, SmallChange = 5, LargeChange = 10, Width = Theme.S(260), AutoSize = false, Height = Theme.S(40), BackColor = Theme.Background };
+            rate.ValueChanged += (_, _) =>
+            {
+                Speech.Speed = rate.Value / 100.0;
+                s.SpeechSpeed = Speech.Speed;
+                speedLabel.Text = $"Velocidade: {Speech.Speed:0.00}×";
+                ProgressStore.Save();
+            };
             var test = FlatButton.Secondary("Testar", (_, _) => Speech.Speak("こんにちは。いっしょに日本語を勉強しましょう。"));
             test.Glyph = Glyphs.Volume;
             test.FitWidth();
-            stack.Add(Ui.Row(Ui.Label("Velocidade (lento ← → rápido):", Theme.Ui(11f), Theme.Text, new Padding(0, Theme.S(8), 0, 0)), rate, test));
+            stack.Add(Ui.Row(speedLabel, rate, test));
+            stack.Add(Ui.Label("Dica: comece em 0,8× para aprender e suba até 1,1× para treinar o ouvido para a velocidade real.", Theme.Ui(9.5f), Theme.Muted));
         }
         else
         {
             stack.Add(new InfoBox(
-                "Nenhuma voz japonesa instalada. Sem ela, os exercícios de escuta ficam desativados.\n\n" +
-                "Para instalar (Windows 10/11):\n" +
-                "1. Abra Configurações → Hora e idioma → Idioma (ou Idioma e região).\n" +
+                "Nenhuma voz japonesa instalada. Sem ela, os exercícios de escuta e o treino de fala ficam limitados.\n\n" +
+                "Como instalar (Windows 10/11, leva uns 5 minutos):\n" +
+                "1. Clique em \"Abrir Idioma\" abaixo (Configurações → Hora e idioma → Idioma).\n" +
                 "2. Clique em \"Adicionar um idioma\" e escolha 日本語 (Japonês).\n" +
-                "3. Marque \"Conversão de texto em fala\" / \"Fala\" (não precisa definir como idioma de exibição).\n" +
-                "4. Aguarde o download e reabra o JapHelp.\n" +
-                "Alternativa: Configurações → Hora e idioma → Fala → Adicionar vozes → Japonês.",
+                "3. Marque \"Conversão de texto em fala\" e \"Reconhecimento de fala\". Desmarque \"Definir como idioma de exibição\".\n" +
+                "4. Aguarde o download terminar e reabra o JapHelp.",
                 Theme.Ui(10.5f), Theme.AccentDark, Theme.ErrorSoft));
-            var open = FlatButton.Secondary("Abrir configurações de fala do Windows", (_, _) => Speech.OpenWindowsSpeechSettings());
-            open.Tag = "fixed";
-            stack.Add(open);
         }
+
+        // ---- diagnóstico
+        stack.Add(Ui.Section("Diagnóstico de áudio e fala"));
+        var others = Speech.AllVoices.Where(v => !v.IsJapanese).Select(v => $"{v.Name} ({v.Language})").Distinct().ToList();
+        var recLangs = SpeechPractice.RecognizerLanguages();
+        stack.Add(new InfoBox(
+            "Vozes japonesas: " + (jaVoices.Count == 0 ? "nenhuma" : string.Join(", ", jaVoices.Select(v => v.Name))) + "\n" +
+            "Outras vozes no Windows: " + (others.Count == 0 ? "nenhuma" : string.Join(", ", others)) + "\n" +
+            "Reconhecimento de fala disponível para: " + (recLangs.Count == 0 ? "nenhum idioma" : string.Join(", ", recLangs)) +
+            (SpeechPractice.JapaneseRecognitionAvailable ? "  ✓ japonês" : "  ✗ japonês (instale o reconhecimento de fala japonês)") + "\n" +
+            "Gravação pelo microfone: " + (SpeechPractice.HasMicrophone ? "✓ microfone encontrado" : "✗ nenhum microfone encontrado"),
+            Theme.Jp(10f), Theme.Text, Color.White) { BorderColor = Theme.Border });
+        stack.Add(Ui.Row(
+            FlatButton.Secondary("Abrir Idioma (instalar japonês)", (_, _) => Speech.OpenSettings("ms-settings:regionlanguage")),
+            FlatButton.Secondary("Vozes do Windows", (_, _) => Speech.OpenSettings("ms-settings:speech")),
+            FlatButton.Secondary("Permissão do microfone", (_, _) => Speech.OpenSettings("ms-settings:privacy-microphone")),
+            FlatButton.Secondary("Reconhecimento de fala online", (_, _) => Speech.OpenSettings("ms-settings:privacy-speech"))));
+        stack.Add(Ui.Label("Depois de instalar algo no Windows, feche e abra o JapHelp de novo para ele detectar.", Theme.Ui(9.5f), Theme.Muted));
 
         // ---- dados
         stack.Add(Ui.Section("Dados"));

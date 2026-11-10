@@ -1,0 +1,353 @@
+// Decks de vocabulário N4 e "vida no Japão".
+
+# Verbos N4 (1) | 動 | N4
+集める|あつめる|coletar, juntar
+集まる|あつまる|reunir-se
+上げる|あげる|levantar; dar
+下げる|さげる|abaixar
+動く|うごく|mover-se
+写す|うつす|copiar
+選ぶ|えらぶ|escolher
+起こす|おこす|acordar (alguém); causar
+怒る|おこる|ficar bravo
+落ちる|おちる|cair; reprovar
+落とす|おとす|deixar cair, perder
+踊る|おどる|dançar
+驚く|おどろく|surpreender-se
+思い出す|おもいだす|lembrar-se
+変わる|かわる|mudar
+変える|かえる|mudar (algo)
+考える|かんがえる|pensar, refletir
+頑張る|がんばる|esforçar-se
+決める|きめる|decidir
+比べる|くらべる|comparar
+暮らす|くらす|viver
+くれる||dar (para mim)
+込む|こむ|lotar, ficar cheio
+壊れる|こわれる|quebrar (sozinho)
+壊す|こわす|quebrar (algo)
+探す|さがす|procurar
+下がる|さがる|baixar, recuar
+騒ぐ|さわぐ|fazer barulho
+触る|さわる|tocar
+調べる|しらべる|pesquisar, investigar
+知らせる|しらせる|avisar
+捨てる|すてる|jogar fora
+滑る|すべる|escorregar
+育てる|そだてる|criar (filhos, plantas)
+倒れる|たおれる|desmaiar, cair
+足りる|たりる|ser suficiente
+捕まえる|つかまえる|pegar, capturar
+付ける|つける|ligar (aparelho); anexar
+続ける|つづける|continuar
+包む|つつむ|embrulhar
+連れて行く|つれていく|levar (alguém)
+手伝う|てつだう|ajudar
+届ける|とどける|entregar
+泊まる|とまる|hospedar-se
+取り替える|とりかえる|trocar
+直す|なおす|consertar, corrigir
+治る|なおる|sarar
+泣く|なく|chorar
+無くす|なくす|perder (objeto)
+慣れる|なれる|acostumar-se
+
+# Verbos N4 (2) | 働 | N4
+似る|にる|parecer-se
+盗む|ぬすむ|roubar
+塗る|ぬる|passar (creme, tinta)
+寝坊する|ねぼうする|perder a hora
+残る|のこる|sobrar
+運ぶ|はこぶ|carregar, transportar
+始める|はじめる|começar (algo)
+払う|はらう|pagar
+冷える|ひえる|esfriar
+引っ越す|ひっこす|mudar de casa
+拾う|ひろう|apanhar do chão
+増える|ふえる|aumentar
+減る|へる|diminuir
+褒める|ほめる|elogiar
+間に合う|まにあう|chegar a tempo
+守る|まもる|proteger, cumprir
+迷う|まよう|perder-se; hesitar
+見つける|みつける|encontrar
+迎える|むかえる|receber, ir buscar
+戻る|もどる|voltar
+貰う|もらう|receber
+焼く|やく|assar, grelhar
+約束する|やくそくする|prometer, combinar
+止める|やめる|parar, largar
+揺れる|ゆれる|balançar, tremer
+汚れる|よごれる|sujar-se
+喜ぶ|よろこぶ|alegrar-se
+沸かす|わかす|ferver
+別れる|わかれる|separar-se, despedir-se
+笑う|わらう|rir
+割れる|われる|quebrar (vidro)
+謝る|あやまる|pedir desculpas
+急ぐ|いそぐ|apressar-se
+祈る|いのる|rezar, desejar
+植える|うえる|plantar
+受ける|うける|receber; fazer (prova)
+打つ|うつ|bater; digitar
+遅れる|おくれる|atrasar
+送る|おくる|enviar; levar (alguém)
+片付ける|かたづける|arrumar
+
+# Adjetivos e advérbios N4 | 形 | N4
+浅い|あさい|raso
+深い|ふかい|profundo
+厚い|あつい|grosso (espessura)
+薄い|うすい|fino; fraco (sabor)
+柔らかい|やわらかい|macio
+硬い|かたい|duro
+美しい|うつくしい|belo
+嬉しい|うれしい|feliz, contente
+悲しい|かなしい|triste
+寂しい|さびしい|solitário
+恥ずかしい|はずかしい|envergonhado
+怖い|こわい|assustador
+珍しい|めずらしい|raro, incomum
+正しい|ただしい|correto
+細かい|こまかい|detalhado; miúdo
+酷い|ひどい|terrível
+優しい|やさしい|gentil
+苦い|にがい|amargo
+眠い|ねむい|com sono
+丁寧|ていねい|educado, cuidadoso
+真面目|まじめ|sério, dedicado
+複雑|ふくざつ|complicado
+簡単|かんたん|fácil, simples
+特別|とくべつ|especial
+十分|じゅうぶん|suficiente
+残念|ざんねん|que pena
+無理|むり|impossível
+必要|ひつよう|necessário
+大事|だいじ|importante
+安全|あんぜん|seguro
+危険|きけん|perigoso
+自由|じゆう|livre
+きっと||com certeza
+必ず|かならず|sem falta
+しっかり||firmemente, direito
+ずっと||o tempo todo; muito mais
+なかなか||bastante; (+neg.) não facilmente
+はっきり||claramente
+やっと||finalmente
+急に|きゅうに|de repente
+特に|とくに|especialmente
+もちろん||claro, com certeza
+例えば|たとえば|por exemplo
+これから||a partir de agora
+さっき||há pouco
+
+# Sentimentos e personalidade | 心 | N4
+気持ち|きもち|sentimento
+心配|しんぱい|preocupação
+安心|あんしん|alívio, tranquilidade
+興味|きょうみ|interesse
+趣味|しゅみ|hobby
+夢|ゆめ|sonho
+自信|じしん|autoconfiança
+緊張|きんちょう|nervosismo
+感動|かんどう|emoção, comoção
+性格|せいかく|personalidade
+明るい人|あかるいひと|pessoa alegre
+優しい人|やさしいひと|pessoa gentil
+真面目な人|まじめなひと|pessoa séria, esforçada
+怒りっぽい|おこりっぽい|irritadiço
+恥ずかしがり屋|はずかしがりや|tímido
+ホームシック||saudade de casa
+寂しい|さびしい|com saudade, solitário
+楽しみ|たのしみ|expectativa (ansioso por algo bom)
+びっくりする||levar um susto
+がっかりする||ficar decepcionado
+ほっとする||ficar aliviado
+いらいらする||ficar irritado
+笑顔|えがお|sorriso
+涙|なみだ|lágrima
+愛|あい|amor
+
+# Trabalho e escritório | 社 | N4
+仕事|しごと|trabalho
+会社員|かいしゃいん|funcionário de empresa
+社長|しゃちょう|presidente da empresa
+部長|ぶちょう|chefe de departamento
+上司|じょうし|chefe, superior
+同僚|どうりょう|colega de trabalho
+会議|かいぎ|reunião
+資料|しりょう|material, documentos
+給料|きゅうりょう|salário
+時給|じきゅう|salário por hora
+残業|ざんぎょう|hora extra
+休憩|きゅうけい|intervalo, pausa
+出張|しゅっちょう|viagem a trabalho
+面接|めんせつ|entrevista
+履歴書|りれきしょ|currículo
+経験|けいけん|experiência
+予定|よてい|plano, agenda
+連絡|れんらく|contato, aviso
+相談|そうだん|conversa para pedir conselho
+説明|せつめい|explicação
+準備|じゅんび|preparação
+担当|たんとう|responsável (por algo)
+お客様|おきゃくさま|cliente (respeitoso)
+店員|てんいん|atendente
+アルバイト||trabalho de meio período
+
+# Compras e dinheiro | 買 | N4
+値段|ねだん|preço
+お金|おかね|dinheiro
+お釣り|おつり|troco
+現金|げんきん|dinheiro vivo
+両替|りょうがえ|câmbio
+割引|わりびき|desconto
+半額|はんがく|metade do preço
+税込|ぜいこみ|com imposto
+売り切れ|うりきれ|esgotado
+品物|しなもの|mercadoria
+商品|しょうひん|produto
+特売|とくばい|promoção
+レジ袋|レジぶくろ|sacola de compras
+領収書|りょうしゅうしょ|recibo (formal)
+支払い|しはらい|pagamento
+貯金|ちょきん|poupança
+節約|せつやく|economia (poupar)
+無料|むりょう|grátis
+有料|ゆうりょう|pago, cobrado
+送料|そうりょう|frete
+返品|へんぴん|devolução
+交換|こうかん|troca
+試着|しちゃく|provar roupa
+サイズ||tamanho
+ポイント||pontos (fidelidade)
+
+# Saúde e hospital | 医 | N4
+健康|けんこう|saúde
+怪我|けが|ferimento
+咳|せき|tosse
+鼻水|はなみず|coriza
+喉|のど|garganta
+頭痛|ずつう|dor de cabeça
+吐き気|はきけ|náusea
+寒気|さむけ|calafrio
+下痢|げり|diarreia
+アレルギー||alergia
+入院|にゅういん|internação
+退院|たいいん|alta hospitalar
+注射|ちゅうしゃ|injeção
+手術|しゅじゅつ|cirurgia
+検査|けんさ|exame
+保険証|ほけんしょう|carteirinha do seguro
+処方箋|しょほうせん|receita médica
+薬局|やっきょく|farmácia
+歯医者|はいしゃ|dentista
+救急車|きゅうきゅうしゃ|ambulância
+予約|よやく|agendamento, reserva
+具合|ぐあい|condição (de saúde)
+調子|ちょうし|estado, condição
+体温|たいおん|temperatura corporal
+休む|やすむ|descansar
+
+# Natureza, clima e desastres | 災 | N4
+天気予報|てんきよほう|previsão do tempo
+台風|たいふう|tufão
+地震|じしん|terremoto
+津波|つなみ|tsunami
+大雨|おおあめ|chuva forte
+雷|かみなり|trovão
+梅雨|つゆ|estação das chuvas
+湿気|しっけ|umidade
+気温|きおん|temperatura (ar)
+温度|おんど|temperatura
+火事|かじ|incêndio
+避難|ひなん|evacuação
+避難所|ひなんじょ|abrigo
+非常口|ひじょうぐち|saída de emergência
+停電|ていでん|queda de energia
+断水|だんすい|corte de água
+桜|さくら|cerejeira
+紅葉|こうよう|folhas de outono
+森|もり|floresta
+島|しま|ilha
+
+# Tecnologia e internet | 技 | N4
+パソコン||computador
+スマホ||smartphone
+携帯電話|けいたいでんわ|celular
+充電|じゅうでん|carregar (bateria)
+充電器|じゅうでんき|carregador
+電池|でんち|pilha, bateria
+画面|がめん|tela
+アプリ||aplicativo
+メール||e-mail, mensagem
+インターネット||internet
+ワイファイ||Wi-Fi
+パスワード||senha
+ダウンロード||download
+登録|とうろく|cadastro
+ログイン||login
+検索|けんさく|busca
+送信|そうしん|enviar (mensagem)
+返信|へんしん|responder (mensagem)
+既読|きどく|lido (visualizado)
+写真を撮る|しゃしんをとる|tirar foto
+動画|どうが|vídeo
+印刷|いんさつ|impressão
+保存|ほぞん|salvar (arquivo)
+設定|せってい|configuração
+故障|こしょう|defeito, pane
+
+# Burocracia no Japão | 役 | Vida no Japão
+在留カード|ざいりゅうカード|cartão de residente
+住民票|じゅうみんひょう|certificado de residência
+市役所|しやくしょ|prefeitura
+窓口|まどぐち|guichê
+申請|しんせい|requerimento, solicitação
+手続き|てつづき|procedimento, trâmite
+書類|しょるい|documentos
+記入|きにゅう|preenchimento
+署名|しょめい|assinatura
+印鑑|いんかん|carimbo pessoal
+氏名|しめい|nome completo
+生年月日|せいねんがっぴ|data de nascimento
+住所|じゅうしょ|endereço
+国籍|こくせき|nacionalidade
+本人確認|ほんにんかくにん|confirmação de identidade
+口座|こうざ|conta bancária
+通帳|つうちょう|caderneta bancária
+暗証番号|あんしょうばんごう|senha (PIN)
+振込|ふりこみ|transferência bancária
+引き落とし|ひきおとし|débito automático
+契約|けいやく|contrato
+解約|かいやく|cancelamento de contrato
+期限|きげん|prazo
+更新|こうしん|renovação
+延長|えんちょう|prorrogação
+保険|ほけん|seguro
+年金|ねんきん|previdência
+税金|ぜいきん|imposto
+家賃|やちん|aluguel
+敷金|しききん|caução
+
+# Expressões do dia a dia | 話 | Vida no Japão
+お疲れ様です|おつかれさまです|bom trabalho (cumprimento)
+お先に失礼します|おさきにしつれいします|com licença, já vou indo
+お邪魔します|おじゃまします|com licença (ao entrar na casa de alguém)
+お大事に|おだいじに|melhoras!
+いただきます||(antes de comer)
+ごちそうさまでした||(depois de comer)
+お久しぶりです|おひさしぶりです|quanto tempo!
+おめでとうございます||parabéns
+どういたしまして||de nada
+気を付けて|きをつけて|tome cuidado
+頑張って|がんばって|força! boa sorte!
+お願いがあるんですが|おねがいがあるんですが|tenho um pedido a fazer
+ちょっといいですか||tem um minutinho?
+なるほど||entendi, faz sentido
+そうですね||é mesmo; deixe-me ver
+仕方がない|しかたがない|não tem jeito
+まあまあ||mais ou menos
+よろしく||conto com você (casual)
+大丈夫ですか|だいじょうぶですか|você está bem?
+もう一回|もういっかい|mais uma vez

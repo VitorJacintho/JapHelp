@@ -19,6 +19,8 @@ public class DictionaryView : UserControl
         _all = new();
         foreach (var l in ContentRepository.AllLessons)
             foreach (var v in l.VocabItems) _all.Add((v, l.Title));
+        foreach (var d in ContentRepository.Decks)
+            foreach (var v in d.Items) _all.Add((v, $"Deck {d.Level}: {d.Name}"));
         foreach (var c in ContentRepository.Phrases)
             foreach (var v in c.Items) _all.Add((v, "Frases: " + c.Name));
         foreach (var k in ContentRepository.Kanji)

@@ -28,6 +28,10 @@ public class Lesson
     /// <summary>[quem fala, japonês, leitura, tradução]</summary>
     public List<string[]> Dialog { get; set; } = new();
     public List<ExerciseDef> Exercises { get; set; } = new();
+    /// <summary>Texto para leitura: parágrafos [japonês, leitura (opcional), tradução].</summary>
+    public List<string[]> Text { get; set; } = new();
+    /// <summary>Título do texto (ex.: "Aviso do dormitório").</summary>
+    public string? TextTitle { get; set; }
     /// <summary>Kana ensinados nesta lição, separados por espaço (gera treino automático).</summary>
     public string? Kana { get; set; }
 
@@ -87,6 +91,15 @@ public class PhraseCategory
     public IEnumerable<VocabItem> Items => Phrases.Where(p => p.Length >= 3).Select(p => new VocabItem(p[0], p[1], p[2], "frases:" + Name));
 }
 
+public class VocabDeck
+{
+    public string Name { get; set; } = "";
+    public string Icon { get; set; } = "語";
+    public string Level { get; set; } = "";
+    public List<VocabItem> Items { get; set; } = new();
+    public string Key => Level + ":" + Name;
+}
+
 public enum ExType { Choice, Typing, Order, Listen }
 
 /// <summary>Exercício pronto para ser exibido pelo ExerciseRunner.</summary>
@@ -111,6 +124,8 @@ public class Exercise
     public bool BigJapanese { get; set; }
     /// <summary>Se true, o áudio entregaria a resposta: não toca antes de responder.</summary>
     public bool AudioRevealsAnswer { get; set; }
+    /// <summary>Texto de apoio (leitura) mostrado acima da pergunta.</summary>
+    public string? Passage { get; set; }
 
     public string CorrectAnswerText => Type switch
     {

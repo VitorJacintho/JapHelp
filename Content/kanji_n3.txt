@@ -1,0 +1,377 @@
+// Complemento do N4 e kanji do N3.
+// Formato: kanji|on'yomi|kun'yomi|significado|palavra:leitura:significado;...
+#N4
+同|ドウ|おな(じ)|mesmo, igual|同じ:おなじ:igual;同時:どうじ:ao mesmo tempo
+発|ハツ・ホツ||partir; emitir|出発:しゅっぱつ:partida;発表:はっぴょう:apresentação;発音:はつおん:pronúncia
+場|ジョウ|ば|lugar|場所:ばしょ:lugar;会場:かいじょう:local do evento;駐車場:ちゅうしゃじょう:estacionamento
+代|ダイ|か(わる)・よ|substituir; era; taxa|時代:じだい:época;電気代:でんきだい:conta de luz;代わりに:かわりに:em vez de
+通|ツウ|とお(る)・かよ(う)|passar; frequentar|通る:とおる:passar;通う:かよう:frequentar;交通:こうつう:trânsito
+主|シュ|ぬし・おも|principal; dono|主人:しゅじん:marido; dono;主に:おもに:principalmente
+度|ド|たび|grau; vez|今度:こんど:da próxima vez;温度:おんど:temperatura;一度:いちど:uma vez
+公|コウ|おおやけ|público|公園:こうえん:parque;公共:こうきょう:público
+野|ヤ|の|campo|野菜:やさい:verduras;野球:やきゅう:beisebol
+以|イ||a partir de; por meio de|以上:いじょう:acima de; isso é tudo;以下:いか:abaixo de;以外:いがい:exceto
+正|セイ・ショウ|ただ(しい)|correto|正しい:ただしい:correto;正月:しょうがつ:Ano-Novo
+心|シン|こころ|coração, mente|心:こころ:coração;安心:あんしん:alívio;心配:しんぱい:preocupação
+文|ブン・モン|ふみ|frase; escrita|文:ぶん:frase;文化:ぶんか:cultura;作文:さくぶん:redação
+元|ゲン・ガン|もと|origem|元気:げんき:animado;元日:がんじつ:1º de janeiro
+集|シュウ|あつ(まる)・あつ(める)|reunir|集まる:あつまる:reunir-se;集める:あつめる:coletar
+死|シ|し(ぬ)|morte|死ぬ:しぬ:morrer;必死:ひっし:desesperado, com todas as forças
+工|コウ・ク||construção, indústria|工場:こうじょう:fábrica;工事:こうじ:obras
+建|ケン|た(てる)|construir|建物:たてもの:prédio;建てる:たてる:construir
+研|ケン|と(ぐ)|polir; pesquisar|研究:けんきゅう:pesquisa;研修:けんしゅう:treinamento
+究|キュウ|きわ(める)|investigar|研究:けんきゅう:pesquisa;研究室:けんきゅうしつ:laboratório
+起|キ|お(きる)・お(こす)|acordar; ocorrer|起きる:おきる:acordar;起こす:おこす:acordar alguém, causar
+去|キョ・コ|さ(る)|passado; ir embora|去年:きょねん:ano passado;過去:かこ:passado
+味|ミ|あじ|sabor|味:あじ:sabor;意味:いみ:significado;趣味:しゅみ:hobby
+字|ジ|あざ|letra, caractere|漢字:かんじ:kanji;文字:もじ:letra, caractere
+風|フウ|かぜ|vento; estilo|風:かぜ:vento;台風:たいふう:tufão;和風:わふう:estilo japonês
+紙|シ|かみ|papel|紙:かみ:papel;手紙:てがみ:carta
+鳥|チョウ|とり|pássaro|鳥:とり:pássaro;焼き鳥:やきとり:espetinho de frango
+犬|ケン|いぬ|cachorro|犬:いぬ:cachorro;子犬:こいぬ:filhote de cachorro
+洋|ヨウ||oceano; ocidental|洋服:ようふく:roupa ocidental;太平洋:たいへいよう:Oceano Pacífico
+漢|カン||China (Han)|漢字:かんじ:kanji
+英|エイ||Inglaterra; excelente|英語:えいご:inglês;英会話:えいかいわ:conversação em inglês
+#N3
+政|セイ・ショウ|まつりごと|governo, política|政治:せいじ:política;政府:せいふ:governo
+治|ジ・チ|なお(る)・おさ(める)|governar; curar|政治:せいじ:política;治る:なおる:sarar
+議|ギ||deliberação|会議:かいぎ:reunião;議論:ぎろん:discussão
+民|ミン|たみ|povo|国民:こくみん:cidadão, povo;住民:じゅうみん:morador
+連|レン|つ(れる)|levar junto; ligar|連絡:れんらく:contato;連れる:つれる:levar (alguém)
+絡|ラク|から(む)|enredar|連絡:れんらく:contato, aviso
+対|タイ・ツイ||oposto; contra|反対:はんたい:oposição;対して:たいして:em relação a
+部|ブ||parte; departamento|部屋:へや:quarto;全部:ぜんぶ:tudo;部長:ぶちょう:chefe de departamento
+合|ゴウ・ガッ|あ(う)|encaixar; juntar|試合:しあい:partida;都合:つごう:conveniência;似合う:にあう:ficar bem
+内|ナイ|うち|dentro|案内:あんない:guia, orientação;国内:こくない:nacional
+案|アン||plano, proposta|案内:あんない:orientação;案:あん:ideia, proposta
+相|ソウ・ショウ|あい|mútuo; ministro|相談:そうだん:consulta, conselho;相手:あいて:parceiro, outra parte
+談|ダン||conversa|相談:そうだん:consulta;冗談:じょうだん:piada
+定|テイ・ジョウ|さだ(める)|determinar|予定:よてい:plano;定食:ていしょく:prato feito
+回|カイ|まわ(る)|vez; girar|一回:いっかい:uma vez;回る:まわる:girar;今回:こんかい:desta vez
+選|セン|えら(ぶ)|escolher|選ぶ:えらぶ:escolher;選手:せんしゅ:atleta
+実|ジツ|み・みの(る)|real; fruto|実は:じつは:na verdade;実際:じっさい:na prática
+際|サイ|きわ|ocasião; borda|国際:こくさい:internacional;実際:じっさい:na realidade
+決|ケツ|き(める)・き(まる)|decidir|決める:きめる:decidir;決まる:きまる:ser decidido
+全|ゼン|まった(く)|todo|全部:ぜんぶ:tudo;全然:ぜんぜん:nem um pouco;安全:あんぜん:segurança
+表|ヒョウ|おもて・あらわ(す)|tabela; superfície; expressar|発表:はっぴょう:apresentação;表:ひょう:tabela;表す:あらわす:expressar
+戦|セン|たたか(う)|guerra; lutar|戦争:せんそう:guerra;戦う:たたかう:lutar
+争|ソウ|あらそ(う)|disputar|戦争:せんそう:guerra;競争:きょうそう:competição
+経|ケイ|へ(る)|passar; economia|経験:けいけん:experiência;経済:けいざい:economia
+済|サイ|す(む)|terminar; acertar|経済:けいざい:economia;済む:すむ:resolver-se, terminar
+最|サイ|もっと(も)|o mais|最近:さいきん:recentemente;最初:さいしょ:o primeiro;最後:さいご:o último
+初|ショ|はじ(め)・はつ|primeiro|最初:さいしょ:primeiro;初めて:はじめて:pela primeira vez
+現|ゲン|あらわ(れる)|aparecer; atual|現在:げんざい:atualmente;現金:げんきん:dinheiro vivo
+在|ザイ|あ(る)|existir|在留カード:ざいりゅうカード:cartão de residente;現在:げんざい:presente
+調|チョウ|しら(べる)|investigar; tom|調べる:しらべる:pesquisar;調子:ちょうし:condição, estado
+当|トウ|あ(たる)・あ(てる)|acertar; este|本当:ほんとう:verdade;弁当:べんとう:marmita;担当:たんとう:responsável
+法|ホウ||lei; método|方法:ほうほう:método;文法:ぶんぽう:gramática
+性|セイ・ショウ||natureza; sexo|男性:だんせい:homem;女性:じょせい:mulher;性格:せいかく:personalidade
+格|カク||status, caso|性格:せいかく:personalidade;合格:ごうかく:aprovação;価格:かかく:preço
+要|ヨウ|い(る)|necessário|必要:ひつよう:necessário;要る:いる:precisar
+必|ヒツ|かなら(ず)|certamente|必ず:かならず:sem falta;必要:ひつよう:necessário
+務|ム|つと(める)|dever, serviço|事務所:じむしょ:escritório;義務:ぎむ:obrigação
+成|セイ|な(る)|tornar-se; completar|成功:せいこう:sucesso;成績:せいせき:notas (escolares)
+期|キ・ゴ||período|期間:きかん:período;学期:がっき:semestre;期待:きたい:expectativa
+取|シュ|と(る)|pegar|取る:とる:pegar;受け取る:うけとる:receber
+和|ワ|やわ(らぐ)|harmonia; Japão|和食:わしょく:comida japonesa;平和:へいわ:paz
+平|ヘイ・ビョウ|たい(ら)・ひら|plano; paz|平和:へいわ:paz;平日:へいじつ:dia útil
+機|キ|はた|máquina; ocasião|機械:きかい:máquina;飛行機:ひこうき:avião
+械|カイ||máquina|機械:きかい:máquina
+加|カ|くわ(える)|adicionar|参加:さんか:participação;追加:ついか:adição
+参|サン|まい(る)|participar; ir (humilde)|参加:さんか:participação;参考:さんこう:referência
+続|ゾク|つづ(く)・つづ(ける)|continuar|続く:つづく:continuar;手続き:てつづき:procedimento
+進|シン|すす(む)|avançar|進む:すすむ:avançar;進学:しんがく:seguir os estudos
+数|スウ|かず・かぞ(える)|número; contar|数学:すうがく:matemática;数える:かぞえる:contar
+記|キ|しる(す)|registrar|記入:きにゅう:preenchimento;日記:にっき:diário
+指|シ|ゆび・さ(す)|dedo; apontar|指:ゆび:dedo;指定席:していせき:assento reservado
+支|シ|ささ(える)|apoiar; ramo|支払い:しはらい:pagamento;支える:ささえる:apoiar
+産|サン|う(む)|produzir; dar à luz|お土産:おみやげ:lembrancinha;生産:せいさん:produção
+点|テン||ponto|点:てん:ponto, nota;交差点:こうさてん:cruzamento
+報|ホウ|むく(いる)|notícia; recompensa|情報:じょうほう:informação;天気予報:てんきよほう:previsão do tempo
+情|ジョウ|なさ(け)|emoção; situação|情報:じょうほう:informação;感情:かんじょう:emoção
+活|カツ||vida, atividade|生活:せいかつ:vida cotidiana;活動:かつどう:atividade
+原|ゲン|はら|campo; original|原因:げんいん:causa;原宿:はらじゅく:Harajuku
+因|イン|よ(る)|causa|原因:げんいん:causa
+共|キョウ|とも|juntos|共通:きょうつう:em comum;共に:ともに:juntos
+得|トク|え(る)・う(る)|obter; vantagem|得意:とくい:ponto forte;得る:える:obter
+解|カイ|と(く)|resolver|理解:りかい:compreensão;解く:とく:resolver
+交|コウ|ま(じわる)|cruzar; trocar|交通:こうつう:trânsito;交換:こうかん:troca
+資|シ||recursos|資料:しりょう:material, documentos;資格:しかく:qualificação
+向|コウ|む(く)・む(かう)|direção; virar-se|向かう:むかう:dirigir-se a;方向:ほうこう:direção
+勝|ショウ|か(つ)|vencer|勝つ:かつ:vencer;勝手:かって:egoísta, por conta própria
+負|フ|ま(ける)・お(う)|perder; carregar|負ける:まける:perder;勝負:しょうぶ:disputa
+面|メン|おもて・つら|rosto; superfície|面白い:おもしろい:interessante;画面:がめん:tela;面接:めんせつ:entrevista
+接|セツ|つ(ぐ)|contato, ligar|面接:めんせつ:entrevista;直接:ちょくせつ:diretamente
+告|コク|つ(げる)|anunciar|広告:こうこく:anúncio;報告:ほうこく:relatório
+反|ハン|そ(る)|contra|反対:はんたい:oposição;反省:はんせい:reflexão (autocrítica)
+判|ハン・バン||julgar; carimbo|判断:はんだん:julgamento;評判:ひょうばん:reputação
+断|ダン|ことわ(る)|recusar; cortar|断る:ことわる:recusar;判断:はんだん:julgamento
+認|ニン|みと(める)|reconhecer|確認:かくにん:confirmação;認める:みとめる:admitir
+確|カク|たし(か)|certo|確認:かくにん:confirmação;確か:たしか:certo; se não me engano
+利|リ|き(く)|lucro; vantagem|便利:べんり:prático;利用:りよう:uso
+組|ソ|く(む)|grupo; montar|番組:ばんぐみ:programa (TV);組:くみ:turma
+信|シン||crença; sinal|信号:しんごう:semáforo;自信:じしん:autoconfiança;信じる:しんじる:acreditar
+件|ケン||caso, assunto|事件:じけん:caso, incidente;条件:じょうけん:condição
+側|ソク|がわ|lado|右側:みぎがわ:lado direito;両側:りょうがわ:ambos os lados
+任|ニン|まか(せる)|encarregar|担任:たんにん:professor responsável;任せる:まかせる:confiar a
+求|キュウ|もと(める)|buscar, pedir|求める:もとめる:pedir, buscar;要求:ようきゅう:exigência
+所|ショ|ところ|lugar|台所:だいどころ:cozinha;住所:じゅうしょ:endereço;近所:きんじょ:vizinhança
+次|ジ|つぎ|próximo|次:つぎ:próximo;次回:じかい:próxima vez
+昨|サク||anterior (ontem)|昨日:きのう:ontem;昨年:さくねん:ano passado (formal)
+論|ロン||argumento, teoria|議論:ぎろん:discussão;論文:ろんぶん:artigo acadêmico, tese
+官|カン||oficial do governo|警官:けいかん:policial;官庁:かんちょう:órgão do governo
+警|ケイ||advertir|警察:けいさつ:polícia;警報:けいほう:alerta
+察|サツ||observar|警察:けいさつ:polícia;観察:かんさつ:observação
+増|ゾウ|ふ(える)・ま(す)|aumentar|増える:ふえる:aumentar;増加:ぞうか:aumento
+減|ゲン|へ(る)|diminuir|減る:へる:diminuir;減少:げんしょう:redução
+感|カン||sentir|感じる:かんじる:sentir;感謝:かんしゃ:gratidão
+謝|シャ|あやま(る)|agradecer; desculpar-se|謝る:あやまる:pedir desculpas;感謝:かんしゃ:gratidão
+投|トウ|な(げる)|lançar|投げる:なげる:arremessar;投票:とうひょう:votação
+示|ジ・シ|しめ(す)|mostrar|示す:しめす:indicar;指示:しじ:instrução
+変|ヘン|か(わる)・か(える)|mudar; estranho|変わる:かわる:mudar;大変:たいへん:difícil, muito;変:へん:estranho
+打|ダ|う(つ)|bater|打つ:うつ:bater, digitar;打ち合わせ:うちあわせ:reunião preparatória
+直|チョク・ジキ|なお(す)・ただ(ちに)|direto; consertar|直す:なおす:consertar;直接:ちょくせつ:diretamente;正直:しょうじき:honesto
+式|シキ||cerimônia; estilo|結婚式:けっこんしき:casamento;入学式:にゅうがくしき:cerimônia de ingresso
+果|カ|は(たす)|fruto; resultado|結果:けっか:resultado;果物:くだもの:fruta
+結|ケツ|むす(ぶ)|amarrar; concluir|結婚:けっこん:casamento;結果:けっか:resultado
+婚|コン||casamento|結婚:けっこん:casamento;離婚:りこん:divórcio
+容|ヨウ||conteúdo; forma|内容:ないよう:conteúdo;美容院:びよういん:salão de beleza
+演|エン||atuar|演奏:えんそう:apresentação musical;講演:こうえん:palestra
+歳|サイ・セイ|とし|idade (anos)|二十歳:はたち:20 anos;何歳:なんさい:quantos anos
+能|ノウ||capacidade|可能:かのう:possível;能力:のうりょく:habilidade
+位|イ|くらい|posição, nível|位置:いち:posição;一位:いちい:primeiro lugar
+置|チ|お(く)|colocar|置く:おく:colocar;位置:いち:posição
+流|リュウ|なが(れる)|fluir|流れる:ながれる:correr (água);交流:こうりゅう:intercâmbio
+疑|ギ|うたが(う)|duvidar|疑問:ぎもん:dúvida;疑う:うたがう:desconfiar
+過|カ|す(ぎる)・す(ごす)|passar; excesso|過ごす:すごす:passar (o tempo);過去:かこ:passado
+局|キョク||repartição|郵便局:ゆうびんきょく:correio;薬局:やっきょく:farmácia
+郵|ユウ||correio|郵便局:ゆうびんきょく:correio;郵送:ゆうそう:envio pelo correio
+放|ホウ|はな(す)|soltar|放送:ほうそう:transmissão;放課後:ほうかご:depois da aula
+状|ジョウ||estado; carta|状況:じょうきょう:situação;招待状:しょうたいじょう:convite (cartão)
+球|キュウ|たま|bola, esfera|野球:やきゅう:beisebol;地球:ちきゅう:planeta Terra
+職|ショク||emprego|就職:しゅうしょく:conseguir emprego;職員:しょくいん:funcionário
+就|シュウ|つ(く)|assumir (cargo)|就職:しゅうしょく:conseguir emprego;就職活動:しゅうしょくかつどう:procura de emprego
+供|キョウ|とも・そな(える)|oferecer; acompanhar|子供:こども:criança;提供:ていきょう:oferecimento
+役|ヤク・エキ||papel, função|役に立つ:やくにたつ:ser útil;市役所:しやくしょ:prefeitura
+構|コウ|かま(う)|estrutura; importar-se|結構:けっこう:bastante; tudo bem (recusa);構いません:かまいません:não tem problema
+費|ヒ|つい(やす)|despesa|費用:ひよう:custo;交通費:こうつうひ:auxílio transporte;生活費:せいかつひ:custo de vida
+由|ユ・ユウ|よし|motivo|理由:りゆう:motivo;自由:じゆう:liberdade
+難|ナン|むずか(しい)|difícil|難しい:むずかしい:difícil;困難:こんなん:dificuldade
+優|ユウ|やさ(しい)・すぐ(れる)|gentil; excelente|優しい:やさしい:gentil;優勝:ゆうしょう:vitória (campeonato)
+夫|フ・フウ|おっと|marido|夫:おっと:(meu) marido;大丈夫:だいじょうぶ:tudo bem
+妻|サイ|つま|esposa|妻:つま:(minha) esposa;夫妻:ふさい:casal
+収|シュウ|おさ(める)|obter, receber|収入:しゅうにゅう:renda;領収書:りょうしゅうしょ:recibo
+石|セキ|いし|pedra|石:いし:pedra;石けん:せっけん:sabonete
+違|イ|ちが(う)|diferir|違う:ちがう:ser diferente, errado;間違い:まちがい:erro
+消|ショウ|け(す)・き(える)|apagar|消す:けす:apagar, desligar;消しゴム:けしゴム:borracha
+神|シン・ジン|かみ|deus|神社:じんじゃ:santuário;神様:かみさま:deus
+規|キ||regra|規則:きそく:regra;正規:せいき:oficial, regular
+則|ソク||regra|規則:きそく:regra;原則:げんそく:princípio
+術|ジュツ||técnica, arte|美術館:びじゅつかん:museu de arte;手術:しゅじゅつ:cirurgia
+宅|タク||residência|自宅:じたく:a própria casa;宅配便:たくはいびん:entrega em domicílio
+害|ガイ||dano|被害:ひがい:dano;災害:さいがい:desastre
+配|ハイ|くば(る)|distribuir|心配:しんぱい:preocupação;配る:くばる:distribuir
+育|イク|そだ(てる)|criar, educar|教育:きょういく:educação;育てる:そだてる:criar
+訪|ホウ|たず(ねる)・おとず(れる)|visitar|訪ねる:たずねる:visitar;訪問:ほうもん:visita
+残|ザン|のこ(る)|restar|残る:のこる:sobrar;残念:ざんねん:que pena;残業:ざんぎょう:hora extra
+念|ネン||pensamento|残念:ざんねん:que pena;記念:きねん:comemoração
+想|ソウ||ideia, imaginar|感想:かんそう:impressão;予想:よそう:previsão
+助|ジョ|たす(ける)|ajudar|助ける:たすける:ajudar, salvar;助かる:たすかる:ser de grande ajuda
+労|ロウ||trabalho; esforço|苦労:くろう:sofrimento, esforço;労働:ろうどう:trabalho braçal
+例|レイ|たと(える)|exemplo|例えば:たとえば:por exemplo;例:れい:exemplo
+然|ゼン・ネン||assim; natureza|自然:しぜん:natureza;全然:ぜんぜん:nem um pouco;突然:とつぜん:de repente
+限|ゲン|かぎ(る)|limite|期限:きげん:prazo;限る:かぎる:limitar
+追|ツイ|お(う)|perseguir|追う:おう:perseguir;追加:ついか:adição
+商|ショウ|あきな(う)|comércio|商品:しょうひん:produto;商店街:しょうてんがい:rua comercial
+葉|ヨウ|は|folha|言葉:ことば:palavra;葉:は:folha
+伝|デン|つた(える)|transmitir|伝える:つたえる:transmitir;手伝う:てつだう:ajudar
+形|ケイ・ギョウ|かたち|forma|形:かたち:forma;人形:にんぎょう:boneca
+景|ケイ||paisagem|景色:けしき:paisagem;景気:けいき:situação econômica
+落|ラク|お(ちる)・お(とす)|cair|落ちる:おちる:cair; reprovar;落とし物:おとしもの:objeto perdido
+好|コウ|す(き)・この(む)|gostar|好き:すき:gostar;好物:こうぶつ:comida favorita
+退|タイ|しりぞ(く)|recuar|退院:たいいん:alta hospitalar;退屈:たいくつ:tédio
+渡|ト|わた(る)・わた(す)|atravessar; entregar|渡る:わたる:atravessar;渡す:わたす:entregar
+失|シツ|うしな(う)|perder|失礼:しつれい:falta de educação;失敗:しっぱい:fracasso
+敗|ハイ|やぶ(れる)|derrota|失敗:しっぱい:fracasso;勝敗:しょうはい:vitória ou derrota
+差|サ|さ(す)|diferença|差:さ:diferença;交差点:こうさてん:cruzamento
+末|マツ|すえ|fim|週末:しゅうまつ:fim de semana;年末:ねんまつ:fim de ano
+守|シュ・ス|まも(る)|proteger|守る:まもる:proteger, cumprir;留守:るす:ausência (de casa)
+留|リュウ・ル|と(める)|ficar; reter|留学:りゅうがく:estudar no exterior;留守:るす:fora de casa
+若|ジャク|わか(い)|jovem|若い:わかい:jovem;若者:わかもの:jovens
+種|シュ|たね|tipo; semente|種類:しゅるい:tipo;種:たね:semente
+類|ルイ||tipo, classe|種類:しゅるい:tipo;書類:しょるい:documentos
+美|ビ|うつく(しい)|beleza|美しい:うつくしい:belo;美術館:びじゅつかん:museu de arte
+命|メイ|いのち|vida; ordem|命:いのち:vida;一生懸命:いっしょうけんめい:com todo o esforço
+福|フク||sorte, felicidade|幸福:こうふく:felicidade;福岡:ふくおか:Fukuoka
+幸|コウ|しあわ(せ)・さいわ(い)|felicidade|幸せ:しあわせ:feliz;幸い:さいわい:felizmente
+望|ボウ|のぞ(む)|desejar|希望:きぼう:esperança, desejo;望む:のぞむ:desejar
+希|キ||raro; esperança|希望:きぼう:desejo
+観|カン||ver, observar|観光:かんこう:turismo;観客:かんきゃく:público
+光|コウ|ひかり・ひか(る)|luz|光:ひかり:luz;観光:かんこう:turismo
+横|オウ|よこ|lado, horizontal|横:よこ:ao lado;横断歩道:おうだんほどう:faixa de pedestres
+深|シン|ふか(い)|profundo|深い:ふかい:profundo;深夜:しんや:madrugada
+申|シン|もう(す)|dizer (humilde); solicitar|申し込み:もうしこみ:inscrição;申請:しんせい:requerimento
+様|ヨウ|さま|senhor; modo|〜様:さま:Sr./Sra.;様子:ようす:aparência, situação
+港|コウ|みなと|porto|空港:くうこう:aeroporto;港:みなと:porto
+識|シキ||conhecer|知識:ちしき:conhecimento;常識:じょうしき:senso comum
+呼|コ|よ(ぶ)|chamar|呼ぶ:よぶ:chamar;呼吸:こきゅう:respiração
+達|タツ||alcançar|友達:ともだち:amigo;配達:はいたつ:entrega
+良|リョウ|よ(い)|bom|良い:よい:bom;不良:ふりょう:defeituoso, delinquente
+候|コウ|そうろう|clima; candidato|天候:てんこう:clima;候補:こうほ:candidato
+程|テイ|ほど|grau, limite|程度:ていど:grau, nível;日程:にってい:agenda
+値|チ|ね・あたい|preço, valor|値段:ねだん:preço;値上げ:ねあげ:aumento de preço
+突|トツ|つ(く)|espetar; súbito|突然:とつぜん:de repente;突き当たり:つきあたり:fim da rua
+路|ロ|じ|caminho|道路:どうろ:estrada;線路:せんろ:trilho
+科|カ||disciplina; departamento|科目:かもく:disciplina;内科:ないか:clínica geral
+積|セキ|つ(む)|acumular|積極的:せっきょくてき:ativo, proativo;面積:めんせき:área
+他|タ|ほか|outro|他:ほか:outro;その他:そのた:outros
+処|ショ||lidar; lugar|処理:しょり:tratamento, processamento;処方箋:しょほうせん:receita médica
+太|タイ・タ|ふと(い)|gordo, grosso|太い:ふとい:grosso;太る:ふとる:engordar;太陽:たいよう:sol
+客|キャク・カク||cliente, visita|お客さん:おきゃくさん:cliente;客室:きゃくしつ:quarto de hóspedes
+師|シ||mestre|医師:いし:médico;教師:きょうし:professor
+登|トウ・ト|のぼ(る)|subir|登る:のぼる:escalar;登録:とうろく:registro
+録|ロク||registrar|登録:とうろく:registro;記録:きろく:registro, recorde
+易|エキ・イ|やさ(しい)|fácil; comércio|易しい:やさしい:fácil;貿易:ぼうえき:comércio exterior
+速|ソク|はや(い)|rápido|速い:はやい:rápido;高速:こうそく:alta velocidade;速達:そくたつ:entrega expressa
+存|ソン・ゾン||existir; saber|ご存じ:ごぞんじ:saber (respeitoso);保存:ほぞん:salvar, conservar
+飛|ヒ|と(ぶ)|voar|飛ぶ:とぶ:voar;飛行機:ひこうき:avião
+単|タン||simples|簡単:かんたん:fácil;単語:たんご:vocábulo;単位:たんい:créditos
+簡|カン||simples|簡単:かんたん:fácil
+座|ザ|すわ(る)|sentar; assento|座る:すわる:sentar;口座:こうざ:conta bancária
+破|ハ|やぶ(る)|rasgar, romper|破る:やぶる:rasgar, quebrar (regra)
+除|ジョ|のぞ(く)|remover|掃除:そうじ:limpeza;除く:のぞく:excluir
+掃|ソウ|は(く)|varrer|掃除:そうじ:limpeza;掃除機:そうじき:aspirador
+完|カン||completo|完成:かんせい:conclusão;完全:かんぜん:perfeito, completo
+降|コウ|お(りる)・ふ(る)|descer; cair (chuva)|降りる:おりる:descer (do trem);降る:ふる:cair (chuva)
+責|セキ|せ(める)|responsabilidade|責任:せきにん:responsabilidade
+給|キュウ||salário; fornecer|給料:きゅうりょう:salário;時給:じきゅう:salário por hora
+苦|ク|くる(しい)・にが(い)|sofrimento; amargo|苦しい:くるしい:doloroso;苦手:にがて:ponto fraco
+迎|ゲイ|むか(える)|receber, buscar|迎える:むかえる:receber, ir buscar;歓迎:かんげい:boas-vindas
+園|エン|その|jardim|公園:こうえん:parque;動物園:どうぶつえん:zoológico
+具|グ||ferramenta|道具:どうぐ:ferramenta;家具:かぐ:móveis
+辞|ジ|や(める)|palavra; renunciar|辞書:じしょ:dicionário;辞める:やめる:largar (emprego)
+馬|バ|うま|cavalo|馬:うま:cavalo;馬鹿:ばか:bobo
+愛|アイ||amor|愛:あい:amor;恋愛:れんあい:romance
+彼|ヒ|かれ・かの|ele|彼:かれ:ele; namorado;彼女:かのじょ:ela; namorada
+未|ミ||ainda não|未来:みらい:futuro;未成年:みせいねん:menor de idade
+冷|レイ|つめ(たい)・ひ(える)|frio (ao toque)|冷たい:つめたい:gelado;冷蔵庫:れいぞうこ:geladeira
+適|テキ||adequado|適当:てきとう:adequado; descuidado;快適:かいてき:confortável
+寄|キ|よ(る)|aproximar; passar por|寄る:よる:passar em (algum lugar);年寄り:としより:idoso
+王|オウ||rei|王様:おうさま:rei;王子:おうじ:príncipe
+返|ヘン|かえ(す)|devolver|返す:かえす:devolver;返事:へんじ:resposta
+背|ハイ|せ・せい|costas; altura|背:せ:altura, costas;背中:せなか:costas
+熱|ネツ|あつ(い)|calor; febre|熱:ねつ:febre;熱い:あつい:quente (ao toque)
+宿|シュク|やど|hospedagem|宿題:しゅくだい:lição de casa;新宿:しんじゅく:Shinjuku
+頼|ライ|たの(む)・たよ(る)|pedir; confiar|頼む:たのむ:pedir;信頼:しんらい:confiança
+覚|カク|おぼ(える)・さ(める)|lembrar; acordar|覚える:おぼえる:memorizar;目覚まし:めざまし:despertador
+船|セン|ふね|navio|船:ふね:navio;風船:ふうせん:balão
+途|ト||caminho|途中:とちゅう:no meio do caminho
+許|キョ|ゆる(す)|permitir|許す:ゆるす:perdoar, permitir;免許:めんきょ:licença, carteira
+抜|バツ|ぬ(く)|extrair|抜く:ぬく:tirar;〜抜き:ぬき:sem ~
+罪|ザイ|つみ|crime|犯罪:はんざい:crime;罪:つみ:pecado, crime
+犯|ハン|おか(す)|crime; violar|犯人:はんにん:criminoso;犯罪:はんざい:crime
+努|ド|つと(める)|esforço|努力:どりょく:esforço
+精|セイ||espírito; refinado|精神:せいしん:mente, espírito;精算:せいさん:acerto de contas
+散|サン|ち(る)|espalhar|散歩:さんぽ:passeio;散らかる:ちらかる:estar bagunçado
+静|セイ|しず(か)|silencioso|静か:しずか:silencioso;冷静:れいせい:calmo
+喜|キ|よろこ(ぶ)|alegria|喜ぶ:よろこぶ:alegrar-se
+浮|フ|う(く)|flutuar|浮く:うく:flutuar
+絶|ゼツ|た(える)|cortar; absolutamente|絶対:ぜったい:com certeza;絶対に:ぜったいに:de jeito nenhum (+neg.)
+倒|トウ|たお(れる)|cair|倒れる:たおれる:desmaiar, cair;面倒:めんどう:trabalhoso, chato
+等|トウ|ひと(しい)|igual; classe|平等:びょうどう:igualdade;等:など:etc.
+老|ロウ|お(いる)|velho|老人:ろうじん:idoso
+曲|キョク|ま(がる)|curva; música|曲がる:まがる:virar;曲:きょく:música
+庭|テイ|にわ|jardim|庭:にわ:jardim;家庭:かてい:lar
+徒|ト||aluno; a pé|生徒:せいと:aluno (escola);徒歩:とほ:a pé
+勤|キン|つと(める)|trabalhar|通勤:つうきん:ir ao trabalho;勤める:つとめる:trabalhar em
+遅|チ|おそ(い)・おく(れる)|atrasado, lento|遅い:おそい:lento, tarde;遅れる:おくれる:atrasar;遅刻:ちこく:atraso
+居|キョ|い(る)|morar; estar|居酒屋:いざかや:izakaya;居間:いま:sala de estar
+雑|ザツ||misturado|雑誌:ざっし:revista;複雑:ふくざつ:complicado
+招|ショウ|まね(く)|convidar|招待:しょうたい:convite;招く:まねく:convidar
+困|コン|こま(る)|apuro|困る:こまる:ficar em apuros
+欠|ケツ|か(ける)|faltar|欠席:けっせき:ausência;欠点:けってん:defeito
+更|コウ|さら・ふ(ける)|renovar; além disso|変更:へんこう:mudança;更新:こうしん:renovação
+刻|コク|きざ(む)|gravar; tempo|遅刻:ちこく:atraso;時刻表:じこくひょう:quadro de horários
+賛|サン||aprovar|賛成:さんせい:concordância
+抱|ホウ|だ(く)・かか(える)|abraçar|抱く:だく:abraçar
+恐|キョウ|おそ(れる)|medo|恐い:こわい:assustador;恐れ入ります:おそれいります:desculpe o incômodo
+息|ソク|いき|respiração; filho|息:いき:respiração;息子:むすこ:filho
+戻|レイ|もど(る)|voltar|戻る:もどる:voltar;払い戻し:はらいもどし:reembolso
+願|ガン|ねが(う)|desejar, pedir|お願い:おねがい:pedido, por favor;願う:ねがう:desejar
+絵|カイ・エ||desenho, pintura|絵:え:desenho;絵本:えほん:livro ilustrado
+越|エツ|こ(す)|ultrapassar|引っ越し:ひっこし:mudança (de casa);越える:こえる:ultrapassar
+欲|ヨク|ほ(しい)|desejo|欲しい:ほしい:querer;食欲:しょくよく:apetite
+痛|ツウ|いた(い)|dor|痛い:いたい:dolorido;頭痛:ずつう:dor de cabeça
+笑|ショウ|わら(う)・え(む)|rir|笑う:わらう:rir;笑顔:えがお:sorriso
+互|ゴ|たが(い)|mútuo|お互い:おたがい:um ao outro
+束|ソク|たば|feixe; promessa|約束:やくそく:promessa, compromisso;花束:はなたば:buquê
+似|ジ|に(る)|parecer-se|似ている:にている:ser parecido;似合う:にあう:combinar
+列|レツ||fila|列:れつ:fila;行列:ぎょうれつ:fila (de gente)
+探|タン|さが(す)|procurar|探す:さがす:procurar;探検:たんけん:exploração
+逃|トウ|に(げる)|fugir|逃げる:にげる:fugir
+遊|ユウ|あそ(ぶ)|brincar|遊ぶ:あそぶ:se divertir;遊園地:ゆうえんち:parque de diversões
+迷|メイ|まよ(う)|perder-se|迷う:まよう:perder-se, hesitar;迷惑:めいわく:incômodo
+夢|ム|ゆめ|sonho|夢:ゆめ:sonho;夢中:むちゅう:absorto
+君|クン|きみ|você (íntimo)|君:きみ:você;〜君:くん:sufixo para rapazes
+緒|ショ・チョ|お|início; laço|一緒に:いっしょに:juntos
+折|セツ|お(る)・お(れる)|dobrar, quebrar|折る:おる:dobrar;折り返し:おりかえし:retorno (ligação)
+草|ソウ|くさ|grama|草:くさ:grama, mato
+暮|ボ|く(らす)|viver; anoitecer|暮らす:くらす:viver;一人暮らし:ひとりぐらし:morar sozinho
+酒|シュ|さけ|bebida alcoólica|お酒:おさけ:bebida alcoólica;日本酒:にほんしゅ:saquê
+悲|ヒ|かな(しい)|triste|悲しい:かなしい:triste
+晴|セイ|は(れる)|céu limpo|晴れ:はれ:tempo bom;晴れる:はれる:abrir o tempo
+掛|カイ|か(ける)|pendurar|掛ける:かける:pendurar, ligar (telefone)
+到|トウ||chegar|到着:とうちゃく:chegada
+寝|シン|ね(る)|dormir|寝る:ねる:dormir;昼寝:ひるね:soneca
+盗|トウ|ぬす(む)|roubar|盗む:ぬすむ:roubar;盗難:とうなん:furto
+吸|キュウ|す(う)|inspirar, sugar|吸う:すう:fumar, inspirar;呼吸:こきゅう:respiração
+陽|ヨウ||sol, positivo|太陽:たいよう:sol;陽気:ようき:alegre
+御|ゴ・ギョ|おん|honorífico|御飯:ごはん:refeição;御中:おんちゅう:(endereçamento a empresas)
+歯|シ|は|dente|歯:は:dente;歯医者:はいしゃ:dentista
+忘|ボウ|わす(れる)|esquecer|忘れる:わすれる:esquecer;忘れ物:わすれもの:objeto esquecido
+雪|セツ|ゆき|neve|雪:ゆき:neve;大雪:おおゆき:nevasca
+吹|スイ|ふ(く)|soprar|吹く:ふく:soprar
+娘|ジョウ|むすめ|filha|娘:むすめ:filha
+誤|ゴ|あやま(る)|erro|誤解:ごかい:mal-entendido
+洗|セン|あら(う)|lavar|洗う:あらう:lavar;洗濯:せんたく:lavar roupa
+慣|カン|な(れる)|acostumar-se|慣れる:なれる:acostumar-se;習慣:しゅうかん:hábito
+礼|レイ・ライ||cortesia; agradecimento|失礼:しつれい:falta de educação;お礼:おれい:agradecimento
+窓|ソウ|まど|janela|窓:まど:janela;窓口:まどぐち:guichê
+昔|セキ・シャク|むかし|antigamente|昔:むかし:antigamente;昔話:むかしばなし:conto antigo
+怒|ド|おこ(る)・いか(る)|raiva|怒る:おこる:ficar bravo
+泳|エイ|およ(ぐ)|nadar|泳ぐ:およぐ:nadar;水泳:すいえい:natação
+祖|ソ||ancestral|祖父:そふ:avô;祖母:そぼ:avó
+杯|ハイ|さかずき|copo|一杯:いっぱい:um copo; cheio;乾杯:かんぱい:brinde
+疲|ヒ|つか(れる)|cansar|疲れる:つかれる:cansar-se;お疲れ様:おつかれさま:bom trabalho
+皆|カイ|みな・みんな|todos|皆さん:みなさん:todos (vocês)
+鳴|メイ|な(く)・な(る)|cantar; soar|鳴く:なく:cantar (animal);鳴る:なる:tocar (som)
+腹|フク|はら|barriga|お腹:おなか:barriga;腹が立つ:はらがたつ:ficar irritado
+眠|ミン|ねむ(い)・ねむ(る)|sono|眠い:ねむい:com sono;睡眠:すいみん:sono
+怖|フ|こわ(い)|medo|怖い:こわい:assustador, ter medo
+頂|チョウ|いただ(く)|topo; receber (humilde)|頂上:ちょうじょう:cume;頂く:いただく:receber
+箱|ソウ|はこ|caixa|箱:はこ:caixa;ゴミ箱:ゴミばこ:lixeira
+髪|ハツ|かみ|cabelo|髪:かみ:cabelo;髪型:かみがた:penteado, corte de cabelo
+忙|ボウ|いそが(しい)|ocupado|忙しい:いそがしい:ocupado
+靴|カ|くつ|sapato|靴:くつ:sapato;靴下:くつした:meia
+猫|ビョウ|ねこ|gato|猫:ねこ:gato;子猫:こねこ:gatinho
+卒|ソツ||concluir; soldado|卒業:そつぎょう:formatura
+授|ジュ|さず(ける)|conceder, ensinar|授業:じゅぎょう:aula;教授:きょうじゅ:professor titular
+練|レン|ね(る)|treinar|練習:れんしゅう:treino
+復|フク||repetir; voltar|復習:ふくしゅう:revisão;往復:おうふく:ida e volta
+課|カ||lição; seção|課題:かだい:tarefa;第一課:だいいっか:lição 1
+証|ショウ||prova, certificado|証明書:しょうめいしょ:certificado;保険証:ほけんしょう:carteirinha do seguro
+保|ホ|たも(つ)|proteger, manter|保険:ほけん:seguro;保存:ほぞん:salvar
+健|ケン|すこ(やか)|saúde|健康:けんこう:saúde
+康|コウ||saúde|健康:けんこう:saúde
+預|ヨ|あず(ける)|depositar, deixar aos cuidados|預ける:あずける:deixar guardado, depositar;預金:よきん:depósito bancário
+届|カイ|とど(ける)・とど(く)|entregar; notificar|届く:とどく:chegar (entrega);届け出:とどけで:notificação
+鉄|テツ||ferro|地下鉄:ちかてつ:metrô;鉄道:てつどう:ferrovia
+橋|キョウ|はし|ponte|橋:はし:ponte;歩道橋:ほどうきょう:passarela
+島|トウ|しま|ilha|島:しま:ilha;広島:ひろしま:Hiroshima
+波|ハ|なみ|onda|波:なみ:onda;津波:つなみ:tsunami
+震|シン|ふる(える)|tremer|地震:じしん:terremoto;震える:ふるえる:tremer
+災|サイ|わざわ(い)|desastre|災害:さいがい:desastre;防災:ぼうさい:prevenção de desastres
+避|ヒ|さ(ける)|evitar|避難:ひなん:evacuação;避ける:さける:evitar
+救|キュウ|すく(う)|salvar|救急車:きゅうきゅうしゃ:ambulância;救う:すくう:salvar
+怪|カイ|あや(しい)|suspeito; misterioso|怪我:けが:ferimento;怪しい:あやしい:suspeito
+貯|チョ|た(める)|poupar|貯金:ちょきん:poupança;貯める:ためる:juntar (dinheiro)

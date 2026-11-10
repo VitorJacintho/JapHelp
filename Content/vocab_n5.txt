@@ -1,0 +1,446 @@
+// Decks de vocabulário N5. Formato: "# Nome | ícone | nível" e depois "japonês|leitura|significado".
+// Leitura pode ficar vazia quando a palavra já está em kana.
+
+# Família e pessoas | 家 | N5
+家族|かぞく|família
+父|ちち|meu pai
+母|はは|minha mãe
+お父さん|おとうさん|pai (de alguém / chamando)
+お母さん|おかあさん|mãe (de alguém / chamando)
+兄|あに|meu irmão mais velho
+姉|あね|minha irmã mais velha
+弟|おとうと|irmão mais novo
+妹|いもうと|irmã mais nova
+お兄さん|おにいさん|irmão mais velho (de alguém)
+お姉さん|おねえさん|irmã mais velha (de alguém)
+兄弟|きょうだい|irmãos
+両親|りょうしん|pais
+祖父|そふ|meu avô
+祖母|そぼ|minha avó
+おじいさん||avô; senhor idoso
+おばあさん||avó; senhora idosa
+おじさん||tio; senhor
+おばさん||tia; senhora
+子供|こども|criança
+赤ちゃん|あかちゃん|bebê
+男の人|おとこのひと|homem
+女の人|おんなのひと|mulher
+男の子|おとこのこ|menino
+女の子|おんなのこ|menina
+友達|ともだち|amigo
+大人|おとな|adulto
+皆さん|みなさん|todos (vocês)
+自分|じぶん|si mesmo, eu mesmo
+主人|しゅじん|marido; dono
+
+# Corpo | 体 | N5
+体|からだ|corpo
+頭|あたま|cabeça
+顔|かお|rosto
+目|め|olho
+耳|みみ|orelha
+鼻|はな|nariz
+口|くち|boca
+歯|は|dente
+首|くび|pescoço
+手|て|mão
+腕|うで|braço
+指|ゆび|dedo
+足|あし|pé, perna
+お腹|おなか|barriga
+背中|せなか|costas
+声|こえ|voz
+髪|かみ|cabelo
+病気|びょうき|doença
+風邪|かぜ|resfriado
+薬|くすり|remédio
+痛い|いたい|dolorido
+元気|げんき|saudável, animado
+医者|いしゃ|médico
+熱|ねつ|febre
+
+# Comida e bebida | 食 | N5
+ご飯|ごはん|arroz cozido; refeição
+朝ご飯|あさごはん|café da manhã
+昼ご飯|ひるごはん|almoço
+晩ご飯|ばんごはん|jantar
+料理|りょうり|culinária, prato
+肉|にく|carne
+牛肉|ぎゅうにく|carne bovina
+豚肉|ぶたにく|carne de porco
+鶏肉|とりにく|frango
+魚|さかな|peixe
+卵|たまご|ovo
+野菜|やさい|verduras, legumes
+果物|くだもの|fruta
+りんご||maçã
+みかん||tangerina
+バナナ||banana
+パン||pão
+お米|おこめ|arroz (cru)
+水|みず|água
+お茶|おちゃ|chá
+コーヒー||café
+牛乳|ぎゅうにゅう|leite
+ジュース||suco
+お酒|おさけ|bebida alcoólica
+ビール||cerveja
+お菓子|おかし|doce, petisco
+砂糖|さとう|açúcar
+塩|しお|sal
+醤油|しょうゆ|shoyu
+弁当|べんとう|marmita, bentô
+食べ物|たべもの|comida
+飲み物|のみもの|bebida
+おいしい||gostoso
+まずい||ruim (sabor)
+甘い|あまい|doce
+辛い|からい|picante
+お腹がすく|おなかがすく|ficar com fome
+箸|はし|hashi
+お皿|おさら|prato (louça)
+コップ||copo
+
+# Casa e objetos | 物 | N5
+家|いえ|casa
+部屋|へや|quarto, cômodo
+台所|だいどころ|cozinha
+お風呂|おふろ|banheira, banho
+トイレ||banheiro
+窓|まど|janela
+ドア||porta
+玄関|げんかん|entrada (onde se tiram os sapatos)
+階段|かいだん|escada
+机|つくえ|mesa de estudo
+椅子|いす|cadeira
+ベッド||cama
+テーブル||mesa
+冷蔵庫|れいぞうこ|geladeira
+テレビ||televisão
+電気|でんき|luz, eletricidade
+時計|とけい|relógio
+鍵|かぎ|chave
+傘|かさ|guarda-chuva
+鞄|かばん|bolsa, mochila
+財布|さいふ|carteira
+携帯|けいたい|celular
+眼鏡|めがね|óculos
+写真|しゃしん|foto
+新聞|しんぶん|jornal
+雑誌|ざっし|revista
+手紙|てがみ|carta
+切手|きって|selo
+箱|はこ|caixa
+紙|かみ|papel
+石鹸|せっけん|sabonete
+タオル||toalha
+
+# Cidade e lugares | 町 | N5
+町|まち|cidade, bairro
+駅|えき|estação
+店|みせ|loja
+銀行|ぎんこう|banco
+郵便局|ゆうびんきょく|correio
+病院|びょういん|hospital
+図書館|としょかん|biblioteca
+公園|こうえん|parque
+学校|がっこう|escola
+大学|だいがく|universidade
+会社|かいしゃ|empresa
+映画館|えいがかん|cinema
+喫茶店|きっさてん|cafeteria
+レストラン||restaurante
+デパート||loja de departamentos
+スーパー||supermercado
+コンビニ||loja de conveniência
+ホテル||hotel
+交番|こうばん|posto policial
+大使館|たいしかん|embaixada
+道|みち|rua, caminho
+橋|はし|ponte
+建物|たてもの|prédio
+入口|いりぐち|entrada
+出口|でぐち|saída
+近く|ちかく|perto, vizinhança
+隣|となり|ao lado
+国|くに|país
+外国|がいこく|exterior
+池|いけ|lago
+
+# Transporte e viagem | 車 | N5
+電車|でんしゃ|trem
+地下鉄|ちかてつ|metrô
+新幹線|しんかんせん|trem-bala
+バス||ônibus
+タクシー||táxi
+車|くるま|carro
+自転車|じてんしゃ|bicicleta
+飛行機|ひこうき|avião
+空港|くうこう|aeroporto
+船|ふね|barco, navio
+切符|きっぷ|bilhete
+旅行|りょこう|viagem
+地図|ちず|mapa
+荷物|にもつ|bagagem
+乗る|のる|embarcar, pegar (transporte)
+降りる|おりる|descer (do transporte)
+乗り換える|のりかえる|fazer baldeação
+歩く|あるく|andar
+着く|つく|chegar
+出かける|でかける|sair (de casa)
+
+# Tempo e calendário | 時 | N5
+今|いま|agora
+今日|きょう|hoje
+明日|あした|amanhã
+昨日|きのう|ontem
+毎日|まいにち|todos os dias
+今週|こんしゅう|esta semana
+来週|らいしゅう|semana que vem
+先週|せんしゅう|semana passada
+今月|こんげつ|este mês
+来月|らいげつ|mês que vem
+先月|せんげつ|mês passado
+今年|ことし|este ano
+来年|らいねん|ano que vem
+去年|きょねん|ano passado
+朝|あさ|manhã
+昼|ひる|meio-dia
+夜|よる|noite
+夕方|ゆうがた|fim de tarde
+午前|ごぜん|manhã (AM)
+午後|ごご|tarde (PM)
+時間|じかん|tempo, horas
+週末|しゅうまつ|fim de semana
+誕生日|たんじょうび|aniversário
+休み|やすみ|folga, férias
+夏休み|なつやすみ|férias de verão
+春|はる|primavera
+夏|なつ|verão
+秋|あき|outono
+冬|ふゆ|inverno
+一昨日|おととい|anteontem
+明後日|あさって|depois de amanhã
+
+# Natureza e clima | 天 | N5
+天気|てんき|tempo (clima)
+雨|あめ|chuva
+雪|ゆき|neve
+風|かぜ|vento
+空|そら|céu
+雲|くも|nuvem
+晴れ|はれ|tempo bom
+曇り|くもり|tempo nublado
+暑い|あつい|quente (clima)
+寒い|さむい|frio (clima)
+暖かい|あたたかい|morno, agradável
+涼しい|すずしい|fresco
+山|やま|montanha
+川|かわ|rio
+海|うみ|mar
+木|き|árvore
+花|はな|flor
+動物|どうぶつ|animal
+犬|いぬ|cachorro
+猫|ねこ|gato
+鳥|とり|pássaro
+太陽|たいよう|sol
+月|つき|lua
+星|ほし|estrela
+
+# Escola e estudo | 学 | N5
+先生|せんせい|professor
+学生|がくせい|estudante
+留学生|りゅうがくせい|intercambista
+勉強|べんきょう|estudo
+授業|じゅぎょう|aula
+宿題|しゅくだい|lição de casa
+テスト||prova
+試験|しけん|exame
+問題|もんだい|questão, problema
+答え|こたえ|resposta
+質問|しつもん|pergunta
+教室|きょうしつ|sala de aula
+本|ほん|livro
+辞書|じしょ|dicionário
+ノート||caderno
+鉛筆|えんぴつ|lápis
+ペン||caneta
+消しゴム|けしゴム|borracha
+言葉|ことば|palavra, língua
+漢字|かんじ|kanji
+文|ぶん|frase
+意味|いみ|significado
+練習|れんしゅう|treino, prática
+英語|えいご|inglês
+作文|さくぶん|redação
+
+# Roupas e cores | 服 | N5
+服|ふく|roupa
+洋服|ようふく|roupa ocidental
+シャツ||camisa
+ズボン||calça
+スカート||saia
+靴|くつ|sapato
+靴下|くつした|meia
+帽子|ぼうし|chapéu, boné
+コート||casaco
+セーター||suéter
+着る|きる|vestir (parte de cima)
+はく||vestir (parte de baixo, sapatos)
+かぶる||pôr (chapéu)
+脱ぐ|ぬぐ|tirar (roupa, sapatos)
+色|いろ|cor
+赤い|あかい|vermelho
+青い|あおい|azul
+白い|しろい|branco
+黒い|くろい|preto
+黄色い|きいろい|amarelo
+茶色|ちゃいろ|marrom
+緑|みどり|verde
+
+# Verbos essenciais | 動 | N5
+会う|あう|encontrar (alguém)
+開ける|あける|abrir
+閉める|しめる|fechar
+遊ぶ|あそぶ|divertir-se
+洗う|あらう|lavar
+ある||haver (coisas)
+いる||haver, estar (pessoas, animais)
+言う|いう|dizer
+行く|いく|ir
+来る|くる|vir
+帰る|かえる|voltar para casa
+入る|はいる|entrar
+出る|でる|sair
+起きる|おきる|acordar
+寝る|ねる|dormir
+食べる|たべる|comer
+飲む|のむ|beber
+見る|みる|ver
+聞く|きく|ouvir; perguntar
+読む|よむ|ler
+書く|かく|escrever
+話す|はなす|falar
+買う|かう|comprar
+売る|うる|vender
+待つ|まつ|esperar
+持つ|もつ|segurar, ter
+使う|つかう|usar
+作る|つくる|fazer, produzir
+する||fazer
+分かる|わかる|entender
+知る|しる|saber, conhecer
+教える|おしえる|ensinar
+習う|ならう|aprender (com alguém)
+覚える|おぼえる|memorizar
+忘れる|わすれる|esquecer
+始まる|はじまる|começar
+終わる|おわる|terminar
+休む|やすむ|descansar, faltar
+働く|はたらく|trabalhar
+住む|すむ|morar
+立つ|たつ|ficar de pé
+座る|すわる|sentar
+走る|はしる|correr
+泳ぐ|およぐ|nadar
+呼ぶ|よぶ|chamar
+貸す|かす|emprestar
+借りる|かりる|pegar emprestado
+返す|かえす|devolver
+送る|おくる|enviar
+撮る|とる|tirar (foto)
+
+# Adjetivos | 形 | N5
+大きい|おおきい|grande
+小さい|ちいさい|pequeno
+新しい|あたらしい|novo
+古い|ふるい|velho (coisas)
+高い|たかい|caro; alto
+安い|やすい|barato
+低い|ひくい|baixo
+長い|ながい|longo
+短い|みじかい|curto
+多い|おおい|muitos
+少ない|すくない|poucos
+早い|はやい|cedo
+速い|はやい|rápido
+遅い|おそい|lento; tarde
+近い|ちかい|perto
+遠い|とおい|longe
+広い|ひろい|amplo
+狭い|せまい|apertado, estreito
+明るい|あかるい|claro, alegre
+暗い|くらい|escuro
+重い|おもい|pesado
+軽い|かるい|leve
+強い|つよい|forte
+弱い|よわい|fraco
+易しい|やさしい|fácil
+難しい|むずかしい|difícil
+楽しい|たのしい|divertido
+面白い|おもしろい|interessante, engraçado
+つまらない||chato, sem graça
+忙しい|いそがしい|ocupado
+いい||bom
+悪い|わるい|ruim
+かわいい||fofo, bonito
+若い|わかい|jovem
+静か|しずか|silencioso
+賑やか|にぎやか|animado, movimentado
+きれい||bonito; limpo
+便利|べんり|prático
+有名|ゆうめい|famoso
+好き|すき|gostar de
+嫌い|きらい|detestar
+上手|じょうず|habilidoso
+下手|へた|ruim em
+大丈夫|だいじょうぶ|tudo bem
+暇|ひま|livre, desocupado
+大切|たいせつ|importante, precioso
+親切|しんせつ|gentil
+
+# Advérbios e palavras úteis | 副 | N5
+とても||muito
+少し|すこし|um pouco
+ちょっと||um pouco; (recusa)
+たくさん||muito, bastante
+もっと||mais
+一番|いちばん|o mais
+よく||frequentemente; bem
+いつも||sempre
+時々|ときどき|às vezes
+あまり||não muito (+ negativo)
+全然|ぜんぜん|nem um pouco (+ negativo)
+まだ||ainda
+もう||já
+すぐ||imediatamente
+ゆっくり||devagar
+一緒に|いっしょに|juntos
+一人で|ひとりで|sozinho
+また||de novo
+本当に|ほんとうに|realmente
+多分|たぶん|provavelmente
+だんだん||gradualmente
+初めて|はじめて|pela primeira vez
+それから||e então, depois
+でも||mas
+だから||por isso
+
+# Perguntas | 何 | N5
+何|なに|o quê
+誰|だれ|quem
+どこ||onde
+いつ||quando
+どう||como
+どうして||por quê
+なぜ||por quê (formal)
+いくら||quanto (preço)
+いくつ||quantos; quantos anos
+どれ||qual (entre vários)
+どちら||qual (entre dois); onde (educado)
+どんな||que tipo de
+どのくらい||quanto (tempo, quantidade)
+何時|なんじ|que horas
+何人|なんにん|quantas pessoas
+何曜日|なんようび|que dia da semana

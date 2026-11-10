@@ -7,6 +7,8 @@ public class AppSettings
     public bool ShowRomaji { get; set; } = true;
     public bool ShowReading { get; set; } = true;
     public int SpeechRate { get; set; } = -1;
+    public double SpeechSpeed { get; set; } = 0.9;
+    public string? VoiceId { get; set; }
     public int DailyGoalXp { get; set; } = 60;
     public bool AutoPlayAudio { get; set; } = true;
     public int MaxReviewsPerSession { get; set; } = 40;
@@ -43,6 +45,9 @@ public class ProgressData
     /// <summary>Erros por item (kana, kanji, vocabulário) — usados para "pontos fracos".</summary>
     public Dictionary<string, int> Mistakes { get; set; } = new();
     public HashSet<string> KanjiGroupsDone { get; set; } = new();
+    /// <summary>Melhor nota (0-100) de pronúncia por frase.</summary>
+    public Dictionary<string, int> SpeakingBest { get; set; } = new();
+    public HashSet<string> VocabDecksDone { get; set; } = new();
     public int Xp { get; set; }
     public int Streak { get; set; }
     public int BestStreak { get; set; }
@@ -81,7 +86,7 @@ public static class ProgressStore
             try { File.Copy(FilePath, FilePath + ".bak", true); } catch { }
             Data = new ProgressData();
         }
-        Speech.Rate = Data.Settings.SpeechRate;
+        Speech.Speed = Math.Clamp(Data.Settings.SpeechSpeed, 0.5, 1.5);
         CheckStreakBroken();
     }
 

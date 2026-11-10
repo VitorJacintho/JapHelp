@@ -96,7 +96,10 @@ public class PhrasesView : UserControl
         play.Glyph = Glyphs.Volume;
         play.FitWidth();
         play.Enabled = Speech.Available;
-        _list.Add(Ui.Row(quiz, add, play));
+        var speak = FlatButton.Secondary("Treinar fala", (_, _) => MainForm.Instance.ShowView(new SpeakingView("Frases úteis: " + cat.Name, items), "speak"));
+        speak.Glyph = "";
+        speak.FitWidth();
+        _list.Add(Ui.Row(quiz, add, play, speak));
 
         foreach (var p in cat.Phrases.Where(p => p.Length >= 3))
         {

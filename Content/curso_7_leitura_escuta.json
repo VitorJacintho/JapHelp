@@ -1,0 +1,467 @@
+{
+  "id": "n7",
+  "order": 7,
+  "title": "Leitura e escuta",
+  "level": "N5 → N2 · textos reais",
+  "description": "Textos e áudios longos do dia a dia no Japão: mensagens, avisos, e-mails, anúncios, notícias e conversas, com perguntas de compreensão.",
+  "color": "#5B6C2F",
+  "lessons": [
+    {
+      "id": "n7-01",
+      "title": "Mensagem de LINE de um amigo",
+      "subtitle": "N5 · convite para o fim de semana",
+      "theory": [
+        "# Lendo mensagens casuais",
+        "Mensagens de LINE entre amigos usam a forma casual, frases curtas e emojis. Para ler rápido:",
+        "- Procure primeiro **quando** (日にち, 時間) e **onde** (場所).",
+        "- Frases terminadas em **〜ない？** são convites: 行かない？ = 'vamos?'.",
+        "- **〜よ** informa, **〜ね** busca concordância, **〜けど** suaviza.",
+        "## Estratégia de leitura",
+        "- 1ª leitura: entenda a ideia geral sem parar em palavras desconhecidas.",
+        "- 2ª leitura: procure as informações que as perguntas pedem.",
+        "- Só depois veja a tradução na aba Texto.",
+        "> Responder com 'いいね！' (boa!) e um emoji já é uma resposta natural no LINE."
+      ],
+      "textTitle": "LINE: 健くんから",
+      "text": [
+        ["アナちゃん、おつかれ！", "アナちゃん、おつかれ！", "Ana, e aí! (oi, cansada?)"],
+        ["今度の土曜日、ひま？", "こんど の どようび、ひま？", "Você está livre no sábado que vem?"],
+        ["大学の友達と三人で、新しいラーメン屋に行かない？", "だいがく の ともだち と さんにん で、あたらしい ラーメンや に いかない？", "Vamos a um restaurante de lámen novo, nós três com um amigo da faculdade?"],
+        ["駅の北口に十二時に集まろう。", "えき の きたぐち に じゅうにじ に あつまろう。", "Vamos nos encontrar na saída norte da estação ao meio-dia."],
+        ["ちょっと高いけど、すごくおいしいらしいよ。", "ちょっと たかい けど、すごく おいしい らしい よ。", "É um pouco caro, mas dizem que é muito bom."],
+        ["行けるかどうか、金曜日までに教えてね。", "いける か どうか、きんようび まで に おしえて ね。", "Me avisa até sexta se você pode ir, tá?"]
+      ],
+      "vocab": [
+        ["今度", "こんど", "próximo, da próxima vez"],
+        ["暇", "ひま", "livre"],
+        ["ラーメン屋", "ラーメンや", "restaurante de lámen"],
+        ["北口", "きたぐち", "saída norte"],
+        ["集まる", "あつまる", "reunir-se"],
+        ["〜らしい", "", "dizem que, parece que"],
+        ["〜までに", "", "até (prazo)"],
+        ["教える", "おしえる", "avisar, informar; ensinar"]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "O que o Ken está propondo?", "o": ["Ir comer lámen no sábado", "Estudar na biblioteca no sábado", "Ir ao cinema na sexta", "Fazer uma festa em casa"]},
+        {"t": "mc", "q": "Quantas pessoas vão no total?", "o": ["Três", "Duas", "Quatro", "Não diz"]},
+        {"t": "mc", "q": "Onde e quando eles vão se encontrar?", "o": ["Saída norte da estação, ao meio-dia", "Saída sul da estação, às 2h", "Na faculdade, ao meio-dia", "No restaurante, às 12h30"]},
+        {"t": "mc", "q": "O que o Ken diz sobre o restaurante?", "o": ["É um pouco caro, mas dizem que é ótimo", "É barato e famoso", "É longe da estação", "Ele já foi várias vezes"]},
+        {"t": "mc", "q": "Até quando a Ana precisa responder?", "o": ["Até sexta-feira", "Até sábado ao meio-dia", "Até hoje à noite", "Não precisa responder"]},
+        {"t": "mc", "q": "Qual resposta curta aceita o convite naturalmente?", "o": ["いいね！行く行く！", "ちょっと…", "行かないでね。", "高いですから。"]}
+      ]
+    },
+    {
+      "id": "n7-02",
+      "title": "Aviso do dormitório",
+      "subtitle": "N5–N4 · regras do 寮",
+      "theory": [
+        "# Lendo avisos e regras",
+        "Avisos (お知らせ) usam frases curtas, forma educada e estruturas de regra:",
+        "| Estrutura | Significado |",
+        "| 〜てください | por favor, faça ~ |",
+        "| 〜ないでください | por favor, não faça ~ |",
+        "| 〜てはいけません | é proibido ~ |",
+        "| 〜こと | (regra) deve-se ~ |",
+        "| 〜までに | até (prazo) |",
+        "## Dica",
+        "Procure números (horários, datas, andares) e verbos no final das frases: neles está a regra.",
+        "! Regras de dormitório são levadas a sério. Ler e entender os avisos evita problemas com o 寮長 (supervisor)."
+      ],
+      "textTitle": "さくら寮 お知らせ",
+      "text": [
+        ["寮に住む皆さんへ", "りょう に すむ みなさん へ", "A todos os moradores do dormitório"],
+        ["一、夜十一時から朝七時までは、大きい声で話さないでください。", "いち、よる じゅういちじ から あさ しちじ まで は、おおきい こえ で はなさないで ください。", "1. Das 23h às 7h, não fale alto."],
+        ["二、お風呂は夜十時までです。シャワーは二十四時間使えます。", "に、おふろ は よる じゅうじ まで です。シャワー は にじゅうよじかん つかえます。", "2. A banheira é até as 22h. O chuveiro pode ser usado 24 horas."],
+        ["三、燃えるゴミは月曜日と木曜日の朝八時までに出してください。", "さん、もえるごみ は げつようび と もくようび の あさ はちじ まで に だして ください。", "3. Coloque o lixo queimável segunda e quinta até as 8h."],
+        ["四、部屋でたばこを吸ってはいけません。たばこは一階の外で吸ってください。", "よん、へや で たばこ を すって は いけません。たばこ は いっかい の そと で すって ください。", "4. É proibido fumar no quarto. Fume do lado de fora, no térreo."],
+        ["五、友達は夜九時まで部屋に入ってもいいです。泊まることはできません。", "ご、ともだち は よる くじ まで へや に はいっても いい です。とまる こと は できません。", "5. Amigos podem entrar no quarto até as 21h. Não podem dormir aqui."],
+        ["分からないことがあったら、一階の事務室に聞いてください。", "わからない こと が あったら、いっかい の じむしつ に きいて ください。", "Se tiver dúvidas, pergunte no escritório do térreo."]
+      ],
+      "vocab": [
+        ["寮", "りょう", "dormitório"],
+        ["お知らせ", "おしらせ", "aviso"],
+        ["声", "こえ", "voz"],
+        ["燃えるゴミ", "もえるごみ", "lixo queimável"],
+        ["吸う", "すう", "fumar"],
+        ["泊まる", "とまる", "pernoitar"],
+        ["事務室", "じむしつ", "escritório (administração)"],
+        ["〜へ", "", "para ~ (destinatário)"]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Às 23h30, você quer conversar com um amigo no corredor. Segundo o aviso:", "o": ["Pode, mas sem falar alto", "Pode falar alto até meia-noite", "Precisa pedir permissão", "É proibido sair do quarto"]},
+        {"t": "mc", "q": "Você chegou às 22h30 e quer tomar banho. O que pode usar?", "o": ["Só o chuveiro", "A banheira e o chuveiro", "Só a banheira", "Nada até as 7h"]},
+        {"t": "mc", "q": "Quando colocar o lixo queimável?", "o": ["Segunda e quinta, até as 8h", "Segunda e quinta, à noite", "Todos os dias até as 8h", "Terça e sexta, até as 8h"]},
+        {"t": "mc", "q": "Onde é permitido fumar?", "o": ["Do lado de fora, no térreo", "No quarto, de janela aberta", "No banheiro", "Em lugar nenhum do prédio nem fora"]},
+        {"t": "mc", "q": "Seu amigo quer dormir no seu quarto no fim de semana. Pode?", "o": ["Não — amigos só até as 21h e não podem pernoitar", "Sim, se avisar o escritório", "Sim, só no fim de semana", "Sim, até 2 noites"]},
+        {"t": "mc", "q": "Onde tirar dúvidas?", "o": ["No escritório do térreo", "Com o vizinho", "No escritório do 2º andar", "Na prefeitura"]}
+      ]
+    },
+    {
+      "id": "n7-03",
+      "title": "E-mail do professor",
+      "subtitle": "N4 · mudança de sala e prazo do trabalho",
+      "theory": [
+        "# Lendo e-mails formais",
+        "E-mails da universidade seguem uma estrutura fixa — saber onde está a informação economiza tempo:",
+        "1. Destinatário (〜さん / 〜の皆さん)",
+        "2. Saudação: お疲れ様です / いつもお世話になっております",
+        "3. **Assunto principal** (geralmente com 〜について / 〜のお知らせ)",
+        "4. Detalhes: datas, salas, prazos",
+        "5. Pedido final: よろしくお願いします",
+        "## Palavras-chave",
+        "| Palavra | Significado |",
+        "| 変更 (へんこう) | mudança |",
+        "| 教室 (きょうしつ) | sala |",
+        "| 提出 (ていしゅつ) | entrega (de trabalho) |",
+        "| 締め切り (しめきり) | prazo |",
+        "| 〜までに | até (prazo) |",
+        "| 遅れる場合は | caso se atrase |"
+      ],
+      "textTitle": "件名：来週の授業について",
+      "text": [
+        ["日本語クラスの皆さん", "にほんご クラス の みなさん", "Turma de japonês,"],
+        ["お疲れ様です。山田です。", "おつかれさま です。やまだ です。", "Olá a todos. Aqui é o Yamada."],
+        ["来週の水曜日の授業は、教室が変わります。三号館の二〇五教室ではなく、図書館の四階のセミナー室で行います。", "らいしゅう の すいようび の じゅぎょう は、きょうしつ が かわります。さんごうかん の にまるご きょうしつ では なく、としょかん の よんかい の セミナーしつ で おこないます。", "A aula de quarta da semana que vem muda de sala. Em vez da sala 205 do prédio 3, será na sala de seminários do 4º andar da biblioteca."],
+        ["時間は同じで、午後一時からです。", "じかん は おなじ で、ごご いちじ から です。", "O horário é o mesmo, a partir das 13h."],
+        ["また、レポートの締め切りは来週の金曜日の午後五時です。メールで提出してください。", "また、レポート の しめきり は らいしゅう の きんようび の ごご ごじ です。メール で ていしゅつ して ください。", "Além disso, o prazo do trabalho é sexta da semana que vem, às 17h. Entreguem por e-mail."],
+        ["病気などで遅れる場合は、締め切りの前に連絡してください。", "びょうき など で おくれる ばあい は、しめきり の まえ に れんらく して ください。", "Caso vá se atrasar por doença ou outro motivo, avise antes do prazo."],
+        ["よろしくお願いします。", "よろしく おねがい します。", "Obrigado."]
+      ],
+      "vocab": [
+        ["件名", "けんめい", "assunto (do e-mail)"],
+        ["変わる", "かわる", "mudar"],
+        ["〜号館", "〜ごうかん", "prédio nº ~ (campus)"],
+        ["行う", "おこなう", "realizar"],
+        ["締め切り", "しめきり", "prazo"],
+        ["提出", "ていしゅつ", "entrega"],
+        ["場合", "ばあい", "caso, situação"],
+        ["連絡", "れんらく", "contato, aviso"]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Qual é o assunto principal do e-mail?", "o": ["Mudança de sala e prazo do trabalho", "Cancelamento da aula", "Resultado da prova", "Convite para uma festa"]},
+        {"t": "mc", "q": "Onde será a aula de quarta?", "o": ["Sala de seminários, 4º andar da biblioteca", "Sala 205 do prédio 3", "Sala 205 da biblioteca", "Online"]},
+        {"t": "mc", "q": "O horário da aula mudou?", "o": ["Não, continua às 13h", "Sim, passou para as 17h", "Sim, passou para a manhã", "O e-mail não diz"]},
+        {"t": "mc", "q": "Como e até quando entregar o trabalho?", "o": ["Por e-mail, até sexta às 17h", "Em papel, na quarta", "Por e-mail, até quarta às 13h", "Na biblioteca, sexta de manhã"]},
+        {"t": "mc", "q": "Se você ficar doente e for atrasar a entrega, o que deve fazer?", "o": ["Avisar o professor ANTES do prazo", "Entregar depois sem avisar", "Pedir a um amigo para entregar", "Ir à sala 205"]},
+        {"t": "mc", "q": "Qual seria uma resposta adequada para começar a responder ao professor?", "o": ["山田先生、お疲れ様です。アナです。", "山田さん、おはよう！", "山田、了解。", "やあ、先生！"]}
+      ]
+    },
+    {
+      "id": "n7-04",
+      "title": "Anúncio de vaga de arubaito",
+      "subtitle": "N4 · lendo uma vaga de emprego",
+      "theory": [
+        "# Entendendo uma vaga de emprego (求人)",
+        "Anúncios de emprego usam muitas abreviações e substantivos em vez de frases:",
+        "| Termo | Significado |",
+        "| 募集 (ぼしゅう) | contratando |",
+        "| 時給 (じきゅう) | salário por hora |",
+        "| 交通費支給 (こうつうひしきゅう) | auxílio transporte pago |",
+        "| 週〜日から (しゅう〜にちから) | a partir de ~ dias por semana |",
+        "| 未経験OK (みけいけんオーケー) | aceita sem experiência |",
+        "| 留学生歓迎 (りゅうがくせいかんげい) | intercambistas bem-vindos |",
+        "| 応募 (おうぼ) | candidatura |",
+        "| 面接 (めんせつ) | entrevista |",
+        "| 〜以上 (いじょう) | ~ ou mais |",
+        "! Lembre do limite de 28 horas por semana para estudantes e da permissão 資格外活動許可."
+      ],
+      "textTitle": "カフェ・さくら スタッフ募集！",
+      "text": [
+        ["カフェ・さくらでは、一緒に働くスタッフを募集しています。", "カフェ・さくら で は、いっしょに はたらく スタッフ を ぼしゅう して います。", "O Café Sakura está contratando funcionários."],
+        ["仕事：カフェのホールとキッチン", "しごと：カフェ の ホール と キッチン", "Trabalho: salão e cozinha do café"],
+        ["時給：千百円（夜十時以降は千三百七十五円）", "じきゅう：せんひゃくえん（よる じゅうじ いこう は せんさんびゃくななじゅうごえん）", "Salário/hora: 1.100 ienes (depois das 22h, 1.375 ienes)"],
+        ["時間：朝七時〜夜十一時の間で、一日四時間以上", "じかん：あさ しちじ から よる じゅういちじ の あいだ で、いちにち よじかん いじょう", "Horário: entre 7h e 23h, mínimo de 4 horas por dia"],
+        ["週二日からOK。交通費支給。まかないあり。", "しゅう ふつか から オーケー。こうつうひ しきゅう。まかない あり。", "A partir de 2 dias por semana. Auxílio transporte. Refeição incluída."],
+        ["未経験の方、留学生も大歓迎です！日常会話ができる方。", "みけいけん の かた、りゅうがくせい も だいかんげい です！にちじょうかいわ が できる かた。", "Pessoas sem experiência e intercambistas são muito bem-vindos! É preciso conversação do dia a dia."],
+        ["応募は電話またはウェブから。面接の時に、在留カードを持ってきてください。", "おうぼ は でんわ または ウェブ から。めんせつ の とき に、ざいりゅうカード を もって きて ください。", "Candidatura por telefone ou site. Traga o cartão de residente na entrevista."]
+      ],
+      "vocab": [
+        ["募集", "ぼしゅう", "recrutamento"],
+        ["以降", "いこう", "a partir de, depois de"],
+        ["以上", "いじょう", "ou mais"],
+        ["支給", "しきゅう", "pagamento, fornecimento"],
+        ["まかない", "", "refeição para funcionários"],
+        ["未経験", "みけいけん", "sem experiência"],
+        ["歓迎", "かんげい", "boas-vindas"],
+        ["応募", "おうぼ", "candidatura"],
+        ["日常会話", "にちじょうかいわ", "conversação do dia a dia"],
+        ["または", "", "ou"]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Quanto você ganha por hora trabalhando das 18h às 22h?", "o": ["1.100 ienes", "1.375 ienes", "1.000 ienes", "1.300 ienes"]},
+        {"t": "mc", "q": "Qual é o mínimo de horas por dia?", "o": ["4 horas", "2 horas", "8 horas", "Não tem mínimo"]},
+        {"t": "mc", "q": "Qual destes benefícios a vaga oferece?", "o": ["Auxílio transporte e refeição", "Moradia", "Seguro saúde particular", "Bônus anual"]},
+        {"t": "mc", "q": "Você nunca trabalhou em café. Pode se candidatar?", "o": ["Sim, aceitam sem experiência", "Não, precisa de experiência", "Só com 1 ano de experiência", "Só japoneses"]},
+        {"t": "mc", "q": "Qual requisito de japonês é pedido?", "o": ["Conversação do dia a dia", "JLPT N1", "Nenhum", "Saber keigo perfeitamente"]},
+        {"t": "mc", "q": "O que levar na entrevista?", "o": ["O cartão de residente", "O passaporte e o diploma", "Uma foto 3x4 apenas", "Nada"]}
+      ]
+    },
+    {
+      "id": "n7-05",
+      "title": "Diário de um intercambista",
+      "subtitle": "N4–N3 · a primeira semana no Japão",
+      "theory": [
+        "# Lendo narrativas em primeira pessoa",
+        "Diários e blogs usam a forma simples (だ/である, verbos no passado com 〜た) e contam eventos em sequência.",
+        "## Conectivos que organizam o texto",
+        "| Conectivo | Função |",
+        "| まず | primeiro |",
+        "| それから / その後 | depois |",
+        "| でも / しかし | mas |",
+        "| 実は | na verdade |",
+        "| 最後に | por último |",
+        "| 〜おかげで | graças a ~ |",
+        "## Estratégia",
+        "Marque mentalmente cada evento e o sentimento ligado a ele (うれしかった, 大変だった, 不安だった...)."
+      ],
+      "textTitle": "日本での最初の一週間",
+      "text": [
+        ["日本に来て、一週間がたった。", "にほん に きて、いっしゅうかん が たった。", "Faz uma semana que cheguei ao Japão."],
+        ["まず、空港で在留カードをもらって、電車で大学の寮へ行った。荷物が重くて、とても大変だった。", "まず、くうこう で ざいりゅうカード を もらって、でんしゃ で だいがく の りょう へ いった。にもつ が おもくて、とても たいへん だった。", "Primeiro, recebi o cartão de residente no aeroporto e fui de trem ao dormitório. A bagagem era pesada e foi bem difícil."],
+        ["次の日は市役所で住所の手続きをした。職員の話が速くて、ほとんど分からなかった。でも、やさしい日本語で説明してくれたおかげで、何とか終わった。", "つぎ の ひ は しやくしょ で じゅうしょ の てつづき を した。しょくいん の はなし が はやくて、ほとんど わからなかった。でも、やさしい にほんご で せつめい して くれた おかげ で、なんとか おわった。", "No dia seguinte, fiz o registro de endereço na prefeitura. O funcionário falava rápido e quase não entendi. Mas, graças a ele ter explicado em japonês simples, consegui terminar."],
+        ["一番困ったのはゴミの分別だ。種類が多すぎて、最初は全然分からなかった。隣の部屋の田中さんが教えてくれて、本当に助かった。", "いちばん こまった の は ゴミ の ぶんべつ だ。しゅるい が おおすぎて、さいしょ は ぜんぜん わからなかった。となり の へや の たなかさん が おしえて くれて、ほんとうに たすかった。", "O que mais me complicou foi a separação do lixo. Eram tipos demais e no começo eu não entendia nada. O Tanaka, do quarto ao lado, me ensinou e me ajudou muito."],
+        ["実は、少し寂しい時もある。でも、新しい友達もできたし、毎日が新しい発見の連続だ。来週から授業が始まる。頑張ろう！", "じつは、すこし さびしい とき も ある。でも、あたらしい ともだち も できた し、まいにち が あたらしい はっけん の れんぞく だ。らいしゅう から じゅぎょう が はじまる。がんばろう！", "Na verdade, às vezes me sinto um pouco sozinho. Mas também fiz novos amigos, e todo dia é uma sequência de descobertas. As aulas começam semana que vem. Vamos lá!"]
+      ],
+      "vocab": [
+        ["たつ", "", "passar (tempo)"],
+        ["手続き", "てつづき", "procedimento"],
+        ["職員", "しょくいん", "funcionário (órgão público)"],
+        ["ほとんど", "", "quase (todo/nada)"],
+        ["何とか", "なんとか", "de algum jeito"],
+        ["分別", "ぶんべつ", "separação (de lixo)"],
+        ["助かる", "たすかる", "ser de grande ajuda"],
+        ["発見", "はっけん", "descoberta"],
+        ["連続", "れんぞく", "sequência"],
+        ["〜おかげで", "", "graças a ~"]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Há quanto tempo o autor está no Japão?", "o": ["Uma semana", "Um mês", "Um dia", "Um ano"]},
+        {"t": "mc", "q": "O que foi difícil no primeiro dia?", "o": ["Carregar a bagagem pesada", "Encontrar o aeroporto", "Pegar o cartão de residente", "Falar com o Tanaka"]},
+        {"t": "mc", "q": "Como ele conseguiu terminar o trâmite na prefeitura?", "o": ["O funcionário explicou em japonês simples", "Um amigo traduziu", "Usou um app de tradução", "Voltou outro dia"]},
+        {"t": "mc", "q": "O que mais o deixou em apuros?", "o": ["A separação do lixo", "A comida", "O trem", "O idioma na universidade"]},
+        {"t": "mc", "q": "Quem é o Tanaka?", "o": ["O vizinho de quarto", "O funcionário da prefeitura", "O professor", "Um amigo do Brasil"]},
+        {"t": "mc", "q": "Qual é o sentimento geral no final?", "o": ["Um pouco de solidão, mas animado e positivo", "Muito triste, quer voltar", "Totalmente indiferente", "Bravo com o Japão"]}
+      ]
+    },
+    {
+      "id": "n7-06",
+      "title": "Notícia: tufão se aproximando",
+      "subtitle": "N3 · lendo notícias e alertas",
+      "theory": [
+        "# Notícias e alertas",
+        "Notícias usam estilo escrito (forma simples, muitos kanji compostos) e passiva/expressões formais.",
+        "| Expressão | Significado |",
+        "| 〜に接近する | aproximar-se de ~ |",
+        "| 〜見込み (みこみ) | previsão, expectativa |",
+        "| 〜おそれがある | há risco de ~ |",
+        "| 〜に伴い | junto com, devido a |",
+        "| 運休 (うんきゅう) | suspensão de transporte |",
+        "| 休校 (きゅうこう) | escola fechada (sem aula) |",
+        "| 警報 (けいほう) / 注意報 (ちゅういほう) | alerta / aviso |",
+        "| 不要不急の外出 | saídas não essenciais |",
+        "> Em época de tufões (agosto a outubro), acompanhe as notícias e o site da sua universidade: aulas costumam ser canceladas quando há 警報."
+      ],
+      "textTitle": "大型の台風１５号、あす関西に接近",
+      "text": [
+        ["大型で強い台風十五号は、あすの午後、関西地方に最も接近する見込みです。", "おおがた で つよい たいふう じゅうごごう は、あす の ごご、かんさい ちほう に もっとも せっきん する みこみ です。", "O grande e forte tufão nº 15 deve se aproximar ao máximo da região de Kansai amanhã à tarde."],
+        ["気象庁によると、大雨や強い風、高い波に注意が必要で、川の近くでは洪水のおそれがあります。", "きしょうちょう に よると、おおあめ や つよい かぜ、たかい なみ に ちゅうい が ひつよう で、かわ の ちかく で は こうずい の おそれ が あります。", "Segundo a Agência Meteorológica, é preciso atenção a chuvas fortes, ventos e ondas altas, e há risco de enchentes perto de rios."],
+        ["台風の接近に伴い、JRなどの鉄道各社は、あすの昼ごろから運休する予定です。", "たいふう の せっきん に ともない、ジェイアール など の てつどう かくしゃ は、あす の ひる ごろ から うんきゅう する よてい です。", "Com a aproximação do tufão, a JR e outras ferrovias planejam suspender a operação a partir do meio-dia de amanhã."],
+        ["また、多くの大学や学校が休校を決めました。", "また、おおく の だいがく や がっこう が きゅうこう を きめました。", "Além disso, muitas universidades e escolas decidiram cancelar as aulas."],
+        ["不要不急の外出は避け、食べ物や水、懐中電灯などを準備しておくよう呼びかけています。", "ふようふきゅう の がいしゅつ は さけ、たべもの や みず、かいちゅうでんとう など を じゅんび して おく よう よびかけて います。", "As autoridades pedem que se evitem saídas não essenciais e que se preparem comida, água, lanternas etc."]
+      ],
+      "vocab": [
+        ["接近", "せっきん", "aproximação"],
+        ["見込み", "みこみ", "previsão, expectativa"],
+        ["気象庁", "きしょうちょう", "Agência Meteorológica do Japão"],
+        ["洪水", "こうずい", "enchente"],
+        ["おそれ", "", "risco, perigo de"],
+        ["運休", "うんきゅう", "suspensão (transporte)"],
+        ["休校", "きゅうこう", "cancelamento das aulas"],
+        ["避ける", "さける", "evitar"],
+        ["懐中電灯", "かいちゅうでんとう", "lanterna"],
+        ["呼びかける", "よびかける", "fazer um apelo"]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Quando o tufão deve chegar mais perto de Kansai?", "o": ["Amanhã à tarde", "Hoje à noite", "Amanhã de manhã cedo", "Daqui a uma semana"]},
+        {"t": "mc", "q": "Que risco existe perto dos rios?", "o": ["Enchentes", "Incêndios", "Terremotos", "Neve"]},
+        {"t": "mc", "q": "O que as ferrovias vão fazer?", "o": ["Suspender os trens a partir do meio-dia de amanhã", "Aumentar o número de trens", "Fechar só a JR", "Nada, funcionam normalmente"]},
+        {"t": "mc", "q": "O que muitas universidades decidiram?", "o": ["Cancelar as aulas", "Fazer prova online", "Abrir como abrigo", "Adiar o semestre"]},
+        {"t": "mc", "q": "O que as autoridades recomendam?", "o": ["Evitar sair e preparar comida, água e lanterna", "Ir à praia ver as ondas", "Sair de carro da cidade", "Ir ao trabalho mais cedo"]},
+        {"t": "mc", "q": "No texto, 見込み significa...", "o": ["previsão, expectativa", "proibição", "certeza absoluta", "resultado final"]}
+      ]
+    },
+    {
+      "id": "n7-07",
+      "title": "Ensaio: 'ler o ar' (空気を読む)",
+      "subtitle": "N2 · texto de opinião sobre cultura",
+      "theory": [
+        "# Textos de opinião (N2)",
+        "Ensaios e textos de opinião apresentam uma ideia, dão exemplos, mostram outro ponto de vista e concluem.",
+        "## Marcadores de estrutura",
+        "| Marcador | Função |",
+        "| 〜とは | definição: X とは ~ (X é ~) |",
+        "| 例えば | exemplo |",
+        "| 一方 (いっぽう) | por outro lado |",
+        "| つまり | ou seja |",
+        "| 〜のではないだろうか | não seria que ~? (opinião suave) |",
+        "| 〜と言える | pode-se dizer que |",
+        "## Dica para provas",
+        "A opinião do autor costuma estar no ÚLTIMO parágrafo, muitas vezes com 〜のではないだろうか ou 〜と思う."
+      ],
+      "textTitle": "「空気を読む」ということ",
+      "text": [
+        ["「空気を読む」とは、言葉にされていない周りの気持ちや場の雰囲気を感じ取り、それに合わせて行動することだ。", "「くうき を よむ」 とは、ことば に されて いない まわり の きもち や ば の ふんいき を かんじとり、それ に あわせて こうどう する こと だ。", "'Ler o ar' significa perceber os sentimentos não ditos das pessoas e o clima do lugar, e agir de acordo."],
+        ["例えば、会議で誰も反対意見を言わないとき、本当は全員が賛成しているとは限らない。皆が場の雰囲気を壊さないように、黙っているだけかもしれない。", "たとえば、かいぎ で だれ も はんたい いけん を いわない とき、ほんとう は ぜんいん が さんせい して いる とは かぎらない。みな が ば の ふんいき を こわさない よう に、だまって いる だけ かも しれない。", "Por exemplo, quando ninguém discorda numa reunião, não significa que todos concordam. Talvez estejam só calados para não quebrar o clima."],
+        ["このような習慣は、人間関係を円滑にするという長所がある。一方で、自分の本当の意見を言いにくくなるという短所もある。", "この よう な しゅうかん は、にんげん かんけい を えんかつ に する と いう ちょうしょ が ある。いっぽう で、じぶん の ほんとう の いけん を いいにくく なる と いう たんしょ も ある。", "Esse costume tem a vantagem de tornar as relações mais harmoniosas. Por outro lado, tem a desvantagem de dificultar dizer a própria opinião."],
+        ["外国から来た人にとって、空気を読むことは簡単ではない。しかし、それは能力の問題ではなく、文化の違いにすぎない。", "がいこく から きた ひと に とって、くうき を よむ こと は かんたん で は ない。しかし、それ は のうりょく の もんだい で は なく、ぶんか の ちがい に すぎない。", "Para quem vem de fora, ler o ar não é fácil. Porém, não é questão de capacidade, é apenas uma diferença cultural."],
+        ["大切なのは、空気を読むことと自分の考えを伝えることのバランスなのではないだろうか。", "たいせつ な の は、くうき を よむ こと と じぶん の かんがえ を つたえる こと の バランス な の で は ない だろう か。", "O importante não seria o equilíbrio entre ler o ar e expressar as próprias ideias?"]
+      ],
+      "vocab": [
+        ["空気を読む", "くうきをよむ", "ler o ambiente"],
+        ["雰囲気", "ふんいき", "atmosfera, clima"],
+        ["感じ取る", "かんじとる", "perceber, captar"],
+        ["行動", "こうどう", "ação, comportamento"],
+        ["〜とは限らない", "〜とはかぎらない", "não necessariamente"],
+        ["黙る", "だまる", "ficar calado"],
+        ["円滑", "えんかつ", "harmonioso, sem atritos"],
+        ["長所", "ちょうしょ", "ponto forte, vantagem"],
+        ["短所", "たんしょ", "ponto fraco, desvantagem"],
+        ["能力", "のうりょく", "capacidade"]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Segundo o texto, o que é 'ler o ar'?", "o": ["Perceber sentimentos não ditos e o clima, e agir de acordo", "Prever o tempo pelo vento", "Ler textos difíceis em voz alta", "Discordar abertamente nas reuniões"]},
+        {"t": "mc", "q": "No exemplo da reunião, o silêncio de todos significa...", "o": ["Não necessariamente que todos concordam", "Que todos concordam", "Que ninguém entendeu", "Que a reunião acabou"]},
+        {"t": "mc", "q": "Qual DESVANTAGEM o autor aponta?", "o": ["Fica difícil expressar a própria opinião", "As relações ficam tensas", "As reuniões ficam longas", "Os estrangeiros são excluídos"]},
+        {"t": "mc", "q": "Para o autor, a dificuldade dos estrangeiros em ler o ar é...", "o": ["Apenas uma diferença cultural", "Falta de capacidade", "Falta de estudo de japonês", "Algo impossível de mudar"]},
+        {"t": "mc", "q": "Qual é a opinião final do autor?", "o": ["O importante é equilibrar ler o ar e expressar suas ideias", "Deve-se sempre ler o ar", "Ler o ar deveria acabar", "Estrangeiros não precisam ler o ar"]},
+        {"t": "mc", "q": "No texto, 一方で indica...", "o": ["Contraste (por outro lado)", "Conclusão", "Exemplo", "Causa"]}
+      ]
+    },
+    {
+      "id": "n7-08",
+      "title": "Escuta: anúncios na estação e no trem",
+      "subtitle": "N4 · entendendo o alto-falante",
+      "theory": [
+        "# Entendendo anúncios",
+        "Anúncios são rápidos e cheios de keigo, mas repetem sempre as mesmas fórmulas. Aprenda a reconhecer:",
+        "| Fórmula | Significado |",
+        "| まもなく、〇番線に電車が参ります | em breve o trem chega à plataforma ~ |",
+        "| 黄色い線の内側までお下がりください | afaste-se para trás da linha amarela |",
+        "| 次は〇〇、〇〇です | próxima estação: ~ |",
+        "| お出口は右側です | a saída é do lado direito |",
+        "| 〇〇線はお乗り換えです | baldeação para a linha ~ |",
+        "| ドアが閉まります。ご注意ください | as portas vão fechar |",
+        "| 〜の影響で、遅れが出ております | por causa de ~, há atrasos |",
+        "> Nos exercícios, ouça primeiro SEM ler as opções, depois leia e ouça de novo (use o botão 'Devagar' se precisar).",
+        "! Os exercícios de escuta precisam de uma voz japonesa instalada no Windows (veja Configurações → Diagnóstico de áudio)."
+      ],
+      "dialog": [
+        ["駅", "まもなく、三番線に、大阪行きの快速電車が参ります。黄色い線の内側までお下がりください。", "まもなく、さんばんせん に、おおさかゆき の かいそく でんしゃ が まいります。きいろい せん の うちがわ まで おさがり ください。", "Em breve, o trem rápido com destino a Osaka chegará à plataforma 3. Afaste-se para trás da linha amarela."],
+        ["車内", "次は京都、京都です。お出口は右側です。地下鉄烏丸線はお乗り換えです。", "つぎ は きょうと、きょうと です。おでぐち は みぎがわ です。ちかてつ からすません は おのりかえ です。", "Próxima estação: Kyoto. A saída é do lado direito. Baldeação para o metrô linha Karasuma."],
+        ["駅", "ただいま、人身事故の影響で、電車に二十分ほどの遅れが出ております。ご迷惑をおかけして申し訳ございません。", "ただいま、じんしんじこ の えいきょう で、でんしゃ に にじゅっぷん ほど の おくれ が でて おります。ごめいわく を おかけ して もうしわけ ございません。", "No momento, devido a um acidente com pessoa, os trens estão com cerca de 20 minutos de atraso. Pedimos desculpas pelo transtorno."],
+        ["車内", "ドアが閉まります。ご注意ください。", "ドア が しまります。ごちゅうい ください。", "As portas vão fechar. Cuidado."]
+      ],
+      "vocab": [
+        ["まもなく", "", "em breve"],
+        ["参る", "まいる", "vir, chegar (humilde)"],
+        ["内側", "うちがわ", "lado de dentro"],
+        ["下がる", "さがる", "recuar"],
+        ["右側", "みぎがわ", "lado direito"],
+        ["乗り換え", "のりかえ", "baldeação"],
+        ["影響", "えいきょう", "influência, efeito"],
+        ["遅れ", "おくれ", "atraso"],
+        ["人身事故", "じんしんじこ", "acidente com pessoa (nos trilhos)"],
+        ["快速", "かいそく", "trem rápido"]
+      ],
+      "exercises": [
+        {"t": "listen", "s": "まもなく、三番線に、大阪行きの快速電車が参ります。黄色い線の内側までお下がりください。", "q": "Qual trem vai chegar e onde?", "o": ["Trem rápido para Osaka, plataforma 3", "Trem parador para Kyoto, plataforma 3", "Trem rápido para Osaka, plataforma 8", "Trem-bala para Tóquio, plataforma 1"]},
+        {"t": "listen", "s": "まもなく、三番線に、大阪行きの快速電車が参ります。黄色い線の内側までお下がりください。", "q": "O que o anúncio pede?", "o": ["Que você fique atrás da linha amarela", "Que você compre o bilhete", "Que você corra para o trem", "Que você troque de plataforma"]},
+        {"t": "listen", "s": "次は京都、京都です。お出口は右側です。地下鉄烏丸線はお乗り換えです。", "q": "De que lado fica a saída na próxima estação?", "o": ["Direito", "Esquerdo", "Os dois lados", "Não foi dito"]},
+        {"t": "listen", "s": "次は京都、京都です。お出口は右側です。地下鉄烏丸線はお乗り換えです。", "q": "Qual é a próxima estação?", "o": ["Kyoto", "Osaka", "Tóquio", "Kobe"]},
+        {"t": "listen", "s": "ただいま、人身事故の影響で、電車に二十分ほどの遅れが出ております。", "q": "Qual é a situação?", "o": ["Os trens estão com cerca de 20 minutos de atraso", "Os trens estão cancelados o dia todo", "O trem vai chegar 20 minutos adiantado", "A estação vai fechar em 20 minutos"]},
+        {"t": "mc", "q": "No anúncio, 参ります é a forma humilde de...", "o": ["来ます (vir)", "帰ります (voltar)", "止まります (parar)", "乗ります (embarcar)"]}
+      ]
+    },
+    {
+      "id": "n7-09",
+      "title": "Escuta: na clínica",
+      "subtitle": "N4–N3 · consulta médica completa",
+      "theory": [
+        "# Entendendo o médico",
+        "Numa consulta, as perguntas seguem quase sempre a mesma ordem:",
+        "1. Sintoma: どうされましたか / どこが痛いですか",
+        "2. Desde quando: いつからですか",
+        "3. Febre: 熱はありますか / 何度ですか",
+        "4. Alergias e remédios: アレルギーはありますか / 今飲んでいる薬はありますか",
+        "5. Instruções: 〜日分のお薬を出します / 一日〜回、食後に飲んでください",
+        "6. Retorno: 〜日たってもよくならなかったら、また来てください",
+        "> Anote as instruções do remédio no celular. Se não entender, peça: 紙に書いていただけますか (poderia escrever num papel?)."
+      ],
+      "dialog": [
+        ["医者", "今日はどうされましたか。", "きょう は どう されましたか。", "O que a traz aqui hoje?"],
+        ["アナ", "おとといからのどが痛くて、昨日の夜から熱があります。", "おととい から のど が いたくて、きのう の よる から ねつ が あります。", "Estou com dor de garganta desde anteontem e com febre desde ontem à noite."],
+        ["医者", "熱は何度ですか。", "ねつ は なんど ですか。", "Quantos graus de febre?"],
+        ["アナ", "今朝測ったら、三十八度五分でした。", "けさ はかったら、さんじゅうはちど ごぶ でした。", "Medi hoje de manhã e estava 38,5."],
+        ["医者", "薬のアレルギーはありますか。", "くすり の アレルギー は ありますか。", "Tem alergia a algum remédio?"],
+        ["アナ", "いいえ、ありません。", "いいえ、ありません。", "Não."],
+        ["医者", "風邪ですね。三日分のお薬を出します。一日三回、食後に飲んでください。三日たってもよくならなかったら、また来てください。", "かぜ です ね。みっかぶん の おくすり を だします。いちにち さんかい、しょくご に のんで ください。みっか たっても よく ならなかったら、また きて ください。", "É resfriado. Vou passar remédio para 3 dias. Tome 3 vezes ao dia, após as refeições. Se não melhorar em 3 dias, volte."]
+      ],
+      "vocab": [
+        ["おととい", "", "anteontem"],
+        ["測る", "はかる", "medir"],
+        ["〜度〜分", "〜ど〜ぶ", "graus (temperatura): 38度5分 = 38,5"],
+        ["〜日分", "〜にちぶん", "para ~ dias (remédio)"],
+        ["食後", "しょくご", "após a refeição"],
+        ["たつ", "", "passar (tempo)"],
+        ["よくなる", "", "melhorar"],
+        ["風邪", "かぜ", "resfriado"]
+      ],
+      "exercises": [
+        {"t": "listen", "s": "おとといから のどが いたくて、きのうの よるから ねつが あります。", "q": "Quais são os sintomas e desde quando?", "o": ["Garganta desde anteontem; febre desde ontem à noite", "Febre desde anteontem; garganta desde hoje", "Dor de cabeça desde ontem", "Tosse há uma semana"]},
+        {"t": "listen", "s": "けさ はかったら、さんじゅうはちど ごぶ でした。", "q": "Qual era a temperatura?", "o": ["38,5 graus", "38 graus", "35,8 graus", "39,5 graus"]},
+        {"t": "listen", "s": "みっかぶんの おくすりを だします。いちにち さんかい、しょくごに のんで ください。", "q": "Qual é a instrução do remédio?", "o": ["Para 3 dias, 3 vezes ao dia, após as refeições", "Para 3 dias, 1 vez ao dia, antes de dormir", "Para 1 dia, 3 comprimidos", "Para 3 semanas, em jejum"]},
+        {"t": "listen", "s": "みっか たっても よく ならなかったら、また きて ください。", "q": "Quando ela deve voltar?", "o": ["Se não melhorar em 3 dias", "Daqui a 3 semanas, de qualquer jeito", "Amanhã de manhã", "Não precisa voltar"]},
+        {"t": "mc", "q": "Se você não entender as instruções, o que pedir?", "o": ["紙に書いていただけますか。", "大丈夫です。", "もう帰ります。", "薬はいりません。"]}
+      ]
+    },
+    {
+      "id": "n7-10",
+      "title": "Escuta: conversa com colegas",
+      "subtitle": "N3 · fala casual rápida entre amigos",
+      "theory": [
+        "# Entendendo conversas casuais",
+        "Entre amigos, a fala é rápida, cheia de contrações e frases incompletas. Lembre:",
+        "- 〜てる = 〜ている · 〜ちゃう = 〜てしまう · 〜なきゃ = 〜なければ",
+        "- 〜って = 'disseram que' ou 'sobre ~'",
+        "- 〜じゃん = 'não é?' (casual, Tóquio)",
+        "- Sujeitos e partículas são omitidos o tempo todo.",
+        "> Foque nas palavras de conteúdo (lugares, horários, verbos) e não se preocupe em entender cada partícula."
+      ],
+      "dialog": [
+        ["健", "ねえ、明日のゼミの発表、準備できてる？", "ねえ、あした の ゼミ の はっぴょう、じゅんび できてる？", "E aí, já preparou a apresentação do seminário de amanhã?"],
+        ["アナ", "まだ全然。スライドは作ったけど、原稿がまだなんだ。", "まだ ぜんぜん。スライド は つくった けど、げんこう が まだ なんだ。", "Nada ainda. Fiz os slides, mas o roteiro ainda não."],
+        ["健", "マジで？発表、朝の九時からだよ。", "マジ で？はっぴょう、あさ の くじ から だ よ。", "Sério? A apresentação é às 9 da manhã."],
+        ["アナ", "うん、だから今夜は徹夜しなきゃ。", "うん、だから こんや は てつや しなきゃ。", "Pois é, então hoje vou ter que virar a noite."],
+        ["健", "手伝おうか？図書館、十時まで開いてるし、一緒にやろうよ。", "てつだおう か？としょかん、じゅうじ まで あいてる し、いっしょに やろう よ。", "Quer ajuda? A biblioteca fica aberta até as 10, vamos fazer juntos."],
+        ["アナ", "ほんと？助かる！じゃあ、六時に図書館の前で。", "ほんと？たすかる！じゃあ、ろくじ に としょかん の まえ で。", "Sério? Vai me salvar! Então às 6, na frente da biblioteca."]
+      ],
+      "vocab": [
+        ["ゼミ", "", "seminário (orientação)"],
+        ["発表", "はっぴょう", "apresentação"],
+        ["原稿", "げんこう", "roteiro, texto escrito"],
+        ["徹夜", "てつや", "virar a noite acordado"],
+        ["スライド", "", "slides"],
+        ["助かる", "たすかる", "ser de grande ajuda"],
+        ["〜し", "", "e também (razões)"]
+      ],
+      "exercises": [
+        {"t": "listen", "s": "まだ ぜんぜん。スライドは つくった けど、げんこうが まだ なんだ。", "q": "O que a Ana já fez?", "o": ["Fez os slides, mas não o roteiro", "Fez o roteiro, mas não os slides", "Fez tudo", "Não fez nada"]},
+        {"t": "listen", "s": "はっぴょう、あさの くじから だよ。", "q": "Quando é a apresentação?", "o": ["Às 9h da manhã", "Às 9h da noite", "Às 6h da tarde", "Às 10h"]},
+        {"t": "listen", "s": "うん、だから こんやは てつや しなきゃ。", "q": "O que a Ana diz que vai ter que fazer?", "o": ["Virar a noite acordada", "Dormir cedo", "Faltar à apresentação", "Pedir ajuda ao professor"]},
+        {"t": "listen", "s": "てつだおうか？としょかん、じゅうじまで あいてるし、いっしょに やろうよ。", "q": "O que o Ken oferece?", "o": ["Ajudar na biblioteca, que fica aberta até as 10", "Fazer a apresentação no lugar dela", "Emprestar os slides dele", "Adiar a apresentação"]},
+        {"t": "listen", "s": "ほんと？たすかる！じゃあ、ろくじに としょかんの まえで。", "q": "Onde e quando vão se encontrar?", "o": ["Às 6h, na frente da biblioteca", "Às 10h, dentro da biblioteca", "Às 9h, na sala do seminário", "Às 6h, na estação"]},
+        {"t": "mc", "q": "しなきゃ é a forma casual de...", "o": ["しなければ(ならない)", "しないで", "しちゃった", "してない"]}
+      ]
+    }
+  ]
+}

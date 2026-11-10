@@ -32,6 +32,12 @@ public static class ExerciseFactory
         }
 
         var authored = lesson.Exercises.Select(FromDef).Where(e => e != null).Cast<Exercise>().ToList();
+        if (lesson.Text.Count > 0)
+        {
+            var passage = string.Join("\n", lesson.Text.Where(t => t.Length > 0).Select(t => t[0]));
+            foreach (var e in authored.Where(e => e.Type != ExType.Listen && e.Japanese == null))
+                e.Passage = passage;
+        }
         result.AddRange(authored);
         return result;
     }

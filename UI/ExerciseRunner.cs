@@ -168,6 +168,9 @@ public class ExerciseRunner : UserControl
         if (_retried.Contains(_cur))
             _body.Add(Ui.Label("↻ Revisão de um erro anterior", Theme.UiSemi(9.5f), Theme.Warning));
 
+        if (!string.IsNullOrWhiteSpace(_cur.Passage))
+            _body.Add(new InfoBox(_cur.Passage!, Theme.Jp(12.5f), Theme.Text, Color.White) { BorderColor = Theme.Border, Inner = new Padding(18, 14, 18, 14) });
+
         if (!string.IsNullOrWhiteSpace(_cur.Context))
             _body.Add(new InfoBox("📍 " + _cur.Context, Theme.Jp(11f), Theme.Indigo, Theme.IndigoSoft));
 
@@ -496,6 +499,7 @@ public class ExerciseRunner : UserControl
             SpeakText = e.SpeakText,
             Accepted = e.Accepted,
             Correct = e.Correct,
+            Passage = e.Passage,
             Explanation = e.Explanation,
             Hint = e.Hint,
             StatKey = e.StatKey,

@@ -12,7 +12,8 @@ public class KanjiView : UserControl
     public KanjiView(string? level = null)
     {
         BackColor = Theme.Background;
-        var levels = ContentRepository.Kanji.Select(k => k.Level).Distinct().ToList();
+        var levels = ContentRepository.Kanji.Select(k => k.Level).Distinct()
+            .OrderBy(l => l switch { "N5" => 0, "N4" => 1, "N3" => 2, "N2" => 3, _ => 9 }).ToList();
         _level = level != null && levels.Contains(level) ? level : levels.FirstOrDefault() ?? "";
 
         _detail = new StackPanel { Dock = DockStyle.Right, Width = Theme.S(380), BackColor = Color.White, Padding = Theme.Pad(22, 22, 22, 22), Spacing = 8 };
