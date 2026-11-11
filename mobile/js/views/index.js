@@ -14,3 +14,4 @@ export { SettingsView } from './settings.js';
 export { StatsView } from './stats.js';
 export { DrillsView } from './drills.js';
 export { MyWordsView } from './mywords.js';
+export { ExamView } from './exam.js';

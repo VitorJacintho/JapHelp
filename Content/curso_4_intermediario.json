@@ -58,6 +58,13 @@
         ["このお寺は六百年前に建てられました。", "この おてら は ろっぴゃくねん まえ に たてられました。", "Este templo foi construído há 600 anos."],
         ["友達の結婚式に招待されました。", "ともだち の けっこんしき に しょうたい されました。", "Fui convidado para o casamento de um amigo."]
       ],
+      "dialog": [
+        ["健", "どうしたんですか。元気がないですね。", "どうしたんですか。げんきが ないですね。", "O que houve? Você está desanimada."],
+        ["アナ", "電車で財布を盗まれました。", "でんしゃで さいふを ぬすまれました。", "Roubaram minha carteira no trem."],
+        ["健", "えっ、大変！交番に行きましたか。", "えっ、たいへん！こうばんに いきましたか。", "O quê? Que horror! Foi ao posto policial?"],
+        ["アナ", "はい。それに、雨に降られて、びしょびしょになりました。", "はい。それに、あめに ふられて、びしょびしょに なりました。", "Fui. E ainda peguei chuva e fiquei encharcada."],
+        ["健", "本当に運が悪かったですね。", "ほんとうに うんが わるかったですね。", "Que azar, hein."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Passiva de よむ (ler):", "o": ["よまれる", "よめる", "よませる", "よまれさせる"]},
         {"t": "mc", "q": "Passiva de いう (dizer):", "o": ["いわれる", "いえる", "いあれる", "いらせる"]},
@@ -123,6 +130,13 @@
         ["母は私にピアノを習わせました。", "はは は わたし に ピアノ を ならわせました。", "Minha mãe me fez aprender piano."],
         ["飲み会でお酒を飲まされました。", "のみかい で おさけ を のまされました。", "Fui obrigado a beber no nomikai."],
         ["授業で自己紹介をさせられました。", "じゅぎょう で じこしょうかい を させられました。", "Me fizeram fazer uma autoapresentação na aula."]
+      ],
+      "dialog": [
+        ["アナ", "子どものころ、親に何をさせられましたか。", "こどもの ころ、おやに なにを させられましたか。", "Quando criança, o que seus pais faziam você fazer?"],
+        ["健", "毎日ピアノを練習させられました。", "まいにち ピアノを れんしゅう させられました。", "Me faziam praticar piano todos os dias."],
+        ["アナ", "私の母は、私に好きなことをさせてくれました。", "わたしの ははは、わたしに すきな ことを させて くれました。", "Minha mãe me deixava fazer o que eu gostava."],
+        ["健", "いいですね。今度、ぼくにもブラジル料理を作らせてください。", "いいですね。こんど、ぼくにも ブラジルりょうりを つくらせてください。", "Que legal. Da próxima vez, deixe eu fazer comida brasileira também."],
+        ["アナ", "もちろん！一緒に作りましょう。", "もちろん！いっしょに つくりましょう。", "Claro! Vamos cozinhar juntos."]
       ],
       "exercises": [
         {"t": "mc", "q": "Causativa de いく:", "o": ["いかせる", "いかれる", "いけさせる", "いきさせる"]},
@@ -200,6 +214,14 @@
         ["資料を拝見しました。", "しりょう を はいけん しました。", "Vi o material (humilde)."],
         ["かしこまりました。", "かしこまりました。", "Entendido. / Certamente."]
       ],
+      "dialog": [
+        ["店員", "いらっしゃいませ。何名様でいらっしゃいますか。", "いらっしゃいませ。なんめいさまで いらっしゃいますか。", "Bem-vindos. Quantas pessoas?"],
+        ["アナ", "二人です。", "ふたりです。", "Duas."],
+        ["店員", "こちらへどうぞ。メニューをご覧ください。", "こちらへ どうぞ。メニューを ごらんください。", "Por aqui, por favor. Vejam o cardápio."],
+        ["店員", "ご注文はお決まりですか。", "ごちゅうもんは おきまりですか。", "Já decidiram o pedido?"],
+        ["アナ", "はい。この定食を二つお願いします。", "はい。この ていしょくを ふたつ おねがいします。", "Sim. Dois deste prato feito, por favor."],
+        ["店員", "かしこまりました。少々お待ちください。", "かしこまりました。しょうしょう おまちください。", "Perfeitamente. Aguardem um momento."]
+      ],
       "exercises": [
         {"t": "mc", "q": "尊敬語 (respeitoso) de 言う:", "o": ["おっしゃる", "もうす", "いたす", "まいる"]},
         {"t": "mc", "q": "謙譲語 (humilde) de 言う:", "o": ["もうす", "おっしゃる", "なさる", "めしあがる"]},
@@ -267,6 +289,13 @@
         ["あの店はとても人気があるらしいです。", "あの みせ は とても にんき が ある らしい です。", "Aparentemente aquela loja é muito popular."],
         ["それはアナさんらしいね。", "それ は アナさん らしい ね。", "Isso é a cara da Ana."]
       ],
+      "dialog": [
+        ["アナ", "見て、このケーキ、おいしそう！", "みて、この ケーキ、おいしそう！", "Olha, esse bolo parece delicioso!"],
+        ["健", "本当だ。あ、あの店、雑誌に載っていたらしいよ。", "ほんとうだ。あ、あの みせ、ざっしに のっていた らしいよ。", "É mesmo. Ah, parece que aquela loja saiu numa revista."],
+        ["アナ", "そうなんだ。人がたくさん並んでいるね。", "そうなんだ。ひとが たくさん ならんでいるね。", "Ah, é? Tem muita gente na fila."],
+        ["健", "一時間ぐらい待つそうだよ。", "いちじかん ぐらい まつ そうだよ。", "Dizem que se espera uma hora."],
+        ["アナ", "うーん、今日はやめよう。雨も降りそうだし。", "うーん、きょうは やめよう。あめも ふりそうだし。", "Hmm, hoje não. E parece que vai chover."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Como dizer 'parece gostoso' (olhando a comida)?", "o": ["おいしそう", "おいしいそう", "おいしいよう", "おいしいらしい"]},
         {"t": "mc", "q": "'Parece bom' com いい:", "o": ["よさそう", "いいそう", "いそう", "よいそう"]},
@@ -326,6 +355,13 @@
         ["毎日野菜を食べるようにしています。", "まいにち やさい を たべる ように しています。", "Procuro comer verduras todo dia."],
         ["電車が遅れたので、遅刻しました。", "でんしゃ が おくれた ので、ちこく しました。", "Me atrasei porque o trem atrasou."],
         ["一生懸命勉強したのに、試験に落ちました。", "いっしょうけんめい べんきょう した のに、しけん に おちました。", "Estudei com todo o esforço e mesmo assim reprovei."]
+      ],
+      "dialog": [
+        ["先生", "アナさんはどうして日本に来たんですか。", "アナさんは どうして にほんに きたんですか。", "Ana, por que você veio ao Japão?"],
+        ["アナ", "日本のアニメが好きなので、日本語を勉強するために来ました。", "にほんの アニメが すきなので、にほんごを べんきょうする ために きました。", "Como gosto de anime, vim para estudar japonês."],
+        ["先生", "将来、何に使いたいですか。", "しょうらい、なにに つかいたいですか。", "No futuro, para que quer usar o japonês?"],
+        ["アナ", "翻訳の仕事ができるように、毎日勉強しています。", "ほんやくの しごとが できるように、まいにち べんきょうしています。", "Estudo todos os dias para poder trabalhar com tradução."],
+        ["先生", "すばらしいですね。", "すばらしいですね。", "Que ótimo."]
       ],
       "exercises": [
         {"t": "mc", "jp": "わすれない ___、メモします。", "q": "Complete: 'Anoto PARA NÃO esquecer.'", "o": ["ように", "ために", "ので", "のに"], "e": "Com negativo/involuntário, use ように."},
@@ -388,6 +424,13 @@
         ["だんだん寒くなってきました。", "だんだん さむく なって きました。", "Foi ficando frio."],
         ["机の上にメモが置いてあります。", "つくえ の うえ に メモ が おいて あります。", "Há um bilhete deixado em cima da mesa."]
       ],
+      "dialog": [
+        ["アナ", "あ、窓が開いていますね。", "あ、まどが あいていますね。", "Ah, a janela está aberta."],
+        ["健", "さっき開けておきました。暑いので。", "さっき あけて おきました。あついので。", "Deixei aberta antes. Porque está calor."],
+        ["アナ", "宿題、もう終わりましたか。", "しゅくだい、もう おわりましたか。", "Já terminou a lição de casa?"],
+        ["健", "はい、昨日全部やってしまいました。", "はい、きのう ぜんぶ やって しまいました。", "Sim, fiz tudo de uma vez ontem."],
+        ["アナ", "すごい。私はまだです。今からやってみます。", "すごい。わたしは まだです。いまから やって みます。", "Que demais. Eu ainda não. Vou tentar fazer agora."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Como dizer 'Acabei esquecendo a carteira' (arrependimento)?", "o": ["さいふを わすれて しまいました。", "さいふを わすれて おきました。", "さいふを わすれて みました。", "さいふを わすれて あります。"]},
         {"t": "mc", "q": "Versão casual de たべて しまった:", "o": ["たべちゃった", "たべとった", "たべてた", "たべじゃった"]},
@@ -448,6 +491,13 @@
         ["日本に来たばかりです。", "にほん に きた ばかり です。", "Acabei de chegar ao Japão."],
         ["今、出かけるところです。", "いま、でかける ところ です。", "Estou saindo agora mesmo."],
         ["今、駅に着いたところです。", "いま、えき に ついた ところ です。", "Acabei de chegar à estação."]
+      ],
+      "dialog": [
+        ["アナ", "健さん、もう駅に着いたはずなのに、まだ来ませんね。", "けんさん、もう えきに ついた はずなのに、まだ きませんね。", "O Ken já devia ter chegado à estação, mas ainda não veio."],
+        ["美咲", "電車が遅れているのかもしれません。", "でんしゃが おくれているのかも しれません。", "Talvez o trem esteja atrasado."],
+        ["アナ", "映画が始まるところなので、先に入りましょうか。", "えいがが はじまる ところなので、さきに はいりましょうか。", "O filme está para começar, vamos entrar antes?"],
+        ["美咲", "そうですね。健さんにメッセージを送っておくべきですね。", "そうですね。けんさんに メッセージを おくって おく べきですね。", "É. Devíamos deixar uma mensagem para o Ken."],
+        ["アナ", "今、送ったところです。", "いま、おくった ところです。", "Acabei de mandar."]
       ],
       "exercises": [
         {"t": "mc", "q": "Como dizer 'O trem já deve ter chegado' (pela lógica do horário)?", "o": ["でんしゃは もう ついた はずです。", "でんしゃは もう つく べきです。", "でんしゃは もう ついた ばかりです。", "でんしゃは もう つく わけです。"]},

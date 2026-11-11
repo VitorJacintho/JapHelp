@@ -7,7 +7,11 @@ import { h, icons, infoBox, jpBlock, sentenceCard, section, jpSpan } from './ui.
 
 const PRAISE = ['Correto! 正解！', 'Muito bem! よくできました！', 'Isso aí! すごい！', 'Perfeito! 完璧！'];
 
-export function createRunner({ title, generator, onComplete, onExit }) {
+export function createRunner({ title, generator, onComplete, onExit, exam = null }) {
+  // exam = { seconds }: modo prova — sem correção durante a prova, cronômetro e nota por seção no fim
+  let examResults = [];
+  let timer = null;
+  let deadline = 0;
   let queue = [];
   let pos = 0;
   let originalCount = 0;
@@ -50,6 +54,7 @@ export function createRunner({ title, generator, onComplete, onExit }) {
 
   function requestExit() {
     if (finished || pos === 0 || confirm('Sair agora? O progresso desta sessão será perdido.')) {
+      clearInterval(timer);
       Speech.stop();
       onExit();
     }
@@ -63,6 +68,12 @@ export function createRunner({ title, generator, onComplete, onExit }) {
     retried = new Set();
     firstTryCorrect = 0;
     finished = false;
+    examResults = [];
+    clearInterval(timer);
+    if (exam) {
+      deadline = Date.now() + exam.seconds * 1000;
+      timer = setInterval(updateCounter, 1000);
+    }
     if (queue.length === 0) {
       body.replaceChildren(h('h2', 'Nenhum exercício disponível.'), h('button.btn.primary', { type: 'button', onclick: onExit }, 'Voltar'));
       foot.hidden = true;
@@ -86,7 +97,7 @@ export function createRunner({ title, generator, onComplete, onExit }) {
     answerArea = null;
     bankArea = null;
     progressFill.style.width = `${(pos / Math.max(1, queue.length)) * 100}%`;
-    counter.textContent = `${Math.min(pos + 1, queue.length)} / ${queue.length}`;
+    updateCounter();
     body.replaceChildren();
     body.scrollTop = 0;
     foot.hidden = false;
@@ -98,6 +109,7 @@ export function createRunner({ title, generator, onComplete, onExit }) {
       typing: 'Digite em romaji (ex.: "arigatou") — vira kana automaticamente.',
       order: 'Toque nas peças na ordem certa. Toque numa peça colocada para devolvê-la.',
     }[cur.type] || '';
+    if (exam) fbText.textContent = 'Modo prova: a correção aparece só no fim. ' + fbText.textContent;
     fbSpeak.hidden = true;
     setMain('Verificar', 'primary', false);
 
@@ -227,6 +239,14 @@ export function createRunner({ title, generator, onComplete, onExit }) {
       answerArea.classList.add(correct ? 'right' : 'wrong');
     }
 
+    if (exam) {
+      // prova: registra e segue, sem mostrar se acertou e sem repetir os erros
+      answered = true;
+      examResults.push({ ex: cur, correct });
+      if (correct) { firstTryCorrect++; Store.recordHit(cur.statKey); } else { Store.recordMistake(cur.statKey); failed.add(cur); }
+      next();
+      return;
+    }
     answered = true;
     const firstTime = !failed.has(cur) && !retried.has(cur);
     if (correct) {
@@ -271,14 +291,29 @@ export function createRunner({ title, generator, onComplete, onExit }) {
     else showExercise();
   }
 
+  function updateCounter() {
+    const n = `${Math.min(pos + 1, queue.length)} / ${queue.length}`;
+    if (!exam) { counter.textContent = n; return; }
+    const left = Math.max(0, Math.round((deadline - Date.now()) / 1000));
+    counter.textContent = `⏱ ${Math.floor(left / 60)}:${String(left % 60).padStart(2, '0')} · ${n}`;
+    if (left === 0 && !finished) finish();
+  }
+
   function finish() {
     finished = true;
+    clearInterval(timer);
     Speech.stop();
     progressFill.style.width = '100%';
     foot.hidden = true;
     const pct = Math.round((100 * firstTryCorrect) / Math.max(1, originalCount));
     const mistakes = [...failed];
-    const extra = onComplete?.({ correct: firstTryCorrect, total: originalCount, percent: pct, mistakes });
+    // prova: acertos por seção (questões não respondidas a tempo contam como erro)
+    const sections = exam ? [...new Set(queue.map((q) => q.section))].map((name) => {
+      const qs = queue.filter((q) => q.section === name);
+      const ok = examResults.filter((r) => r.ex.section === name && r.correct).length;
+      return { name, correct: ok, total: qs.length, percent: Math.round((100 * ok) / Math.max(1, qs.length)) };
+    }) : null;
+    const extra = onComplete?.({ correct: firstTryCorrect, total: originalCount, percent: pct, mistakes, sections, answered: examResults.length });
     Store.save();
 
     const face = pct >= 90 ? '素晴らしい！' : pct >= 70 ? 'よくできました！' : pct >= 50 ? 'もう少し！' : 'がんばって！';
@@ -292,6 +327,9 @@ export function createRunner({ title, generator, onComplete, onExit }) {
         h('div.finish-score', `${pct}%`),
         h('div.muted', `${firstTryCorrect} de ${originalCount} certas de primeira · ${msg}`),
         extra ? h('div.finish-extra', extra) : null,
+        sections ? h('div.exam-sections', sections.map((s) => h('div.exam-section',
+          h('div.exam-section-head', h('span', s.name), h('strong', `${s.correct}/${s.total} · ${s.percent}%`)),
+          h('div.bar', h('div.bar-fill', { style: { width: s.percent + '%', background: s.percent >= 40 ? 'var(--success)' : 'var(--error)' } }))))) : null,
         h('div.btn-row.center',
           h('button.btn.primary', { type: 'button', onclick: onExit }, 'Concluir'),
           h('button.btn', { type: 'button', onclick: start }, 'Repetir exercícios'))),

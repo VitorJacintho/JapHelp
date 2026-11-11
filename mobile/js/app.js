@@ -11,7 +11,7 @@ const TABS = [
   ['home', '🏠', 'Início', ['home', 'stats']],
   ['course', '📘', 'Curso', ['course', 'lesson']],
   ['review', '🔁', 'Revisar', ['review']],
-  ['practice', '🎯', 'Praticar', ['practice', 'kana', 'kanji', 'vocab', 'phrases', 'dict', 'speak', 'drills', 'mywords']],
+  ['practice', '🎯', 'Praticar', ['practice', 'kana', 'kanji', 'vocab', 'phrases', 'dict', 'speak', 'drills', 'mywords', 'exam']],
   ['settings', '⚙️', 'Ajustes', ['settings']],
 ];
 
@@ -30,6 +30,7 @@ const ROUTES = {
   settings: () => V.SettingsView(),
   stats: () => V.StatsView(),
   drills: () => V.DrillsView(),
+  exam: () => V.ExamView(),
   mywords: () => V.MyWordsView(),
 };
 
@@ -79,12 +80,13 @@ export const App = {
   },
 
   /** Abre a tela de exercícios. Ao sair, volta para a tela de onde veio. */
-  runExercises({ title, generator, onComplete }) {
+  runExercises({ title, generator, onComplete, exam = null }) {
     Speech.stop();
     runner = createRunner({
       title,
       generator,
       onComplete,
+      exam,
       onExit: () => {
         runner = null;
         if (parseHash().name === 'run') history.back();

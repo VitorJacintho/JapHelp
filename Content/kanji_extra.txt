@@ -1,0 +1,332 @@
+// Kanji que aparecem nas lições, decks e frases do curso e não estão nas listas por nível.
+// Formato: kanji|on'yomi|kun'yomi|significado|palavra:leitura:significado;...
+#Do curso
+切|セツ・サイ|き(る)・き(れる)|cortar; importante|切符:きっぷ:bilhete;大切:たいせつ:importante
+丈|ジョウ|たけ|comprimento; robusto|大丈夫:だいじょうぶ:tudo bem;丈夫:じょうぶ:resistente
+撮|サツ|と(る)|fotografar|撮る:とる:tirar (foto);撮影禁止:さつえいきんし:proibido fotografar
+阪|ハン|さか|ladeira (Osaka)|大阪:おおさか:Osaka
+財|ザイ・サイ||bens, fortuna|財布:さいふ:carteira
+布|フ|ぬの|pano|財布:さいふ:carteira;毛布:もうふ:cobertor
+締|テイ|し(める)|apertar; encerrar|締め切り:しめきり:prazo final
+訳|ヤク|わけ|traduzir; motivo|訳:わけ:motivo;翻訳:ほんやく:tradução
+邪|ジャ||mal; incômodo|風邪:かぜ:resfriado;お邪魔します:おじゃまします:com licença (ao entrar)
+温|オン|あたた(かい)|morno, temperatura|体温:たいおん:temperatura do corpo;気温:きおん:temperatura do ar
+袋|タイ|ふくろ|saco, sacola|袋:ふくろ:sacola;レジ袋:れじぶくろ:sacola de compras
+京|キョウ・ケイ||capital|東京:とうきょう:Tóquio;京都:きょうと:Kyoto
+壊|カイ|こわ(す)・こわ(れる)|quebrar|壊す:こわす:quebrar;壊れる:こわれる:quebrar-se
+賃|チン||pagamento, aluguel|家賃:やちん:aluguel
+寮|リョウ||dormitório|寮:りょう:dormitório
+履|リ|は(く)|calçar; histórico|履歴書:りれきしょ:currículo;履く:はく:calçar
+張|チョウ|は(る)|esticar; estender|緊張:きんちょう:nervosismo;出張:しゅっちょう:viagem de trabalho
+趣|シュ|おもむき|gosto, interesse|趣味:しゅみ:hobby
+身|シン|み|corpo; si mesmo|出身:しゅっしん:origem (de onde é)
+誰||だれ|quem|誰:だれ:quem;誰も:だれも:ninguém
+司|シ||administrar|寿司:すし:sushi;上司:じょうし:chefe
+荷|カ|に|carga|荷物:にもつ:bagagem
+応|オウ||responder, corresponder|応募:おうぼ:candidatura;一応:いちおう:por via das dúvidas
+納|ノウ・ナッ|おさ(める)|pagar; guardar|納豆:なっとう:natto
+符|フ||sinal, bilhete|切符:きっぷ:bilhete
+暇|カ|ひま|tempo livre|暇:ひま:tempo livre;休暇:きゅうか:férias
+弁|ベン||fala; marmita|弁当:べんとう:marmita;大阪弁:おおさかべん:dialeto de Osaka
+台|ダイ・タイ||base, plataforma|台風:たいふう:tufão;台所:だいどころ:cozinha
+票|ヒョウ||ficha, voto|住民票:じゅうみんひょう:atestado de residência;投票:とうひょう:votação
+募|ボ|つの(る)|recrutar|募集:ぼしゅう:recrutamento;応募:おうぼ:candidatura
+鍵|ケン|かぎ|chave|鍵:かぎ:chave
+誕|タン||nascimento|誕生日:たんじょうび:aniversário
+豆|トウ・ズ|まめ|feijão, grão|納豆:なっとう:natto;豆:まめ:feijão, grão
+隣|リン|となり|vizinho, ao lado|隣:となり:ao lado
+机|キ|つくえ|mesa, escrivaninha|机:つくえ:mesa
+寿|ジュ|ことぶき|longevidade|寿司:すし:sushi
+伴|ハン・バン|ともな(う)|acompanhar|伴う:ともなう:acompanhar, vir junto
+影|エイ|かげ|sombra; imagem|影響:えいきょう:influência;撮影:さつえい:filmagem
+頑|ガン||teimoso, firme|頑張る:がんばる:esforçar-se
+契|ケイ|ちぎ(る)|acordo|契約:けいやく:contrato
+請|セイ|こ(う)・う(ける)|pedir|申請:しんせい:requerimento
+第|ダイ||número (ordinal)|次第:しだい:assim que;第一:だいいち:primeiro
+滞|タイ|とどこお(る)|ficar, estagnar|滞在:たいざい:estadia;渋滞:じゅうたい:engarrafamento
+喉|コウ|のど|garganta|喉:のど:garganta
+傘|サン|かさ|guarda-chuva|傘:かさ:guarda-chuva
+携|ケイ|たずさ(える)|carregar consigo|携帯:けいたい:celular
+帯|タイ|お(びる)・おび|cinto; zona|携帯:けいたい:celular;時間帯:じかんたい:faixa de horário
+額|ガク|ひたい|valor; testa|半額:はんがく:metade do preço;月額:げつがく:valor mensal
+嫌|ケン|きら(う)・いや|detestar|嫌い:きらい:não gostar;嫌:いや:desagradável
+狭|キョウ|せま(い)|estreito|狭い:せまい:apertado, estreito
+枚|マイ||contador de coisas planas|一枚:いちまい:uma folha
+脱|ダツ|ぬ(ぐ)|tirar (roupa)|脱ぐ:ぬぐ:tirar (roupa, sapato)
+紅|コウ|べに|vermelho intenso|紅茶:こうちゃ:chá preto;紅葉:こうよう:folhas de outono
+幹|カン|みき|tronco|新幹線:しんかんせん:trem-bala
+惑|ワク|まど(う)|confundir|迷惑:めいわく:incômodo
+敬|ケイ|うやま(う)|respeitar|敬語:けいご:linguagem respeitosa
+寂|ジャク・セキ|さび(しい)|solidão|寂しい:さびしい:sentir-se sozinho
+誘|ユウ|さそ(う)|convidar|誘う:さそう:convidar
+囲|イ|かこ(む)|cercar|雰囲気:ふんいき:clima, atmosfera;囲む:かこむ:cercar
+的|テキ|まと|alvo; (sufixo -ico)|目的:もくてき:objetivo;積極的:せっきょくてき:proativo
+快|カイ|こころよ(い)|agradável|快速:かいそく:trem rápido;快適:かいてき:confortável
+箸||はし|hashi|箸:はし:hashi
+乾|カン|かわ(く)|secar|乾杯:かんぱい:saúde! (brinde)
+印|イン|しるし|marca, carimbo|印鑑:いんかん:carimbo pessoal;印刷:いんさつ:impressão
+修|シュウ|おさ(める)|estudar; consertar|研修:けんしゅう:treinamento
+講|コウ||palestra|講義:こうぎ:aula expositiva;休講:きゅうこう:aula cancelada
+輩|ハイ||colega, geração|先輩:せんぱい:veterano;後輩:こうはい:calouro
+咳|ガイ|せき|tosse|咳:せき:tosse
+歴|レキ||história, trajetória|履歴書:りれきしょ:currículo
+蔵|ゾウ|くら|armazém|冷蔵庫:れいぞうこ:geladeira
+庫|コ||depósito|冷蔵庫:れいぞうこ:geladeira;車庫:しゃこ:garagem
+貼|チョウ|は(る)|colar|貼る:はる:colar;貼り紙:はりがみ:aviso colado
+触|ショク|さわ(る)・ふ(れる)|tocar|触る:さわる:tocar
+呂|ロ||coluna (banho)|お風呂:おふろ:banho (banheira)
+富|フ|と(む)|riqueza|富士山:ふじさん:Monte Fuji
+士|シ||cavalheiro, profissional|富士山:ふじさん:Monte Fuji;弁護士:べんごし:advogado
+節|セツ|ふし|estação; economia|季節:きせつ:estação do ano;節約:せつやく:economia
+池|チ|いけ|lago|池:いけ:lago;電池:でんち:pilha
+褒|ホウ|ほ(める)|elogiar|褒める:ほめる:elogiar
+菜|サイ|な|verdura|野菜:やさい:verduras
+噂||うわさ|boato|噂:うわさ:boato
+象|ショウ・ゾウ||fenômeno; elefante|気象庁:きしょうちょう:agência meteorológica;対象:たいしょう:público-alvo
+氏|シ|うじ|sobrenome; senhor|氏名:しめい:nome completo
+丸|ガン|まる・まる(い)|círculo, redondo|丸:まる:círculo;丸い:まるい:redondo
+湿|シツ|しめ(る)|umidade|湿気:しっけ:umidade
+泣|キュウ|な(く)|chorar|泣く:なく:chorar
+興|キョウ・コウ||interesse; prosperar|興味:きょうみ:interesse
+査|サ||investigar|検査:けんさ:exame;入国審査:にゅうこくしんさ:controle de imigração
+停|テイ||parar|停電:ていでん:falta de luz;停車:ていしゃ:parada (do trem)
+森|シン|もり|floresta|森:もり:floresta
+辛|シン|から(い)・つら(い)|picante; penoso|辛い:からい:picante
+鑑|カン||espelho; modelo|印鑑:いんかん:carimbo pessoal
+帳|チョウ||caderno|通帳:つうちょう:caderneta bancária;手帳:てちょう:agenda
+振|シン|ふ(る)|balançar; transferir|振込:ふりこみ:transferência bancária;振る:ふる:balançar
+延|エン|の(びる)・の(ばす)|prolongar|延長:えんちょう:prorrogação
+湯|トウ|ゆ|água quente|お湯:おゆ:água quente
+診|シン|み(る)|examinar (médico)|問診票:もんしんひょう:questionário médico;診察:しんさつ:consulta médica
+鼻|ビ|はな|nariz|鼻:はな:nariz;鼻水:はなみず:coriza
+箋|セン||papel, nota|処方箋:しょほうせん:receita médica
+海|カイ|うみ|mar|海:うみ:mar;北海道:ほっかいどう:Hokkaido
+泊|ハク|と(まる)|pernoitar|泊まる:とまる:pernoitar
+提|テイ|さ(げる)|apresentar, oferecer|提出:ていしゅつ:entrega;提供:ていきょう:oferecimento
+雰|フン||atmosfera|雰囲気:ふんいき:clima, atmosfera
+滑|カツ|すべ(る)|escorregar|滑る:すべる:escorregar
+短|タン|みじか(い)|curto|短い:みじかい:curto;短所:たんしょ:ponto fraco
+響|キョウ|ひび(く)|ecoar|影響:えいきょう:influência
+釣|チョウ|つ(る)|pescar; troco|お釣り:おつり:troco
+眼|ガン|まなこ|olho|眼鏡:めがね:óculos
+鏡|キョウ|かがみ|espelho|眼鏡:めがね:óculos;鏡:かがみ:espelho
+個|コ||unidade|一個:いっこ:uma unidade;個人:こじん:indivíduo
+匹|ヒツ|ひき|contador de animais pequenos|一匹:いっぴき:um animal
+磨|マ|みが(く)|polir, escovar|磨く:みがく:polir, escovar
+濯|タク||lavar|洗濯:せんたく:lavar roupa
+季|キ||estação|季節:きせつ:estação do ano
+叱|シツ|しか(る)|repreender|叱る:しかる:dar bronca
+踏|トウ|ふ(む)|pisar|踏む:ふむ:pisar
+己|コ・キ|おのれ|si mesmo|自己紹介:じこしょうかい:autoapresentação
+紹|ショウ||apresentar|紹介:しょうかい:apresentação
+介|カイ||intermediar|紹介:しょうかい:apresentação
+召|ショウ|め(す)|chamar (honorífico)|召し上がる:めしあがる:comer, beber (respeitoso)
+覧|ラン||ver, olhar|ご覧になる:ごらんになる:ver (respeitoso)
+伺|シ|うかが(う)|visitar, perguntar (humilde)|伺う:うかがう:visitar, perguntar (humilde)
+拝|ハイ|おが(む)|reverenciar|拝見する:はいけんする:ver (humilde)
+嬉||うれ(しい)|feliz|嬉しい:うれしい:feliz
+誌|シ||revista, registro|雑誌:ざっし:revista
+懸|ケン・ケ|か(ける)|pendurar; empenho|一生懸命:いっしょうけんめい:com todo o empenho
+将|ショウ||general; futuro|将来:しょうらい:futuro
+翻|ホン|ひるがえ(す)|virar; traduzir|翻訳:ほんやく:tradução
+嘘|キョ|うそ|mentira|嘘:うそ:mentira
+慮|リョ||consideração|遠慮:えんりょ:cerimônia, reserva
+籍|セキ||registro|国籍:こくせき:nacionalidade
+署|ショ||repartição; assinar|署名:しょめい:assinatura;警察署:けいさつしょ:delegacia
+微|ビ||minúsculo, sutil|微妙:びみょう:sutil, mais ou menos
+妙|ミョウ||estranho, sutil|微妙:びみょう:sutil, mais ou menos
+久|キュウ|ひさ(しい)|muito tempo|久しぶり:ひさしぶり:há quanto tempo
+焼|ショウ|や(く)・や(ける)|assar, queimar|焼く:やく:assar;焼き鳥:やきとり:espetinho de frango
+悔|カイ|く(やしい)|arrependimento|後悔:こうかい:arrependimento;悔しい:くやしい:frustrante
+句|ク||frase, verso|文句:もんく:reclamação
+価|カ|あたい|preço, valor|物価:ぶっか:custo de vida;価格:かかく:preço
+諦|テイ|あきら(める)|desistir|諦める:あきらめる:desistir
+薄|ハク|うす(い)|fino, ralo|薄い:うすい:fino, fraco
+頃||ころ|época, por volta de|子供の頃:こどものころ:na infância
+審|シン||examinar|入国審査:にゅうこくしんさ:controle de imigração
+各|カク|おのおの|cada|各駅停車:かくえきていしゃ:trem que para em todas
+渋|ジュウ|しぶ(い)|adstringente; travado|渋滞:じゅうたい:engarrafamento
+城|ジョウ|しろ|castelo|大阪城:おおさかじょう:Castelo de Osaka;城:しろ:castelo
+環|カン||anel, ciclo|環境:かんきょう:meio ambiente
+宮|キュウ・グウ|みや|palácio, santuário|宮島:みやじま:Miyajima;神宮:じんぐう:grande santuário
+奨|ショウ||incentivar|奨学金:しょうがくきん:bolsa de estudos
+敷|フ|し(く)|estender|敷金:しききん:caução (aluguel)
+粗|ソ|あら(い)|grosseiro|粗大ゴミ:そだいごみ:lixo grande
+騒|ソウ|さわ(ぐ)|barulho|騒ぐ:さわぐ:fazer barulho;騒音:そうおん:ruído
+吐|ト|は(く)|vomitar, expelir|吐き気:はきけ:náusea
+我|ガ|われ|eu, ego|怪我:けが:ferimento
+津|シン|つ|porto|津波:つなみ:tsunami
+勘|カン||intuição; calcular|割り勘:わりかん:rachar a conta
+俺||おれ|eu (masculino, informal)|俺:おれ:eu (masculino, informal)
+歓|カン||alegria|歓迎:かんげい:boas-vindas
+庁|チョウ||órgão do governo|県庁:けんちょう:governo da província;気象庁:きしょうちょう:agência meteorológica
+洪|コウ||inundação|洪水:こうずい:enchente
+懐|カイ|なつ(かしい)|saudade; bolso|懐かしい:なつかしい:saudoso;懐中電灯:かいちゅうでんとう:lanterna
+灯|トウ|ひ|lâmpada, luz|懐中電灯:かいちゅうでんとう:lanterna
+黙|モク|だま(る)|silêncio|黙る:だまる:ficar calado
+黄|コウ・オウ|き|amarelo|黄色い:きいろい:amarelo
+測|ソク|はか(る)|medir|測る:はかる:medir
+稿|コウ||rascunho|原稿:げんこう:manuscrito, roteiro
+徹|テツ||atravessar|徹夜:てつや:virar a noite
+暖|ダン|あたた(かい)|morno|暖かい:あたたかい:morno, agradável;暖房:だんぼう:aquecimento
+比|ヒ|くら(べる)|comparar|比べる:くらべる:comparar
+片|ヘン|かた|um lado; pedaço|片付ける:かたづける:arrumar
+恥|チ|は(じる)・は(ずかしい)|vergonha|恥ずかしい:はずかしい:envergonhado
+僚|リョウ||colega|同僚:どうりょう:colega de trabalho
+担|タン|かつ(ぐ)|carregar; encarregar-se|担当:たんとう:responsável
+領|リョウ||território; receber|領収書:りょうしゅうしょ:recibo
+検|ケン||inspecionar|検査:けんさ:exame;検索:けんさく:busca
+充|ジュウ|あ(てる)|encher|充電:じゅうでん:carregar (bateria);充電器:じゅうでんき:carregador
+房|ボウ|ふさ|quarto; cacho|冷房:れいぼう:ar-condicionado;暖房:だんぼう:aquecimento
+浴|ヨク|あ(びる)|banhar-se|浴びる:あびる:banhar-se;浴衣:ゆかた:yukata
+駄|ダ||inútil|駄目:だめ:não pode, não presta
+僕|ボク||eu (masculino)|僕:ぼく:eu (masculino)
+援|エン||ajudar|応援:おうえん:torcida, apoio
+桃|トウ|もも|pêssego|桃:もも:pêssego;桃太郎:ももたろう:Momotaro (conto)
+郎|ロウ||rapaz (em nomes)|桃太郎:ももたろう:Momotaro (conto)
+泥|デイ|どろ|lama|泥棒:どろぼう:ladrão
+棒|ボウ||vara, bastão|泥棒:どろぼう:ladrão
+寺|ジ|てら|templo budista|お寺:おてら:templo;清水寺:きよみずでら:templo Kiyomizu
+尊|ソン|とうと(い)|respeitar|尊敬語:そんけいご:linguagem respeitosa
+謙|ケン||modéstia|謙譲語:けんじょうご:linguagem humilde
+譲|ジョウ|ゆず(る)|ceder|譲る:ゆずる:ceder (o lugar)
+載|サイ|の(る)・の(せる)|publicar, carregar|載る:のる:sair (no jornal, revista)
+並|ヘイ|なら(ぶ)・なら(べる)|enfileirar|並ぶ:ならぶ:fazer fila
+添|テン|そ(える)|anexar|添付:てんぷ:anexo
+佐|サ||ajudar (em nomes)|佐藤:さとう:Sato (sobrenome)
+藤|トウ|ふじ|glicínia|佐藤:さとう:Sato (sobrenome);藤:ふじ:glicínia
+析|セキ||analisar|分析:ぶんせき:análise
+導|ドウ|みちび(く)|guiar|導入:どうにゅう:introdução, implantação
+順|ジュン||ordem, sequência|手順:てじゅん:procedimento;順番:じゅんばん:vez, ordem
+承|ショウ|うけたまわ(る)|aceitar|承知しました:しょうちしました:entendido (formal)
+該|ガイ||corresponder|該当:がいとう:corresponder, aplicar-se
+壁|ヘキ|かべ|parede|壁:かべ:parede
+谷|コク|たに|vale|渋谷:しぶや:Shibuya;谷:たに:vale
+膳|ゼン||bandeja de refeição|お膳:おぜん:bandeja de refeição
+唐|トウ|から|China antiga|唐揚げ:からあげ:frango frito
+揚|ヨウ|あ(げる)|fritar; erguer|唐揚げ:からあげ:frango frito;揚げる:あげる:fritar
+献|ケン||oferecer|献立:こんだて:cardápio do dia
+管|カン|くだ|tubo; administrar|管理:かんり:administração
+源|ゲン|みなもと|fonte, origem|資源ゴミ:しげんごみ:lixo reciclável
+缶|カン||lata|缶:かん:lata
+防|ボウ|ふせ(ぐ)|proteger, prevenir|防災:ぼうさい:prevenção de desastres;消防車:しょうぼうしゃ:caminhão de bombeiros
+余|ヨ|あま(る)|sobra|余震:よしん:tremor secundário;余る:あまる:sobrar
+隠|イン|かく(す)・かく(れる)|esconder|隠す:かくす:esconder
+裏|リ|うら|verso, avesso|裏:うら:verso, parte de trás
+型|ケイ|かた|modelo, forma|髪型:かみがた:penteado
+周|シュウ|まわ(り)|volta, redor|周り:まわり:arredores
+烏|ウ|からす|corvo|烏:からす:corvo
+首|シュ|くび|pescoço|首:くび:pescoço
+腕|ワン|うで|braço|腕:うで:braço
+豚|トン|ぶた|porco|豚肉:ぶたにく:carne de porco
+鶏|ケイ|にわとり|galinha|鶏肉:とりにく:frango
+卵|ラン|たまご|ovo|卵:たまご:ovo
+乳|ニュウ|ちち|leite|牛乳:ぎゅうにゅう:leite
+菓|カ||doce|お菓子:おかし:doce, salgadinho
+砂|サ|すな|areia|砂糖:さとう:açúcar
+糖|トウ||açúcar|砂糖:さとう:açúcar
+塩|エン|しお|sal|塩:しお:sal
+醤|ショウ||molho|醤油:しょうゆ:shoyu
+油|ユ|あぶら|óleo|醤油:しょうゆ:shoyu;油:あぶら:óleo
+甘|カン|あま(い)|doce|甘い:あまい:doce
+皿||さら|prato|お皿:おさら:prato
+玄|ゲン||entrada; escuro|玄関:げんかん:entrada da casa
+椅|イ||cadeira|椅子:いす:cadeira
+鞄|ホウ|かばん|bolsa|鞄:かばん:bolsa
+鹸|ケン||sabão|石鹸:せっけん:sabonete
+喫|キツ||consumir (fumar, beber)|喫茶店:きっさてん:cafeteria;喫煙所:きつえんじょ:área de fumantes
+雲|ウン|くも|nuvem|雲:くも:nuvem
+曇|ドン|くも(る)|nublar|曇り:くもり:tempo nublado
+涼|リョウ|すず(しい)|fresco|涼しい:すずしい:fresco
+星|セイ|ほし|estrela|星:ほし:estrela
+鉛|エン|なまり|chumbo|鉛筆:えんぴつ:lápis
+筆|ヒツ|ふで|pincel|鉛筆:えんぴつ:lápis
+帽|ボウ||chapéu|帽子:ぼうし:chapéu, boné
+緑|リョク|みどり|verde|緑:みどり:verde
+低|テイ|ひく(い)|baixo|低い:ひくい:baixo
+賑||にぎ(やか)|animado|賑やか:にぎやか:animado, movimentado
+踊|ヨウ|おど(る)|dançar|踊る:おどる:dançar
+驚|キョウ|おどろ(く)|surpreender-se|驚く:おどろく:surpreender-se
+捨|シャ|す(てる)|jogar fora|捨てる:すてる:jogar fora
+捕|ホ|つか(まえる)|capturar|捕まえる:つかまえる:pegar, capturar
+包|ホウ|つつ(む)|embrulhar|包む:つつむ:embrulhar
+塗|ト|ぬ(る)|passar (tinta, creme)|塗る:ぬる:passar, pintar
+坊|ボウ||menino; monge|寝坊:ねぼう:perder a hora
+拾|シュウ|ひろ(う)|apanhar do chão|拾う:ひろう:apanhar do chão
+貰||もら(う)|receber|貰う:もらう:receber
+揺|ヨウ|ゆ(れる)|balançar|揺れる:ゆれる:balançar, tremer
+汚|オ|きたな(い)・よご(れる)|sujo|汚い:きたない:sujo;汚れる:よごれる:sujar-se
+沸|フツ|わ(く)・わ(かす)|ferver|沸かす:わかす:ferver
+祈|キ|いの(る)|rezar|祈る:いのる:rezar, desejar
+植|ショク|う(える)|plantar|植える:うえる:plantar
+浅|セン|あさ(い)|raso|浅い:あさい:raso
+厚|コウ|あつ(い)|grosso|厚い:あつい:grosso
+柔|ジュウ|やわ(らかい)|macio|柔らかい:やわらかい:macio;柔道:じゅうどう:judô
+硬|コウ|かた(い)|duro|硬い:かたい:duro
+珍|チン|めずら(しい)|raro|珍しい:めずらしい:raro
+細|サイ|ほそ(い)・こま(かい)|fino, detalhado|細かい:こまかい:detalhado, miúdo
+酷|コク|ひど(い)|cruel, terrível|酷い:ひどい:terrível
+丁|テイ・チョウ||educado; quarteirão|丁寧:ていねい:educado, cuidadoso
+寧|ネイ||calmo, cortês|丁寧:ていねい:educado, cuidadoso
+複|フク||duplo, múltiplo|複雑:ふくざつ:complicado
+緊|キン||tenso|緊張:きんちょう:nervosismo
+涙|ルイ|なみだ|lágrima|涙:なみだ:lágrima
+憩|ケイ||descanso|休憩:きゅうけい:intervalo
+痢|リ||diarreia|下痢:げり:diarreia
+射|シャ|い(る)|disparar; injetar|注射:ちゅうしゃ:injeção
+雷|ライ|かみなり|trovão|雷:かみなり:trovão
+梅|バイ|うめ|ameixa japonesa|梅雨:つゆ:estação das chuvas;梅:うめ:ameixa
+桜|オウ|さくら|cerejeira|桜:さくら:cerejeira
+器|キ|うつわ|recipiente, aparelho|充電器:じゅうでんき:carregador;食器:しょっき:louça
+索|サク||procurar|検索:けんさく:busca
+既|キ|すで(に)|já|既読:きどく:lido (mensagem)
+刷|サツ|す(る)|imprimir|印刷:いんさつ:impressão
+設|セツ|もう(ける)|instalar|設定:せってい:configuração;設備:せつび:instalações
+与|ヨ|あた(える)|dar|与える:あたえる:dar, conceder
+尋|ジン|たず(ねる)|perguntar|尋ねる:たずねる:perguntar
+況|キョウ||situação|状況:じょうきょう:situação
+境|キョウ|さかい|fronteira|環境:かんきょう:meio ambiente
+効|コウ|き(く)|efeito|効果:こうか:efeito;効く:きく:fazer efeito
+条|ジョウ||cláusula|条件:じょうけん:condição
+基|キ|もと|base|基本:きほん:básico
+標|ヒョウ||marca, meta|目標:もくひょう:meta;標識:ひょうしき:placa
+義|ギ||justiça; significado|講義:こうぎ:aula expositiva;義務:ぎむ:obrigação
+専|セン|もっぱ(ら)|exclusivo|専攻:せんこう:área de estudo;専門:せんもん:especialidade
+攻|コウ|せ(める)|atacar; estudar|専攻:せんこう:área de estudo
+績|セキ||realização|成績:せいせき:notas, desempenho
+魔|マ||demônio; estorvo|お邪魔します:おじゃまします:com licença (ao entrar)
+継|ケイ|つ(ぐ)|continuar, suceder|中継:ちゅうけい:transmissão ao vivo;引き継ぎ:ひきつぎ:passagem de trabalho
+貴|キ|とうと(い)|precioso, nobre|貴重:きちょう:precioso, valioso
+純|ジュン||puro|単純:たんじゅん:simples
+素|ソ・ス||elemento; simples|素直:すなお:sincero;素敵:すてき:lindo, encantador
+派|ハ||facção, escola|立派:りっぱ:admirável
+屈|クツ||dobrar, ceder|退屈:たいくつ:entediante
+詳|ショウ|くわ(しい)|detalhado|詳しい:くわしい:detalhado
+激|ゲキ|はげ(しい)|violento, intenso|激しい:はげしい:intenso
+偉|イ|えら(い)|grandioso|偉い:えらい:admirável
+慢|マン||paciência; arrogância|我慢:がまん:aguentar
+喧|ケン|やかま(しい)|barulhento|喧嘩:けんか:briga
+嘩|カ||barulho, briga|喧嘩:けんか:briga
+仲|チュウ|なか|relação|仲間:なかま:companheiro;仲直り:なかなおり:fazer as pazes
+恋|レン|こい|amor romântico|恋人:こいびと:namorado(a)
+婦|フ||mulher; esposa|夫婦:ふうふ:casal
+戚|セキ||parentesco|親戚:しんせき:parente
+励|レイ|はげ(ます)|encorajar|励ます:はげます:encorajar
+慰|イ|なぐさ(める)|consolar|慰める:なぐさめる:consolar
+症|ショウ||sintoma, doença|症状:しょうじょう:sintoma;花粉症:かふんしょう:alergia a pólen
+骨|コツ|ほね|osso|骨折:こっせつ:fratura;骨:ほね:osso
+傷|ショウ|きず|ferida|火傷:やけど:queimadura;傷:きず:ferida
+粉|フン|こな|pó|花粉症:かふんしょう:alergia a pólen;小麦粉:こむぎこ:farinha de trigo
+血|ケツ|ち|sangue|血液:けつえき:sangue;血:ち:sangue
+液|エキ||líquido|血液:けつえき:sangue
+臓|ゾウ||órgão interno|心臓:しんぞう:coração
+肩|ケン|かた|ombro|肩:かた:ombro
+腰|ヨウ|こし|lombar, quadril|腰:こし:lombar
+膝|シツ|ひざ|joelho|膝:ひざ:joelho
+挙|キョ|あ(げる)|erguer; realizar|選挙:せんきょ:eleição
+府|フ||governo; província|政府:せいふ:governo;大阪府:おおさかふ:província de Osaka
+被|ヒ|こうむ(る)|sofrer (dano)|被害:ひがい:dano
+齢|レイ||idade|高齢者:こうれいしゃ:idoso;年齢:ねんれい:idade
+輸|ユ||transportar|輸入:ゆにゅう:importação;輸出:ゆしゅつ:exportação
+律|リツ||lei, regra|法律:ほうりつ:lei
+権|ケン||direito, poder|権利:けんり:direito

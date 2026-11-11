@@ -78,6 +78,13 @@
         ["あまりテレビを見ません。", "あまり テレビ を みません。", "Não assisto muito TV."],
         ["明日、大学へ行きますか。", "あした、だいがく へ いきますか。", "Você vai à universidade amanhã?"]
       ],
+      "dialog": [
+        ["アナ", "田中さんは毎朝何時に起きますか。", "たなかさんは まいあさ なんじに おきますか。", "Tanaka, a que horas você acorda toda manhã?"],
+        ["田中", "六時に起きます。アナさんは？", "ろくじに おきます。アナさんは？", "Acordo às seis. E você, Ana?"],
+        ["アナ", "私は七時に起きます。それから、コーヒーを飲みます。", "わたしは しちじに おきます。それから、コーヒーを のみます。", "Eu acordo às sete. Depois, tomo café."],
+        ["田中", "週末は何をしますか。", "しゅうまつは なにを しますか。", "O que você faz no fim de semana?"],
+        ["アナ", "図書館で勉強します。日曜日は休みます。", "としょかんで べんきょうします。にちようびは やすみます。", "Estudo na biblioteca. No domingo, descanso."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Como se diz 'comi' (passado)?", "o": ["たべました", "たべます", "たべません", "たべませんでした"]},
         {"t": "mc", "q": "Como se diz 'não bebi'?", "o": ["のみませんでした", "のみません", "のみました", "のまないでした"]},
@@ -147,6 +154,12 @@
         ["私も日本語を勉強しています。", "わたし も にほんご を べんきょう しています。", "Eu também estudo japonês."],
         ["駅で田中さんに会いました。", "えき で たなかさん に あいました。", "Encontrei o Tanaka na estação."],
         ["日本語で話してください。", "にほんご で はなして ください。", "Por favor, fale em japonês."]
+      ],
+      "dialog": [
+        ["アナ", "すみません、この電車は新宿に行きますか。", "すみません、この でんしゃは しんじゅくに いきますか。", "Com licença, este trem vai para Shinjuku?"],
+        ["駅員", "いいえ、行きません。新宿は二番線ですよ。", "いいえ、いきません。しんじゅくは にばんせんですよ。", "Não, não vai. Para Shinjuku é a plataforma 2."],
+        ["アナ", "二番線ですね。新宿で友達と昼ご飯を食べます。", "にばんせんですね。しんじゅくで ともだちと ひるごはんを たべます。", "Plataforma 2, certo. Vou almoçar com um amigo em Shinjuku."],
+        ["駅員", "そうですか。いってらっしゃい。", "そうですか。いってらっしゃい。", "Ah, é? Boa ida."]
       ],
       "exercises": [
         {"t": "mc", "jp": "としょかん___ べんきょうします。", "q": "Complete: 'Estudo NA biblioteca.'", "o": ["で", "に", "を", "へ"], "e": "Lugar onde uma ação acontece → で."},
@@ -224,6 +237,14 @@
         ["私は猫が好きです。", "わたし は ねこ が すき です。", "Eu gosto de gatos."],
         ["テストはよくなかったです。", "テスト は よくなかった です。", "A prova não foi boa."]
       ],
+      "dialog": [
+        ["田中", "日本の生活はどうですか。", "にほんの せいかつは どうですか。", "Como está a vida no Japão?"],
+        ["アナ", "とても楽しいです。でも、ちょっと忙しいです。", "とても たのしいです。でも、ちょっと いそがしいです。", "Muito divertida. Mas um pouco corrida."],
+        ["田中", "寮はどうですか。", "りょうは どうですか。", "E o dormitório?"],
+        ["アナ", "部屋は狭いですが、きれいで静かです。", "へやは せまいですが、きれいで しずかです。", "O quarto é pequeno, mas é limpo e silencioso."],
+        ["田中", "日本の食べ物は？", "にほんの たべものは？", "E a comida japonesa?"],
+        ["アナ", "おいしいです！でも、納豆は好きじゃありません。", "おいしいです！でも、なっとうは すきじゃありません。", "Gostosa! Mas não gosto de natto."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Negativo de たかい (caro):", "o": ["たかくない", "たかいじゃない", "たかない", "たかくありませんでした"]},
         {"t": "mc", "q": "Passado de さむい (frio):", "o": ["さむかった", "さむいでした", "さむくでした", "さむいかった"]},
@@ -293,6 +314,13 @@
         ["ベッドの下に猫がいます。", "ベッド の した に ねこ が います。", "Embaixo da cama há um gato."],
         ["冷蔵庫の中に何もありません。", "れいぞうこ の なか に なにも ありません。", "Não há nada dentro da geladeira."],
         ["銀行は郵便局と病院の間です。", "ぎんこう は ゆうびんきょく と びょういん の あいだ です。", "O banco fica entre o correio e o hospital."]
+      ],
+      "dialog": [
+        ["アナ", "すみません、トイレはどこにありますか。", "すみません、トイレは どこに ありますか。", "Com licença, onde fica o banheiro?"],
+        ["店員", "エレベーターの右にあります。", "エレベーターの みぎに あります。", "Fica à direita do elevador."],
+        ["アナ", "それから、この近くにコンビニはありますか。", "それから、この ちかくに コンビニは ありますか。", "E tem alguma loja de conveniência aqui perto?"],
+        ["店員", "はい、駅の前に一つあります。", "はい、えきの まえに ひとつ あります。", "Sim, tem uma em frente à estação."],
+        ["アナ", "ありがとうございます。", "ありがとうございます。", "Obrigada."]
       ],
       "exercises": [
         {"t": "mc", "jp": "つくえの ___ に ほんが あります。", "q": "Complete: 'Há um livro EMBAIXO da mesa.'", "o": ["した", "うえ", "なか", "まえ"]},
@@ -438,6 +466,14 @@
         ["朝起きて、ご飯を食べて、学校へ行きます。", "あさ おきて、ごはん を たべて、がっこう へ いきます。", "De manhã acordo, como e vou para a escola."],
         ["どうぞ、座ってください。", "どうぞ、すわって ください。", "Fique à vontade, sente-se."]
       ],
+      "dialog": [
+        ["先生", "アナさん、ここに名前を書いてください。", "アナさん、ここに なまえを かいてください。", "Ana, escreva seu nome aqui, por favor."],
+        ["アナ", "はい。住所も書きますか。", "はい。じゅうしょも かきますか。", "Certo. Escrevo o endereço também?"],
+        ["先生", "はい、お願いします。それから、写真を貼ってください。", "はい、おねがいします。それから、しゃしんを はってください。", "Sim, por favor. Depois, cole a foto."],
+        ["アナ", "すみません、もう一度言ってください。", "すみません、もう いちど いってください。", "Desculpe, pode repetir, por favor?"],
+        ["先生", "写真を、ここに、貼ってください。", "しゃしんを、ここに、はってください。", "Cole a foto, aqui."],
+        ["アナ", "わかりました。", "わかりました。", "Entendi."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Forma て de かきます (escrever):", "o": ["かいて", "かきて", "かって", "かんで"]},
         {"t": "mc", "q": "Forma て de のみます (beber):", "o": ["のんで", "のみて", "のって", "のいで"]},
@@ -506,6 +542,13 @@
         ["このペンを使ってもいいですか。", "この ペン を つかっても いい ですか。", "Posso usar esta caneta?"],
         ["ここでたばこを吸ってはいけません。", "ここ で たばこ を すっては いけません。", "É proibido fumar aqui."],
         ["作品に触ってはいけません。", "さくひん に さわっては いけません。", "Não toque nas obras."]
+      ],
+      "dialog": [
+        ["係員", "すみません、ここで写真を撮ってはいけません。", "すみません、ここで しゃしんを とっては いけません。", "Com licença, aqui não pode tirar fotos."],
+        ["アナ", "あ、すみません。知りませんでした。外で撮ってもいいですか。", "あ、すみません。しりませんでした。そとで とっても いいですか。", "Ah, desculpe. Eu não sabia. Posso tirar lá fora?"],
+        ["係員", "はい、外はいいですよ。", "はい、そとは いいですよ。", "Sim, lá fora pode."],
+        ["アナ", "あの人は何をしていますか。", "あの ひとは なにを していますか。", "O que aquela pessoa está fazendo?"],
+        ["係員", "庭を掃除しています。", "にわを そうじしています。", "Está limpando o jardim."]
       ],
       "exercises": [
         {"t": "mc", "q": "Como dizer 'Estou estudando agora'?", "o": ["いま べんきょうして います。", "いま べんきょうします。", "いま べんきょうしました。", "いま べんきょうしたいです。"]},
@@ -580,6 +623,13 @@
         ["家に猫が二匹います。", "うち に ねこ が にひき います。", "Tenho dois gatos em casa."],
         ["一日に三回薬を飲みます。", "いちにち に さんかい くすり を のみます。", "Tomo remédio três vezes por dia."]
       ],
+      "dialog": [
+        ["店員", "いらっしゃいませ。", "いらっしゃいませ。", "Bem-vinda."],
+        ["アナ", "りんごを三つと、ペットボトルの水を二本ください。", "りんごを みっつと、ペットボトルの みずを にほん ください。", "Três maçãs e duas garrafas de água, por favor."],
+        ["店員", "はい。袋は要りますか。", "はい。ふくろは いりますか。", "Certo. Precisa de sacola?"],
+        ["アナ", "一枚お願いします。", "いちまい おねがいします。", "Uma, por favor."],
+        ["店員", "全部で五百八十円です。", "ぜんぶで ごひゃくはちじゅうえんです。", "Ao todo, 580 ienes."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Como dizer 'três (objetos)' com o contador genérico?", "o": ["みっつ", "さんつ", "みつ", "さんこ"]},
         {"t": "mc", "q": "Como dizer 'duas pessoas'?", "o": ["ふたり", "にじん", "ににん", "ふたつ"]},
@@ -591,6 +641,78 @@
         {"t": "type", "q": "Escreva 'hitotsu' (um objeto).", "acc": ["ひとつ", "一つ"]},
         {"t": "listen", "s": "ビールを さんぼん ください。", "q": "O que a pessoa pediu?", "o": ["3 garrafas de cerveja", "3 copos de cerveja", "1 cerveja", "30 cervejas"]},
         {"t": "listen", "s": "いちにちに にかい のんで ください。", "q": "Qual a instrução?", "o": ["Tome 2 vezes por dia", "Tome 1 vez por dia", "Tome 2 comprimidos", "Tome a cada 2 dias"]}
+      ]
+    },
+    {
+      "id": "n2-09",
+      "title": "は × が",
+      "subtitle": "tópico ou sujeito? · 〜が好き · 〜がいます/あります",
+      "theory": [
+        "# は e が: a dúvida mais famosa do japonês",
+        "As duas partículas aparecem depois do sujeito, mas fazem coisas diferentes. Uma regra simples resolve a maioria dos casos:",
+        "- **は** apresenta o TÓPICO: \"quanto a X, ...\". O foco está no que vem DEPOIS (o comentário).",
+        "- **が** marca o SUJEITO e põe o foco NELE: \"é X que ...\".",
+        "ex: 私**は**アナです。 → Quanto a mim, sou a Ana. (a informação nova é \"Ana\")",
+        "ex: 私**が**アナです。 → A Ana sou EU. (resposta a \"quem é a Ana?\")",
+        "## Perguntas com quem/o que: sempre が",
+        "Palavras interrogativas (だれ, なに, どれ, どこ) nunca levam は. E a resposta repete o が.",
+        "ex: だれ**が**来ましたか。 → 田中さん**が**来ました。",
+        "## Informação nova × já conhecida",
+        "Quando algo aparece pela primeira vez na conversa, use が. Depois que virou assunto, ele passa a ser は.",
+        "ex: 昔々、おじいさん**が**いました。おじいさん**は**山に行きました。 → Era uma vez um velhinho. O velhinho foi à montanha.",
+        "## Expressões que pedem が",
+        "| Expressão | Exemplo |",
+        "| 〜が好き / 嫌い | 私は寿司**が**好きです。 |",
+        "| 〜が上手 / 下手 | アナさんは歌**が**上手です。 |",
+        "| 〜がわかる | 日本語**が**わかります。 |",
+        "| 〜がほしい | 新しいパソコン**が**ほしいです。 |",
+        "| 〜がいる / ある | 公園に犬**が**います。 |",
+        "Repare: nessas frases o は fica com a PESSOA (o tópico) e o が com o objeto do gosto, da habilidade ou da existência.",
+        "## は para contraste",
+        "は também compara duas coisas, mesmo no lugar de を:",
+        "ex: 肉**は**食べますが、魚**は**食べません。 → Carne eu como, mas peixe não.",
+        "> Dica: se a frase responde \"quem?\" ou \"o quê?\", use が. Se ela fala SOBRE algo já conhecido, use は."
+      ],
+      "vocab": [
+        ["好き", "すき", "gostar de (な)"],
+        ["嫌い", "きらい", "não gostar de (な)"],
+        ["上手", "じょうず", "habilidoso, bom em (な)"],
+        ["下手", "へた", "ruim em (な)"],
+        ["歌", "うた", "canção, cantar"],
+        ["寿司", "すし", "sushi"],
+        ["肉", "にく", "carne"],
+        ["魚", "さかな", "peixe"],
+        ["犬", "いぬ", "cachorro"],
+        ["猫", "ねこ", "gato"],
+        ["公園", "こうえん", "parque"],
+        ["誰", "だれ", "quem"]
+      ],
+      "examples": [
+        ["私はアナです。", "わたし は アナ です。", "Eu sou a Ana."],
+        ["誰が来ましたか。", "だれ が きましたか。", "Quem veio?"],
+        ["田中さんが来ました。", "たなかさん が きました。", "Foi o Tanaka que veio."],
+        ["私は寿司が好きです。", "わたし は すし が すき です。", "Eu gosto de sushi."],
+        ["アナさんは歌が上手です。", "アナさん は うた が じょうず です。", "A Ana canta bem."],
+        ["公園に犬がいます。", "こうえん に いぬ が います。", "Tem um cachorro no parque."],
+        ["肉は食べますが、魚は食べません。", "にく は たべますが、さかな は たべません。", "Carne eu como, mas peixe não."]
+      ],
+      "dialog": [
+        ["田中", "アナさんは日本の食べ物で何が一番好きですか。", "アナさんは にほんの たべもので なにが いちばん すきですか。", "Ana, de comida japonesa, do que você mais gosta?"],
+        ["アナ", "ラーメンが一番好きです。田中さんは？", "ラーメンが いちばん すきです。たなかさんは？", "Gosto mais de lámen. E você?"],
+        ["田中", "僕は寿司が好きです。でも、納豆は苦手です。", "ぼくは すしが すきです。でも、なっとうは にがてです。", "Eu gosto de sushi. Mas natto não é comigo."],
+        ["アナ", "私も！納豆は食べられません。", "わたしも！なっとうは たべられません。", "Eu também! Natto eu não consigo comer."]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Complete: だれ ___ きましたか。", "o": ["が", "は", "を", "に"], "e": "Palavras interrogativas (だれ, なに) sempre levam が."},
+        {"t": "mc", "q": "Complete: わたし ___ すしが すきです。", "o": ["は", "が", "を", "で"], "e": "A pessoa é o tópico (は); o objeto do gosto leva が."},
+        {"t": "mc", "q": "Complete: わたしは すし ___ すきです。", "o": ["が", "を", "は", "に"], "e": "〜が好き: o que se gosta leva が."},
+        {"t": "mc", "q": "Complete: こうえんに いぬ ___ います。", "o": ["が", "を", "で", "へ"], "e": "Existência (いる/ある): o que existe leva が."},
+        {"t": "mc", "ctx": "Alguém pergunta: だれが アナさんですか。", "q": "Você é a Ana. O que responde?", "o": ["わたしが アナです。", "わたしは アナです。", "わたしを アナです。", "わたしも アナです。"], "e": "A resposta a \"quem?\" repete o が."},
+        {"t": "mc", "q": "O que significa: にくは たべますが、さかなは たべません。", "o": ["Carne eu como, mas peixe não.", "Como carne e peixe.", "Não como carne nem peixe.", "Peixe eu como, mas carne não."], "e": "は marcando contraste."},
+        {"t": "order", "q": "Monte: A Ana canta bem.", "w": ["アナさん", "は", "うた", "が", "じょうず", "です"]},
+        {"t": "order", "q": "Monte: Eu entendo japonês.", "w": ["わたし", "は", "にほんご", "が", "わかります"]},
+        {"t": "type", "q": "Complete com a partícula: なに ___ ほしいですか。", "acc": ["が"], "e": "Interrogativa + 〜がほしい: が."},
+        {"t": "listen", "s": "わたしは ねこが すきですが、いぬは きらいです。", "q": "O que a pessoa disse?", "o": ["Gosta de gatos, mas não de cachorros.", "Gosta de cachorros, mas não de gatos.", "Gosta de gatos e de cachorros.", "Não gosta de animais."]}
       ]
     }
   ]

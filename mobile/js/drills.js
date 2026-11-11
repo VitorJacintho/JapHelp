@@ -132,8 +132,8 @@ export function inflectable() {
   return out;
 }
 
-export function conjugationDrill(count = 12) {
-  return shuffle(inflectable()).slice(0, count).map(({ info }, i) => {
+export function conjugationDrill(count = 12, list = inflectable()) {
+  return shuffle(list).slice(0, count).map(({ info }, i) => {
     const names = Object.keys(info.forms);
     const from = names[0];
     const to = pick(names.slice(1));
@@ -251,9 +251,9 @@ export function sentencePool() {
   return distinctBy(out, (s) => s.jp);
 }
 
-export function particleDrill(count = 12) {
+export function particleDrill(count = 12, pool = sentencePool()) {
   const result = [];
-  for (const s of shuffle(sentencePool())) {
+  for (const s of shuffle(pool)) {
     if (result.length >= count) break;
     if (s.jp.length > 28) continue;
     const spots = segment(s.jp).filter((g) => g.particle && DRILL_PARTICLES.includes(g.particle) && g.start > 0);
@@ -273,8 +273,8 @@ export function particleDrill(count = 12) {
 // =====================================================================
 // DITADO
 // =====================================================================
-export function dictationDrill(count = 10) {
-  const short = sentencePool().filter((s) => {
+export function dictationDrill(count = 10, pool = sentencePool()) {
+  const short = pool.filter((s) => {
     const r = s.reading.replace(/[\s　。、？！?!]/g, '');
     return r.length >= 4 && r.length <= 16 && Kana.isAllKana(r);
   });
@@ -282,4 +282,61 @@ export function dictationDrill(count = 10) {
     type: 'typing', dictation: true, prompt: 'Ouça e escreva o que ouviu (romaji vira kana)', speakText: s.jp,
     accepted: [s.reading, s.jp], hint: s.meaning, explanation: `${s.jp} = ${s.meaning}`,
   }));
+}
+
+// =====================================================================
+// MONTAR FRASE
+// =====================================================================
+const PUNCT = /^[、。！？!?「」『』（）()・…\s　,.]+$/;
+
+/** Peças de uma frase: as palavras do curso, sem a pontuação. null se ficar curta ou longa demais. */
+export function sentenceTiles(jp) {
+  const words = segment(jp).map((s) => jp.slice(s.start, s.end)).filter((w) => !PUNCT.test(w));
+  return words.length >= 3 && words.length <= 7 ? words : null;
+}
+
+export function orderDrill(count = 6, pool = sentencePool()) {
+  const result = [];
+  for (const s of shuffle(pool)) {
+    if (result.length >= count) break;
+    const words = sentenceTiles(s.jp);
+    if (!words) continue;
+    result.push(makeExercise({
+      type: 'order', prompt: `Monte a frase: "${s.meaning}"`, correct: words, tiles: shuffle(words),
+      speakText: s.jp, explanation: `${s.jp}（${s.reading.replace(/\s+/g, ' ')}）`,
+    }));
+  }
+  return result;
+}
+
+// =====================================================================
+// SESSÃO DA LIÇÃO: exercícios da lição + produção (digitar, montar, conjugar, ditado)
+// =====================================================================
+/** Frases da própria lição (exemplos e diálogo). */
+export function lessonSentences(lesson) {
+  const out = [];
+  for (const e of lesson.examples) if (e.length >= 3) out.push({ jp: e[0], reading: e[1] || e[0], meaning: e[2] });
+  for (const d of lesson.dialog) if (d.length >= 4) out.push({ jp: d[1], reading: d[2] || d[1], meaning: d[3] });
+  return distinctBy(out, (s) => s.jp);
+}
+
+/** Exercícios extras gerados a partir da lição; não repete o que os autores já escreveram. */
+export function lessonExtras(lesson) {
+  const sentences = lessonSentences(lesson);
+  const extras = [];
+  extras.push(...orderDrill(3, sentences));
+  extras.push(...particleDrill(1, sentences));
+  const conj = inflectable().filter(({ v }) => lesson.vocab.some((x) => x[0] === v.jp));
+  extras.push(...conjugationDrill(Math.min(3, conj.length), conj));
+  if (Speech.available) extras.push(...dictationDrill(2, sentences));
+  return extras;
+}
+
+/** Sessão completa da lição: autores + extras espalhados no meio (não no começo). */
+export function lessonSession(lesson, base) {
+  const list = [...base];
+  const extras = lessonExtras(lesson);
+  const start = Math.min(list.length, Math.ceil(list.length / 3));
+  for (const ex of extras) list.splice(start + Math.floor(Math.random() * (list.length - start + 1)), 0, ex);
+  return list;
 }

@@ -37,18 +37,19 @@ e abra `http://localhost:8765/mobile/` (no Chrome, F12 → modo celular). Use `h
 - **Mostrar para alguém:** nas Frases úteis, o botão 🔎 abre a frase em tela cheia, com letras grandes, para mostrar a um atendente.
 - **Minhas palavras:** em Praticar → Minhas palavras, cadastre palavras da aula ou da rua (aceita romaji); elas entram na revisão.
 - **Plano do dia:** na tela inicial, quatro tarefas curtas (revisões, próxima lição, um treino que muda a cada dia e 5 kanji para escrever), com ✓ quando feitas.
+- **Simulado JLPT:** em Praticar → Simulado JLPT, uma prova N5 ou N4 com tempo (25 ou 30 min), sem correção durante a prova e com a nota de cada seção no fim (vocabulário e kanji, gramática, leitura e audição). É uma estimativa, montada com o conteúdo do curso.
 - **Furigana que some:** em Ajustes, a opção "Esconder a furigana dos kanji que já domino" tira a leitura dos kanji com 14+ dias na revisão.
 - **Testes:** `mobile/testes/` confere conteúdo, exercícios, furigana, traços, arquivos do modo offline e se o celular dá os mesmos resultados do PC (conversão de kana, correção de respostas, SRS, furigana e conferência dos traços). As respostas do PC ficam em `mobile/testes/paridade.json`; ao mudar `Core/Kana.cs`, `Core/Furigana.cs`, `Core/Strokes.cs` ou o SRS, gere de novo com `JapHelp.exe --paridade mobile/testes/paridade.json`.
 - Para ouvir o áudio, o celular precisa de voz japonesa (Android: Serviços de fala do Google → instalar dados de voz → Japonês; iPhone: Acessibilidade → Conteúdo Falado → Vozes → Japonês). A verificação de pronúncia usa a internet.
 
 ## O que tem
 
-- **72 lições** em 8 módulos: Fundamentos (kana), N5, N4, N3, N2 (12 lições), **Vida no Japão** (imigração, trem, konbini, prefeitura, banco, faculdade, moradia, saúde, emergências, arubaito, amizades) e **Leitura e escuta** (textos reais e áudios longos com perguntas de compreensão).
-- Cada lição: teoria, vocabulário, exemplos, diálogos e exercícios (múltipla escolha, digitação em romaji → kana, montar frase, escuta).
-- **Vocabulário em decks**: 896 palavras em 30 temas (N5, N4, N3, vida no Japão), com quiz.
+- **77 lições** em 8 módulos: Fundamentos (kana), N5, N4, N3, N2 (12 lições), **Vida no Japão** (imigração, trem, konbini, prefeitura, banco, faculdade, moradia, saúde, emergências, arubaito, amizades) e **Leitura e escuta** (textos reais e áudios longos com perguntas de compreensão).
+- Cada lição: teoria, vocabulário, exemplos, diálogo e exercícios (múltipla escolha, digitação em romaji → kana, montar frase, escuta). No celular, a sessão também traz exercícios gerados com as frases da lição: montar frase, completar partícula, conjugar e ditado.
+- **Vocabulário em decks**: 1.016 palavras em 34 temas (N5, N4, N3, vida no Japão), com quiz.
 - **Treino de fala**: ouvir o modelo, gravar a própria voz, comparar e verificar a pronúncia (reconhecimento de fala do Windows).
 - **Revisão espaçada (SRS)** do que você estuda, com **furigana** (leitura em cima dos kanji) nos cartões, exemplos e textos.
-- **Kana** (tabela, quiz e pontos fracos), **Kanji** (646: N5, N4, N3 e placas/avisos), **prática de escrita** em 3 níveis (com números, sem números, de memória) que confere a ordem e o sentido dos traços.
+- **Kana** (tabela, quiz e pontos fracos), **Kanji** (975: N5, N4, N3, placas/avisos e todos os outros que aparecem no curso), **prática de escrita** em 3 níveis (com números, sem números, de memória) que confere a ordem e o sentido dos traços.
 - **Frases úteis** (170 em 14 situações) e **dicionário** com busca em português, romaji ou japonês.
 
 ## Áudio e fala
@@ -65,7 +66,7 @@ Todo o conteúdo fica em `Content/` e pode ser editado sem mexer no código:
 | Arquivo | Conteúdo |
 |---|---|
 | `curso_*.json` | módulos e lições (teoria, texto, vocabulário, exemplos, diálogos, exercícios) |
-| `kanji*.txt` | `kanji\|on\|kun\|significado\|palavra:leitura:significado;...` |
+| `kanji*.txt` | `kanji\|on\|kun\|significado\|palavra:leitura:significado;...` (`kanji_extra.txt` traz os kanji do curso que não estão nas listas por nível; um teste avisa se faltar algum) |
 | `vocab_*.txt` | decks: `# Nome \| ícone \| nível` e depois `japonês\|leitura\|significado` |
 | `frases.json` | frases por situação |
 | `dicas.txt` | dicas do dia (uma por linha) |

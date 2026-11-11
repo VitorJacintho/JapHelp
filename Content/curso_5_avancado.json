@@ -143,6 +143,12 @@
         ["留学を通して大きく成長しました。", "りゅうがく を とおして おおきく せいちょう しました。", "Cresci muito através do intercâmbio."],
         ["この件に関して質問があります。", "この けん に かんして しつもん が あります。", "Tenho uma pergunta a respeito deste assunto."]
       ],
+      "dialog": [
+        ["部長", "新しいシステムの導入に伴い、来週から作業の手順が変わります。", "あたらしい システムの どうにゅうに ともない、らいしゅうから さぎょうの てじゅんが かわります。", "Com a introdução do novo sistema, o procedimento de trabalho muda a partir da semana que vem."],
+        ["アナ", "説明会は行われますか。", "せつめいかいは おこなわれますか。", "Haverá uma sessão explicativa?"],
+        ["部長", "はい、全員を対象に、金曜日に行う予定です。", "はい、ぜんいんを たいしょうに、きんようびに おこなう よていです。", "Sim, está prevista para sexta-feira, para todos."],
+        ["アナ", "承知しました。それに先立って、資料を確認しておきます。", "しょうちしました。それに さきだって、しりょうを かくにんして おきます。", "Entendido. Antes disso, vou revisar os materiais."]
+      ],
       "exercises": [
         {"t": "mc", "jp": "わたし___ にほんごは むずかしいです。", "q": "Complete: 'PARA MIM o japonês é difícil.'", "o": ["にとって", "にたいして", "について", "として"]},
         {"t": "mc", "jp": "りゅうがくせい___ にほんに きました。", "q": "Complete: 'Vim ao Japão COMO intercambista.'", "o": ["として", "にとって", "によって", "について"]},
@@ -209,6 +215,12 @@
         ["雨が降らないうちに帰ろう。", "あめ が ふらない うち に かえろう。", "Vamos voltar antes que chova."],
         ["家族に会いたくてたまらない。", "かぞく に あいたくて たまらない。", "Estou morrendo de saudade da minha família."],
         ["彼は嘘をついているに違いない。", "かれ は うそ を ついて いる に ちがいない。", "Ele com certeza está mentindo."]
+      ],
+      "dialog": [
+        ["健", "日本の生活にはもう慣れた？", "にほんの せいかつには もう なれた？", "Já se acostumou com a vida no Japão?"],
+        ["アナ", "慣れたことは慣れたけど、敬語はいまだに難しいよ。", "なれたことは なれたけど、けいごは いまだに むずかしいよ。", "Acostumar, acostumei, mas keigo até hoje é difícil."],
+        ["健", "ネイティブでさえ間違えるから、気にすることないよ。", "ネイティブでさえ まちがえるから、きに することないよ。", "Até nativos erram, então não precisa se preocupar."],
+        ["アナ", "そう言ってもらえると、ちょっと気が楽になる。", "そう いって もらえると、ちょっと きが らくに なる。", "Ouvir isso me deixa um pouco mais tranquila."]
       ],
       "exercises": [
         {"t": "mc", "q": "にくが きらいな わけでは ありません significa...", "o": ["Não é que eu odeie carne", "Eu odeio carne", "Não posso comer carne", "Eu como muita carne"]},
@@ -290,6 +302,12 @@
         ["氏名と住所をご記入ください。", "しめい と じゅうしょ を ごきにゅう ください。", "Preencha seu nome e endereço, por favor."],
         ["このエレベーターは故障中です。", "この エレベーター は こしょうちゅう です。", "Este elevador está com defeito."],
         ["本日休業", "ほんじつ きゅうぎょう", "Fechado hoje."]
+      ],
+      "dialog": [
+        ["アナ", "この貼り紙、「関係者以外立入禁止」って何？", "この はりがみ、「かんけいしゃ いがい たちいり きんし」って なに？", "O que quer dizer este aviso: “proibida a entrada de pessoas não autorizadas”?"],
+        ["健", "関係のない人は入っちゃいけないってこと。", "かんけいの ない ひとは はいっちゃ いけないって こと。", "Quer dizer que quem não tem nada a ver não pode entrar."],
+        ["アナ", "じゃあ、この申込書の「該当するものに丸をつけてください」は？", "じゃあ、この もうしこみしょの「がいとうする ものに まるを つけてください」は？", "E no formulário, “circule o que se aplica”?"],
+        ["健", "自分に合うものを丸で囲むって意味だよ。", "じぶんに あう ものを まるで かこむって いみだよ。", "Significa circular o que vale para você."]
       ],
       "exercises": [
         {"t": "mc", "jp": "撮影禁止", "q": "O que significa esta placa?", "o": ["Proibido fotografar/filmar", "Proibido fumar", "Proibido entrar", "Proibido estacionar"]},
@@ -377,6 +395,12 @@
         ["それ、ほんまに？", "それ、ほんま に？", "Isso é verdade? (Kansai)"],
         ["今日は行かへん。", "きょう は いかへん。", "Hoje eu não vou. (Kansai)"]
       ],
+      "dialog": [
+        ["健", "めっちゃ久しぶりやん！元気やった？", "めっちゃ ひさしぶりやん！げんきやった？", "Quanto tempo! Tudo bem? (Kansai)"],
+        ["アナ", "うん、元気！大阪弁、なんかかわいいね。", "うん、げんき！おおさかべん、なんか かわいいね。", "Sim, tudo! O dialeto de Osaka é meio fofo."],
+        ["健", "ほんま？ほな、今日はたこ焼き食べに行こか。", "ほんま？ほな、きょうは たこやき たべに いこか。", "Sério? Então hoje vamos comer takoyaki? (Kansai)"],
+        ["アナ", "行く行く！マジで楽しみ！", "いく いく！マジで たのしみ！", "Bora! Tô muito animada!"]
+      ],
       "exercises": [
         {"t": "mc", "q": "わすれちゃった é a forma casual de...", "o": ["わすれて しまった", "わすれて いた", "わすれて おいた", "わすれなければ"]},
         {"t": "mc", "q": "いかなきゃ significa...", "o": ["Tenho que ir", "Não vou", "Vamos", "Não precisa ir"]},
@@ -463,6 +487,12 @@
         ["彼は日本語がぺらぺらです。", "かれ は にほんご が ぺらぺら です。", "Ele é fluente em japonês."],
         ["このパンケーキ、ふわふわ！", "この パンケーキ、ふわふわ！", "Essa panqueca é fofinha!"]
       ],
+      "dialog": [
+        ["アナ", "なんだか頭がずきずきするんです。", "なんだか あたまが ずきずき するんです。", "Minha cabeça está latejando."],
+        ["医者", "熱はありますか。", "ねつは ありますか。", "Tem febre?"],
+        ["アナ", "少しあります。それに、のどがひりひりします。", "すこし あります。それに、のどが ひりひり します。", "Um pouco. E a garganta está ardendo."],
+        ["医者", "風邪ですね。今夜はゆっくり休んでください。", "かぜですね。こんやは ゆっくり やすんでください。", "É resfriado. Descanse bem esta noite."]
+      ],
       "exercises": [
         {"t": "mc", "q": "おなかが ぺこぺこ significa...", "o": ["Estou com muita fome", "Estou com dor de barriga", "Estou satisfeito", "Estou com sede"]},
         {"t": "mc", "q": "Como dizer 'fluente em japonês'?", "o": ["にほんごが ぺらぺら", "にほんごが ぺこぺこ", "にほんごが ばらばら", "にほんごが ごろごろ"]},
@@ -527,6 +557,12 @@
         ["たとえ失敗したとしても、後悔はしない。", "たとえ しっぱい した と しても、こうかい は しない。", "Mesmo que eu fracasse, não vou me arrepender."],
         ["いえいえ、まだまだです。", "いえいえ、まだまだ です。", "Que nada, ainda tenho muito a aprender."]
       ],
+      "dialog": [
+        ["健", "日本の夏はどう？", "にほんの なつは どう？", "E o verão japonês?"],
+        ["アナ", "ブラジルも暑いけど、日本の夏は湿気がすごいね。", "ブラジルも あついけど、にほんの なつは しっけが すごいね。", "O Brasil também é quente, mas o verão do Japão é muito úmido."],
+        ["健", "暑いわりに、みんなスーツ着てるでしょ。", "あつい わりに、みんな スーツ きてるでしょ。", "Apesar do calor, todo mundo de terno, né?"],
+        ["アナ", "そうそう。大変なのに、文句を言う人はあまりいないよね。", "そうそう。たいへんなのに、もんくを いう ひとは あまり いないよね。", "Pois é. Mesmo sendo puxado, quase ninguém reclama."]
+      ],
       "exercises": [
         {"t": "mc", "jp": "大雨___、試合は行われた。", "q": "Complete (notícia, formal): 'Apesar da chuva forte, o jogo foi realizado.'", "o": ["にもかかわらず", "くせに", "わりに", "としても"]},
         {"t": "mc", "q": "Qual expressão carrega CRÍTICA e só se usa sobre outra pessoa?", "o": ["〜くせに", "〜にもかかわらず", "〜にしては", "〜としても"]},
@@ -586,6 +622,12 @@
         ["日本の人口は減りつつある。", "にほん の じんこう は へり つつ ある。", "A população japonesa está diminuindo."],
         ["大雨に伴い、運転を見合わせております。", "おおあめ に ともない、うんてん を みあわせて おります。", "Devido à chuva forte, a operação está suspensa."]
       ],
+      "dialog": [
+        ["アナ", "最近、日本語を話す機会が増えてきました。", "さいきん、にほんごを はなす きかいが ふえて きました。", "Ultimamente, as oportunidades de falar japonês têm aumentado."],
+        ["先生", "話せば話すほど、上手になりますよ。", "はなせば はなすほど、じょうずに なりますよ。", "Quanto mais você fala, melhor fica."],
+        ["アナ", "単語を覚えるにつれて、ニュースもわかるようになってきました。", "たんごを おぼえるに つれて、ニュースも わかるように なって きました。", "À medida que aprendo palavras, também passei a entender o noticiário."],
+        ["先生", "その調子で頑張ってください。", "その ちょうしで がんばってください。", "Continue assim."]
+      ],
       "exercises": [
         {"t": "mc", "jp": "日本語が上手になる___、日本の生活が楽しくなった。", "q": "Complete: 'À medida que meu japonês melhorou...'", "o": ["につれて", "に応じて", "一方で", "つつある"]},
         {"t": "mc", "jp": "経験___時給が上がります。", "q": "Complete: 'O salário sobe CONFORME a experiência.'", "o": ["に応じて", "につれて", "くせに", "にしては"]},
@@ -640,6 +682,12 @@
         ["スマホを見ながら歩くと、事故を起こしかねない。", "スマホ を みながら あるく と、じこ を おこし かねない。", "Andar olhando o celular pode acabar causando um acidente."],
         ["申し訳ございませんが、返品はお受けしかねます。", "もうしわけ ございません が、へんぴん は おうけし かねます。", "Sinto muito, mas não podemos aceitar devoluções."],
         ["食べられないことはないけど、あまり好きじゃない。", "たべられない こと は ない けど、あまり すき じゃない。", "Não é que eu não consiga comer, mas não gosto muito."]
+      ],
+      "dialog": [
+        ["健", "来週の試験、大丈夫？", "らいしゅうの しけん、だいじょうぶ？", "A prova da semana que vem, tudo certo?"],
+        ["アナ", "勉強しないわけにはいかないんだけど、ついスマホを見ちゃうんだ。", "べんきょうしない わけには いかないんだけど、つい スマホを みちゃうんだ。", "Não posso deixar de estudar, mas acabo olhando o celular sem querer."],
+        ["健", "このままだと、単位を落としかねないよ。", "この ままだと、たんいを おとしかねないよ。", "Desse jeito, você pode acabar perdendo os créditos."],
+        ["アナ", "だよね。今夜から図書館で勉強せざるを得ないな。", "だよね。こんやから としょかんで べんきょう せざるを えないな。", "Pois é. A partir de hoje à noite, não tenho escolha a não ser estudar na biblioteca."]
       ],
       "exercises": [
         {"t": "mc", "q": "Forma ず de する:", "o": ["せず", "しず", "さず", "すず"]},
@@ -697,6 +745,12 @@
         ["今年こそ、N2に合格したい。", "ことし こそ、エヌツー に ごうかく したい。", "Este ano, sim, quero passar no N2."],
         ["こちらこそ、よろしくお願いします。", "こちら こそ、よろしく おねがい します。", "Eu é que agradeço / o prazer é meu."]
       ],
+      "dialog": [
+        ["アナ", "このアパート、駅から近いうえに、家賃も安いんです。", "この アパート、えきから ちかい うえに、やちんも やすいんです。", "Este apartamento, além de ser perto da estação, tem aluguel barato."],
+        ["健", "それに、スーパーもすぐそこだし、文句なしだね。", "それに、スーパーも すぐ そこだし、もんく なしだね。", "E ainda tem supermercado logo ali. Perfeito."],
+        ["アナ", "ただ、壁が薄いのが気になります。", "ただ、かべが うすいのが きに なります。", "Só me preocupa a parede ser fina."],
+        ["健", "それこそ、契約する前に確認しないと。", "それこそ、けいやくする まえに かくにん しないと。", "Isso mesmo é o que você precisa confirmar antes de assinar."]
+      ],
       "exercises": [
         {"t": "mc", "jp": "この店は安い___、おいしい。", "q": "Complete: 'Esta loja, além de barata, é gostosa.'", "o": ["上に", "どころか", "こそ", "さえ"]},
         {"t": "mc", "jp": "雨は止む___、ますます強くなった。", "q": "Complete: 'Longe de parar, a chuva ficou mais forte.'", "o": ["どころか", "上に", "はもちろん", "さえ"]},
@@ -750,6 +804,12 @@
         ["結果が分かり次第、ご連絡します。", "けっか が わかり しだい、ごれんらく します。", "Assim que soubermos o resultado, entraremos em contato."],
         ["授業の最中に、携帯が鳴ってしまった。", "じゅぎょう の さいちゅう に、けいたい が なって しまった。", "Bem no meio da aula, o celular tocou."],
         ["行くかどうかは天気次第です。", "いく か どうか は てんき しだい です。", "Se vou ou não depende do tempo."]
+      ],
+      "dialog": [
+        ["先輩", "日本に来た際は、まず区役所で住民登録をしてね。", "にほんに きた さいは、まず くやくしょで じゅうみん とうろくを してね。", "Quando chegar ao Japão, primeiro faça o registro de residente na prefeitura do bairro."],
+        ["アナ", "はい。引っ越すたびに届けが必要ですか。", "はい。ひっこす たびに とどけが ひつようですか。", "Certo. Preciso avisar toda vez que mudar?"],
+        ["先輩", "そう。新しい住所が決まり次第、十四日以内に出してね。", "そう。あたらしい じゅうしょが きまり しだい、じゅうよっか いないに だしてね。", "Sim. Assim que o novo endereço for definido, entregue em até 14 dias."],
+        ["アナ", "わかりました。忘れないうちにメモしておきます。", "わかりました。わすれない うちに メモして おきます。", "Entendi. Vou anotar antes que eu esqueça."]
       ],
       "exercises": [
         {"t": "mc", "ctx": "Você fez entrevista de arubaito e o gerente diz: 結果が出次第、連絡します。", "q": "O que ele disse?", "o": ["Assim que sair o resultado, ele entra em contato", "O resultado já saiu", "Não haverá resultado", "Ligue para ele amanhã"]},
@@ -806,6 +866,12 @@
         ["上手になりたければ、毎日話すことだ。", "じょうず に なりたければ、まいにち はなす こと だ。", "Se quer melhorar, o importante é falar todo dia."],
         ["安全に越したことはない。", "あんぜん に こした こと は ない。", "Segurança nunca é demais."],
         ["日本人だからといって、みんな寿司が好きなわけではない。", "にほんじん だ から と いって、みんな すし が すき な わけ で は ない。", "Só porque é japonês, não quer dizer que todos gostem de sushi."]
+      ],
+      "dialog": [
+        ["アナ", "日本で就職するか、帰国するか迷っています。", "にほんで しゅうしょくするか、きこくするか まよっています。", "Estou em dúvida entre trabalhar no Japão ou voltar para casa."],
+        ["先生", "若いうちに色々な経験をしたほうがいいと思いますよ。", "わかい うちに いろいろな けいけんを した ほうが いいと おもいますよ。", "Acho melhor ter várias experiências enquanto é jovem."],
+        ["アナ", "確かに、日本で働くのはいい経験になると思います。", "たしかに、にほんで はたらくのは いい けいけんに なると おもいます。", "De fato, acho que trabalhar no Japão seria uma boa experiência."],
+        ["先生", "アナさんの日本語なら、きっと大丈夫ですよ。", "アナさんの にほんごなら、きっと だいじょうぶですよ。", "Com o seu japonês, Ana, com certeza vai dar certo."]
       ],
       "exercises": [
         {"t": "mc", "jp": "疲れた時は寝る___。", "q": "Complete: 'Quando está cansado, o melhor é dormir.'", "o": ["に限る", "に過ぎない", "ものではない", "というより"]},

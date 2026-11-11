@@ -159,3 +159,131 @@
 湿気|しっけ|umidade
 冷房|れいぼう|ar-condicionado (frio)
 暖房|だんぼう|aquecimento
+
+# Adjetivos N3 | 形 | N3
+貴重|きちょう|precioso, valioso
+重要|じゅうよう|importante
+必要|ひつよう|necessário
+十分|じゅうぶん|suficiente
+適当|てきとう|adequado; desleixado
+正確|せいかく|exato, preciso
+確実|かくじつ|certo, garantido
+複雑|ふくざつ|complicado
+単純|たんじゅん|simples
+具体的|ぐたいてき|concreto
+平気|へいき|tranquilo, sem problema
+素直|すなお|sincero, obediente
+真面目|まじめ|sério, aplicado
+正直|しょうじき|honesto
+立派|りっぱ|esplêndido, admirável
+自由|じゆう|livre
+不便|ふべん|inconveniente
+退屈|たいくつ|entediante
+面倒|めんどう|trabalhoso, chato
+大変|たいへん|difícil, puxado
+苦しい|くるしい|sofrido, sufocante
+悔しい|くやしい|frustrante
+懐かしい|なつかしい|saudoso
+怪しい|あやしい|suspeito
+詳しい|くわしい|detalhado; entendido em
+激しい|はげしい|intenso, violento
+親しい|したしい|íntimo, próximo
+等しい|ひとしい|igual
+眠い|ねむい|com sono
+偉い|えらい|admirável; importante
+
+# Sentimentos e relações N3 | 心 | N3
+感謝|かんしゃ|gratidão
+感動|かんどう|emoção, comoção
+心配|しんぱい|preocupação
+安心|あんしん|alívio, tranquilidade
+緊張|きんちょう|nervosismo
+我慢|がまん|aguentar, paciência
+後悔|こうかい|arrependimento
+感情|かんじょう|sentimento
+気持ち|きもち|sentimento, sensação
+信頼|しんらい|confiança
+尊敬|そんけい|respeito, admiração
+喧嘩|けんか|briga
+仲直り|なかなおり|fazer as pazes
+付き合う|つきあう|namorar; acompanhar
+別れる|わかれる|separar-se
+恋人|こいびと|namorado(a)
+夫婦|ふうふ|casal (casado)
+親戚|しんせき|parente
+知り合い|しりあい|conhecido
+仲間|なかま|companheiro, turma
+迷惑|めいわく|incômodo
+遠慮|えんりょ|cerimônia, reserva
+お互い|おたがい|um ao outro
+励ます|はげます|encorajar
+慰める|なぐさめる|consolar
+謝る|あやまる|pedir desculpas
+笑顔|えがお|sorriso
+涙|なみだ|lágrima
+寂しい|さびしい|sentir-se sozinho
+嬉しい|うれしい|feliz
+
+# Saúde e corpo N3 | 体 | N3
+健康|けんこう|saúde
+体調|たいちょう|condição física
+症状|しょうじょう|sintoma
+怪我|けが|ferimento
+骨折|こっせつ|fratura
+火傷|やけど|queimadura
+頭痛|ずつう|dor de cabeça
+腹痛|ふくつう|dor de barriga
+吐き気|はきけ|náusea
+下痢|げり|diarreia
+咳|せき|tosse
+鼻水|はなみず|coriza
+花粉症|かふんしょう|alergia a pólen
+注射|ちゅうしゃ|injeção
+手術|しゅじゅつ|cirurgia
+入院|にゅういん|internação
+退院|たいいん|alta hospitalar
+診察|しんさつ|consulta médica
+処方箋|しょほうせん|receita médica
+保険証|ほけんしょう|carteirinha do seguro saúde
+体重|たいじゅう|peso (corporal)
+身長|しんちょう|altura
+血液|けつえき|sangue
+心臓|しんぞう|coração (órgão)
+肩|かた|ombro
+腰|こし|lombar, quadril
+膝|ひざ|joelho
+喉|のど|garganta
+疲れる|つかれる|cansar-se
+治る|なおる|sarar
+
+# Notícias e sociedade N3 | 報 | N3
+政治|せいじ|política
+経済|けいざい|economia
+選挙|せんきょ|eleição
+政府|せいふ|governo
+国際|こくさい|internacional
+事件|じけん|incidente, caso
+犯人|はんにん|criminoso
+警察|けいさつ|polícia
+被害|ひがい|dano, prejuízo
+災害|さいがい|desastre
+人口|じんこう|população
+高齢者|こうれいしゃ|idoso
+少子化|しょうしか|queda da natalidade
+物価|ぶっか|custo de vida
+景気|けいき|situação econômica
+輸入|ゆにゅう|importação
+輸出|ゆしゅつ|exportação
+増加|ぞうか|aumento
+減少|げんしょう|diminuição
+調査|ちょうさ|pesquisa, levantamento
+発表|はっぴょう|anúncio
+記者|きしゃ|jornalista
+記事|きじ|matéria, artigo
+番組|ばんぐみ|programa (de TV)
+世論|よろん|opinião pública
+法律|ほうりつ|lei
+権利|けんり|direito
+義務|ぎむ|dever, obrigação
+平和|へいわ|paz
+戦争|せんそう|guerra

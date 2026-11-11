@@ -62,6 +62,13 @@
         ["もう帰らなきゃ。", "もう かえらなきゃ。", "Já tenho que ir embora. (casual)"],
         ["忘れないでね。", "わすれないで ね。", "Não esqueça, tá? (casual)"]
       ],
+      "dialog": [
+        ["先輩", "アナさん、部屋に入る前に、靴を脱いでください。", "アナさん、へやに はいる まえに、くつを ぬいでください。", "Ana, antes de entrar no quarto, tire os sapatos."],
+        ["アナ", "はい。スリッパは履かなくてもいいですか。", "はい。スリッパは はかなくても いいですか。", "Certo. Posso ficar sem os chinelos?"],
+        ["先輩", "いいですよ。でも、トイレではトイレのスリッパを使わなければなりません。", "いいですよ。でも、トイレでは トイレの スリッパを つかわなければ なりません。", "Pode. Mas no banheiro tem que usar os chinelos do banheiro."],
+        ["先輩", "忘れないでくださいね。", "わすれないでくださいね。", "Não esqueça, hein."],
+        ["アナ", "はい、気をつけます。", "はい、きを つけます。", "Sim, vou tomar cuidado."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Forma de dicionário de のみます:", "o": ["のむ", "のみる", "のぬ", "のまる"]},
         {"t": "mc", "q": "Forma ない de かきます:", "o": ["かかない", "かきない", "かくない", "かけない"]},
@@ -203,6 +210,13 @@
         ["授業が終わった後で、図書館へ行きます。", "じゅぎょう が おわった あと で、としょかん へ いきます。", "Depois que a aula acabar, vou à biblioteca."],
         ["三年前に日本語の勉強を始めました。", "さんねん まえ に にほんご の べんきょう を はじめました。", "Comecei a estudar japonês há três anos."]
       ],
+      "dialog": [
+        ["健", "アナさんは富士山に登ったことがありますか。", "アナさんは ふじさんに のぼったことが ありますか。", "Ana, você já subiu o Monte Fuji?"],
+        ["アナ", "いいえ、まだありません。健さんは？", "いいえ、まだ ありません。けんさんは？", "Não, ainda não. E você, Ken?"],
+        ["健", "去年、一回登りました。夜に登って、山の上で日の出を見ました。", "きょねん、いっかい のぼりました。よるに のぼって、やまの うえで ひのでを みました。", "Subi uma vez no ano passado. Subi à noite e vi o nascer do sol lá em cima."],
+        ["アナ", "すごい！私も一度登ってみたいです。", "すごい！わたしも いちど のぼって みたいです。", "Que incrível! Eu também quero subir uma vez."],
+        ["健", "じゃあ、夏休みに一緒に行きましょう。", "じゃあ、なつやすみに いっしょに いきましょう。", "Então vamos juntos nas férias de verão."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Como dizer 'Já comi sushi'?", "o": ["すしを たべた ことが あります。", "すしを たべる ことが あります。", "すしを たべて あります。", "すしを たべたり します。"]},
         {"t": "mc", "q": "Como dizer 'Nunca fui a Kyoto'?", "o": ["きょうとに いった ことが ありません。", "きょうとに いく ことが ありません。", "きょうとに いきませんでした。", "きょうとに いって いません。"]},
@@ -267,6 +281,14 @@
         ["今日は昨日ほど寒くないです。", "きょう は きのう ほど さむくない です。", "Hoje não está tão frio quanto ontem."],
         ["早く寝た方がいいですよ。", "はやく ねた ほう が いい です よ。", "É melhor você dormir cedo."]
       ],
+      "dialog": [
+        ["店員", "こちらとこちら、どちらがいいですか。", "こちらと こちら、どちらが いいですか。", "Este ou este, qual prefere?"],
+        ["アナ", "どちらが軽いですか。", "どちらが かるいですか。", "Qual é mais leve?"],
+        ["店員", "こちらの方がずっと軽いです。でも、少し高いです。", "こちらの ほうが ずっと かるいです。でも、すこし たかいです。", "Este é bem mais leve. Mas é um pouco mais caro."],
+        ["アナ", "このお店で一番人気があるのはどれですか。", "この おみせで いちばん にんきが あるのは どれですか。", "Qual é o mais popular desta loja?"],
+        ["店員", "こちらです。安くて丈夫ですよ。", "こちらです。やすくて じょうぶですよ。", "Este. É barato e resistente."],
+        ["アナ", "じゃあ、それにします。", "じゃあ、それに します。", "Então vou levar esse."]
+      ],
       "exercises": [
         {"t": "order", "q": "Monte: Tóquio é maior que Osaka.", "w": ["とうきょう", "は", "おおさか", "より", "おおきい", "です"]},
         {"t": "mc", "jp": "コーヒーと こうちゃと ___ が すきですか。", "q": "Complete (escolha entre dois):", "o": ["どちら", "どれ", "なに", "どこ"]},
@@ -328,6 +350,14 @@
         ["ここで両替することができます。", "ここ で りょうがえ する こと が できます。", "Aqui é possível trocar dinheiro."],
         ["部屋から富士山が見えます。", "へや から ふじさん が みえます。", "Do quarto dá pra ver o Monte Fuji."],
         ["すみません、よく聞こえません。", "すみません、よく きこえません。", "Desculpe, não estou ouvindo bem."]
+      ],
+      "dialog": [
+        ["面接官", "日本語が話せますか。", "にほんごが はなせますか。", "Você fala japonês?"],
+        ["アナ", "はい、少し話せます。漢字はまだあまり読めません。", "はい、すこし はなせます。かんじは まだ あまり よめません。", "Sim, falo um pouco. Kanji ainda não consigo ler muito."],
+        ["面接官", "週に何日働けますか。", "しゅうに なんにち はたらけますか。", "Quantos dias por semana você pode trabalhar?"],
+        ["アナ", "三日働けます。土曜日も来られます。", "みっか はたらけます。どようびも こられます。", "Posso trabalhar três dias. Também posso vir aos sábados."],
+        ["面接官", "朝早く来られますか。", "あさ はやく こられますか。", "Consegue vir cedo de manhã?"],
+        ["アナ", "はい、大丈夫です。", "はい、だいじょうぶです。", "Sim, sem problema."]
       ],
       "exercises": [
         {"t": "mc", "q": "Potencial de はなす (falar):", "o": ["はなせる", "はなされる", "はなられる", "はなさせる"]},
@@ -395,6 +425,13 @@
         ["京都へ行くなら、新幹線が便利ですよ。", "きょうと へ いくなら、しんかんせん が べんり です よ。", "Se você vai a Kyoto, o trem-bala é prático."],
         ["もし困ったら、いつでも言ってください。", "もし こまったら、いつでも いって ください。", "Se tiver algum problema, me fale a qualquer hora."]
       ],
+      "dialog": [
+        ["アナ", "明日雨が降ったら、ハイキングはどうしますか。", "あした あめが ふったら、ハイキングは どう しますか。", "Se chover amanhã, o que fazemos com a trilha?"],
+        ["健", "雨なら、中止にしましょう。", "あめなら、ちゅうしに しましょう。", "Se for chuva, vamos cancelar."],
+        ["アナ", "晴れたら、何時に集まりますか。", "はれたら、なんじに あつまりますか。", "Se fizer sol, a que horas nos encontramos?"],
+        ["健", "八時に駅に集まりましょう。遅れるなら、LINEしてください。", "はちじに えきに あつまりましょう。おくれるなら、ラインしてください。", "Vamos nos encontrar às 8 na estação. Se for se atrasar, mande mensagem no LINE."],
+        ["アナ", "わかりました。駅に着いたら、連絡します。", "わかりました。えきに ついたら、れんらくします。", "Combinado. Quando chegar na estação, eu aviso."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Como dizer 'Se chover, não vou'?", "o": ["あめが ふったら、いきません。", "あめが ふると、いきましょう。", "あめが ふるなら、いきたい。", "あめが ふって、いきません。"]},
         {"t": "mc", "ctx": "Explicando uma máquina de bilhetes: 'Apertando este botão, sai o troco.'", "q": "Qual condicional é mais natural?", "o": ["〜と (おすと)", "〜なら (おすなら)", "〜たら só no passado", "Nenhuma"]},
@@ -461,6 +498,13 @@
         ["写真を撮っていただけませんか。", "しゃしん を とって いただけませんか。", "Poderia tirar uma foto para mim?"],
         ["ペンを貸してくれない？", "ペン を かして くれない？", "Me empresta uma caneta? (casual)"]
       ],
+      "dialog": [
+        ["健", "そのペン、かわいいですね。", "その ペン、かわいいですね。", "Que caneta bonitinha."],
+        ["アナ", "これは誕生日に友達がくれました。", "これは たんじょうびに ともだちが くれました。", "Uma amiga me deu de aniversário."],
+        ["健", "いいですね。ぼくは姉にマフラーをもらいました。", "いいですね。ぼくは あねに マフラーを もらいました。", "Que legal. Eu ganhei um cachecol da minha irmã."],
+        ["アナ", "健さんは何かあげましたか。", "けんさんは なにか あげましたか。", "E você deu alguma coisa para ela?"],
+        ["健", "はい、姉に本をあげました。それから、料理を作ってあげました。", "はい、あねに ほんを あげました。それから、りょうりを つくって あげました。", "Sim, dei um livro para ela. E também fiz uma comida para ela."]
+      ],
       "exercises": [
         {"t": "mc", "jp": "ともだちが わたしに ほんを ___。", "q": "Complete: 'Meu amigo ME deu um livro.'", "o": ["くれました", "あげました", "もらいました", "さしあげました"]},
         {"t": "mc", "jp": "わたしは いもうとに ケーキを ___。", "q": "Complete: 'Eu dei um bolo para minha irmã.'", "o": ["あげました", "くれました", "もらいました", "くださいました"]},
@@ -526,6 +570,13 @@
         ["先生は明日休みだと言いました。", "せんせい は あした やすみ だ と いいました。", "O professor disse que amanhã não tem aula."],
         ["田中さん、今日来ないって。", "たなかさん、きょう こないって。", "O Tanaka disse que não vem hoje. (casual)"]
       ],
+      "dialog": [
+        ["先生", "アナさん、卒業したら何をするつもりですか。", "アナさん、そつぎょうしたら なにを する つもりですか。", "Ana, o que pretende fazer depois de se formar?"],
+        ["アナ", "日本の会社で働こうと思っています。", "にほんの かいしゃで はたらこうと おもっています。", "Estou pensando em trabalhar numa empresa japonesa."],
+        ["先生", "そうですか。どんな仕事ですか。", "そうですか。どんな しごとですか。", "É mesmo? Que tipo de trabalho?"],
+        ["アナ", "観光の仕事です。友達も「アナさんに合っている」と言っていました。", "かんこうの しごとです。ともだちも「アナさんに あっている」と いっていました。", "Trabalho com turismo. Minha amiga também disse que “combina com você”."],
+        ["先生", "いいですね。応援していますよ。", "いいですね。おうえんしていますよ。", "Que bom. Estou torcendo por você."]
+      ],
       "exercises": [
         {"t": "mc", "q": "Volitiva de いく:", "o": ["いこう", "いきよう", "いくよう", "いけよう"]},
         {"t": "mc", "q": "Volitiva de たべる:", "o": ["たべよう", "たべろう", "たべこう", "たべおう"]},
@@ -536,6 +587,260 @@
         {"t": "order", "q": "Monte: Pretendo voltar ao meu país nas férias.", "w": ["やすみ", "に", "くに", "へ", "かえる", "つもり", "です"]},
         {"t": "type", "q": "Escreva 'vamos beber!' (casual) a partir de のむ.", "acc": ["のもう", "飲もう"]},
         {"t": "listen", "s": "せんせいは あした しけんが あると いいました。", "q": "O que o professor disse?", "o": ["Que amanhã tem prova", "Que amanhã não tem aula", "Que a prova foi ontem", "Que vai faltar amanhã"]}
+      ]
+    },
+    {
+      "id": "n3-09",
+      "title": "Orações que descrevem um nome",
+      "subtitle": "昨日買った本 · 日本に住んでいる友達",
+      "theory": [
+        "# \"O livro que comprei ontem\"",
+        "Em japonês não existe \"que\" ligando a descrição ao nome. A frase descritiva inteira vem ANTES do nome, com o verbo na forma simples.",
+        "| Português | Japonês |",
+        "| o livro que comprei ontem | 昨日**買った**本 |",
+        "| o amigo que mora no Japão | 日本に**住んでいる**友達 |",
+        "| a pessoa que não vem | **来ない**人 |",
+        "| o lugar onde trabalho | 私が**働いている**所 |",
+        "## Como montar",
+        "- 1. Escreva a frase simples: 昨日本を買った。 (comprei um livro ontem)",
+        "- 2. Tire o nome que será descrito e coloque-o no fim: 昨日買った**本**",
+        "- 3. Use a frase no lugar de um nome normal: 昨日買った本は面白いです。",
+        "## O sujeito dentro da descrição: が (ou の)",
+        "Dentro da descrição, o sujeito leva が, nunca は:",
+        "ex: 母**が**作った料理 → a comida que minha mãe fez",
+        "ex: 母**の**作った料理 → (igual, mais comum na escrita)",
+        "## Adjetivos funcionam igual",
+        "ex: 背が高い人 → a pessoa alta (\"de altura alta\")",
+        "ex: 静かな部屋 → um quarto silencioso",
+        "! Não use です nem ます dentro da descrição: ✗ 昨日買いました本 → ✓ 昨日買った本",
+        "> Leia de trás para frente: em 駅の前にある店, ache primeiro o nome (店), depois a descrição (que fica em frente à estação)."
+      ],
+      "vocab": [
+        ["住む", "すむ", "morar"],
+        ["所", "ところ", "lugar"],
+        ["面白い", "おもしろい", "interessante, engraçado"],
+        ["背", "せ", "altura (de pessoa); costas"],
+        ["料理", "りょうり", "comida, culinária"],
+        ["作る", "つくる", "fazer, preparar"],
+        ["店", "みせ", "loja"],
+        ["読む", "よむ", "ler"],
+        ["借りる", "かりる", "pegar emprestado"],
+        ["写真", "しゃしん", "foto"],
+        ["撮る", "とる", "tirar (foto)"],
+        ["会社", "かいしゃ", "empresa"]
+      ],
+      "examples": [
+        ["昨日買った本は面白いです。", "きのう かった ほん は おもしろい です。", "O livro que comprei ontem é interessante."],
+        ["日本に住んでいる友達がいます。", "にほん に すんでいる ともだち が います。", "Tenho um amigo que mora no Japão."],
+        ["母が作った料理が一番おいしいです。", "はは が つくった りょうり が いちばん おいしい です。", "A comida que minha mãe faz é a mais gostosa."],
+        ["駅の前にある店で待っています。", "えき の まえ に ある みせ で まっています。", "Estou esperando na loja que fica em frente à estação."],
+        ["これは京都で撮った写真です。", "これ は きょうと で とった しゃしん です。", "Esta é a foto que tirei em Kyoto."],
+        ["図書館で借りた本を返します。", "としょかん で かりた ほん を かえします。", "Vou devolver o livro que peguei na biblioteca."]
+      ],
+      "dialog": [
+        ["健", "それ、何の本？", "それ、なんの ほん？", "Que livro é esse?"],
+        ["アナ", "先生が貸してくれた本だよ。日本の昔話が書いてある本。", "せんせいが かして くれた ほんだよ。にほんの むかしばなしが かいてある ほん。", "É o livro que o professor me emprestou. Um livro com contos antigos do Japão."],
+        ["健", "へえ。この前話していた、桃太郎の話も入ってる？", "へえ。この まえ はなしていた、ももたろうの はなしも はいってる？", "Ah, é? Tem também a história do Momotaro que você comentou outro dia?"],
+        ["アナ", "うん。私が一番好きな話だよ。", "うん。わたしが いちばん すきな はなしだよ。", "Tem. É a história de que eu mais gosto."]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Como se diz \"o livro que comprei ontem\"?", "o": ["きのう かった ほん", "ほん きのう かった", "きのう かいました ほん", "きのう かった の ほん"], "e": "A descrição vem antes do nome, com o verbo na forma simples."},
+        {"t": "mc", "q": "O que significa: にほんに すんでいる ともだち", "o": ["um amigo que mora no Japão", "um amigo que vai morar no Japão", "um amigo que morou no Japão", "um amigo japonês"]},
+        {"t": "mc", "q": "Complete: はは ___ つくった りょうり", "o": ["が", "は", "を", "で"], "e": "O sujeito dentro da descrição leva が (ou の), nunca は."},
+        {"t": "mc", "q": "Qual está correta?", "o": ["せが たかい ひと", "せが たかいです ひと", "せが たかい の ひと", "ひと せが たかい"], "e": "Adjetivo -い descreve direto, sem です."},
+        {"t": "mc", "ctx": "Você está procurando o lugar onde o Tanaka trabalha.", "q": "Como perguntar?", "o": ["たなかさんが はたらいている ところは どこですか。", "たなかさんは はたらいています ところは どこですか。", "どこ たなかさん はたらく ところですか。", "たなかさんの ところで はたらきますか。"]},
+        {"t": "order", "q": "Monte: Esta é a foto que tirei em Kyoto.", "w": ["これ", "は", "きょうと", "で", "とった", "しゃしん", "です"]},
+        {"t": "order", "q": "Monte: Tenho um amigo que mora no Japão.", "w": ["にほん", "に", "すんでいる", "ともだち", "が", "います"]},
+        {"t": "type", "q": "Escreva a forma simples no passado de かいます (comprar), para usar antes de um nome.", "acc": ["かった", "買った"]},
+        {"t": "listen", "s": "えきの まえに ある みせで まっています。", "q": "Onde a pessoa está esperando?", "o": ["Na loja em frente à estação", "Na estação em frente à loja", "Atrás da estação", "Dentro do trem"]}
+      ]
+    },
+    {
+      "id": "n3-10",
+      "title": "Verbos transitivos e intransitivos",
+      "subtitle": "開ける・開く · 閉める・閉まる · 〜ている × 〜てある",
+      "theory": [
+        "# A porta abre ou alguém abre a porta?",
+        "Muitos verbos japoneses vêm em PARES: um para quando alguém faz a ação (transitivo, usa を) e outro para quando a coisa acontece sozinha (intransitivo, usa が).",
+        "| Alguém faz (を) | Acontece (が) | Sentido |",
+        "| ドアを開ける | ドアが開く | abrir |",
+        "| ドアを閉める | ドアが閉まる | fechar |",
+        "| 電気をつける | 電気がつく | acender |",
+        "| 電気を消す | 電気が消える | apagar |",
+        "| 車を止める | 車が止まる | parar |",
+        "| 授業を始める | 授業が始まる | começar |",
+        "| 仕事を終える | 仕事が終わる | terminar |",
+        "| 物を落とす | 物が落ちる | cair / derrubar |",
+        "| 物を壊す | 物が壊れる | quebrar |",
+        "## Por que isso importa no Japão",
+        "O japonês prefere o intransitivo para não apontar culpa: em vez de \"eu quebrei\", é comum dizer \"quebrou\".",
+        "ex: コップが割れました。 → O copo quebrou. (mais suave que コップを割りました)",
+        "## 〜ている com intransitivos: o estado",
+        "ex: 窓が開いている。 → A janela está aberta (estado).",
+        "## 〜てある com transitivos: alguém deixou assim",
+        "ex: 窓が開けてある。 → A janela foi deixada aberta (alguém abriu de propósito).",
+        "> Dica: muitos intransitivos terminam em 〜まる, 〜わる, 〜れる; muitos transitivos em 〜める, 〜す, 〜える."
+      ],
+      "vocab": [
+        ["開ける", "あける", "abrir (algo)"],
+        ["開く", "あく", "abrir-se"],
+        ["閉める", "しめる", "fechar (algo)"],
+        ["閉まる", "しまる", "fechar-se"],
+        ["消す", "けす", "apagar (luz, etc.)"],
+        ["消える", "きえる", "apagar-se, sumir"],
+        ["始める", "はじめる", "começar (algo)"],
+        ["始まる", "はじまる", "começar"],
+        ["落とす", "おとす", "derrubar, perder"],
+        ["落ちる", "おちる", "cair"],
+        ["壊す", "こわす", "quebrar (algo)"],
+        ["壊れる", "こわれる", "quebrar-se"],
+        ["割れる", "われる", "rachar, quebrar (vidro)"],
+        ["電気", "でんき", "luz, eletricidade"]
+      ],
+      "examples": [
+        ["ドアを開けてください。", "ドア を あけて ください。", "Abra a porta, por favor."],
+        ["ドアが開きました。", "ドア が あきました。", "A porta abriu."],
+        ["電気を消してから寝ます。", "でんき を けしてから ねます。", "Apago a luz e depois durmo."],
+        ["授業は九時に始まります。", "じゅぎょう は くじ に はじまります。", "A aula começa às nove."],
+        ["スマホを落として、画面が割れました。", "スマホ を おとして、がめん が われました。", "Derrubei o celular e a tela rachou."],
+        ["窓が開いています。", "まど が あいています。", "A janela está aberta."],
+        ["エアコンがつけてあります。", "エアコン が つけて あります。", "O ar-condicionado foi deixado ligado."]
+      ],
+      "dialog": [
+        ["アナ", "すみません、部屋のエアコンがつかないんですが。", "すみません、へやの エアコンが つかないんですが。", "Com licença, o ar-condicionado do quarto não liga."],
+        ["管理人", "リモコンの電池が切れているかもしれません。", "リモコンの でんちが きれているかも しれません。", "Talvez a pilha do controle tenha acabado."],
+        ["アナ", "あ、それに、窓が閉まらないんです。", "あ、それに、まどが しまらないんです。", "Ah, e a janela não fecha."],
+        ["管理人", "わかりました。すぐ見に行きます。", "わかりました。すぐ みに いきます。", "Entendi. Vou já dar uma olhada."]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Complete: ドア ___ あけてください。", "o": ["を", "が", "は", "に"], "e": "あける é transitivo: alguém abre algo (を)."},
+        {"t": "mc", "q": "Complete: ドア ___ あきました。", "o": ["が", "を", "で", "へ"], "e": "あく é intransitivo: a porta abre (が)."},
+        {"t": "mc", "q": "Qual é o par intransitivo de しめる (fechar algo)?", "o": ["しまる", "しめす", "しまう", "しめられる"]},
+        {"t": "mc", "q": "Qual é o par transitivo de きえる (apagar-se)?", "o": ["けす", "きえさせる", "けせる", "きる"]},
+        {"t": "mc", "ctx": "Você derrubou um copo do restaurante sem querer.", "q": "Qual frase soa mais natural para avisar?", "o": ["すみません、コップが われてしまいました。", "すみません、コップを わりたいです。", "コップが わりました。", "コップを われました。"], "e": "O intransitivo (割れる) evita destacar a culpa."},
+        {"t": "mc", "q": "Diferença: まどが あいています × まどが あけてあります", "o": ["O 2º indica que alguém abriu de propósito", "São iguais", "O 1º indica que alguém abriu de propósito", "O 2º está no passado"]},
+        {"t": "order", "q": "Monte: A aula começa às nove.", "w": ["じゅぎょう", "は", "くじ", "に", "はじまります"]},
+        {"t": "type", "q": "Escreva o verbo: apagar a luz = でんきを ___", "acc": ["けす", "消す", "けします", "消します"]},
+        {"t": "listen", "s": "スマホを おとして、がめんが われました。", "q": "O que aconteceu?", "o": ["O celular caiu e a tela rachou", "O celular foi roubado", "A tela do computador quebrou", "O celular ficou sem bateria"]}
+      ]
+    },
+    {
+      "id": "n3-11",
+      "title": "〜んです: explicar e perguntar o porquê",
+      "subtitle": "どうしたんですか · 頭が痛いんです · 〜んですが",
+      "theory": [
+        "# 〜んです: \"é que...\"",
+        "〜んです (〜のです na escrita) acrescenta uma EXPLICAÇÃO ou pede uma. É muito usado na fala e soa natural e próximo.",
+        "| Tipo | Forma | Exemplo |",
+        "| Verbo | forma simples + んです | 行くんです / 行ったんです |",
+        "| Adjetivo -い | 〜いんです | 痛いんです |",
+        "| Adjetivo -な / nome | 〜なんです | 好きなんです / 学生なんです |",
+        "## 1. Explicar uma situação",
+        "ex: 頭が痛いんです。 → É que estou com dor de cabeça. (explica por que você está mal)",
+        "## 2. Perguntar quando você percebe algo",
+        "ex: どうしたんですか。 → O que aconteceu? (você vê que algo está errado)",
+        "ex: どこに行くんですか。 → Aonde você está indo? (vê a pessoa saindo arrumada)",
+        "## 3. 〜んですが: começar um pedido com educação",
+        "ex: 道に迷ったんですが、駅はどこですか。 → É que me perdi... onde fica a estação?",
+        "ex: 日本語がよくわからないんですが…。 → É que não entendo bem japonês...",
+        "! Cuidado: usar んです o tempo todo para fatos simples soa insistente. ✗ 私は学生なんです (sem contexto) → ✓ 私は学生です.",
+        "> No casual vira 〜んだ / 〜の: どうしたの？ · 頭が痛いんだ。"
+      ],
+      "vocab": [
+        ["頭", "あたま", "cabeça"],
+        ["痛い", "いたい", "dolorido, doer"],
+        ["道", "みち", "caminho, rua"],
+        ["迷う", "まよう", "perder-se"],
+        ["遅れる", "おくれる", "atrasar-se"],
+        ["財布", "さいふ", "carteira"],
+        ["忘れる", "わすれる", "esquecer"],
+        ["急ぐ", "いそぐ", "apressar-se"],
+        ["試験", "しけん", "prova, exame"],
+        ["熱", "ねつ", "febre"]
+      ],
+      "examples": [
+        ["どうしたんですか。", "どう した ん です か。", "O que aconteceu?"],
+        ["頭が痛いんです。", "あたま が いたい ん です。", "É que estou com dor de cabeça."],
+        ["道に迷ったんですが、駅はどこですか。", "みち に まよった ん です が、えき は どこ です か。", "É que me perdi... onde fica a estação?"],
+        ["財布を忘れたんです。", "さいふ を わすれた ん です。", "É que esqueci a carteira."],
+        ["どうして遅れたんですか。", "どうして おくれた ん です か。", "Por que você se atrasou?"],
+        ["明日、試験があるんです。", "あした、しけん が ある ん です。", "É que amanhã tenho prova."]
+      ],
+      "dialog": [
+        ["先生", "アナさん、どうしたんですか。顔色が悪いですよ。", "アナさん、どうしたんですか。かおいろが わるいですよ。", "Ana, o que houve? Você está pálida."],
+        ["アナ", "ちょっと熱があるんです。", "ちょっと ねつが あるんです。", "É que estou com um pouco de febre."],
+        ["先生", "それは大変ですね。今日は早く帰ったほうがいいですよ。", "それは たいへんですね。きょうは はやく かえった ほうが いいですよ。", "Que chato. É melhor ir para casa cedo hoje."],
+        ["アナ", "すみません。じゃあ、レポートは明日出してもいいですか。", "すみません。じゃあ、レポートは あした だしても いいですか。", "Desculpe. Então, posso entregar o relatório amanhã?"],
+        ["先生", "ええ、いいですよ。お大事に。", "ええ、いいですよ。おだいじに。", "Pode, sim. Melhoras."]
+      ],
+      "exercises": [
+        {"t": "mc", "ctx": "Seu colega chega com cara de dor.", "q": "O que você pergunta?", "o": ["どうしたんですか。", "どうしますか。", "なにを しましたか。", "だいじょうぶでしたか。"], "e": "〜んですか: pergunta sobre algo que você percebeu."},
+        {"t": "mc", "q": "Forma correta de \"é que gosto\" (すき):", "o": ["すきなんです", "すきいんです", "すきんです", "すきのです"], "e": "Adjetivo -な + なんです."},
+        {"t": "mc", "q": "Forma correta de \"é que dói\" (いたい):", "o": ["いたいんです", "いたいなんです", "いたかったんです", "いたんです"]},
+        {"t": "mc", "ctx": "Você está perdido e vai pedir ajuda a alguém na rua.", "q": "Como começar?", "o": ["すみません、みちに まよったんですが…", "みちに まよいました。", "みちは どこですか。", "まよったんですか。"], "e": "〜んですが introduz um pedido com educação."},
+        {"t": "mc", "q": "Em qual situação 〜んです soa ESTRANHO?", "o": ["Dizer só o próprio nome ao se apresentar", "Explicar por que chegou atrasado", "Perguntar por que alguém está chorando", "Pedir ajuda dizendo que se perdeu"]},
+        {"t": "order", "q": "Monte: É que esqueci a carteira.", "w": ["さいふ", "を", "わすれた", "んです"]},
+        {"t": "type", "q": "Transforme em explicação: あした しけんが ある → あした しけんが ___", "acc": ["あるんです", "あるのです"]},
+        {"t": "listen", "s": "でんしゃが おくれたんです。すみません。", "q": "O que a pessoa explicou?", "o": ["O trem atrasou", "Ela perdeu o trem", "O trem estava cheio", "Ela pegou o trem errado"]}
+      ]
+    },
+    {
+      "id": "n3-12",
+      "title": "〜ながら: duas ações ao mesmo tempo",
+      "subtitle": "音楽を聞きながら勉強する · 〜ながら働く",
+      "theory": [
+        "# Fazer duas coisas ao mesmo tempo",
+        "〜ながら liga duas ações feitas pela MESMA pessoa ao mesmo tempo. A ação principal fica no fim.",
+        "| Forma | Exemplo |",
+        "| radical do ます + ながら | 聞きます → 聞き**ながら** |",
+        "| | 食べます → 食べ**ながら** |",
+        "| | します → し**ながら** |",
+        "ex: 音楽を聞きながら勉強します。 → Estudo ouvindo música. (a principal é estudar)",
+        "ex: 歩きながら話しましょう。 → Vamos conversar andando.",
+        "## A ação principal vem por último",
+        "- テレビを見ながら、ご飯を食べます。 → Como assistindo TV (a ação principal é comer).",
+        "- ご飯を食べながら、テレビを見ます。 → Assisto TV comendo (a ação principal é assistir).",
+        "## Para fases longas da vida",
+        "ex: 大学に通いながら、アルバイトをしています。 → Faço bico enquanto curso a faculdade.",
+        "! Só serve para a MESMA pessoa. Para pessoas diferentes use 〜間に: 私が料理している間に、友達が掃除した.",
+        "> Regra de etiqueta no Japão: 歩きながら食べる (comer andando na rua) costuma ser malvisto."
+      ],
+      "vocab": [
+        ["聞く", "きく", "ouvir; perguntar"],
+        ["歩く", "あるく", "andar"],
+        ["通う", "かよう", "frequentar (escola, trabalho)"],
+        ["運転", "うんてん", "dirigir"],
+        ["考える", "かんがえる", "pensar"],
+        ["笑う", "わらう", "rir"],
+        ["歌う", "うたう", "cantar"],
+        ["説明", "せつめい", "explicação"],
+        ["メモ", "", "anotação"],
+        ["電話", "でんわ", "telefone, ligação"]
+      ],
+      "examples": [
+        ["音楽を聞きながら勉強します。", "おんがく を ききながら べんきょう します。", "Estudo ouvindo música."],
+        ["歩きながら話しましょう。", "あるきながら はなしましょう。", "Vamos conversar andando."],
+        ["大学に通いながら、アルバイトをしています。", "だいがく に かよいながら、アルバイト を しています。", "Faço bico enquanto curso a faculdade."],
+        ["運転しながら電話をしてはいけません。", "うんてん しながら でんわ を しては いけません。", "Não pode falar ao telefone dirigindo."],
+        ["メモを取りながら説明を聞いてください。", "メモ を とりながら せつめい を きいてください。", "Ouça a explicação anotando."],
+        ["笑いながら話してくれました。", "わらいながら はなして くれました。", "Ele me contou rindo."]
+      ],
+      "dialog": [
+        ["健", "アナさん、いつも何を聞きながら勉強してるの？", "アナさん、いつも なにを ききながら べんきょうしてるの？", "Ana, o que você costuma ouvir enquanto estuda?"],
+        ["アナ", "日本のポッドキャストだよ。聞きながら、知らない言葉をメモしてる。", "にほんの ポッドキャストだよ。ききながら、しらない ことばを メモしてる。", "Podcast japonês. Enquanto ouço, anoto as palavras que não conheço."],
+        ["健", "すごいね。ぼくは音楽を聞きながらじゃないと集中できない。", "すごいね。ぼくは おんがくを ききながらじゃないと しゅうちゅうできない。", "Que legal. Eu só consigo me concentrar ouvindo música."],
+        ["アナ", "人それぞれだね。", "ひと それぞれだね。", "Cada um tem seu jeito."]
+      ],
+      "exercises": [
+        {"t": "mc", "q": "Forma com ながら de たべます:", "o": ["たべながら", "たべるながら", "たべてながら", "たべたながら"], "e": "Radical do ます + ながら."},
+        {"t": "mc", "q": "Forma com ながら de ききます:", "o": ["ききながら", "きくながら", "きいてながら", "きかながら"]},
+        {"t": "mc", "q": "Em おんがくを ききながら べんきょうします, qual é a ação principal?", "o": ["estudar", "ouvir música", "as duas igualmente", "nenhuma"], "e": "A ação principal é a que vem no fim."},
+        {"t": "mc", "q": "Qual frase está ERRADA?", "o": ["わたしが りょうりしながら、ともだちが そうじしました。", "あるきながら はなしましょう。", "テレビを みながら たべます。", "メモを とりながら ききます。"], "e": "ながら só serve para a mesma pessoa."},
+        {"t": "mc", "ctx": "Um amigo japonês comenta sobre comer andando na rua.", "q": "O que ele provavelmente diz?", "o": ["あるきながら たべるのは ちょっと…", "あるきながら たべてください。", "あるきながら たべたいです。", "あるきながら たべましょう。"]},
+        {"t": "order", "q": "Monte: Vamos conversar andando pelo parque.", "w": ["こうえん", "を", "あるきながら", "はなしましょう"]},
+        {"t": "order", "q": "Monte: Estudo ouvindo música.", "w": ["おんがく", "を", "ききながら", "べんきょう", "します"]},
+        {"t": "type", "q": "Escreva a forma com ながら de あるきます (andar).", "acc": ["あるきながら", "歩きながら"]},
+        {"t": "listen", "s": "うんてんしながら でんわを しては いけません。", "q": "O que é proibido?", "o": ["Falar ao telefone dirigindo", "Dirigir à noite", "Usar o telefone no trem", "Comer dirigindo"]}
       ]
     }
   ]

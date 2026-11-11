@@ -26,6 +26,7 @@ export function DrillsView() {
       item('円', 'Preços', 'Ouvir e ler valores em ienes', () => run('Preços', () => Drills.numbersDrill(12, ['price']))),
       item('時', 'Horas e datas', '4:30, 20 de abril… com as leituras irregulares', () => run('Horas e datas', () => Drills.numbersDrill(12, ['time', 'date']))),
       item('は', 'Partículas', 'Complete as frases do curso com は, が, を, に, で…', () => run('Partículas', () => Drills.particleDrill(12))),
+      item('組', 'Montar frases', 'Coloque as palavras das frases do curso na ordem certa', () => run('Montar frases', () => Drills.orderDrill(10))),
       item('耳', 'Ditado', 'Ouça uma frase curta e escreva', () => run('Ditado', () => Drills.dictationDrill(10)), !Speech.available)),
     !Speech.available ? infoBox('O ditado e as questões de ouvir precisam da voz japonesa do aparelho.', 'warn') : null,
   );

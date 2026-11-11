@@ -9,7 +9,8 @@ import { alignFurigana, hideReading } from '../js/furigana.js';
 import { loadStrokeData, checkDrawing, pathPoints } from '../js/strokes.js';
 import { segment, conjugations, wordsWithFurigana } from '../js/glossary.js';
 import { xpHistory, reviewForecast } from '../js/stats-data.js';
-import { inflect, inflectable, numberKana, priceKana, timeKana, dateKana, numbersDrill, particleDrill, conjugationDrill, dictationDrill } from '../js/drills.js';
+import { EXAMS, SECTIONS, buildExam } from '../js/exam.js';
+import { inflect, inflectable, numberKana, priceKana, timeKana, dateKana, numbersDrill, particleDrill, conjugationDrill, dictationDrill, lessonSession, sentenceTiles, sentencePool, orderDrill } from '../js/drills.js';
 
 const tests = [];
 const test = (name, fn) => tests.push({ name, fn });
@@ -271,11 +272,38 @@ test('Treinos: números, preços, horas e datas', () => cases([
   [timeKana(4, 30), 'よじさんじゅっぷん'], [timeKana(9, 5), 'くじごふん'], [timeKana(7, 10), 'しちじじゅっぷん'], [timeKana(12, 0), 'じゅうにじ'], [timeKana(1, 45), 'いちじよんじゅうごふん'],
   [dateKana(4, 20), 'しがつはつか'], [dateKana(9, 14), 'くがつじゅうよっか'], [dateKana(1, 1), 'いちがつついたち'], [dateKana(7, 23), 'しちがつにじゅうさんにち'],
 ], ([got, want]) => (got === want ? null : `${got} (esperado ${want})`)));
+test('Lições: sessões com exercícios de produção (montar, digitar, conjugar)', () => {
+  let total = 0, mc = 0, problems = [];
+  for (const l of Content.allLessons) {
+    const list = lessonSession(l, Ex.forLesson(l));
+    for (const ex of list) {
+      total++;
+      if (ex.type === 'choice' || ex.type === 'listen') mc++;
+      if (ex.type === 'order') {
+        const built = ex.correct.join('');
+        if (!l.examples.concat(l.dialog.map((d) => [d[1]])).some((e) => Kana.normalizeAnswer(e[0]) === Kana.normalizeAnswer(built)) && !ex.prompt.startsWith('Monte a frase') === false && !built) problems.push(`${l.id}: montar frase vazio`);
+        if ([...ex.tiles].sort().join('|') !== [...ex.correct].sort().join('|') && !ex.tiles.length) problems.push(`${l.id}: peças erradas`);
+      }
+      if (!Ex.correctAnswerText(ex)) problems.push(`${l.id}: sem resposta (${ex.prompt})`);
+    }
+  }
+  assert(problems.length === 0, problems.slice(0, 8).join('\n    '));
+  const pct = Math.round((100 * mc) / total);
+  assert(pct <= 66, `múltipla escolha ainda é ${pct}% das sessões (antes era 78%)`);
+  return `${total} questões, ${pct}% de múltipla escolha`;
+});
+test('Montar frase: as peças refazem a frase original', () => cases(sentencePool().slice(0, 400), (s) => {
+  const words = sentenceTiles(s.jp);
+  if (!words) return null;
+  const strip = (t) => Kana.normalizeAnswer(t);
+  return strip(words.join('')) === strip(s.jp) ? null : `${s.jp} → ${words.join('|')}`;
+}));
 test('Treinos: toda questão gerada tem resposta e opções diferentes', () => {
-  const all = [...numbersDrill(45), ...particleDrill(30), ...conjugationDrill(40), ...dictationDrill(15)];
+  const all = [...numbersDrill(45), ...particleDrill(30), ...conjugationDrill(40), ...dictationDrill(15), ...orderDrill(20)];
   assert(all.length >= 100, `poucas questões geradas: ${all.length}`);
   return cases(all, (ex) => {
     if (ex.type === 'typing') return ex.accepted.length && ex.accepted[0] ? null : `sem resposta: ${ex.prompt}`;
+    if (ex.type === 'order') return ex.correct.length >= 3 && ex.tiles.length === ex.correct.length ? null : `montar frase ruim: ${ex.prompt}`;
     if (ex.options.length < 3 || new Set(ex.options).size !== ex.options.length) return `opções ruins: ${ex.prompt} ${show(ex.options)}`;
     if (!(ex.answer >= 0)) return `sem a resposta certa: ${ex.prompt}`;
     if (ex.prompt.startsWith('Qual partícula') && !ex.japanese.includes('___')) return `sem lacuna: ${ex.japanese}`;
@@ -300,6 +328,35 @@ test('Furigana some só nos kanji dominados (sem salvar nada)', () => {
     delete srs['t:日']; delete srs['t:本'];
     Store.settings.HideKnownFurigana = before;
   }
+});
+
+test('Simulado JLPT: N5 e N4 com as 4 seções e questões válidas', () => {
+  const info = [];
+  for (const level of Object.keys(EXAMS)) {
+    const exam = buildExam(level);
+    const bySection = Object.fromEntries(SECTIONS.map((s) => [s, exam.filter((e) => e.section === s).length]));
+    for (const s of SECTIONS) assert(bySection[s] >= 3, `${level}: seção "${s}" com só ${bySection[s]} questões`);
+    for (const ex of exam) {
+      if (!Ex.correctAnswerText(ex)) throw new Falha(`${level}: questão sem resposta (${ex.prompt})`);
+      if ((ex.type === 'choice' || ex.type === 'listen') && new Set(ex.options).size !== ex.options.length) throw new Falha(`${level}: opções repetidas (${ex.prompt})`);
+    }
+    info.push(`${level}: ${exam.length} questões`);
+  }
+  return info.join(', ');
+});
+test('Todo kanji usado no curso está na lista de kanji', () => {
+  const known = new Set(Content.kanji.map((k) => k.char));
+  const texts = [];
+  for (const l of Content.allLessons) {
+    for (const a of [l.vocab, l.examples, l.text]) for (const e of a) texts.push(e[0] || '');
+    for (const d of l.dialog) texts.push(d[1] || '');
+  }
+  for (const d of Content.decks) for (const v of d.items) texts.push(v.jp);
+  for (const c of Content.phrases) for (const p of c.phrases) texts.push(p[0] || '');
+  const missing = new Set();
+  for (const t of texts) for (const c of t) if (Kana.isKanji(c) && c !== '々' && !known.has(c)) missing.add(c);
+  assert(missing.size === 0, `${missing.size} kanji fora da lista (inclua em Content/kanji_extra.txt): ${[...missing].join('')}`);
+  return `${known.size} kanji`;
 });
 
 // ---------------------------------------------------------------- estatísticas

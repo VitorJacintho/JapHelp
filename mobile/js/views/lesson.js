@@ -7,6 +7,7 @@ import * as Ex from '../exercises.js';
 import { openTracing } from '../trace.js';
 import { h, icons, button, infoBox, section, sentenceCard, vocabTile, charTile, renderTheory, jpText, tappableJp } from '../ui.js';
 import { COLORS, page, row } from './common.js';
+import { lessonSession } from '../drills.js';
 import { App } from '../app.js';
 
 const lessonState = { showTranslation: false };
@@ -132,6 +133,7 @@ function lessonExercises(lesson, color) {
   if (lesson.kana && lesson.kana.trim()) parts.push('leitura e reconhecimento de kana');
   if (lesson.vocab.length) parts.push('vocabulário (significado, áudio e escrita)');
   if (lesson.exercises.length) parts.push(`${lesson.exercises.length} exercícios de gramática e situações reais`);
+  if (lesson.examples.length || lesson.dialog.length) parts.push('montar frases e completar partículas com os exemplos da lição');
   return [
     h('h2', 'Hora de praticar!'),
     h('p.muted', 'Esta sessão mistura ' + parts.join(', ') + '. Questões erradas voltam no final para você fixar.'),
@@ -151,7 +153,7 @@ function lessonExercises(lesson, color) {
 function startLessonExercises(lesson) {
   App.runExercises({
     title: lesson.title,
-    generator: () => Ex.forLesson(lesson),
+    generator: () => lessonSession(lesson, Ex.forLesson(lesson)),
     onComplete: (r) => {
       const lp = Store.getLesson(lesson.id);
       const wasCompleted = lp.Completed;
