@@ -3,6 +3,8 @@ import * as Kana from './kana.js';
 import { Store } from './store.js';
 import { Speech } from './speech.js';
 import { furiganaNodes } from './furigana.js';
+import { wordsWithFurigana, PARTICLES, GRAMMAR } from './glossary.js';
+import { VocabItem } from './content.js';
 
 /** h('div.card', {onclick}, filhos...) — cria elementos sem innerHTML (texto sempre escapado). */
 export function h(tag, attrs, ...children) {
@@ -46,6 +48,73 @@ export function jpText(tag, jp, reading, attrs = {}) {
   if (nodes) el.classList.add('has-ruby');
   el.furigana = !!nodes;
   return el;
+}
+
+function rubyNode(text, rt) {
+  return h('ruby', text, h('rt', rt));
+}
+
+/**
+ * Frase em japonês em que cada palavra conhecida pode ser tocada para ver o significado
+ * (Ajustes → "Tocar numa palavra mostra o significado"). Com leitura, põe furigana como jpText.
+ */
+export function tappableJp(tag, jp, reading, attrs = {}) {
+  const words = wordsWithFurigana(jp, reading);
+  let ruby = false;
+  const nodes = words.map((w) => {
+    const inner = w.parts.map((p) => {
+      if (!p.reading) return p.text;
+      ruby = true;
+      return rubyNode(p.text, p.reading);
+    });
+    if (!w.entries && !w.particle && !w.grammar) return inner;
+    return h('span.w', { role: 'button', tabindex: 0, onclick: (e) => { e.stopPropagation(); showWord(w); } }, inner);
+  });
+  const el = h(tag, { lang: 'ja', ...attrs }, nodes);
+  if (ruby) el.classList.add('has-ruby');
+  el.furigana = ruby;
+  return el;
+}
+
+/** Folha com o significado da palavra tocada. */
+function showWord(w) {
+  Speech.speak(w.entries?.[0]?.base ? w.entries[0].jp : w.text);
+  const reading = w.parts.filter((p) => p.reading).length ? w.parts.map((p) => p.reading || p.text).join('') : null;
+  const body = [];
+  if (w.particle) {
+    body.push(h('div.word-entry', h('div.word-kind', 'partícula'), h('div.word-meaning', PARTICLES[w.particle])));
+  }
+  if (w.grammar) {
+    body.push(h('div.word-entry', h('div.word-kind', 'gramática'), h('div.word-meaning', GRAMMAR[w.grammar])));
+  }
+  // a mesma palavra pode vir de várias lições com traduções diferentes: junta numa só
+  const merged = [];
+  for (const e of w.entries || []) {
+    const same = merged.find((m) => m.jp === e.jp && m.reading === e.reading && m.kind === e.kind);
+    if (!same) merged.push({ ...e });
+    else if (!same.meaning.split('; ').includes(e.meaning)) same.meaning += '; ' + e.meaning;
+  }
+  for (const e of merged.slice(0, 4)) {
+    const addBtn = e.kind === 'palavra' ? h('button.btn.small', { type: 'button' }, '＋ Revisão') : null;
+    if (addBtn) {
+      const v = new VocabItem(e.jp, e.reading, e.meaning, 'toque');
+      const inSrs = !!Store.data.Srs[v.key];
+      addBtn.disabled = inSrs;
+      if (inSrs) addBtn.textContent = '✓ Na revisão';
+      addBtn.onclick = () => { Store.addToSrs(v); Store.save(); addBtn.textContent = '✓ Na revisão'; addBtn.disabled = true; };
+    }
+    body.push(h('div.word-entry',
+      h('div.word-head', h('span.word-jp', { lang: 'ja' }, e.jp), e.reading && e.reading !== e.jp ? h('span.word-reading', { lang: 'ja' }, e.reading) : null),
+      h('div.word-meaning', e.meaning),
+      h('div.btn-row',
+        Speech.available ? button('🔊 Ouvir', () => Speech.speak(e.jp), 'btn small') : null,
+        addBtn),
+      e.base ? h('div.word-kind', `forma de ${e.jp}`) : e.kind === 'kanji' ? h('div.word-kind', 'kanji') : null));
+  }
+  sheet(h('div.word-sheet',
+    h('div.word-big', { lang: 'ja' }, w.text),
+    reading && reading !== w.text ? h('div.word-big-reading', { lang: 'ja' }, reading) : null,
+    body));
 }
 
 export const icons = {
@@ -94,7 +163,7 @@ export function jpBlock(jp, { size = 'md', reading = null, romaji = null, speak 
 export function sentenceCard(jp, reading, meaning, { speaker = null, speakerColor = null } = {}) {
   reading = reading && reading.trim() ? reading : jp;
   const s = Store.settings;
-  const main = jpText('div.sc-jp', jp, s.ShowReading ? reading : null);
+  const main = (s.TapToDefine ? tappableJp : jpText)('div.sc-jp', jp, s.ShowReading ? reading : null);
   const body = h('div.sc-body',
     main,
     s.ShowReading && Kana.containsKanji(jp) && !main.furigana ? h('div.sc-reading', { lang: 'ja' }, reading.replaceAll(' ', '')) : null,

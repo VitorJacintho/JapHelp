@@ -7,6 +7,8 @@ import { Store, toIso, parseDate, today } from '../js/store.js';
 import * as Ex from '../js/exercises.js';
 import { alignFurigana } from '../js/furigana.js';
 import { loadStrokeData, checkDrawing, pathPoints } from '../js/strokes.js';
+import { segment, conjugations, wordsWithFurigana } from '../js/glossary.js';
+import { xpHistory, reviewForecast } from '../js/stats-data.js';
 
 const tests = [];
 const test = (name, fn) => tests.push({ name, fn });
@@ -168,6 +170,84 @@ test('Traços: sentido invertido é apontado', () => {
   const ref = strokeData['一'].map((d) => pathPoints(d));
   const r = checkDrawing(strokeData['一'], [[...ref[0]].reverse()]);
   assert(!r.ok && r.results[0].issue === 'direction', 'esperado "sentido invertido" no 一');
+});
+
+test('PC = celular: furigana', () => cases(paridade.furigana, ([jp, rd, want]) => {
+  const got = alignFurigana(jp, rd)?.map((p) => (p.reading ? `${p.text}[${p.reading}]` : p.text)).join('') ?? null;
+  return got === want ? null : `${jp} | ${rd} → ${got} (PC: ${want})`;
+}));
+test('PC = celular: conferência dos traços', () => cases(paridade.tracos, ([ch, variant, want]) => {
+  const ref = strokeData[ch].map((d) => pathPoints(d));
+  const strokes = {
+    exato: ref,
+    pequeno: ref.map((s) => s.map(([x, y]) => [12 + x * 0.6, 20 + y * 0.6])),
+    invertido: ref.map((s, i) => (i === 0 ? [...s].reverse() : s)),
+    faltando: ref.slice(0, -1),
+    trocado: [ref[1], ref[0], ...ref.slice(2)],
+  }[variant];
+  const r = checkDrawing(strokeData[ch], strokes);
+  const name = { direction: 'Direction', order: 'Order', shape: 'Shape', extra: 'Extra' };
+  const res = r.ok ? 'ok' : r.results.map((x) => (x.ok ? 'None' : x.issue === 'order' ? `Order:${x.matches}` : name[x.issue])).join(',');
+  const got = `${res}|${r.drawn}`;
+  return got === want ? null : `${ch} ${variant} → ${got} (PC: ${want})`;
+}));
+
+// ---------------------------------------------------------------- tocar na palavra
+test('Palavras: divisão das frases', () => cases([
+  ['これはいくらですか。', 'これ|は|いくら|ですか|。'],
+  ['毎朝パンを食べます。', '毎朝|パン|を|食べます|。'],
+  ['ちょっと待ってください。', 'ちょっと|待ってください|。'],
+  ['今、ご飯を食べています。', '今|、|ご飯|を|食べています|。'],
+  ['机の上に本があります。', '机|の|上|に|本|が|あります|。'],
+], ([jp, want]) => {
+  const got = segment(jp).map((s) => jp.slice(s.start, s.end)).join('|');
+  return got === want ? null : `${jp} → ${got} (esperado ${want})`;
+}));
+test('Palavras: formas conjugadas', () => cases([
+  ['食べます', ['食べました', '食べて', '食べたい', '食べません']],
+  ['書く', ['書きます', '書いて', '書いた', '書かない']],
+  ['行く', ['行きます', '行って', '行った']],
+  ['高い', ['高くない', '高かった', '高くて']],
+  ['勉強する', ['勉強します', '勉強して', '勉強した']],
+], ([jp, forms]) => {
+  const c = conjugations(jp);
+  const missing = forms.filter((f) => !c.has(f));
+  return missing.length ? `${jp}: faltou ${missing.join(', ')}` : null;
+}));
+test('Palavras: a maior parte dos exemplos é tocável', () => {
+  let tot = 0, cov = 0;
+  for (const l of Content.allLessons) {
+    for (const e of [...l.examples, ...l.dialog.map((d) => [d[1], d[2]])]) {
+      if (!e[0]) continue;
+      for (const w of wordsWithFurigana(e[0], e[1])) {
+        const n = [...w.text].filter((c) => Kana.isKana(c) || Kana.isKanji(c)).length;
+        tot += n;
+        if (w.entries || w.particle || w.grammar) cov += n;
+      }
+    }
+  }
+  const pct = Math.round((100 * cov) / tot);
+  assert(pct >= 80, `só ${pct}% do texto ficou tocável`);
+  return `${pct}% do texto`;
+});
+
+// ---------------------------------------------------------------- estatísticas
+test('Estatísticas: XP por dia e previsão de revisões', () => {
+  const now = new Date(2026, 10, 11);
+  const data = {
+    DailyXp: { '2026-11-11': 30, '2026-11-10': 12, '2026-10-01': 99 },
+    Srs: {
+      a: { Due: '2026-11-01T00:00:00' }, // atrasada → hoje
+      b: { Due: '2026-11-11T09:00:00' },
+      c: { Due: '2026-11-13T00:00:00' },
+      d: { Due: '2026-12-25T00:00:00' }, // fora dos 7 dias
+    },
+  };
+  const hist = xpHistory(data, 28, now);
+  assert(hist.length === 28 && hist[27].value === 30 && hist[26].value === 12, 'histórico de XP');
+  assert(hist.reduce((s, p) => s + p.value, 0) === 42, 'XP fora do período entrou no gráfico');
+  const f = reviewForecast(data, 7, now).map((p) => p.value);
+  assert(show(f) === show([2, 0, 1, 0, 0, 0, 0]), 'previsão: ' + show(f));
 });
 
 // ---------------------------------------------------------------- progresso

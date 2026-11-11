@@ -31,6 +31,7 @@ export function HomeView() {
       statTile('🔁', String(due), 'revisões para hoje', COLORS.success)),
     h('div.goal' + (todayXp >= goal ? '.ok' : ''), todayXp >= goal ? `Meta diária cumprida! 🎉  ${todayXp}/${goal} XP` : `Meta diária: ${todayXp}/${goal} XP`),
     progressBar(todayXp / goal, todayXp >= goal ? COLORS.success : COLORS.warning),
+    h('button.btn.wide.stats-link', { type: 'button', onclick: () => App.go('stats') }, '📊 Ver estatísticas e revisões da semana'),
     App.installPrompt ? h('button.btn.install', { type: 'button', onclick: () => App.install() }, '📲 Instalar o JapHelp no celular') : null,
     Backup.shouldRemind ? backupReminder() : null,
     next ? [section('Continuar de onde parou'), lessonCard(next, { wide: true, onclick: () => App.go(`lesson/${next.id}`) })]

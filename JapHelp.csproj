@@ -20,6 +20,10 @@
     <None Update="Content\**\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <!-- ordem dos traços (KanjiVG), a mesma do app de celular -->
+    <None Include="mobile\data\tracos.json" Link="Content\tracos.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

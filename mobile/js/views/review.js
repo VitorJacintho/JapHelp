@@ -4,17 +4,20 @@ import { Content, VocabItem } from '../content.js';
 import { Store, Intervals, parseDate } from '../store.js';
 import { Speech } from '../speech.js';
 import * as Ex from '../exercises.js';
-import { h, icons, button, infoBox, progressBar, section, jpBlock, statTile } from '../ui.js';
+import { h, icons, button, infoBox, progressBar, section, jpBlock, statTile, toast } from '../ui.js';
 import { COLORS, page, title } from './common.js';
+import { loadStrokeData } from '../strokes.js';
+import { createBoard, describeResult } from '../board.js';
 import { App } from '../app.js';
 
-const review = { queue: [], pos: 0, revealed: false, reverse: false, reviewed: 0, lapsed: new Set(), active: false, finished: false };
+const review = { queue: [], pos: 0, revealed: false, reverse: false, write: false, strokes: null, reviewed: 0, lapsed: new Set(), active: false, finished: false };
 
 export function ReviewView() {
   if (review.active) return reviewCard();
   if (review.finished) return reviewFinish();
   const all = Object.values(Store.data.Srs);
   const due = Store.dueCount;
+  const dueKanji = Store.dueItems().filter((s) => s.Kind === 'kanji').length;
   if (all.length === 0) {
     return page(...title('Revisão espaçada (SRS)', 'O app mostra cada palavra pouco antes de você esquecê-la.'),
       infoBox('Sua revisão está vazia. Conclua lições (70%+), decks de vocabulário ou grupos de kanji para adicionar itens automaticamente. Em Frases úteis você também pode adicionar frases.', 'indigo'));
@@ -30,7 +33,9 @@ export function ReviewView() {
       statTile('📚', String(all.length), 'itens no total', COLORS.accent)),
     h('div.stack',
       h('button.btn.primary.big', { type: 'button', disabled: due === 0, onclick: () => startReview(false) }, `Japonês → português (${due})`),
-      h('button.btn.big', { type: 'button', disabled: due === 0, onclick: () => startReview(true) }, `Português → japonês (${due})`)),
+      h('button.btn.big', { type: 'button', disabled: due === 0, onclick: () => startReview(true) }, `Português → japonês (${due})`),
+      h('button.btn.big', { type: 'button', disabled: dueKanji === 0, onclick: () => startReview(true, true) }, `✍️ Escrever os kanji (${dueKanji})`)),
+    dueKanji > 0 ? h('p.muted.small', 'Escrever: o app mostra o significado e a leitura, você escreve o kanji de memória e ele confere a ordem e o sentido dos traços. No modo Português → japonês, os kanji também viram cartões de escrita.') : null,
     nextDue ? infoBox(`Nada pendente agora. 🎉 Próxima revisão: ${nextDue.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}. Enquanto isso, faça um treino livre ou avance no curso.`, 'success') : null,
     section('Treino livre'),
     h('p.muted.small', 'Múltipla escolha, áudio e escrita com itens aleatórios da sua coleção (não altera o agendamento).'),
@@ -39,9 +44,15 @@ export function ReviewView() {
   );
 }
 
-function startReview(reverse) {
+async function startReview(reverse, write = false) {
+  // ordem dos traços: no sentido português → japonês, os kanji viram cartões de escrita
+  if (reverse) review.strokes = await loadStrokeData().catch(() => null);
   review.reverse = reverse;
-  review.queue = Ex.shuffle(Store.dueItems().slice(0, Store.settings.MaxReviewsPerSession));
+  review.write = write;
+  let due = Store.dueItems();
+  if (write) due = due.filter((s) => s.Kind === 'kanji' && review.strokes?.[s.Front]);
+  if (write && due.length === 0) { toast('Não consegui carregar a ordem dos traços. Tente de novo com internet.'); return; }
+  review.queue = Ex.shuffle(due.slice(0, Store.settings.MaxReviewsPerSession));
   review.pos = 0;
   review.reviewed = 0;
   review.lapsed = new Set();
@@ -56,6 +67,7 @@ const kindName = (k) => (k === 'kanji' ? 'kanji' : k === 'frase' ? 'frase' : 'vo
 function reviewCard() {
   if (review.pos >= review.queue.length) return finishReview();
   const cur = review.queue[review.pos];
+  if (review.reverse && cur.Kind === 'kanji' && review.strokes?.[cur.Front]) return writeCard(cur, review.strokes[cur.Front]);
   const s = Store.settings;
   const showJp = !review.reverse;
   const front = showJp
@@ -73,12 +85,9 @@ function reviewCard() {
     if (!review.reverse) lines.push(cur.Back);
     if (cur.Extra) lines.push(cur.Extra);
     if (cur.Kind !== 'kanji') Speech.speak(cur.Front);
-    const names = ['Errei', 'Difícil', 'Bom', 'Fácil'];
-    const kinds = ['danger', 'warning', 'success', 'indigo'];
     answer.append(
       h('div.info.info-indigo.review-answer', { lang: 'ja' }, lines.flatMap((l, i) => (i ? [h('br'), l] : [l]))),
-      h('div.grade-row', names.map((n, g) => h('button.btn.grade.' + kinds[g], { type: 'button', onclick: () => gradeCard(cur, g) },
-        h('span', n), h('small', nextIntervalText(cur, g))))));
+      gradeButtons(cur));
   };
   if (showJp && cur.Kind !== 'kanji' && s.AutoPlayAudio) setTimeout(() => Speech.speak(cur.Front), 150);
   return page(
@@ -90,6 +99,73 @@ function reviewCard() {
     h('p.muted.center', showJp ? 'Você lembra o significado e a leitura?' : 'Como se diz isso em japonês? Fale em voz alta antes de virar.'),
     revealBtn,
     answer,
+  );
+}
+
+const GRADE_NAMES = ['Errei', 'Difícil', 'Bom', 'Fácil'];
+const GRADE_KINDS = ['danger', 'warning', 'success', 'indigo'];
+
+/** Botões de avaliação; suggested = nota sugerida (destacada). */
+function gradeButtons(cur, suggested = null) {
+  return h('div.grade-row', GRADE_NAMES.map((n, g) => h('button.btn.grade.' + GRADE_KINDS[g] + (g === suggested ? '.suggested' : ''),
+    { type: 'button', onclick: () => gradeCard(cur, g) }, h('span', n), h('small', nextIntervalText(cur, g)))));
+}
+
+/** Cartão de escrita: mostra significado e leitura; o aluno escreve o kanji de memória e o app confere. */
+function writeCard(cur, ref) {
+  let hinted = false;
+  const feedback = h('div.trace-feedback.info.info-neutral', 'Escreva o kanji de memória e toque em "Conferir".');
+  const after = h('div');
+  const board = createBoard({ level: 'hard' });
+  const wrap = h('div.review-board', board.el);
+  const setFeedback = (text, kind) => {
+    feedback.className = 'trace-feedback info info-' + kind;
+    feedback.replaceChildren(...text.split('\n').flatMap((l, k) => (k ? [h('br'), l] : [l])));
+  };
+  const finish = (result) => {
+    // sugestão: certo sem dica = Bom; certo com dica = Difícil; errado = Errei (o aluno pode escolher outra)
+    const suggested = result?.ok ? (hinted ? 1 : 2) : 0;
+    actions.hidden = true;
+    after.replaceChildren(
+      h('div.info.info-indigo.review-answer', { lang: 'ja' },
+        h('span.review-kanji', cur.Front), h('br'), cur.Reading, cur.Extra ? [h('br'), h('small', cur.Extra)] : null),
+      h('p.muted.small.center', 'Como foi? (a sugestão está destacada)'),
+      gradeButtons(cur, suggested));
+  };
+  const check = () => {
+    if (board.strokeCount === 0) { setFeedback('Desenhe primeiro. ✍️', 'warn'); return; }
+    const result = board.check();
+    const { kind, text } = describeResult(result, { fromMemory: !hinted });
+    setFeedback(text, kind);
+    finish(result);
+  };
+  const actions = h('div.btn-row.center.wrap.trace-actions',
+    h('button.btn.small', { type: 'button', onclick: () => board.undo() }, 'Desfazer'),
+    h('button.btn.small', { type: 'button', onclick: () => board.clear() }, 'Limpar'),
+    h('button.btn.small', {
+      type: 'button',
+      onclick: () => {
+        hinted = true;
+        setFeedback('Dica: veja a ordem dos traços. Quando você começar a escrever, o modelo some.', 'indigo');
+        board.animate();
+      },
+    }, '💡 Dica'),
+    h('button.btn.small', { type: 'button', onclick: () => { setFeedback('Não lembrou — tudo bem. Veja o kanji e a ordem dos traços.', 'warn'); board.animate(); finish(null); } }, 'Não sei'),
+    h('button.btn.small.primary', { type: 'button', onclick: check }, '✓ Conferir'));
+  setTimeout(() => {
+    board.resize(Math.min(320, wrap.clientWidth || 300));
+    board.setChar(cur.Front, ref);
+  }, 0);
+  return page(
+    h('div.review-top',
+      h('button.icon-btn.ghost', { type: 'button', 'aria-label': 'Encerrar revisão', onclick: finishReview }, icons.close),
+      h('div.muted', `Restam ${review.queue.length - review.pos} · escrever kanji`)),
+    progressBar(review.pos / review.queue.length),
+    h('div.card.review-back', cur.Back, h('div.review-reading', { lang: 'ja' }, cur.Reading)),
+    wrap,
+    feedback,
+    actions,
+    after,
   );
 }
 

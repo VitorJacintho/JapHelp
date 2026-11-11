@@ -8,7 +8,7 @@ import { h, infoBox } from './ui.js';
 import * as V from './views/index.js';
 
 const TABS = [
-  ['home', '🏠', 'Início', ['home']],
+  ['home', '🏠', 'Início', ['home', 'stats']],
   ['course', '📘', 'Curso', ['course', 'lesson']],
   ['review', '🔁', 'Revisar', ['review']],
   ['practice', '🎯', 'Praticar', ['practice', 'kana', 'kanji', 'vocab', 'phrases', 'dict', 'speak']],
@@ -28,6 +28,7 @@ const ROUTES = {
   dict: () => V.DictionaryView(),
   speak: () => V.SpeakingView(),
   settings: () => V.SettingsView(),
+  stats: () => V.StatsView(),
 };
 
 let viewEl;
@@ -96,6 +97,12 @@ export const App = {
     this.go('speak');
   },
 
+  /** Aplica o tamanho do texto em japonês escolhido em Ajustes. */
+  applyTextScale() {
+    const v = Number(Store.settings.JpTextScale) || 1;
+    document.documentElement.style.setProperty('--jp-scale', String(Math.min(1.6, Math.max(0.9, v))));
+  },
+
   async install() {
     if (!this.installPrompt) return;
     this.installPrompt.prompt();
@@ -128,6 +135,8 @@ async function boot() {
       h('span.tab-icon', icon), h('span.tab-label', label))));
 
   Store.load();
+  App.applyTextScale();
+  Store.onChange(() => App.applyTextScale()); // importar progresso pode trazer outro tamanho
   Backup.protect();
   let asked = false; // pede proteção uma vez quando surgir o primeiro progresso
   Store.onChange(() => { if (!asked && Backup.persisted === false && Backup.hasProgress) { asked = true; Backup.protect(); } });

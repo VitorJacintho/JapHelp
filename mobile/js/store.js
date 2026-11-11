@@ -14,6 +14,8 @@ const DEFAULT_SETTINGS = () => ({
   DailyGoalXp: 60,
   AutoPlayAudio: true,
   MaxReviewsPerSession: 40,
+  JpTextScale: 1, // só no celular: tamanho do texto em japonês
+  TapToDefine: true, // só no celular: tocar na palavra mostra o significado
 });
 
 const EMPTY = () => ({

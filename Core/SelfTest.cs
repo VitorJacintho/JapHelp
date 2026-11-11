@@ -218,6 +218,23 @@ public static class SelfTest
         }
         catch (Exception exn) { Fail("KanaDrill: " + exn.Message); }
 
+        // ordem dos traços (KanjiVG) e furigana
+        var semTracos = ContentRepository.Kanji.Where(k => Strokes.Get(k.Char) == null).Select(k => k.Char).ToList();
+        if (semTracos.Count > 0) Fail("Kanji sem ordem dos traços (rode mobile/ferramentas/kanjivg.ps1): " + string.Join(" ", semTracos.Take(30)));
+        foreach (var ch in ContentRepository.Kanji.Select(k => k.Char).Where(c => Strokes.Get(c) != null))
+        {
+            var paths = Strokes.Get(ch)!;
+            var exact = paths.Select(d => (IReadOnlyList<PointF>)Strokes.PathPoints(d)).ToList();
+            if (!Strokes.Check(paths, exact).Ok) Fail($"Traços de {ch}: o desenho exato não passou na conferência");
+        }
+        var furiPairs = ContentRepository.AllLessons.SelectMany(l => l.VocabItems
+                .Concat(l.Examples.Where(e => e.Length >= 3).Select(e => new VocabItem(e[0], e[1], e[2], l.Id))))
+            .Concat(ContentRepository.Decks.SelectMany(d => d.Items))
+            .Where(v => Kana.ContainsKanji(v.Jp) && v.Reading != v.Jp).ToList();
+        var furiFail = furiPairs.Where(v => Furigana.Align(v.Jp, v.Reading) == null).Select(v => v.Jp).Distinct().ToList();
+        sb.AppendLine($"  Furigana: {furiPairs.Count - furiFail.Count} de {furiPairs.Count} encaixam · traços: {Strokes.AllChars.Count} caracteres");
+        foreach (var f in furiFail.Take(10)) Fail("Furigana não encaixa (confira a leitura): " + f);
+
         sb.Insert(0, problems == 0 ? "RESULTADO: OK (0 problemas)\n" : $"RESULTADO: {problems} problema(s)\n");
         File.WriteAllText(outputPath, sb.ToString(), Encoding.UTF8);
         return problems;

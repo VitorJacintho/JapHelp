@@ -2,7 +2,7 @@
 import { Content } from '../content.js';
 import { Store } from '../store.js';
 import { Speech, Practice } from '../speech.js';
-import { h, button, infoBox, section, toast } from '../ui.js';
+import { h, button, infoBox, section, toast, jpText } from '../ui.js';
 import { page, title } from './common.js';
 import { Backup, REMIND_AFTER_DAYS } from '../backup.js';
 import { VERSION } from '../arquivos.js';
@@ -67,7 +67,9 @@ export function SettingsView() {
     h('div.card.settings',
       toggle('Mostrar romaji junto do japonês', 'ShowRomaji', 'Recomendado: desligue depois do Nível 0 — o romaji vira muleta.'),
       toggle('Mostrar leitura em kana (furigana)', 'ShowReading'),
-      toggle('Tocar áudio automaticamente', 'AutoPlayAudio')),
+      toggle('Tocar áudio automaticamente', 'AutoPlayAudio'),
+      toggle('Tocar numa palavra mostra o significado', 'TapToDefine', 'Nos exemplos, diálogos, frases e textos.'),
+      textSizePicker()),
     section('Metas'),
     h('div.card.settings',
       number('Meta diária de XP', 'DailyGoalXp', 10, 500, 10),
@@ -113,4 +115,24 @@ export function SettingsView() {
       ' © Ulrich Apel, licença ',
       h('a', { href: 'https://creativecommons.org/licenses/by-sa/3.0/', target: '_blank', rel: 'noopener' }, 'CC BY-SA 3.0'), '.'),
   );
+}
+
+const TEXT_SIZES = [[1, 'Normal'], [1.15, 'Grande'], [1.3, 'Maior'], [1.5, 'Enorme']];
+
+/** Tamanho do texto em japonês (e da furigana), com uma prévia. */
+function textSizePicker() {
+  const s = Store.settings;
+  const cur = Number(s.JpTextScale) || 1;
+  const buttons = TEXT_SIZES.map(([v, name]) => h('button' + (Math.abs(v - cur) < 0.01 ? '.active' : ''), {
+    type: 'button',
+    onclick: () => {
+      s.JpTextScale = v;
+      Store.save(); // aplica na hora (App.applyTextScale escuta as mudanças)
+      for (const b of buttons) b.classList.toggle('active', b === buttons[TEXT_SIZES.findIndex((t) => t[0] === v)]);
+    },
+  }, name));
+  return h('div.field.col',
+    h('span', 'Tamanho do texto em japonês'),
+    h('div.segmented.size-picker', buttons),
+    jpText('div.sc-jp.size-preview', '日本語を勉強しています。', 'にほんごを べんきょうしています。'));
 }

@@ -5,7 +5,7 @@ import { Store, toIso } from '../store.js';
 import { Speech } from '../speech.js';
 import * as Ex from '../exercises.js';
 import { openTracing } from '../trace.js';
-import { h, icons, button, infoBox, section, sentenceCard, vocabTile, charTile, renderTheory, jpText } from '../ui.js';
+import { h, icons, button, infoBox, section, sentenceCard, vocabTile, charTile, renderTheory, jpText, tappableJp } from '../ui.js';
 import { COLORS, page, row } from './common.js';
 import { App } from '../app.js';
 
@@ -77,7 +77,7 @@ function lessonText(lesson) {
       const reading = hasReading ? p[1] : p[0];
       if (lessonState.showTranslation && p.length >= 3) return sentenceCard(p[0], reading, p[2]);
       const furi = Store.settings.ShowReading && hasReading && Kana.containsKanji(p[0]) ? reading : null;
-      const main = jpText('div.reading-jp', p[0], furi);
+      const main = (Store.settings.TapToDefine ? tappableJp : jpText)('div.reading-jp', p[0], furi);
       return h('div.card.reading-para', { onclick: () => Speech.speak(p[0]) },
         furi && !main.furigana ? h('div.jp-reading', { lang: 'ja' }, furi.replaceAll(' ', '')) : null,
         main);

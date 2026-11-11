@@ -28,6 +28,7 @@
   --font-jp: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic UI", "Meiryo", sans-serif;
   --tabbar-h: 62px;
   --safe-b: env(safe-area-inset-bottom, 0px);
+  --jp-scale: 1; /* Ajustes → Tamanho do japonês */
   color-scheme: light;
 }
 
@@ -218,7 +219,7 @@ p { margin: 0; }
 .next-lesson { margin-top: 16px; }
 .text-title { font-size: 20px; }
 .reading-para { cursor: pointer; }
-.reading-jp { font-size: 19px; line-height: 1.8; }
+.reading-jp { font-size: calc(19px * var(--jp-scale)); line-height: 1.8; }
 
 /* teoria */
 .theory { font-size: 16px; line-height: 1.65; }
@@ -232,7 +233,7 @@ p { margin: 0; }
 .theory .t-h1 strong, .theory .t-h2 strong { color: inherit; }
 .theory .t-tip { background: var(--warning-soft); color: var(--tip-text); border-radius: 10px; padding: 10px 12px; margin: 8px 0; }
 .theory .t-warn { background: var(--error-soft); color: var(--accent-dark); border-radius: 10px; padding: 10px 12px; margin: 8px 0; }
-.theory .t-ex { color: var(--indigo); font-size: 17px; padding: 4px 0 4px 14px; border-left: 3px solid var(--indigo-soft); margin: 4px 0 8px; }
+.theory .t-ex { color: var(--indigo); font-size: calc(17px * var(--jp-scale)); padding: 4px 0 4px 14px; border-left: 3px solid var(--indigo-soft); margin: 4px 0 8px; }
 .theory .t-gap { height: 6px; }
 .table-wrap { overflow-x: auto; margin: 8px -4px 12px; }
 .theory table { border-collapse: collapse; font-size: 15px; min-width: 60%; }
@@ -246,12 +247,12 @@ p { margin: 0; }
   display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; box-shadow: var(--shadow);
 }
 .jp-main { font-weight: 600; line-height: 1.35; word-break: break-word; }
-.jp-main.size-sm { font-size: 21px; }
-.jp-main.size-md { font-size: 28px; }
-.jp-main.size-lg { font-size: 36px; }
-.jp-main.size-xl { font-size: 68px; line-height: 1.15; }
-.jp-main.size-xxl { font-size: 88px; line-height: 1.1; font-weight: 400; }
-.jp-reading { color: var(--muted); font-size: 15px; }
+.jp-main.size-sm { font-size: calc(21px * var(--jp-scale)); }
+.jp-main.size-md { font-size: calc(28px * var(--jp-scale)); }
+.jp-main.size-lg { font-size: calc(36px * var(--jp-scale)); }
+.jp-main.size-xl { font-size: calc(68px * var(--jp-scale)); line-height: 1.15; }
+.jp-main.size-xxl { font-size: calc(88px * var(--jp-scale)); line-height: 1.1; font-weight: 400; }
+.jp-reading { color: var(--muted); font-size: calc(15px * var(--jp-scale)); }
 .jp-romaji { color: var(--muted); font-style: italic; font-size: 14.5px; }
 .speak-row { display: flex; gap: 10px; margin-top: 8px; }
 
@@ -262,8 +263,8 @@ p { margin: 0; }
 }
 .sentence-card:active { border-color: var(--indigo); background: var(--card-hover); }
 .sc-body { flex: 1; min-width: 0; }
-.sc-jp { font-size: 19px; line-height: 1.45; }
-.sc-reading { color: var(--muted); font-size: 14px; }
+.sc-jp { font-size: calc(19px * var(--jp-scale)); line-height: 1.45; }
+.sc-reading { color: var(--muted); font-size: calc(14px * var(--jp-scale)); }
 .sc-romaji { color: var(--muted); font-size: 13.5px; font-style: italic; }
 .sc-meaning { color: var(--indigo); font-size: 15px; margin-top: 2px; }
 .avatar { width: 38px; height: 38px; flex: none; border-radius: 50%; color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 13px; align-self: flex-start; }
@@ -274,7 +275,7 @@ p { margin: 0; }
   cursor: pointer; display: flex; flex-direction: column; gap: 2px; min-height: 92px;
 }
 .vocab-tile:active { border-color: var(--accent-local, var(--accent)); border-width: 2px; padding: 9px 11px; }
-.vt-jp { font-size: 20px; font-weight: 600; word-break: break-word; }
+.vt-jp { font-size: calc(20px * var(--jp-scale)); font-weight: 600; word-break: break-word; }
 .vt-sub { font-size: 12.5px; color: var(--muted); }
 .vt-meaning { font-size: 14px; color: var(--indigo); }
 
@@ -287,8 +288,8 @@ p { margin: 0; }
 }
 .char-tile.empty { background: transparent; border: 0; cursor: default; }
 .char-tile:active { border-color: var(--indigo); background: var(--indigo-soft); }
-.ct-char { font-size: 26px; line-height: 1.15; }
-.char-tile.big .ct-char { font-size: 30px; }
+.ct-char { font-size: calc(26px * var(--jp-scale)); line-height: 1.15; }
+.char-tile.big .ct-char { font-size: calc(30px * var(--jp-scale)); }
 .ct-sub { font-size: 11.5px; color: var(--muted); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .weak-dot { position: absolute; top: 5px; right: 5px; width: 8px; height: 8px; background: var(--warning); border-radius: 50%; }
 
@@ -336,8 +337,8 @@ p { margin: 0; }
 .dict-row { text-align: left; border: 0; border-bottom: 1px solid var(--border); background: transparent; padding: 10px 14px; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 0 10px; }
 .dict-row:last-child { border-bottom: 0; }
 .dict-row:active { background: var(--indigo-soft); }
-.dict-jp { font-size: 18px; font-weight: 600; }
-.dict-reading { font-size: 13px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+.dict-jp { font-size: calc(18px * var(--jp-scale)); font-weight: 600; }
+.dict-reading { font-size: calc(13px * var(--jp-scale)); color: var(--muted); font-weight: 400; margin-left: 8px; }
 .dict-romaji { font-size: 13px; color: var(--muted); font-style: italic; text-align: right; align-self: center; }
 .dict-meaning { color: var(--indigo); font-size: 14.5px; grid-column: 1 / -1; }
 .dict-src { color: var(--muted); font-size: 12px; grid-column: 1 / -1; }
@@ -351,7 +352,7 @@ p { margin: 0; }
 .review-top { display: flex; align-items: center; gap: 8px; margin-left: -8px; }
 .review-front { margin-top: 6px; }
 .review-back { font-size: 22px; font-weight: 700; text-align: center; padding: 28px 16px; }
-.review-answer { font-size: 19px; text-align: center; }
+.review-answer { font-size: calc(19px * var(--jp-scale)); text-align: center; }
 .grade-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px; }
 .btn.grade { flex-direction: column; gap: 0; padding: 8px 4px; min-height: 62px; }
 .btn.grade small { font-weight: 500; opacity: .9; font-size: 12px; }
@@ -365,33 +366,33 @@ p { margin: 0; }
 .runner-body { flex: 1; overflow-y: auto; padding: 8px 16px 20px; display: flex; flex-direction: column; gap: 12px; -webkit-overflow-scrolling: touch; }
 .prompt { font-size: 20px; font-weight: 800; }
 .retry-note { color: var(--warning); font-weight: 700; font-size: 13.5px; }
-.passage { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; white-space: pre-line; font-size: 16.5px; line-height: 1.8; max-height: 38vh; overflow-y: auto; }
+.passage { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; white-space: pre-line; font-size: calc(16.5px * var(--jp-scale)); line-height: 1.8; max-height: 38vh; overflow-y: auto; }
 .listen-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .options { display: flex; flex-direction: column; gap: 8px; }
 .option {
   display: flex; align-items: center; gap: 12px; text-align: left; width: 100%; min-height: 56px; padding: 10px 14px;
   background: var(--card); border: 2px solid var(--border); border-radius: 14px; cursor: pointer; font-size: 16.5px;
 }
-.option.jp-opt .opt-text { font-size: 20px; }
-.option.short .opt-text { font-size: 28px; }
+.option.jp-opt .opt-text { font-size: calc(20px * var(--jp-scale)); }
+.option.short .opt-text { font-size: calc(28px * var(--jp-scale)); }
 .opt-n { width: 26px; height: 26px; flex: none; border-radius: 8px; border: 1px solid var(--border); display: grid; place-items: center; font-size: 13px; color: var(--muted); font-weight: 700; }
 .option.selected { border-color: var(--indigo); background: var(--indigo-soft); }
 .option.right { border-color: var(--success); background: var(--success-soft); }
 .option.wrong { border-color: var(--error); background: var(--error-soft); }
 .option:disabled { opacity: 1; }
 .typing-input {
-  width: 100%; min-height: 58px; font-size: 24px; padding: 10px 14px; border-radius: 14px; border: 2px solid var(--border);
+  width: 100%; min-height: 58px; font-size: calc(24px * var(--jp-scale)); padding: 10px 14px; border-radius: 14px; border: 2px solid var(--border);
   background: var(--card); font-family: var(--font-jp);
 }
 .typing-input.right { border-color: var(--success); background: var(--success-soft); }
 .typing-input.wrong { border-color: var(--error); background: var(--error-soft); }
-.typing-preview { font-size: 20px; color: var(--indigo); min-height: 30px; }
+.typing-preview { font-size: calc(20px * var(--jp-scale)); color: var(--indigo); min-height: 30px; }
 .tile-area { display: flex; flex-wrap: wrap; gap: 8px; min-height: 64px; padding: 10px; border-radius: 14px; }
 .tile-area.answer { background: var(--card); border: 2px dashed var(--border); }
 .tile-area.answer.right { border: 2px solid var(--success); background: var(--success-soft); }
 .tile-area.answer.wrong { border: 2px solid var(--error); background: var(--error-soft); }
 .tile-area.bank { padding: 4px 0; min-height: 0; }
-.word-tile { min-height: 46px; padding: 6px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-size: 19px; cursor: pointer; box-shadow: 0 2px 0 var(--border); }
+.word-tile { min-height: 46px; padding: 6px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-size: calc(19px * var(--jp-scale)); cursor: pointer; box-shadow: 0 2px 0 var(--border); }
 .answer .word-tile { background: var(--indigo-soft); border-color: transparent; }
 
 .runner-foot {
@@ -457,7 +458,7 @@ p { margin: 0; }
 .sheet-handle { width: 40px; height: 5px; border-radius: 9px; background: var(--border); margin: 0 auto 6px; }
 .sheet-close { position: absolute; top: 10px; right: 12px; }
 .kanji-detail { display: flex; flex-direction: column; gap: 10px; }
-.kanji-big { font-size: 96px; text-align: center; line-height: 1.15; }
+.kanji-big { font-size: calc(96px * var(--jp-scale)); text-align: center; line-height: 1.15; }
 .kanji-meaning { text-align: center; font-size: 19px; font-weight: 800; color: var(--accent); margin-top: -6px; }
 
 .toast {
@@ -515,3 +516,53 @@ rt { font-size: .5em; font-weight: 400; color: var(--muted); letter-spacing: 0; 
 .trace-sub { color: var(--muted); font-size: 13.5px; }
 .trace-feedback { font-size: 14px; margin: 0; padding: 8px 12px; max-height: 26dvh; overflow-y: auto; }
 .trace-actions { gap: 6px; }
+
+/* ---------- tamanho do japonês ---------- */
+.size-picker { grid-template-columns: repeat(4, 1fr); }
+.size-picker button { padding: 8px 2px; color: var(--text); }
+.size-picker button.active { color: #fff; }
+.size-preview { margin-top: 6px; font-weight: 400; }
+
+/* ---------- escrita na revisão ---------- */
+.review-board { width: min(320px, 100%); aspect-ratio: 1; margin: 4px auto; display: flex; justify-content: center; }
+.review-reading { font-size: calc(17px * var(--jp-scale)); font-weight: 500; color: var(--muted); margin-top: 6px; }
+.review-kanji { font-size: calc(56px * var(--jp-scale)); line-height: 1.2; }
+.btn.grade.suggested { outline: 3px solid var(--text); outline-offset: 2px; }
+
+/* ---------- estatísticas ---------- */
+.stats-link { margin-top: 2px; }
+.stats.three { grid-template-columns: repeat(3, 1fr); }
+.chart { margin: 14px 0 6px; padding: 12px 12px 8px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); }
+.chart-title { font-weight: 700; font-size: 15px; }
+.chart-caption { color: var(--muted); font-size: 13px; min-height: 1.4em; }
+.chart-plot { position: relative; height: 150px; margin-top: 18px; border-bottom: 1px solid var(--border); }
+.chart-cols { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(var(--n), 1fr); align-items: end; gap: 2px; }
+.chart-col { position: relative; height: 100%; display: flex; align-items: flex-end; justify-content: center; border: 0; padding: 0; background: transparent; cursor: pointer; }
+.chart-bar { display: block; width: 100%; max-width: 26px; min-height: 0; background: var(--indigo); border-radius: 4px 4px 0 0; }
+.chart-col:hover .chart-bar, .chart-col.sel .chart-bar { background: var(--accent); }
+.chart-val { position: absolute; bottom: calc(var(--h, 0%) + 2px); font-size: 11px; font-weight: 700; color: var(--text); white-space: nowrap; }
+.chart-ref { position: absolute; left: 0; right: 0; border-top: 1px dashed var(--muted); pointer-events: none; z-index: 1; }
+.chart-ref span { position: absolute; right: 0; top: -17px; font-size: 11px; color: var(--muted); background: var(--card); padding: 0 3px; }
+.chart-axis { display: grid; grid-template-columns: repeat(var(--n), 1fr); font-size: 11px; color: var(--muted); margin-top: 4px; }
+.chart-axis span { white-space: nowrap; overflow: visible; text-align: center; }
+.chart-axis span:first-child { text-align: left; }
+.chart-axis span:last-child { text-align: right; }
+.chart-table { margin-top: 6px; font-size: 13px; }
+.chart-table summary { color: var(--indigo); cursor: pointer; }
+.chart-table table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.chart-table td { padding: 3px 6px; border-bottom: 1px solid var(--border); }
+.chart-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.mistake-row .dict-meaning { margin-top: 2px; }
+
+/* ---------- tocar na palavra ---------- */
+.w { cursor: pointer; border-radius: 4px; text-decoration: underline dotted color-mix(in srgb, var(--muted) 55%, transparent); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.w:active, .w:hover { background: var(--indigo-soft); }
+.word-sheet { display: flex; flex-direction: column; gap: 10px; padding-top: 4px; }
+.word-big { font-size: calc(34px * var(--jp-scale)); font-weight: 700; text-align: center; }
+.word-big-reading { text-align: center; color: var(--muted); font-size: calc(17px * var(--jp-scale)); margin-top: -8px; }
+.word-entry { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
+.word-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.word-jp { font-size: calc(22px * var(--jp-scale)); font-weight: 700; }
+.word-reading { color: var(--muted); font-size: calc(15px * var(--jp-scale)); }
+.word-meaning { color: var(--indigo); font-size: 16px; }
+.word-kind { color: var(--muted); font-size: 12.5px; }

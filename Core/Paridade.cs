@@ -77,11 +77,55 @@ public static class Paridade
         Section("splitUnits", readings.Where(Kana.IsAllKana).Take(300).Select(s => new object[] { s, Kana.SplitUnits(s) }));
         Section("compare", compares.Select(c => new[] { c[0], c[1], Kana.Compare(c[0], c[1]).ToString() }));
         Section("srs", srs.Cast<object>());
+
+        // furigana: frase + leitura → "日本語[にほんご]を話[はな]します" (ou null se não encaixa)
+        var pairs = items.Where(v => Kana.ContainsKanji(v.Jp) && v.Reading != v.Jp)
+            .Select(v => (v.Jp, v.Reading)).Distinct().OrderBy(p => p.Jp, StringComparer.Ordinal).ToList();
+        var furiCases = Sample(pairs.Select(p => p.Jp + "\u0001" + p.Reading).ToList(), 700)
+            .Select(s => s.Split('\u0001')).ToList();
+        furiCases.Add(new[] { "Suicaでお願いします。", "スイカで おねがいします。" });
+        furiCases.Add(new[] { "Wi-Fiのパスワードは何ですか。", "ワイファイの パスワードは なんですか。" });
+        furiCases.Add(new[] { "日本", "にっぽんご" });
+        Section("furigana", furiCases.Select(c =>
+        {
+            var parts = Furigana.Align(c[0], c[1]);
+            return new[] { c[0], c[1], parts == null ? null : string.Concat(parts.Select(p => p.Reading != null ? $"{p.Text}[{p.Reading}]" : p.Text)) };
+        }));
+        Section("tracos", StrokeCases());
         sb.Append("\n}\n");
 
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(outputPath))!);
         File.WriteAllText(outputPath, sb.ToString(), new UTF8Encoding(false));
         return 0;
+    }
+
+    /// <summary>
+    /// Conferência dos traços em desenhos montados a partir do próprio modelo:
+    /// exato, 1º e 2º trocados, 1º invertido, menor e deslocado, faltando o último.
+    /// </summary>
+    private static IEnumerable<object> StrokeCases()
+    {
+        var chars = Strokes.AllChars.OrderBy(c => c, StringComparer.Ordinal).ToList();
+        var pick = Sample(chars, 120);
+        foreach (var ch in pick)
+        {
+            var paths = Strokes.Get(ch)!;
+            var refPts = paths.Select(d => Strokes.PathPoints(d)).ToList();
+            var variants = new List<(string Name, List<List<PointF>> Strokes)>
+            {
+                ("exato", refPts),
+                ("pequeno", refPts.Select(s => s.Select(p => new PointF(12 + p.X * 0.6f, 20 + p.Y * 0.6f)).ToList()).ToList()),
+                ("invertido", refPts.Select((s, i) => i == 0 ? Enumerable.Reverse(s).ToList() : s).ToList()),
+                ("faltando", refPts.Take(refPts.Count - 1).ToList()),
+            };
+            if (refPts.Count >= 2) variants.Add(("trocado", new[] { refPts[1], refPts[0] }.Concat(refPts.Skip(2)).ToList()));
+            foreach (var (name, strokes) in variants)
+            {
+                var r = Strokes.Check(paths, strokes.Cast<IReadOnlyList<PointF>>().ToList());
+                var res = r.Ok ? "ok" : string.Join(",", r.Results.Select(x => x.Issue == Strokes.Issue.Order ? $"Order:{x.Matches}" : x.Issue.ToString()));
+                yield return new[] { ch, name, $"{res}|{r.Drawn}" };
+            }
+        }
     }
 
     /// <summary>Pega até n itens espalhados pela lista (sempre os mesmos, para o arquivo não mudar à toa).</summary>

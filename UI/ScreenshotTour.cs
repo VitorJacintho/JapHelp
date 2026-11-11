@@ -80,6 +80,18 @@ public static class ScreenshotTour
             }),
             ("25_kanji_n3", () => form.ShowView(new KanjiView("N3"), "kanji")),
             ("26_n2_lesson", () => form.OpenLesson(ContentRepository.FindLesson("n5-09")!, "theory")),
+            ("27_vocab_furigana", () => form.OpenLesson(lesson, "vocab")),
+            ("28_trace", () =>
+            {
+                TracingForm.SaveTestShot(Path.Combine(dir, "28a_trace_facil.png"), new() { "日", "本" }, TracingForm.Level.Easy, null);
+                TracingForm.SaveTestShot(Path.Combine(dir, "28b_trace_certo.png"), new() { "日" }, TracingForm.Level.Medium, s => s);
+                // 本 de memória, menor, com 1º e 2º trocados e o 3º invertido
+                TracingForm.SaveTestShot(Path.Combine(dir, "28c_trace_errado.png"), new() { "本" }, TracingForm.Level.Hard, s =>
+                {
+                    var small = s.Select(st => st.Select(p => new PointF(12 + p.X * 0.6f, 20 + p.Y * 0.6f)).ToList()).ToList();
+                    return new[] { small[1], small[0], Enumerable.Reverse(small[2]).ToList() }.Concat(small.Skip(3)).ToList();
+                });
+            }),
         };
         int i = 0;
         var timer = new System.Windows.Forms.Timer { Interval = 700 };

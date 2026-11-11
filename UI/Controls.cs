@@ -324,7 +324,7 @@ public class InfoBox : Control, IFlexHeight
 // =====================================================================
 public class JpBlock : Panel, IFlexHeight
 {
-    private readonly Label _jp;
+    private readonly Control _jp; // Label, ou RubyLabel quando há furigana
     private readonly Label? _reading;
     private readonly Label? _romaji;
     private readonly FlatButton? _speak;
@@ -333,8 +333,19 @@ public class JpBlock : Panel, IFlexHeight
     {
         BackColor = Color.White;
         Padding = Theme.Pad(18, 14, 18, 14);
-        _jp = MakeLabel(jp, Theme.Jp(size), Theme.Text);
-        if (reading != null) _reading = MakeLabel(reading, Theme.Jp(12f), Theme.Muted);
+        // furigana em cima dos kanji quando a leitura encaixa; senão, leitura numa linha acima (como antes)
+        var ruby = reading != null ? new RubyLabel(jp, reading, Theme.Jp(size)) { ForeColor = Theme.Text, BackColor = Color.White } : null;
+        if (ruby != null && ruby.Works)
+        {
+            Controls.Add(ruby);
+            _jp = ruby;
+        }
+        else
+        {
+            ruby?.Dispose();
+            if (reading != null) _reading = MakeLabel(reading, Theme.Jp(12f), Theme.Muted);
+            _jp = MakeLabel(jp, Theme.Jp(size), Theme.Text);
+        }
         if (romaji != null) _romaji = MakeLabel(romaji, Theme.Ui(10.5f, FontStyle.Italic), Theme.Muted);
         if (speak != null && Speech.Available)
         {
@@ -355,12 +366,17 @@ public class JpBlock : Panel, IFlexHeight
     {
         int maxW = Math.Max(60, width - Padding.Horizontal - (_speak != null ? Theme.S(56) : 0));
         int y = Padding.Top;
-        foreach (var l in new[] { _jp, _reading, _romaji })
+        foreach (var c in new Control?[] { _jp, _reading, _romaji })
         {
-            if (l == null) continue;
-            var sz = l.GetPreferredSize(new Size(maxW, 0));
-            int h = sz.Height + (int)(l.Font.Size > 30 ? l.Font.Height * 0.25f : Theme.S(2));
-            l.SetBounds(Padding.Left, y, maxW, h);
+            if (c == null) continue;
+            int h;
+            if (c is RubyLabel rl) h = rl.HeightForWidth(maxW) + Theme.S(2);
+            else
+            {
+                var sz = c.GetPreferredSize(new Size(maxW, 0));
+                h = sz.Height + (int)(c.Font.Size > 30 ? c.Font.Height * 0.25f : Theme.S(2));
+            }
+            c.SetBounds(Padding.Left, y, maxW, h);
             y += h;
         }
         _speak?.SetBounds(width - Padding.Right - _speak.Width, Padding.Top, _speak.Width, _speak.Height);
@@ -526,10 +542,13 @@ public class SentenceCard : Control, IFlexHeight
     private int TextLeft => Theme.S(Speaker != null ? 64 : 18);
     private int TextWidth(int w) => w - TextLeft - Theme.S(56);
 
-    private IEnumerable<(string text, Font font, Color color)> Lines()
+    /// <summary>Furigana em cima dos kanji (null se desligada ou se a leitura não encaixar).</summary>
+    private RubyLayout? Ruby(int tw) => ShowReading ? RubyLayout.Build(Jp, Reading, JpFont, tw) : null;
+
+    private IEnumerable<(string text, Font font, Color color)> Lines(bool withRuby)
     {
-        yield return (Jp, JpFont, Theme.Text);
-        if (ShowReading) yield return (Reading.Replace(" ", ""), ReadFont, Theme.Muted);
+        if (!withRuby) yield return (Jp, JpFont, Theme.Text);
+        if (ShowReading && !withRuby) yield return (Reading.Replace(" ", ""), ReadFont, Theme.Muted);
         if (ShowRomaji && Kana.ContainsJapanese(Reading)) yield return (Kana.ToRomaji(Reading), RomajiFont, Theme.Muted);
         yield return (Meaning, MeanFont, Theme.Indigo);
     }
@@ -538,7 +557,9 @@ public class SentenceCard : Control, IFlexHeight
     {
         int tw = Math.Max(50, TextWidth(width));
         int h = Theme.S(14);
-        foreach (var (text, font, _) in Lines())
+        var ruby = Ruby(tw);
+        if (ruby != null) h += ruby.Height + Theme.S(3);
+        foreach (var (text, font, _) in Lines(ruby != null))
             h += TextRenderer.MeasureText(text, font, new Size(tw, int.MaxValue), TextFormatFlags.WordBreak | TextFormatFlags.NoPadding).Height + Theme.S(3);
         return Math.Max(h + Theme.S(12), Theme.S(60));
     }
@@ -577,7 +598,13 @@ public class SentenceCard : Control, IFlexHeight
 
         int tw = Math.Max(50, TextWidth(Width));
         int y = Theme.S(12);
-        foreach (var (text, font, color) in Lines())
+        var ruby = Ruby(tw);
+        if (ruby != null)
+        {
+            ruby.Draw(g, TextLeft, y, Theme.Text, Theme.Muted);
+            y += ruby.Height + Theme.S(3);
+        }
+        foreach (var (text, font, color) in Lines(ruby != null))
         {
             var sz = TextRenderer.MeasureText(text, font, new Size(tw, int.MaxValue), TextFormatFlags.WordBreak | TextFormatFlags.NoPadding);
             TextRenderer.DrawText(g, text, font, new Rectangle(TextLeft, y, tw, sz.Height), color, TextFormatFlags.WordBreak | TextFormatFlags.NoPadding | TextFormatFlags.NoPrefix);
@@ -634,12 +661,24 @@ public class VocabTile : Control
         int pad = Theme.S(12);
         int w = Width - pad * 2;
         var jpFont = Theme.Jp(Item.Jp.Length > 9 ? 13f : 17f);
-        int y = Theme.S(8);
-        var jpSz = TextRenderer.MeasureText(Item.Jp, jpFont);
-        TextRenderer.DrawText(g, Item.Jp, jpFont, new Rectangle(pad, y, w, jpSz.Height), Theme.Text, TextFormatFlags.EndEllipsis | TextFormatFlags.NoPrefix);
-        y += jpSz.Height;
+        int y = Theme.S(4);
+        // furigana em cima dos kanji (cabe numa linha); se não encaixar, a leitura vai na linha de baixo
+        var ruby = Item.HasKanji && ProgressStore.Data.Settings.ShowReading ? RubyLayout.Build(Item.Jp, Item.Reading, jpFont, w, wrap: false) : null;
+        if (ruby != null && ruby.Width <= w)
+        {
+            ruby.Draw(g, pad, y, Theme.Text, Theme.Muted);
+            y += ruby.Height;
+        }
+        else
+        {
+            ruby = null;
+            y += Theme.S(4);
+            var jpSz = TextRenderer.MeasureText(Item.Jp, jpFont);
+            TextRenderer.DrawText(g, Item.Jp, jpFont, new Rectangle(pad, y, w, jpSz.Height), Theme.Text, TextFormatFlags.EndEllipsis | TextFormatFlags.NoPrefix);
+            y += jpSz.Height;
+        }
         var sub = new List<string>();
-        if (Item.HasKanji && ProgressStore.Data.Settings.ShowReading) sub.Add(Item.Reading);
+        if (Item.HasKanji && ProgressStore.Data.Settings.ShowReading && ruby == null) sub.Add(Item.Reading);
         if (ProgressStore.Data.Settings.ShowRomaji) sub.Add(Item.Romaji);
         if (sub.Count > 0)
         {
