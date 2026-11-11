@@ -24,7 +24,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}mobile/
     steps:
+      # Sempre o código mais recente da main: assim, rodar de novo ("Re-run") uma execução antiga
+      # publica a versão atual, em vez de voltar o site para o código daquela execução.
       - uses: actions/checkout@v5
+        with:
+          ref: main
 
       - name: Gerar lista de arquivos e versão
         shell: pwsh
