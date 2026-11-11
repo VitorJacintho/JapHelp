@@ -103,6 +103,22 @@ public static class ProgressStore
         Changed?.Invoke();
     }
 
+    /// <summary>Salva uma cópia do progresso (o mesmo formato do app de celular).</summary>
+    public static void Export(string path) => File.WriteAllText(path, JsonSerializer.Serialize(Data, JsonOpts));
+
+    /// <summary>Troca o progresso pelo do arquivo (do PC ou do celular). Lança exceção se o arquivo for inválido.</summary>
+    public static void Import(string path)
+    {
+        var text = File.ReadAllText(path).TrimStart('﻿');
+        var d = JsonSerializer.Deserialize<ProgressData>(text, JsonOpts) ?? throw new InvalidDataException("arquivo vazio");
+        // mantém a voz e a velocidade escolhidas neste PC
+        d.Settings.VoiceId = Data.Settings.VoiceId;
+        d.Settings.SpeechSpeed = Data.Settings.SpeechSpeed;
+        Data = d;
+        CheckStreakBroken();
+        Save();
+    }
+
     public static void Reset()
     {
         var settings = Data.Settings;

@@ -110,6 +110,40 @@ public class SettingsView : UserControl
                     : "Erros:\n" + string.Join("\n", ContentRepository.Errors), "JapHelp");
             })));
 
+        // backup: o mesmo arquivo serve no celular (Ajustes → Importar progresso) e vice-versa
+        stack.Add(Ui.Label("Backup: o arquivo exportado também pode ser importado no app de celular, e o backup do celular pode ser importado aqui.", Theme.Ui(10f), Theme.Muted));
+        stack.Add(Ui.Row(
+            FlatButton.Secondary("Exportar progresso (backup)", (_, _) =>
+            {
+                using var dlg = new SaveFileDialog
+                {
+                    Title = "Salvar backup do progresso",
+                    FileName = $"japhelp-progresso-{DateTime.Today:yyyy-MM-dd}.json",
+                    Filter = "Progresso do JapHelp (*.json)|*.json|Todos os arquivos|*.*",
+                };
+                if (dlg.ShowDialog() != DialogResult.OK) return;
+                try { ProgressStore.Export(dlg.FileName); MessageBox.Show("Backup salvo.", "JapHelp"); }
+                catch (Exception ex) { MessageBox.Show("Não consegui salvar: " + ex.Message, "JapHelp"); }
+            }),
+            FlatButton.Secondary("Importar progresso", (_, _) =>
+            {
+                using var dlg = new OpenFileDialog
+                {
+                    Title = "Escolher backup do progresso (do PC ou do celular)",
+                    Filter = "Progresso do JapHelp (*.json;*.txt)|*.json;*.txt|Todos os arquivos|*.*",
+                };
+                if (dlg.ShowDialog() != DialogResult.OK) return;
+                if (MessageBox.Show("Substituir o progresso deste PC pelo do arquivo?", "Importar progresso",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+                try
+                {
+                    ProgressStore.Import(dlg.FileName);
+                    MessageBox.Show("Progresso importado!", "JapHelp");
+                    MainForm.Instance.Navigate("home");
+                }
+                catch (Exception ex) { MessageBox.Show("Arquivo inválido: " + ex.Message, "JapHelp"); }
+            })));
+
         var reset = FlatButton.Primary("Zerar todo o progresso", (_, _) =>
         {
             if (MessageBox.Show("Isso apaga lições concluídas, XP, sequência e toda a revisão (SRS). Não dá para desfazer. Continuar?",

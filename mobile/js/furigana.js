@@ -2,6 +2,17 @@
 // O conteúdo traz a frase e a leitura inteira em kana ("日本語を話します" / "にほんごを はなします");
 // aqui as partes em kana servem de âncora para descobrir a leitura de cada trecho de kanji.
 import * as Kana from './kana.js';
+import { Store } from './store.js';
+
+// Ajustes → "Esconder a furigana dos kanji que você já domina": kanji maduros na revisão (caixa 5+, 14+ dias)
+let known = null;
+Store.onChange(() => { known = null; });
+export function hideReading(text) {
+  if (!Store.settings.HideKnownFurigana) return false;
+  known ??= new Set(Object.values(Store.data.Srs).filter((s) => s.Kind === 'kanji' && s.Box >= 5).map((s) => s.Front));
+  const kanji = [...text].filter(Kana.isKanji);
+  return kanji.length > 0 && kanji.every((c) => known.has(c));
+}
 
 const isLatin = (c) => /[A-Za-z0-9Ａ-Ｚａ-ｚ０-９]/.test(c);
 const needsReading = (c) => Kana.isKanji(c) || c === 'ヶ' || c === '〆' || isLatin(c);
@@ -63,5 +74,5 @@ export function furiganaNodes(jp, reading) {
     if (!Kana.containsKanji(jp) || !reading || [...jp].length > 6) return null;
     return [ruby(jp, noSpace(reading))];
   }
-  return parts.map((p) => (p.reading ? ruby(p.text, p.reading) : p.text));
+  return parts.map((p) => (p.reading && !hideReading(p.text) ? ruby(p.text, p.reading) : p.text));
 }

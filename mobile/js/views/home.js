@@ -6,6 +6,7 @@ import * as Ex from '../exercises.js';
 import { h, infoBox, progressBar, section, statTile, lessonCard, toast } from '../ui.js';
 import { COLORS, page } from './common.js';
 import { Backup } from '../backup.js';
+import { dailyPlan } from './plan.js';
 import { App } from '../app.js';
 
 export function HomeView() {
@@ -34,6 +35,7 @@ export function HomeView() {
     h('button.btn.wide.stats-link', { type: 'button', onclick: () => App.go('stats') }, '📊 Ver estatísticas e revisões da semana'),
     App.installPrompt ? h('button.btn.install', { type: 'button', onclick: () => App.install() }, '📲 Instalar o JapHelp no celular') : null,
     Backup.shouldRemind ? backupReminder() : null,
+    dailyPlan(),
     next ? [section('Continuar de onde parou'), lessonCard(next, { wide: true, onclick: () => App.go(`lesson/${next.id}`) })]
       : total > 0 ? infoBox('Você concluiu todas as lições! 🎌 Continue revisando no SRS e praticando kanji e frases. おめでとう！', 'success') : null,
     section('Prática rápida'),

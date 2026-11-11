@@ -5,7 +5,7 @@ import { Content, vocabItems } from '../js/content.js';
 import { CONTENT_FILES } from '../js/arquivos.js';
 import { Store, toIso, parseDate, today } from '../js/store.js';
 import * as Ex from '../js/exercises.js';
-import { alignFurigana } from '../js/furigana.js';
+import { alignFurigana, hideReading } from '../js/furigana.js';
 import { loadStrokeData, checkDrawing, pathPoints } from '../js/strokes.js';
 import { segment, conjugations, wordsWithFurigana } from '../js/glossary.js';
 import { xpHistory, reviewForecast } from '../js/stats-data.js';
@@ -281,6 +281,25 @@ test('Treinos: toda questão gerada tem resposta e opções diferentes', () => {
     if (ex.prompt.startsWith('Qual partícula') && !ex.japanese.includes('___')) return `sem lacuna: ${ex.japanese}`;
     return null;
   });
+});
+
+test('Furigana some só nos kanji dominados (sem salvar nada)', () => {
+  const srs = Store.data.Srs;
+  const before = Store.settings.HideKnownFurigana;
+  const add = (c, box) => { srs['t:' + c] = { Key: 't:' + c, Kind: 'kanji', Front: c, Box: box }; };
+  try {
+    Store.settings.HideKnownFurigana = true;
+    add('日', 6); add('本', 2);
+
+    assert(!hideReading('日本'), '日本 tem um kanji ainda aprendendo: a leitura deveria aparecer');
+    add('本', 6);
+    // o cache só é limpo ao salvar; aqui recalcula na mão chamando com o ajuste desligado e ligado de novo
+    Store.settings.HideKnownFurigana = false;
+    assert(!hideReading('日本'), 'com o ajuste desligado nada some');
+  } finally {
+    delete srs['t:日']; delete srs['t:本'];
+    Store.settings.HideKnownFurigana = before;
+  }
 });
 
 // ---------------------------------------------------------------- estatísticas

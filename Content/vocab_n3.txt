@@ -1,0 +1,161 @@
+// Decks de vocabulário N3 (intermediário).
+
+# Verbos N3 | 動 | N3
+受ける|うける|receber; fazer (prova)
+与える|あたえる|dar, conceder
+表す|あらわす|expressar, representar
+現れる|あらわれる|aparecer
+得る|える|obter
+加える|くわえる|acrescentar
+比べる|くらべる|comparar
+断る|ことわる|recusar
+避ける|さける|evitar
+示す|しめす|mostrar, indicar
+任せる|まかせる|deixar (uma tarefa) com alguém
+迷う|まよう|ficar em dúvida; perder-se
+認める|みとめる|reconhecer, admitir
+求める|もとめる|pedir, buscar
+守る|まもる|proteger; cumprir (regra)
+破る|やぶる|rasgar; quebrar (promessa)
+許す|ゆるす|perdoar, permitir
+訪ねる|たずねる|visitar
+尋ねる|たずねる|perguntar
+伝える|つたえる|transmitir, avisar
+続ける|つづける|continuar
+増える|ふえる|aumentar
+慣れる|なれる|acostumar-se
+諦める|あきらめる|desistir
+支払う|しはらう|pagar
+届ける|とどける|entregar
+落ち着く|おちつく|acalmar-se
+間に合う|まにあう|chegar a tempo
+片付ける|かたづける|arrumar
+向かう|むかう|ir em direção a
+
+# Ideias e situações | 念 | N3
+意見|いけん|opinião
+経験|けいけん|experiência
+関係|かんけい|relação
+理由|りゆう|motivo
+目的|もくてき|objetivo
+結果|けっか|resultado
+原因|げんいん|causa
+状況|じょうきょう|situação
+機会|きかい|oportunidade
+責任|せきにん|responsabilidade
+習慣|しゅうかん|costume, hábito
+文化|ぶんか|cultura
+社会|しゃかい|sociedade
+環境|かんきょう|meio ambiente; ambiente
+将来|しょうらい|futuro
+過去|かこ|passado
+現在|げんざい|presente, atualmente
+期待|きたい|expectativa
+不安|ふあん|ansiedade, insegurança
+自信|じしん|autoconfiança
+努力|どりょく|esforço
+影響|えいきょう|influência
+効果|こうか|efeito
+方法|ほうほう|método, jeito
+内容|ないよう|conteúdo
+情報|じょうほう|informação
+条件|じょうけん|condição
+基本|きほん|base, básico
+目標|もくひょう|meta
+判断|はんだん|julgamento, decisão
+
+# Trabalho e faculdade N3 | 職 | N3
+会議|かいぎ|reunião
+資料|しりょう|material, documentos
+締め切り|しめきり|prazo final
+提出|ていしゅつ|entrega (de trabalho, documento)
+報告|ほうこく|relatório; reportar
+相談|そうだん|conversa para pedir conselho
+確認|かくにん|confirmação
+連絡先|れんらくさき|contato (telefone, e-mail)
+給料|きゅうりょう|salário
+残業|ざんぎょう|hora extra
+休暇|きゅうか|férias, folga
+面接|めんせつ|entrevista
+履歴書|りれきしょ|currículo
+応募|おうぼ|candidatura
+担当|たんとう|responsável (por algo)
+上司|じょうし|chefe
+部下|ぶか|subordinado
+同僚|どうりょう|colega de trabalho
+取引先|とりひきさき|cliente, parceiro comercial
+出張|しゅっちょう|viagem de trabalho
+授業|じゅぎょう|aula
+講義|こうぎ|aula expositiva (faculdade)
+単位|たんい|crédito (de disciplina)
+専攻|せんこう|curso, área de estudo
+論文|ろんぶん|artigo acadêmico, tese
+発表|はっぴょう|apresentação; anúncio
+奨学金|しょうがくきん|bolsa de estudos
+成績|せいせき|notas, desempenho
+留学生|りゅうがくせい|estudante estrangeiro
+研究室|けんきゅうしつ|laboratório (do professor)
+
+# Advérbios e conectivos N3 | 副 | N3
+かなり|かなり|bastante
+ずいぶん|ずいぶん|muito, consideravelmente
+ほとんど|ほとんど|quase tudo; (com negativa) quase nunca
+なかなか|なかなか|bastante; (com negativa) não… facilmente
+ついに|ついに|finalmente
+とうとう|とうとう|por fim, afinal
+やっと|やっと|enfim (depois de esforço)
+さっそく|さっそく|imediatamente
+しばらく|しばらく|por um tempo
+いきなり|いきなり|de repente
+たまたま|たまたま|por acaso
+わざわざ|わざわざ|dar-se ao trabalho de
+せっかく|せっかく|já que (com tanto esforço)
+どうしても|どうしても|a qualquer custo; (com negativa) de jeito nenhum
+必ず|かならず|com certeza, sem falta
+特に|とくに|especialmente
+実は|じつは|na verdade
+例えば|たとえば|por exemplo
+むしろ|むしろ|pelo contrário, antes
+ところで|ところで|aliás, mudando de assunto
+それに|それに|além disso
+そのうえ|そのうえ|além do mais
+ところが|ところが|porém (algo inesperado)
+したがって|したがって|portanto
+つまり|つまり|ou seja
+一応|いちおう|por via das dúvidas; mais ou menos
+結局|けっきょく|no fim das contas
+確か|たしか|se não me engano
+相変わらず|あいかわらず|como sempre
+ますます|ますます|cada vez mais
+
+# Casa, cidade e serviços N3 | 住 | N3
+家賃|やちん|aluguel
+引っ越し|ひっこし|mudança (de casa)
+契約|けいやく|contrato
+近所|きんじょ|vizinhança
+住所|じゅうしょ|endereço
+郵便局|ゆうびんきょく|correio
+役所|やくしょ|repartição pública
+窓口|まどぐち|guichê
+手続き|てつづき|trâmite, procedimento
+保険|ほけん|seguro
+税金|ぜいきん|imposto
+料金|りょうきん|tarifa, taxa
+割引|わりびき|desconto
+領収書|りょうしゅうしょ|recibo
+支払い|しはらい|pagamento
+交通|こうつう|trânsito, transporte
+渋滞|じゅうたい|engarrafamento
+事故|じこ|acidente
+信号|しんごう|semáforo
+横断歩道|おうだんほどう|faixa de pedestres
+燃えるゴミ|もえるごみ|lixo queimável
+粗大ゴミ|そだいごみ|lixo grande (móveis, eletrodomésticos)
+地震|じしん|terremoto
+避難|ひなん|evacuação, buscar abrigo
+停電|ていでん|falta de luz
+断水|だんすい|falta de água
+天気予報|てんきよほう|previsão do tempo
+湿気|しっけ|umidade
+冷房|れいぼう|ar-condicionado (frio)
+暖房|だんぼう|aquecimento

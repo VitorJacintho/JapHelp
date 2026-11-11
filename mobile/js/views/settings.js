@@ -67,6 +67,7 @@ export function SettingsView() {
     h('div.card.settings',
       toggle('Mostrar romaji junto do japonês', 'ShowRomaji', 'Recomendado: desligue depois do Nível 0 — o romaji vira muleta.'),
       toggle('Mostrar leitura em kana (furigana)', 'ShowReading'),
+      toggle('Esconder a furigana dos kanji que já domino', 'HideKnownFurigana', 'Kanji com 14+ dias na revisão aparecem sem leitura — um empurrão para ler sozinho.'),
       toggle('Tocar áudio automaticamente', 'AutoPlayAudio'),
       toggle('Tocar numa palavra mostra o significado', 'TapToDefine', 'Nos exemplos, diálogos, frases e textos.'),
       textSizePicker()),

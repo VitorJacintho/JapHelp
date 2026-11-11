@@ -2,7 +2,7 @@
 import * as Kana from './kana.js';
 import { Store } from './store.js';
 import { Speech } from './speech.js';
-import { furiganaNodes } from './furigana.js';
+import { furiganaNodes, hideReading } from './furigana.js';
 import { wordsWithFurigana, PARTICLES, GRAMMAR } from './glossary.js';
 import { Content, VocabItem } from './content.js';
 import { openTracing } from './trace.js';
@@ -62,9 +62,12 @@ function rubyNode(text, rt) {
 export function tappableJp(tag, jp, reading, attrs = {}) {
   const words = wordsWithFurigana(jp, reading);
   let ruby = false;
+  let aligned = false; // a leitura encaixou (mesmo que a furigana dos kanji dominados fique escondida)
   const nodes = words.map((w) => {
     const inner = w.parts.map((p) => {
       if (!p.reading) return p.text;
+      aligned = true;
+      if (hideReading(p.text)) return p.text;
       ruby = true;
       return rubyNode(p.text, p.reading);
     });
@@ -73,7 +76,7 @@ export function tappableJp(tag, jp, reading, attrs = {}) {
   });
   const el = h(tag, { lang: 'ja', ...attrs }, nodes);
   if (ruby) el.classList.add('has-ruby');
-  el.furigana = ruby;
+  el.furigana = aligned;
   return el;
 }
 

@@ -36,6 +36,8 @@ e abra `http://localhost:8765/mobile/` (no Chrome, F12 → modo celular). Use `h
 - **Treinos gerados:** em Praticar → Treinos, exercícios criados na hora a partir do vocabulário e das frases do curso: conjugação (ます, dicionário, て, た, ない e adjetivos), preços, horas e datas (com as leituras irregulares), partículas e ditado.
 - **Mostrar para alguém:** nas Frases úteis, o botão 🔎 abre a frase em tela cheia, com letras grandes, para mostrar a um atendente.
 - **Minhas palavras:** em Praticar → Minhas palavras, cadastre palavras da aula ou da rua (aceita romaji); elas entram na revisão.
+- **Plano do dia:** na tela inicial, quatro tarefas curtas (revisões, próxima lição, um treino que muda a cada dia e 5 kanji para escrever), com ✓ quando feitas.
+- **Furigana que some:** em Ajustes, a opção "Esconder a furigana dos kanji que já domino" tira a leitura dos kanji com 14+ dias na revisão.
 - **Testes:** `mobile/testes/` confere conteúdo, exercícios, furigana, traços, arquivos do modo offline e se o celular dá os mesmos resultados do PC (conversão de kana, correção de respostas, SRS, furigana e conferência dos traços). As respostas do PC ficam em `mobile/testes/paridade.json`; ao mudar `Core/Kana.cs`, `Core/Furigana.cs`, `Core/Strokes.cs` ou o SRS, gere de novo com `JapHelp.exe --paridade mobile/testes/paridade.json`.
 - Para ouvir o áudio, o celular precisa de voz japonesa (Android: Serviços de fala do Google → instalar dados de voz → Japonês; iPhone: Acessibilidade → Conteúdo Falado → Vozes → Japonês). A verificação de pronúncia usa a internet.
 
@@ -43,7 +45,7 @@ e abra `http://localhost:8765/mobile/` (no Chrome, F12 → modo celular). Use `h
 
 - **72 lições** em 8 módulos: Fundamentos (kana), N5, N4, N3, N2 (12 lições), **Vida no Japão** (imigração, trem, konbini, prefeitura, banco, faculdade, moradia, saúde, emergências, arubaito, amizades) e **Leitura e escuta** (textos reais e áudios longos com perguntas de compreensão).
 - Cada lição: teoria, vocabulário, exemplos, diálogos e exercícios (múltipla escolha, digitação em romaji → kana, montar frase, escuta).
-- **Vocabulário em decks**: 746 palavras em 25 temas (N5, N4, vida no Japão), com quiz.
+- **Vocabulário em decks**: 896 palavras em 30 temas (N5, N4, N3, vida no Japão), com quiz.
 - **Treino de fala**: ouvir o modelo, gravar a própria voz, comparar e verificar a pronúncia (reconhecimento de fala do Windows).
 - **Revisão espaçada (SRS)** do que você estuda, com **furigana** (leitura em cima dos kanji) nos cartões, exemplos e textos.
 - **Kana** (tabela, quiz e pontos fracos), **Kanji** (646: N5, N4, N3 e placas/avisos), **prática de escrita** em 3 níveis (com números, sem números, de memória) que confere a ordem e o sentido dos traços.
@@ -75,4 +77,4 @@ dotnet build
 bin/Debug/net10.0-windows10.0.19041.0/JapHelp.exe --selftest resultado.txt
 ```
 
-O progresso do aluno fica em `%APPDATA%\JapHelp\progress.json`.
+O progresso do aluno fica em `%APPDATA%\JapHelp\progress.json`. Em Configurações → Dados dá para exportar e importar o progresso (o mesmo arquivo serve no celular).
