@@ -10,6 +10,26 @@ Requer o .NET 10 SDK no Windows.
 dotnet run
 ```
 
+## No celular (Android e iPhone)
+
+A pasta `mobile/` tem o JapHelp como app web instalável (PWA): mesmo conteúdo, mesmos exercícios, revisão SRS, traçado com o dedo, voz japonesa do celular, gravação da própria voz e verificação de pronúncia. Depois do primeiro acesso funciona offline. Ele lê os arquivos de `Content/` direto, então editar o conteúdo vale para o PC e para o celular.
+
+**Publicar (uma vez):** no GitHub, Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`. O app fica em `https://<usuário>.github.io/JapHelp/mobile/`.
+
+**Instalar no celular:** abra o link — Android (Chrome): menu ⋮ → *Instalar app*; iPhone (Safari): Compartilhar → *Adicionar à Tela de Início*.
+
+**Testar no PC:**
+
+```bash
+powershell -ExecutionPolicy Bypass -File mobile/servir.ps1
+```
+
+e abra `http://localhost:8765/mobile/` (no Chrome, F12 → modo celular).
+
+- O progresso fica salvo no aparelho. Em Ajustes dá para exportar/importar, inclusive o `progress.json` do app de PC.
+- Ao adicionar um arquivo novo em `Content/`, inclua o nome em `mobile/js/content.js` e em `mobile/sw.js`. Ao mudar o código do app, aumente `VERSION` em `mobile/sw.js` para os celulares baixarem a versão nova.
+- Para ouvir o áudio, o celular precisa de voz japonesa (Android: Serviços de fala do Google → instalar dados de voz → Japonês; iPhone: Acessibilidade → Conteúdo Falado → Vozes → Japonês). A verificação de pronúncia usa a internet.
+
 ## O que tem
 
 - **72 lições** em 8 módulos: Fundamentos (kana), N5, N4, N3, N2 (12 lições), **Vida no Japão** (imigração, trem, konbini, prefeitura, banco, faculdade, moradia, saúde, emergências, arubaito, amizades) e **Leitura e escuta** (textos reais e áudios longos com perguntas de compreensão).
