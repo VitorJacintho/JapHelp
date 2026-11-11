@@ -12,3 +12,5 @@ export { DictionaryView } from './dictionary.js';
 export { SpeakingView, setSpeakingSource } from './speaking.js';
 export { SettingsView } from './settings.js';
 export { StatsView } from './stats.js';
+export { DrillsView } from './drills.js';
+export { MyWordsView } from './mywords.js';

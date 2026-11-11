@@ -113,7 +113,7 @@ public class HomeView : UserControl
         var result = new List<Exercise>();
         var kanaUnits = keys.Where(k => k.StartsWith("kana:")).Select(k => k[5..]).ToList();
         if (kanaUnits.Count > 0) result.AddRange(ExerciseFactory.KanaDrill(kanaUnits, Math.Min(10, kanaUnits.Count * 2)));
-        var vocab = ContentRepository.AllVocab.Concat(ContentRepository.Phrases.SelectMany(p => p.Items)).Concat(ContentRepository.Kanji.SelectMany(k => k.Words))
+        var vocab = ContentRepository.AllVocab.Concat(ContentRepository.Decks.SelectMany(d => d.Items)).Concat(ContentRepository.Phrases.SelectMany(p => p.Items)).Concat(ContentRepository.Kanji.SelectMany(k => k.Words))
             .GroupBy(v => v.Key).ToDictionary(g => g.Key, g => g.First());
         var all = vocab.Values.ToList();
         int i = 0;

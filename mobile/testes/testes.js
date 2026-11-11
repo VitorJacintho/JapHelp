@@ -9,6 +9,7 @@ import { alignFurigana } from '../js/furigana.js';
 import { loadStrokeData, checkDrawing, pathPoints } from '../js/strokes.js';
 import { segment, conjugations, wordsWithFurigana } from '../js/glossary.js';
 import { xpHistory, reviewForecast } from '../js/stats-data.js';
+import { inflect, inflectable, numberKana, priceKana, timeKana, dateKana, numbersDrill, particleDrill, conjugationDrill, dictationDrill } from '../js/drills.js';
 
 const tests = [];
 const test = (name, fn) => tests.push({ name, fn });
@@ -229,6 +230,57 @@ test('Palavras: a maior parte dos exemplos é tocável', () => {
   const pct = Math.round((100 * cov) / tot);
   assert(pct >= 80, `só ${pct}% do texto ficou tocável`);
   return `${pct}% do texto`;
+});
+
+// ---------------------------------------------------------------- treinos gerados
+test('Treinos: conjugação de verbos e adjetivos', () => cases([
+  ['食べます', 'たべます', 'comer', { 'dicionário': '食べる', 'て': '食べて', 'ない': '食べない' }],
+  ['書きます', 'かきます', 'escrever', { 'dicionário': '書く', 'て': '書いて', 'た': '書いた', 'ない': '書かない' }],
+  ['行きます', 'いきます', 'ir', { 'dicionário': '行く', 'て': '行って' }],
+  ['見ます', 'みます', 'ver', { 'dicionário': '見る', 'て': '見て' }],
+  ['寝ます', 'ねます', 'dormir', { 'dicionário': '寝る', 'ない': '寝ない' }],
+  ['勉強します', 'べんきょうします', 'estudar', { 'dicionário': '勉強する', 'て': '勉強して' }],
+  ['来ます', 'きます', 'vir', { 'dicionário': '来る', 'ない': '来ない' }],
+  ['飲む', 'のむ', 'beber', { 'ます': '飲みます', 'て': '飲んで', 'ない': '飲まない' }],
+  ['帰る', 'かえる', 'voltar', { 'ます': '帰ります', 'て': '帰って' }],
+  ['起きる', 'おきる', 'acordar', { 'ます': '起きます', 'て': '起きて' }],
+  ['話す', 'はなす', 'falar', { 'ます': '話します', 'て': '話して', 'ない': '話さない' }],
+  ['高い', 'たかい', 'alto; caro', { negativa: '高くない', passado: '高かった', 'て': '高くて' }, true],
+], ([jp, rd, meaning, want, adjective]) => {
+  const info = inflect({ jp, reading: rd, meaning, adjective, source: '' });
+  if (!info) return `${jp}: não conjugou`;
+  const bad = Object.entries(want).filter(([k, v]) => info.forms[k]?.[0] !== v).map(([k, v]) => `${k}: ${info.forms[k]?.[0]} (esperado ${v})`);
+  return bad.length ? `${jp} → ${bad.join(', ')}` : null;
+}));
+test('Treinos: a leitura das formas conjugadas acompanha o japonês', () => {
+  const list = inflectable();
+  assert(list.length >= 80, `só ${list.length} palavras conjugáveis`);
+  return cases(list, ({ v, info }) => {
+    for (const [name, [jp, rd]] of Object.entries(info.forms)) {
+      if (!jp || !rd || Kana.containsKanji(rd)) return `${v.jp} ${name}: ${jp} / ${rd}`;
+      // o final em kana tem de ser igual no japonês e na leitura
+      const tail = jp.match(/[ぁ-ゟ]+$/)?.[0] || '';
+      if (!rd.endsWith(tail)) return `${v.jp} ${name}: ${jp} não combina com ${rd}`;
+    }
+    return null;
+  });
+});
+test('Treinos: números, preços, horas e datas', () => cases([
+  [numberKana(3450), 'さんぜんよんひゃくごじゅう'], [numberKana(800), 'はっぴゃく'], [numberKana(10000), 'いちまん'], [numberKana(16600), 'いちまんろくせんろっぴゃく'],
+  [priceKana(24), 'にじゅうよえん'], [priceKana(980), 'きゅうひゃくはちじゅうえん'],
+  [timeKana(4, 30), 'よじさんじゅっぷん'], [timeKana(9, 5), 'くじごふん'], [timeKana(7, 10), 'しちじじゅっぷん'], [timeKana(12, 0), 'じゅうにじ'], [timeKana(1, 45), 'いちじよんじゅうごふん'],
+  [dateKana(4, 20), 'しがつはつか'], [dateKana(9, 14), 'くがつじゅうよっか'], [dateKana(1, 1), 'いちがつついたち'], [dateKana(7, 23), 'しちがつにじゅうさんにち'],
+], ([got, want]) => (got === want ? null : `${got} (esperado ${want})`)));
+test('Treinos: toda questão gerada tem resposta e opções diferentes', () => {
+  const all = [...numbersDrill(45), ...particleDrill(30), ...conjugationDrill(40), ...dictationDrill(15)];
+  assert(all.length >= 100, `poucas questões geradas: ${all.length}`);
+  return cases(all, (ex) => {
+    if (ex.type === 'typing') return ex.accepted.length && ex.accepted[0] ? null : `sem resposta: ${ex.prompt}`;
+    if (ex.options.length < 3 || new Set(ex.options).size !== ex.options.length) return `opções ruins: ${ex.prompt} ${show(ex.options)}`;
+    if (!(ex.answer >= 0)) return `sem a resposta certa: ${ex.prompt}`;
+    if (ex.prompt.startsWith('Qual partícula') && !ex.japanese.includes('___')) return `sem lacuna: ${ex.japanese}`;
+    return null;
+  });
 });
 
 // ---------------------------------------------------------------- estatísticas

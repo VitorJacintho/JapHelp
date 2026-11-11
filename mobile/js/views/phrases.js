@@ -31,7 +31,7 @@ export function PhrasesView(idx) {
         Kana.toRomaji(p[1]).replaceAll(' ', '').includes(lower))
       .slice(0, 60);
     results.replaceChildren(h('h3.section', `${hits.length} resultado(s) para "${q}"`),
-      h('div.cards', hits.map(([c, p]) => sentenceCard(p[0], p[1], `${p[2]}   ·   [${c.name}]`))));
+      h('div.cards', hits.map(([c, p]) => sentenceCard(p[0], p[1], `${p[2]}   ·   [${c.name}]`, { show: true }))));
   };
   input.addEventListener('input', update);
   setTimeout(update, 0);
@@ -62,7 +62,7 @@ function phraseCategory(cat) {
         Speech.available ? button('🔊 Ouvir todas', () => Speech.speakQueue(items.map((i) => i.jp))) : null,
         button('🎙 Treinar fala', () => App.openSpeaking('Frases úteis: ' + cat.name, items)))),
     h('div.cards', cat.phrases.filter((p) => p.length >= 3).map((p) =>
-      sentenceCard(p[0], p[1], p.length >= 4 && p[3] && p[3].trim() ? `${p[2]}\n💡 ${p[3]}` : p[2]))),
+      sentenceCard(p[0], p[1], p.length >= 4 && p[3] && p[3].trim() ? `${p[2]}\n💡 ${p[3]}` : p[2], { show: true }))),
   );
 }
 

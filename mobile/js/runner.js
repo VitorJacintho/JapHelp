@@ -108,7 +108,7 @@ export function createRunner({ title, generator, onComplete, onExit }) {
     body.append(h('h2.prompt', jpSpan(cur.prompt)));
 
     const audioAllowed = Speech.available && (cur.type === 'listen' || (cur.japanese != null && !cur.audioRevealsAnswer));
-    if (cur.type === 'listen') {
+    if (cur.type === 'listen' || cur.dictation) {
       body.append(h('div.listen-row',
         h('button.btn.indigo.big', { type: 'button', onclick: () => Speech.speak(cur.speakText) }, icons.volume + ' Ouvir'),
         h('button.btn.indigo-soft.big', { type: 'button', onclick: () => Speech.speak(cur.speakText, true) }, icons.slow + ' Devagar')));
@@ -130,7 +130,7 @@ export function createRunner({ title, generator, onComplete, onExit }) {
     else if (cur.type === 'typing') buildTyping();
     else if (cur.type === 'order') buildOrder();
 
-    const autoplay = Speech.available && (cur.type === 'listen' ||
+    const autoplay = Speech.available && (cur.type === 'listen' || cur.dictation ||
       (s.AutoPlayAudio && cur.type === 'choice' && cur.japanese != null && !cur.audioRevealsAnswer && !cur.japanese.includes('___')));
     const ex = cur;
     setTimeout(() => {

@@ -18,7 +18,7 @@ function describeMistake(key) {
   if (key.startsWith('v:')) {
     const [jp, reading] = key.slice(2).split('|');
     const srs = Store.data.Srs[key];
-    const v = srs ? { meaning: srs.Back } : Content.allVocab.find((x) => x.jp === jp) || Content.phraseItems().find((x) => x.jp === jp);
+    const v = srs ? { meaning: srs.Back } : [...Content.allVocab, ...Content.decks.flatMap((d) => d.items), ...Content.phraseItems(), ...Content.kanji.flatMap((k) => k.words)].find((x) => x.jp === jp);
     return { jp, reading: reading !== jp ? reading : null, kind: 'palavra', meaning: v?.meaning || '' };
   }
   return { jp: key, kind: '', meaning: '' };

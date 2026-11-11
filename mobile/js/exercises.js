@@ -260,7 +260,7 @@ export function weakSpotExercises(mistakes) {
   const kanaUnits = keys.filter((k) => k.startsWith('kana:')).map((k) => k.slice(5));
   if (kanaUnits.length > 0) result.push(...kanaDrill(kanaUnits, Math.min(10, kanaUnits.length * 2)));
   const vocab = new Map();
-  for (const v of [...Content.allVocab, ...Content.phraseItems(), ...Content.kanji.flatMap((k) => k.words)]) if (!vocab.has(v.key)) vocab.set(v.key, v);
+  for (const v of [...Content.allVocab, ...Content.decks.flatMap((d) => d.items), ...Content.phraseItems(), ...Content.kanji.flatMap((k) => k.words)]) if (!vocab.has(v.key)) vocab.set(v.key, v);
   const all = [...vocab.values()];
   let i = 0;
   for (const k of keys.filter((k) => k.startsWith('v:'))) {

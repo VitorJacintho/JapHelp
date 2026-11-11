@@ -4,7 +4,8 @@ import { Store } from './store.js';
 import { Speech } from './speech.js';
 import { furiganaNodes } from './furigana.js';
 import { wordsWithFurigana, PARTICLES, GRAMMAR } from './glossary.js';
-import { VocabItem } from './content.js';
+import { Content, VocabItem } from './content.js';
+import { openTracing } from './trace.js';
 
 /** h('div.card', {onclick}, filhos...) — cria elementos sem innerHTML (texto sempre escapado). */
 export function h(tag, attrs, ...children) {
@@ -111,10 +112,16 @@ function showWord(w) {
         addBtn),
       e.base ? h('div.word-kind', `forma de ${e.jp}`) : e.kind === 'kanji' ? h('div.word-kind', 'kanji') : null));
   }
-  sheet(h('div.word-sheet',
+  // qualquer kanji da palavra pode ser praticado na escrita, mesmo fora da lista de kanji do curso
+  const kanjiChars = [...new Set([...w.text].filter(Kana.isKanji))];
+  const meaningOf = (c) => Content.kanji.find((k) => k.char === c)?.meaning || '';
+  const close = sheet(h('div.word-sheet',
     h('div.word-big', { lang: 'ja' }, w.text),
     reading && reading !== w.text ? h('div.word-big-reading', { lang: 'ja' }, reading) : null,
-    body));
+    body,
+    kanjiChars.length
+      ? button(`✍️ Escrever ${kanjiChars.length === 1 ? 'o kanji' : 'os kanji'} ${kanjiChars.join(' ')}`, () => { close(); openTracing(kanjiChars, 0, meaningOf); })
+      : null));
 }
 
 export const icons = {
@@ -160,7 +167,7 @@ export function jpBlock(jp, { size = 'md', reading = null, romaji = null, speak 
 }
 
 /** Cartão de frase: japonês, leitura, romaji, tradução. Toque = ouvir; 🐢 = devagar. */
-export function sentenceCard(jp, reading, meaning, { speaker = null, speakerColor = null } = {}) {
+export function sentenceCard(jp, reading, meaning, { speaker = null, speakerColor = null, show = false } = {}) {
   reading = reading && reading.trim() ? reading : jp;
   const s = Store.settings;
   const main = (s.TapToDefine ? tappableJp : jpText)('div.sc-jp', jp, s.ShowReading ? reading : null);
@@ -172,8 +179,31 @@ export function sentenceCard(jp, reading, meaning, { speaker = null, speakerColo
   const card = h('div.sentence-card', { role: 'button', tabindex: 0, onclick: () => Speech.speak(jp) },
     speaker ? h('div.avatar', { lang: 'ja', style: { background: speakerColor } }, speaker.slice(0, 2)) : null,
     body,
-    Speech.available ? h('button.icon-btn.soft.small', { type: 'button', 'aria-label': 'Ouvir devagar', onclick: (e) => { e.stopPropagation(); Speech.speak(jp, true); } }, icons.slow) : null);
+    h('div.sc-side',
+      Speech.available ? h('button.icon-btn.soft.small', { type: 'button', 'aria-label': 'Ouvir devagar', onclick: (e) => { e.stopPropagation(); Speech.speak(jp, true); } }, icons.slow) : null,
+      show ? h('button.icon-btn.soft.small', { type: 'button', 'aria-label': 'Mostrar para alguém em tela cheia', onclick: (e) => { e.stopPropagation(); showBig(jp, meaning.split('\n')[0]); } }, '🔎') : null));
   return card;
+}
+
+/** Frase em tela cheia, letras grandes, para mostrar a um atendente. Toque para fechar. */
+export function showBig(jp, meaning) {
+  const close = () => { overlay.remove(); if (history.state?.big) history.back(); };
+  const overlay = h('div.big-overlay', { role: 'dialog', 'aria-label': 'Frase em tela cheia', onclick: close },
+    h('div.big-jp', { lang: 'ja' }, jp),
+    h('div.big-meaning', meaning),
+    h('div.btn-row.center',
+      Speech.available ? h('button.btn', { type: 'button', onclick: (e) => { e.stopPropagation(); Speech.speak(jp, true); } }, '🔊 Ouvir devagar') : null,
+      h('button.btn', { type: 'button', onclick: close }, 'Fechar')),
+    h('div.big-tip', 'Mostre a tela para a pessoa. Toque em qualquer lugar para fechar.'));
+  document.body.append(overlay);
+  history.pushState({ big: true }, '');
+  const onPop = () => { window.removeEventListener('popstate', onPop); overlay.remove(); };
+  window.addEventListener('popstate', onPop);
+  // texto o maior possível sem cortar
+  const el = overlay.firstChild;
+  let size = 96;
+  el.style.fontSize = size + 'px';
+  while (size > 28 && (el.scrollHeight > window.innerHeight * 0.55 || el.scrollWidth > window.innerWidth - 32)) { size -= 4; el.style.fontSize = size + 'px'; }
 }
 
 export function vocabTile(v, accent) {

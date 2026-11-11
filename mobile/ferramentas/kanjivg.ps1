@@ -26,6 +26,13 @@ foreach ($f in Get-ChildItem (Join-Path $root 'Content') -Filter 'kanji*.txt') {
     if ($k.Length -ge 1) { [void]$chars.Add([char]::ConvertToUtf32($k, 0)) }
   }
 }
+# todo kanji que aparece em qualquer arquivo do curso (palavras, exemplos, textos), mesmo fora da lista de kanji
+foreach ($f in Get-ChildItem (Join-Path $root 'Content') -File) {
+  foreach ($c in [IO.File]::ReadAllText($f.FullName, $utf8).ToCharArray()) {
+    $n = [int]$c
+    if (($n -ge 0x4E00 -and $n -le 0x9FFF) -or ($n -ge 0x3400 -and $n -le 0x4DBF)) { [void]$chars.Add($n) }
+  }
+}
 
 # ---- arquivo do KanjiVG
 if ($Xml -eq '') {

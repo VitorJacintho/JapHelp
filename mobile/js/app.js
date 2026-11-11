@@ -11,7 +11,7 @@ const TABS = [
   ['home', '🏠', 'Início', ['home', 'stats']],
   ['course', '📘', 'Curso', ['course', 'lesson']],
   ['review', '🔁', 'Revisar', ['review']],
-  ['practice', '🎯', 'Praticar', ['practice', 'kana', 'kanji', 'vocab', 'phrases', 'dict', 'speak']],
+  ['practice', '🎯', 'Praticar', ['practice', 'kana', 'kanji', 'vocab', 'phrases', 'dict', 'speak', 'drills', 'mywords']],
   ['settings', '⚙️', 'Ajustes', ['settings']],
 ];
 
@@ -29,6 +29,8 @@ const ROUTES = {
   speak: () => V.SpeakingView(),
   settings: () => V.SettingsView(),
   stats: () => V.StatsView(),
+  drills: () => V.DrillsView(),
+  mywords: () => V.MyWordsView(),
 };
 
 let viewEl;
