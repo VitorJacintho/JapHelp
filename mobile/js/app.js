@@ -3,8 +3,9 @@ import { Content } from './content.js';
 import { Store } from './store.js';
 import { Speech, Practice } from './speech.js';
 import { createRunner } from './runner.js';
+import { Backup } from './backup.js';
 import { h, infoBox } from './ui.js';
-import * as V from './views.js';
+import * as V from './views/index.js';
 
 const TABS = [
   ['home', '🏠', 'Início', ['home']],
@@ -127,6 +128,9 @@ async function boot() {
       h('span.tab-icon', icon), h('span.tab-label', label))));
 
   Store.load();
+  Backup.protect();
+  let asked = false; // pede proteção uma vez quando surgir o primeiro progresso
+  Store.onChange(() => { if (!asked && Backup.persisted === false && Backup.hasProgress) { asked = true; Backup.protect(); } });
   Speech.init();
   await Content.load();
   document.getElementById('splash')?.remove();
@@ -146,9 +150,54 @@ async function boot() {
     if (name === 'settings') App.render();
   });
 
-  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+  if (new URLSearchParams(location.search).has('nosw')) {
+    // Para desenvolver: /mobile/?nosw desliga o cache offline e sempre carrega os arquivos novos.
+    navigator.serviceWorker?.getRegistrations().then((rs) => rs.forEach((r) => r.unregister()));
+  } else if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    navigator.serviceWorker.register('sw.js').then(watchUpdates).catch(() => {});
   }
+}
+
+// ---------------- versão nova ----------------
+// O service worker novo baixa tudo e fica esperando; o aluno decide quando trocar (para não perder uma sessão no meio).
+let updating = false;
+
+function watchUpdates(reg) {
+  const offer = (worker) => showUpdateBar(worker);
+  if (reg.waiting && navigator.serviceWorker.controller) offer(reg.waiting);
+  reg.addEventListener('updatefound', () => {
+    const worker = reg.installing;
+    worker?.addEventListener('statechange', () => {
+      // sem controller = primeira instalação, não é atualização
+      if (worker.state === 'installed' && navigator.serviceWorker.controller) offer(worker);
+    });
+  });
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (updating) location.reload();
+  });
+  // Confere se há versão nova ao voltar para o app e a cada hora.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') reg.update().catch(() => {});
+  });
+  setInterval(() => reg.update().catch(() => {}), 60 * 60 * 1000);
+}
+
+function showUpdateBar(worker) {
+  document.getElementById('update-bar')?.remove();
+  const bar = h('div.update-bar', { id: 'update-bar', role: 'status' },
+    h('span', '✨ Nova versão do JapHelp disponível.'),
+    h('button.btn.small.primary', {
+      type: 'button',
+      onclick: () => {
+        if (runner?.isActive() && !confirm('Atualizar agora? A sessão de exercícios em andamento será perdida.')) return;
+        updating = true;
+        bar.querySelector('button').disabled = true;
+        worker.postMessage({ type: 'SKIP_WAITING' });
+        setTimeout(() => location.reload(), 3000); // garantia, se o controllerchange não vier
+      },
+    }, 'Atualizar'),
+    h('button.icon-btn.ghost.small', { type: 'button', 'aria-label': 'Depois', onclick: () => bar.remove() }, '✕'));
+  document.body.append(bar);
 }
 
 boot();

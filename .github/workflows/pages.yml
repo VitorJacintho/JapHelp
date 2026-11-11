@@ -1,0 +1,54 @@
+# Publica o app de celular no GitHub Pages a cada push na main.
+# Antes de publicar: gera a lista de arquivos e a versão (mobile/gerar.ps1) e roda os testes.
+# Configuração (uma vez): Settings → Pages → Source: "GitHub Actions".
+name: Publicar app de celular
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}mobile/
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Gerar lista de arquivos e versão
+        shell: pwsh
+        run: ./mobile/gerar.ps1
+
+      - name: Testes (mobile/testes/ no Chrome sem janela)
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 >/dev/null 2>&1 &
+          sleep 2
+          google-chrome --headless=new --no-sandbox --disable-gpu --virtual-time-budget=60000 \
+            --dump-dom http://127.0.0.1:8000/mobile/testes/ > resultado.html 2>/dev/null || true
+          sed -e 's/<[^>]*>//g' resultado.html | sed -n '/RESULTADO\|Rodando/,$p'
+          grep -q 'RESULTADO: OK' resultado.html
+
+      - name: Montar o site (só o app e o conteúdo)
+        run: |
+          mkdir -p _site
+          cp -r mobile Content _site/
+          rm -f _site/mobile/*.ps1
+          printf '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=mobile/"><a href="mobile/">JapHelp</a>\n' > _site/index.html
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

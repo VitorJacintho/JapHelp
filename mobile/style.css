@@ -476,7 +476,6 @@ p { margin: 0; }
 .trace-info { text-align: center; font-size: 22px; font-weight: 700; }
 .trace-canvas-wrap { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
 .trace-canvas { touch-action: none; border-radius: 12px; }
-.trace-tip { color: var(--muted); font-size: 13px; text-align: center; }
 .btn-row.wrap { flex-wrap: wrap; }
 
 @media (min-width: 600px) {
@@ -489,3 +488,30 @@ p { margin: 0; }
   .btn.success, .btn.warning, .btn.indigo, .btn.grade.indigo, .runner-foot .btn.success { color: #0f1a14; }
   .btn.warning { color: #241a05; }
 }
+
+/* ---------- aviso de versão nova ---------- */
+.update-bar {
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar-h) + var(--safe-b) + 10px); z-index: 55;
+  width: min(560px, calc(100vw - 24px)); display: flex; align-items: center; gap: 10px; padding: 10px 8px 10px 14px;
+  background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .18); font-weight: 600; font-size: 14.5px;
+}
+.update-bar span { flex: 1; }
+body.running .update-bar { bottom: calc(var(--safe-b) + 10px); }
+
+/* ---------- furigana ---------- */
+ruby { ruby-position: over; }
+rt { font-size: .5em; font-weight: 400; color: var(--muted); letter-spacing: 0; user-select: none; }
+.has-ruby { line-height: 2.05; }
+.jp-main.has-ruby { line-height: 1.9; }
+.jp-main.size-xl.has-ruby, .jp-main.size-xxl.has-ruby { line-height: 1.5; }
+.jp-main.size-xl rt, .jp-main.size-xxl rt { font-size: .32em; }
+
+/* ---------- escrita: níveis e conferência ---------- */
+.trace-levels { margin: 0; grid-template-columns: repeat(3, 1fr); }
+.trace-levels button { padding: 8px 4px; color: var(--text); }
+.trace-levels button.active { color: #fff; }
+.trace-head { text-align: center; line-height: 1.25; }
+.trace-sub { color: var(--muted); font-size: 13.5px; }
+.trace-feedback { font-size: 14px; margin: 0; padding: 8px 12px; max-height: 26dvh; overflow-y: auto; }
+.trace-actions { gap: 6px; }

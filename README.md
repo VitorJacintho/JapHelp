@@ -12,11 +12,11 @@ dotnet run
 
 ## No celular (Android e iPhone)
 
-A pasta `mobile/` tem o JapHelp como app web instalável (PWA): mesmo conteúdo, mesmos exercícios, revisão SRS, traçado com o dedo, voz japonesa do celular, gravação da própria voz e verificação de pronúncia. Depois do primeiro acesso funciona offline. Ele lê os arquivos de `Content/` direto, então editar o conteúdo vale para o PC e para o celular.
+A pasta `mobile/` tem o JapHelp como app web instalável (PWA): mesmo conteúdo, mesmos exercícios, revisão SRS, furigana em cima dos kanji, escrita com o dedo conferindo a ordem dos traços, voz japonesa do celular, gravação da própria voz e verificação de pronúncia. Depois do primeiro acesso funciona offline. Ele lê os arquivos de `Content/` direto, então editar o conteúdo vale para o PC e para o celular.
 
-**Publicar (uma vez):** no GitHub, Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`. O app fica em `https://<usuário>.github.io/JapHelp/mobile/`.
+**Publicar (uma vez):** no GitHub, Settings → Pages → Source: *GitHub Actions*. A cada push na `main`, o GitHub gera a lista de arquivos, roda os testes e publica (`.github/workflows/pages.yml`). O app fica em `https://<usuário>.github.io/JapHelp/mobile/`.
 
-**Instalar no celular:** abra o link — Android (Chrome): menu ⋮ → *Instalar app*; iPhone (Safari): Compartilhar → *Adicionar à Tela de Início*.
+**Instalar no celular:** abra o link — Android (Chrome): menu ⋮ → *Instalar app*; iPhone (Safari): Compartilhar → *Adicionar à Tela de Início*. Quando sair versão nova, o app mostra "Nova versão disponível — Atualizar".
 
 **Testar no PC:**
 
@@ -24,10 +24,12 @@ A pasta `mobile/` tem o JapHelp como app web instalável (PWA): mesmo conteúdo,
 powershell -ExecutionPolicy Bypass -File mobile/servir.ps1
 ```
 
-e abra `http://localhost:8765/mobile/` (no Chrome, F12 → modo celular).
+e abra `http://localhost:8765/mobile/` (no Chrome, F12 → modo celular). Use `http://localhost:8765/mobile/?nosw` para desligar o cache offline enquanto edita o código. Os testes ficam em `http://localhost:8765/mobile/testes/`.
 
-- O progresso fica salvo no aparelho. Em Ajustes dá para exportar/importar, inclusive o `progress.json` do app de PC.
-- Ao adicionar um arquivo novo em `Content/`, inclua o nome em `mobile/js/content.js` e em `mobile/sw.js`. Ao mudar o código do app, aumente `VERSION` em `mobile/sw.js` para os celulares baixarem a versão nova.
+- **Nada de lista manual:** a lista de arquivos e a versão são geradas por `mobile/gerar.ps1` (o `servir.ps1` e o GitHub rodam sozinhos). Arquivos novos em `Content/` entram automaticamente.
+- **Progresso:** fica salvo no aparelho. O app pede ao navegador para não apagar os dados e lembra de fazer backup a cada 14 dias. Em Ajustes, "Fazer backup" abre o menu de compartilhar do celular (Drive, WhatsApp, e-mail). O arquivo serve também no PC (renomeie para `progress.json` em `%APPDATA%\JapHelp\`), e o `progress.json` do PC pode ser importado no celular.
+- **Escrita:** três níveis — Fácil (modelo com a ordem dos traços numerada), Médio (modelo sem números) e Difícil (quadro vazio, de memória). Ao terminar, o app aponta traço fora de ordem, sentido invertido ou forma diferente. A ordem dos traços vem do [KanjiVG](https://kanjivg.tagaini.net) (© Ulrich Apel, CC BY-SA 3.0), extraída para `mobile/data/tracos.json`; com kanji novos, rode `mobile/ferramentas/kanjivg.ps1`.
+- **Testes:** `mobile/testes/` confere conteúdo, exercícios, furigana, traços, arquivos do modo offline e se o celular dá os mesmos resultados do PC (conversão de kana, correção de respostas, SRS). As respostas do PC ficam em `mobile/testes/paridade.json`; ao mudar `Core/Kana.cs` ou o SRS, gere de novo com `JapHelp.exe --paridade mobile/testes/paridade.json`.
 - Para ouvir o áudio, o celular precisa de voz japonesa (Android: Serviços de fala do Google → instalar dados de voz → Japonês; iPhone: Acessibilidade → Conteúdo Falado → Vozes → Japonês). A verificação de pronúncia usa a internet.
 
 ## O que tem

@@ -1,22 +1,17 @@
 // Carrega o conteúdo do curso da pasta Content/ (a mesma usada pelo app desktop).
 import * as Kana from './kana.js';
 import { Store } from './store.js';
+import { CONTENT_FILES } from './arquivos.js';
 
-// Na web não dá para listar a pasta: novos arquivos precisam entrar aqui (e no sw.js).
-export const CONTENT_BASE = '../Content/';
-export const COURSE_FILES = [
-  'curso_0_fundamentos.json',
-  'curso_1_primeiros_passos.json',
-  'curso_2_basico.json',
-  'curso_3_pre_intermediario.json',
-  'curso_4_intermediario.json',
-  'curso_5_avancado.json',
-  'curso_6_vida_no_japao.json',
-  'curso_7_leitura_escuta.json',
-];
-export const KANJI_FILES = ['kanji.txt', 'kanji_n3.txt'];
-export const VOCAB_FILES = ['vocab_n4.txt', 'vocab_n5.txt'];
-export const OTHER_FILES = ['frases.json', 'dicas.txt'];
+// Na web não dá para listar a pasta: a lista vem de js/arquivos.js, gerado pelo gerar.ps1.
+// Mesmas regras de nome do app de PC (ContentRepository.cs).
+const ordinal = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
+export const CONTENT_BASE = new URL('../../Content/', import.meta.url).href; // relativo a este arquivo, não à página
+export const COURSE_FILES = CONTENT_FILES.filter((f) => /^curso_.*\.json$/.test(f)).sort(ordinal);
+export const KANJI_FILES = CONTENT_FILES.filter((f) => /^kanji.*\.txt$/.test(f))
+  .sort((a, b) => (a === 'kanji.txt' ? -1 : b === 'kanji.txt' ? 1 : ordinal(a, b)));
+export const VOCAB_FILES = CONTENT_FILES.filter((f) => /^vocab_.*\.txt$/.test(f)).sort(ordinal);
+export const OTHER_FILES = ['frases.json', 'dicas.txt'].filter((f) => CONTENT_FILES.includes(f));
 export const ALL_FILES = [...COURSE_FILES, ...KANJI_FILES, ...VOCAB_FILES, ...OTHER_FILES];
 
 export class VocabItem {

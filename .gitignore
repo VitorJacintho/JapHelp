@@ -17,3 +17,7 @@ desktop.ini
 # Saídas do autoteste
 selftest.txt
 resultado.txt
+
+# App de celular: arquivos gerados por mobile/gerar.ps1
+mobile/sw.js
+mobile/js/arquivos.js

@@ -10,6 +10,8 @@ internal static class Program
     {
         if (args.Length >= 1 && args[0] == "--selftest")
             return SelfTest.Run(args.Length >= 2 ? args[1] : Path.Combine(AppContext.BaseDirectory, "selftest.txt"));
+        if (args.Length >= 2 && args[0] == "--paridade")
+            return Paridade.Run(args[1]);
 
         ApplicationConfiguration.Initialize();
         using (var g = Graphics.FromHwnd(IntPtr.Zero))

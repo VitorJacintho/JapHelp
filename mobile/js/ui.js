@@ -2,6 +2,7 @@
 import * as Kana from './kana.js';
 import { Store } from './store.js';
 import { Speech } from './speech.js';
+import { furiganaNodes } from './furigana.js';
 
 /** h('div.card', {onclick}, filhos...) — cria elementos sem innerHTML (texto sempre escapado). */
 export function h(tag, attrs, ...children) {
@@ -38,6 +39,15 @@ export function jpSpan(text) {
   return Kana.containsJapanese(text) ? h('span.jp', { lang: 'ja' }, text) : text;
 }
 
+/** Texto em japonês com furigana em cima dos kanji. Sem leitura (ou sem kanji) = texto simples. */
+export function jpText(tag, jp, reading, attrs = {}) {
+  const nodes = reading && Kana.containsKanji(jp) ? furiganaNodes(jp, reading) : null;
+  const el = h(tag, { lang: 'ja', ...attrs }, nodes || jp);
+  if (nodes) el.classList.add('has-ruby');
+  el.furigana = !!nodes;
+  return el;
+}
+
 export const icons = {
   volume: '🔊', slow: '🐢', play: '▶', back: '‹', next: '›', close: '✕', pen: '✍️', mic: '🎙', check: '✓',
 };
@@ -72,9 +82,10 @@ export function speakButtons(text, cls = '') {
 
 /** Bloco grande de japonês com leitura (furigana em linha) e romaji. */
 export function jpBlock(jp, { size = 'md', reading = null, romaji = null, speak = null } = {}) {
+  const main = jpText('div.jp-main.size-' + size, jp, reading);
   return h('div.jp-block',
-    reading ? h('div.jp-reading', { lang: 'ja' }, reading) : null,
-    h('div.jp-main.size-' + size, { lang: 'ja' }, jp),
+    reading && !main.furigana ? h('div.jp-reading', { lang: 'ja' }, reading) : null,
+    main,
     romaji ? h('div.jp-romaji', romaji) : null,
     speak ? speakButtons(speak) : null);
 }
@@ -83,9 +94,10 @@ export function jpBlock(jp, { size = 'md', reading = null, romaji = null, speak 
 export function sentenceCard(jp, reading, meaning, { speaker = null, speakerColor = null } = {}) {
   reading = reading && reading.trim() ? reading : jp;
   const s = Store.settings;
+  const main = jpText('div.sc-jp', jp, s.ShowReading ? reading : null);
   const body = h('div.sc-body',
-    h('div.sc-jp', { lang: 'ja' }, jp),
-    s.ShowReading && Kana.containsKanji(jp) ? h('div.sc-reading', { lang: 'ja' }, reading.replaceAll(' ', '')) : null,
+    main,
+    s.ShowReading && Kana.containsKanji(jp) && !main.furigana ? h('div.sc-reading', { lang: 'ja' }, reading.replaceAll(' ', '')) : null,
     s.ShowRomaji && Kana.containsJapanese(reading) ? h('div.sc-romaji', Kana.toRomaji(reading)) : null,
     ...meaning.split('\n').map((m) => h('div.sc-meaning', jpSpan(m))));
   const card = h('div.sentence-card', { role: 'button', tabindex: 0, onclick: () => Speech.speak(jp) },
@@ -97,11 +109,12 @@ export function sentenceCard(jp, reading, meaning, { speaker = null, speakerColo
 
 export function vocabTile(v, accent) {
   const s = Store.settings;
+  const main = jpText('div.vt-jp', v.jp, s.ShowReading ? v.reading : null);
   const sub = [];
-  if (v.hasKanji && s.ShowReading) sub.push(v.reading);
+  if (v.hasKanji && s.ShowReading && !main.furigana) sub.push(v.reading);
   if (s.ShowRomaji) sub.push(v.romaji);
   const el = h('button.vocab-tile', { type: 'button', onclick: () => Speech.speak(v.jp) },
-    h('div.vt-jp', { lang: 'ja' }, v.jp),
+    main,
     sub.length ? h('div.vt-sub', { lang: 'ja' }, sub.join(' · ')) : null,
     h('div.vt-meaning', v.meaning));
   if (accent) el.style.setProperty('--accent-local', accent);

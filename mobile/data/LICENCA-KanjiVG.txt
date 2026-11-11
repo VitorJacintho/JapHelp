@@ -1,0 +1,8 @@
+tracos.json contém a ordem dos traços extraída do KanjiVG (https://kanjivg.tagaini.net).
+
+KanjiVG — Copyright (C) 2009-2026 Ulrich Apel.
+Licença: Creative Commons Attribution-Share Alike 3.0 (https://creativecommons.org/licenses/by-sa/3.0/).
+
+O arquivo tracos.json é uma obra derivada (só os caracteres usados no curso, sem as demais
+informações) e é distribuído sob a mesma licença CC BY-SA 3.0.
+Para gerar de novo: powershell -ExecutionPolicy Bypass -File mobile\ferramentas\kanjivg.ps1
