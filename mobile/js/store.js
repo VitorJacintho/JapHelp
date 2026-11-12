@@ -17,6 +17,7 @@ const DEFAULT_SETTINGS = () => ({
   JpTextScale: 1, // só no celular: tamanho do texto em japonês
   TapToDefine: true, // só no celular: tocar na palavra mostra o significado
   HideKnownFurigana: false, // só no celular: esconde a furigana dos kanji maduros na revisão
+  SpeakExercises: true, // só no celular: questões de falar (microfone) nas lições
 });
 
 const EMPTY = () => ({

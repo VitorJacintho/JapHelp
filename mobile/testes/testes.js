@@ -11,6 +11,9 @@ import { segment, conjugations, wordsWithFurigana } from '../js/glossary.js';
 import { xpHistory, reviewForecast } from '../js/stats-data.js';
 import { EXAMS, SECTIONS, buildExam } from '../js/exam.js';
 import { inflect, inflectable, numberKana, priceKana, timeKana, dateKana, numbersDrill, particleDrill, conjugationDrill, dictationDrill, lessonSession, sentenceTiles, sentencePool, orderDrill } from '../js/drills.js';
+import { speechScore, passScore } from '../js/speechmatch.js';
+import { speakingDrill, speakExercise } from '../js/speak.js';
+import { wordGroups, learnSession, kanaLetters, sentenceFor, sentencesUpTo } from '../js/learn.js';
 
 const tests = [];
 const test = (name, fn) => tests.push({ name, fn });
@@ -391,6 +394,80 @@ test('Exportar não altera o progresso salvo', () => {
   const back = JSON.parse(json);
   assert(typeof back.Xp === 'number' && back.Settings && back.Srs, 'formato do arquivo exportado');
   assert(localStorage.getItem('japhelp.progress.v1') === before, 'exportar mudou o progresso');
+});
+
+// ---------------------------------------------------------------- falar e aprender as palavras
+test('Fala: o que o celular ouve é comparado pela leitura (kanji ouvido = kana esperado)', () => cases([
+  ['青', 'あお', 'あお', true], ['家', 'いえ', 'いえ', true], ['恋', 'こい', 'こい', true], ['赤', 'あお', 'あお', false],
+  ['今日は', 'こんにちは', 'こんにちは', true], ['有難うございます', 'ありがとうございます', 'ありがとうございます', true],
+  ['私は留学生です', '私は留学生です。', 'わたし は りゅうがくせい です。', true],
+  ['ブラジルから来ました', 'ブラジルから来ました。', 'ブラジル から きました。', true],
+  ['食べました', '食べました', 'たべました', true], ['てれび', 'テレビ', 'テレビ', true],
+  ['先生', '学生', 'がくせい', false], ['きて', 'きって', 'きって', false],
+], ([heard, jp, rd, want]) => {
+  const got = speechScore(heard, jp, rd) >= passScore(rd);
+  return got === want ? null : `${heard} → ${jp}: ${got ? 'aceitou' : 'recusou'} (nota ${speechScore(heard, jp, rd).toFixed(2)})`;
+}));
+
+test('Aprender: letras da palavra (きゃ = 1, letras repetidas contam)', () => cases([
+  ['きって', 'き|っ|て'], ['りゅうがくせい', 'りゅ|う|が|く|せ|い'], ['ここ', 'こ|こ'], ['コーヒー', 'コ|ー|ヒ|ー'], ['わたし は', 'わ|た|し|は'],
+], ([r, want]) => (kanaLetters(r).join('|') === want ? null : `${r} → ${kanaLetters(r).join('|')}`)));
+
+test('Aprender: frase de exemplo usa a palavra inteira (いえ não vale dentro de いいえ)', () => {
+  const s = [{ jp: 'いいえ、ちがいます。', reading: 'いいえ、ちがいます。', meaning: 'Não, está errado.' }, { jp: 'いえはどこですか。', reading: 'いえ は どこ ですか。', meaning: 'Onde é a casa?' }];
+  const f = sentenceFor({ jp: 'いえ' }, s);
+  assert(f && f.jp === 'いえはどこですか。' && f.start === 0 && f.end === 2, 'achou ' + show(f));
+});
+
+test('Aprender as palavras: sessões de todas as lições e decks são válidas', () => {
+  let sessions = 0, questions = 0, withSentence = 0;
+  const problems = [];
+  const check = (where, group, list) => {
+    sessions++;
+    const learn = list.filter((e) => e.type === 'learn');
+    if (learn.length !== group.length) problems.push(`${where}: ${learn.length} cartões para ${group.length} palavras`);
+    if (list.some((e) => e.type === 'choice' && e.japanese?.includes('___'))) withSentence++;
+    for (const ex of list) {
+      if (ex.type === 'learn') { if (!ex.build().length) problems.push(`${where}: cartão vazio`); continue; }
+      questions++;
+      if (!Ex.correctAnswerText(ex)) problems.push(`${where}: sem resposta (${ex.prompt})`);
+      if (ex.type === 'choice' || ex.type === 'listen') {
+        if (ex.options.length < 2 || new Set(ex.options).size !== ex.options.length || !(ex.answer >= 0)) problems.push(`${where}: opções ruins ${show(ex.options)}`);
+      }
+      if (ex.type === 'order') {
+        const pool = [...ex.tiles];
+        for (const c of ex.correct) { const i = pool.indexOf(c); if (i < 0) problems.push(`${where}: falta a peça ${c}`); else pool.splice(i, 1); }
+      }
+      if (ex.joinTiles === '') {
+        const word = group.find((v) => v.key === ex.statKey);
+        if (Kana.normalizeAnswer(ex.correct.join('')) !== Kana.normalizeAnswer(word.reading)) problems.push(`${where}: escrever ${word.jp} → ${ex.correct.join('')}`);
+      }
+    }
+  };
+  for (const l of Content.allLessons) {
+    const items = vocabItems(l);
+    if (items.length < 3) continue;
+    const groups = wordGroups(items);
+    if (groups.flat().length !== new Set(items.map((v) => v.jp)).size) problems.push(`${l.id}: grupos perderam palavras`);
+    if (groups.some((g) => g.length < 2 || g.length > 5)) problems.push(`${l.id}: grupo de tamanho ${groups.map((g) => g.length)}`);
+    groups.forEach((g, i) => check(`${l.id} g${i + 1}`, g, learnSession(g, { siblings: items, pool: Content.allVocab, sentences: sentencesUpTo(l) })));
+  }
+  const pool = sentencePool();
+  for (const d of Content.decks) wordGroups(d.items).slice(0, 2).forEach((g, i) => check(`${d.name} g${i + 1}`, g, learnSession(g, { siblings: d.items, pool: Content.allVocab, sentences: pool })));
+  assert(problems.length === 0, problems.slice(0, 8).join('\n    '));
+  return `${sessions} grupos, ${questions} questões, ${Math.round((100 * withSentence) / sessions)}% com frase`;
+});
+
+test('Falar: questões geradas têm leitura em kana para conferir', () => {
+  const all = ['kana', 'kanji', 'say', 'repeat', 'mix'].flatMap((k) => speakingDrill(k, 10));
+  const lessonOnes = Content.allLessons.flatMap((l) => l.vocab.filter((x) => x.length >= 3).slice(0, 3)
+    .map((x) => speakExercise({ jp: x[0], reading: x[1] || x[0], meaning: x[2] }, 'read')));
+  return cases([...all, ...lessonOnes.filter((e) => Kana.isAllKana(e.expectedReading))], (ex) => {
+    if (ex.type !== 'speak' || !ex.expected || !ex.expectedReading) return `incompleta: ${ex.prompt}`;
+    if (!Kana.isAllKana(ex.expectedReading.replace(/[。、？！?!]/g, ''))) return `leitura com kanji: ${ex.expected} / ${ex.expectedReading}`;
+    if (ex.speakMode === 'say' && ex.japanese) return `"diga em japonês" mostrando a resposta: ${ex.expected}`;
+    return null;
+  });
 });
 
 // ---------------------------------------------------------------- modo offline

@@ -6,6 +6,8 @@ import * as Ex from '../exercises.js';
 import { h, icons, button, infoBox, section, vocabTile, toast } from '../ui.js';
 import { page, title, row } from './common.js';
 import { App } from '../app.js';
+import { learnPanel } from './learnpanel.js';
+import { sentencePool } from '../drills.js';
 
 export function VocabView(idx) {
   if (idx != null && Content.decks[+idx]) return deckView(Content.decks[+idx]);
@@ -41,6 +43,10 @@ function deckView(deck) {
         h('button.btn', { type: 'button', disabled: inSrs >= deck.items.length, onclick: () => { deck.items.forEach((v) => Store.addToSrs(v)); Store.save(); toast('Palavras adicionadas à revisão.'); App.render(); } }, '＋ Adicionar à revisão'),
         Speech.available ? button('🔊 Ouvir todas', () => Speech.speakQueue(deck.items.map((i) => i.jp))) : null,
         button('🎙 Treinar fala', () => App.openSpeaking('Deck: ' + deck.name, deck.items)))),
+    learnPanel('deck:' + deck.key, deck.name, deck.items, {
+      pool: [...Content.decks.flatMap((d) => d.items), ...Content.allVocab], sentences: sentencePool(), intro: false,
+    }),
+    section('Todas as palavras'),
     h('p.muted.small', 'Toque numa palavra para ouvir.'),
     h('div.vocab-grid', deck.items.map((v) => vocabTile(v))),
   );

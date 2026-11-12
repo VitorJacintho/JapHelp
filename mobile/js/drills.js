@@ -5,6 +5,7 @@ import { Content } from './content.js';
 import { Speech } from './speech.js';
 import { makeExercise, shuffle, distinctBy } from './exercises.js';
 import { segment, PARTICLES } from './glossary.js';
+import { lessonSpeaking } from './speak.js';
 
 const pick = (list) => list[Math.floor(Math.random() * list.length)];
 const rand = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
@@ -329,6 +330,7 @@ export function lessonExtras(lesson) {
   const conj = inflectable().filter(({ v }) => lesson.vocab.some((x) => x[0] === v.jp));
   extras.push(...conjugationDrill(Math.min(3, conj.length), conj));
   if (Speech.available) extras.push(...dictationDrill(2, sentences));
+  extras.push(...lessonSpeaking(lesson, sentences));
   return extras;
 }
 

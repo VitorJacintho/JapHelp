@@ -8,6 +8,8 @@ import { openTracing } from '../trace.js';
 import { h, icons, button, infoBox, section, sentenceCard, vocabTile, charTile, renderTheory, jpText, tappableJp } from '../ui.js';
 import { COLORS, page, row } from './common.js';
 import { lessonSession } from '../drills.js';
+import { wordGroups, sentencesUpTo } from '../learn.js';
+import { learnPanel, isGroupDone } from './learnpanel.js';
 import { App } from '../app.js';
 
 const lessonState = { showTranslation: false };
@@ -96,14 +98,23 @@ function lessonVocab(lesson, color) {
       button('✍️ Praticar escrita destes kana', () => openTracing(units, 0)));
   }
   const items = vocabItems(lesson);
+  const panel = items.length >= 3
+    ? learnPanel(lesson.id, lesson.title, items, { pool: Content.allVocab, sentences: sentencesUpTo(lesson) })
+    : null;
+  // nos primeiros níveis, aprender as palavras com calma vem antes da lista
+  if (panel && isEarly(lesson)) out.push(panel);
   if (items.length) {
     out.push(section('Palavras'),
       row(Speech.available ? button('▶ Ouvir todas', () => Speech.speakQueue(items.map((i) => i.jp))) : null),
       h('p.muted.small', 'Toque numa palavra para ouvir.'),
       h('div.vocab-grid', items.map((v) => vocabTile(v, color))));
   }
+  if (panel && !isEarly(lesson)) out.push(panel);
   return out;
 }
+
+/** Fundamentos, Primeiros passos e Básico: o modo "Aprender as palavras" vira o passo recomendado. */
+const isEarly = (lesson) => (lesson.module.order ?? 0) <= 2;
 
 function lessonExamples(lesson) {
   const ex = lesson.examples.filter((e) => e.length >= 3);
@@ -134,8 +145,15 @@ function lessonExercises(lesson, color) {
   if (lesson.vocab.length) parts.push('vocabulário (significado, áudio e escrita)');
   if (lesson.exercises.length) parts.push(`${lesson.exercises.length} exercícios de gramática e situações reais`);
   if (lesson.examples.length || lesson.dialog.length) parts.push('montar frases e completar partículas com os exemplos da lição');
+  const groups = isEarly(lesson) && vocabItems(lesson).length >= 3 ? wordGroups(vocabItems(lesson)) : [];
+  const pending = groups.filter((_, i) => !isGroupDone(lesson.id, i)).length;
   return [
     h('h2', 'Hora de praticar!'),
+    pending && !(lp && lp.Completed)
+      ? h('div.info.info-indigo.learn-nudge',
+        h('span', `🧠 Dica: antes dos exercícios, aprenda as palavras com calma (${pending} de ${groups.length} grupos por fazer). Fica bem mais fácil.`),
+        h('button.btn.small', { type: 'button', onclick: () => App.go(`lesson/${lesson.id}/vocab`, true) }, 'Aprender as palavras'))
+      : null,
     h('p.muted', 'Esta sessão mistura ' + parts.join(', ') + '. Questões erradas voltam no final para você fixar.'),
     lp && lp.Attempts > 0
       ? infoBox(lp.Completed ? `✓ Lição concluída. Melhor resultado: ${lp.BestScore}% em ${lp.Attempts} tentativa(s).`

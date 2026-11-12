@@ -69,6 +69,7 @@ export function SettingsView() {
       toggle('Mostrar leitura em kana (furigana)', 'ShowReading'),
       toggle('Esconder a furigana dos kanji que já domino', 'HideKnownFurigana', 'Kanji com 14+ dias na revisão aparecem sem leitura — um empurrão para ler sozinho.'),
       toggle('Tocar áudio automaticamente', 'AutoPlayAudio'),
+      toggle('Exercícios de falar (microfone)', 'SpeakExercises', 'Nas lições e em "Aprender as palavras" aparecem questões para responder em voz alta. Desligue se costuma estudar sem poder falar.'),
       toggle('Tocar numa palavra mostra o significado', 'TapToDefine', 'Nos exemplos, diálogos, frases e textos.'),
       textSizePicker()),
     section('Metas'),

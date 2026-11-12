@@ -19,7 +19,7 @@ export function PracticeView() {
       item('話', 'Frases úteis', `${Content.phrases.reduce((n, c) => n + c.phrases.length, 0)} frases para situações reais`, 'phrases'),
       item('声', 'Treino de fala', 'Ouvir, gravar, comparar e verificar a pronúncia', 'speak'),
       item('試', 'Simulado JLPT', 'Prova N5 ou N4 com tempo e nota por seção', 'exam'),
-      item('練', 'Treinos', 'Conjugação, preços, horas e datas, partículas e ditado', 'drills'),
+      item('練', 'Treinos', 'Conjugação, preços, horas, partículas, ditado e falar no microfone', 'drills'),
       item('辞', 'Dicionário', 'Busca em português, romaji ou japonês', 'dict'),
       item('私', 'Minhas palavras', 'Cadastre palavras da aula ou da rua para revisar', 'mywords')),
     weak > 0 ? h('button.btn.wide', { type: 'button', onclick: startWeakSpots }, `🎯 Treinar pontos fracos (${weak})`) : null,

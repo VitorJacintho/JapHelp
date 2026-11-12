@@ -1,5 +1,5 @@
 // Áudio: voz japonesa do celular (Web Speech), gravação da própria voz e reconhecimento de fala.
-import * as Kana from './kana.js';
+import { similarity, speechScore } from './speechmatch.js';
 import { Store } from './store.js';
 
 const synth = typeof window !== 'undefined' ? window.speechSynthesis : null;
@@ -162,7 +162,7 @@ export const Practice = {
         const res = e.results[0];
         for (let i = 0; i < res.length; i++) {
           const heard = res[i].transcript || '';
-          const score = Math.max(similarity(heard, expected), reading ? similarity(heard, reading) : 0);
+          const score = speechScore(heard, expected, reading);
           if (score > best.score || !best.heard) best = { heard, score };
         }
         finish({ ok: best.heard.length > 0, heard: best.heard, score: best.score, message: best.heard ? '' : 'Não ouvi nada. Fale mais perto do microfone.' });
@@ -186,25 +186,5 @@ function describeError(code) {
   }[code] || 'Não foi possível reconhecer (' + code + ').';
 }
 
-/** Semelhança 0..1 entre o que foi ouvido e o esperado. */
-export function similarity(heard, expected) {
-  const norm = (s) => Kana.normalizeAnswer(s).replace(/\p{P}/gu, '');
-  const a = norm(heard);
-  const b = norm(expected);
-  if (!a.length || !b.length) return 0;
-  return Math.max(0, 1 - levenshtein(a, b) / Math.max(a.length, b.length));
-}
 
-function levenshtein(a, b) {
-  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
-  let cur = new Array(b.length + 1);
-  for (let i = 1; i <= a.length; i++) {
-    cur[0] = i;
-    for (let j = 1; j <= b.length; j++) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      cur[j] = Math.min(cur[j - 1] + 1, prev[j] + 1, prev[j - 1] + cost);
-    }
-    [prev, cur] = [cur, prev];
-  }
-  return prev[b.length];
-}
+export { similarity };

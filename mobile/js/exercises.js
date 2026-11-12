@@ -22,7 +22,7 @@ export function distinctBy(items, keyFn) {
   });
 }
 
-/** type: 'choice' | 'typing' | 'order' | 'listen' */
+/** type: 'choice' | 'typing' | 'order' | 'listen' | 'speak' (falar no microfone) | 'learn' (cartão de ensino, sem nota) */
 export function makeExercise(props) {
   return {
     type: 'choice', context: null, prompt: '', japanese: null, japaneseReading: null, speakText: null,
@@ -37,7 +37,9 @@ export function correctAnswerText(ex) {
     case 'choice':
     case 'listen': return ex.options[ex.answer] ?? '';
     case 'typing': return ex.accepted[0] ?? '';
-    case 'order': return ex.correct.join(' ');
+    case 'order': return ex.correct.join(ex.joinTiles ?? ' ');
+    case 'speak': return ex.expected ?? '';
+    case 'learn': return ex.word?.jp ?? '';
     default: return '';
   }
 }
@@ -140,7 +142,7 @@ const SimilarKana = [
   ['ヌ', 'ス', 'フ'], ['マ', 'ム', 'ア'], ['ノ', 'メ'], ['ハ', 'ル'], ['セ', 'サ', 'ヤ'],
 ];
 
-function kanaDistractors(target, pool, n) {
+export function kanaDistractors(target, pool, n) {
   const cands = [];
   for (const g of SimilarKana) if (g.includes(target)) cands.push(...g.filter((x) => x !== target));
   cands.push(...shuffle(pool.filter((p) => p !== target)));
