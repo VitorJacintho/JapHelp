@@ -167,7 +167,8 @@ async function boot() {
     // Para desenvolver: /mobile/?nosw desliga o cache offline e sempre carrega os arquivos novos.
     navigator.serviceWorker?.getRegistrations().then((rs) => rs.forEach((r) => r.unregister()));
   } else if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    navigator.serviceWorker.register('sw.js').then(watchUpdates).catch(() => {});
+    // updateViaCache 'none': a conferência de versão nova nunca usa o cache HTTP (o GitHub manda max-age=600)
+    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(watchUpdates).catch(() => {});
   }
 }
 
@@ -193,6 +194,16 @@ function watchUpdates(reg) {
     if (document.visibilityState === 'visible') reg.update().catch(() => {});
   });
   setInterval(() => reg.update().catch(() => {}), 60 * 60 * 1000);
+}
+
+/** Ajustes → "Procurar atualização": 'ready' (aviso na tela), 'downloading', 'latest' ou 'offline'. */
+export async function checkForUpdate() {
+  const reg = await navigator.serviceWorker?.getRegistration();
+  if (!reg) return 'offline';
+  try { await reg.update(); } catch { return 'offline'; }
+  if (reg.waiting && navigator.serviceWorker.controller) { showUpdateBar(reg.waiting); return 'ready'; }
+  if (reg.installing) return 'downloading'; // o aviso aparece sozinho quando terminar de baixar
+  return 'latest';
 }
 
 function showUpdateBar(worker) {

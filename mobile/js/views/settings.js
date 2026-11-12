@@ -6,7 +6,7 @@ import { h, button, infoBox, section, toast, jpText } from '../ui.js';
 import { page, title } from './common.js';
 import { Backup, REMIND_AFTER_DAYS } from '../backup.js';
 import { VERSION } from '../arquivos.js';
-import { App } from '../app.js';
+import { App, checkForUpdate } from '../app.js';
 
 export function SettingsView() {
   const s = Store.settings;
@@ -112,6 +112,18 @@ export function SettingsView() {
         },
       }, '🗑 Zerar todo o progresso')),
     h('p.muted.small.center', `JapHelp · versão ${VERSION} · funciona offline depois do primeiro acesso.`),
+    'serviceWorker' in navigator ? button('🔄 Procurar atualização', async (e) => {
+      const b = e.currentTarget;
+      b.disabled = true;
+      const r = await checkForUpdate();
+      b.disabled = false;
+      toast({
+        ready: 'Versão nova pronta — toque em "Atualizar" no aviso.',
+        downloading: 'Baixando a versão nova… o aviso aparece em alguns segundos.',
+        latest: 'Você já está na versão mais recente.',
+        offline: 'Sem internet agora — tente de novo mais tarde.',
+      }[r]);
+    }) : null,
     h('p.muted.small.center', 'Ordem dos traços: ',
       h('a', { href: 'https://kanjivg.tagaini.net', target: '_blank', rel: 'noopener' }, 'KanjiVG'),
       ' © Ulrich Apel, licença ',
